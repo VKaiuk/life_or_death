@@ -1,0 +1,36 @@
+# Ren'Py generated files
+game/saves/
+**/saves/
+
+# Bytecode / cache
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.rpyb
+*.rpyc
+*.rpymc
+
+# Logs / crash files
+log.txt
+errors.txt
+traceback.txt
+
+# Build / distribution output
+dist/
+build/
+rapt/
+android/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.swp
+*.tmp
+*~
