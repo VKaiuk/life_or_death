@@ -1,0 +1,51 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 1098, in script
+    show text "{size=40}{color=#FFFFFF}UI Design by Skolaztika \n
+  File "<none>", line 1
+    "{size=40}{color=#FFFFFF}UI Design by Skolaztika \n
+    ^                                                  
+SyntaxError: unterminated string literal (detected at line 1)
+
+-- Full Traceback ------------------------------------------------------------
+
+Traceback (most recent call last):
+  File "game/script.rpy", line 1098, in script
+    show text "{size=40}{color=#FFFFFF}UI Design by Skolaztika \n
+  File "renpy/ast.py", line 1357, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ast.py", line 730, in show_imspec
+    renpy.config.show(
+    ~~~~~~~~~~~~~~~~~^
+        name, at_list=at_list, layer=layer, what=expression, zorder=zorder, tag=tag, behind=behind, atl=atl
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/exports/displayexports.py", line 486, in show
+    if not base.find_target() and renpy.config.missing_show:
+           ~~~~~~~~~~~~~~~~^^                               
+  File "renpy/display/image.py", line 444, in find_target
+    self.target = target._duplicate(a)
+                  ~~~~~~~~~~~~~~~~~^^^
+  File "renpy/text/extras.py", line 267, in _duplicate
+    string = renpy.python.py_eval(param)
+             ~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "renpy/python.py", line 1303, in py_eval
+    code = py_compile(code, "eval")
+           ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1260, in py_compile
+    raise e
+  File "renpy/python.py", line 1190, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, True)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<none>", line 1
+    "{size=40}{color=#FFFFFF}UI Design by Skolaztika \n
+    ^                                                  
+SyntaxError: unterminated string literal (detected at line 1)
+
+macOS-15.7.4-arm64-arm-64bit arm64
+Ren'Py 8.5.2.26010301
+life_or_death Ver. 1
+Sun Apr  5 21:52:18 2026
