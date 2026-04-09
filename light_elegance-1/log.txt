@@ -1,32 +1,31 @@
-2026-04-06 03:40:17 UTC
+2026-04-09 04:25:43 UTC
 macOS-15.7.4-arm64-arm-64bit
 Ren'Py 8.5.2.26010301
 
-Early init took 28 ms
-Loading error handling took 60 ms
-Loading script took 157 ms
-Loading save slot metadata took 24 ms
+Early init took 24 ms
+Loading error handling took 21 ms
+Loading script took 384 ms
+Loading save slot metadata took 43 ms
 Loading persistent took 0 ms
-Running init code took 167 ms
-Loading analysis data took 4 ms
+Running init code took 178 ms
+Loading analysis data took 2 ms
 Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
-Backing up script files to '/Users/vkaiukmac/Library/RenPy/backups/light_elegance-1':
+Reloading save slot metadata took 1 ms
 Dump and make backups took 21 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 16 ms
+Initial gc took 17 ms
 DPI scale factor: 1.000000
 Creating interface object took 0 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 4 ms
-Save screen analysis took 6 ms
+Load screen analysis took 8 ms
+Analyze screens took 0 ms
+Save screen analysis took 0 ms
 Save pyanalysis took 0 ms
 Save bytecode took 15 ms
 Running _start took 0 ms
-Interface start took 330 ms
+Interface start took 372 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1470, 956)
@@ -41,28 +40,24 @@ Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
 Maximum texture size: 4096x4096
 Cleaning stores took 0 ms
-Load screen analysis took 17 ms
+Load screen analysis took 16 ms
 Analyze screens took 0 ms
-Running _start took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 12 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
+Running _start took 2 ms
 Resetting cache.
-Early init took 15 ms
-Loading error handling took 98 ms
-Loading script took 254 ms
-Loading save slot metadata took 7 ms
+Early init took 13 ms
+Loading error handling took 88 ms
+Loading script took 274 ms
+Loading save slot metadata took 8 ms
 Loading persistent took 0 ms
 Running init code took 14 ms
 Loading analysis data took 2 ms
 Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
+Reloading save slot metadata took 3 ms
 Backing up script files to '/Users/vkaiukmac/Library/RenPy/backups/light_elegance-1':
 Dump and make backups took 21 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 22 ms
+Initial gc took 23 ms
 DPI scale factor: 1.000000
 Creating interface object took 0 ms
 Init translation took 0 ms
@@ -87,22 +82,18 @@ Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
 Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
 Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 16 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
 Resetting cache.
 Early init took 4 ms
-Loading error handling took 8 ms
-Loading script took 126 ms
-Loading save slot metadata took 7 ms
+Loading error handling took 7 ms
+Loading script took 133 ms
+Loading save slot metadata took 5 ms
 Loading persistent took 0 ms
-Running init code took 13 ms
+Running init code took 15 ms
 Loading analysis data took 2 ms
 Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
+Reloading save slot metadata took 1 ms
 Backing up script files to '/Users/vkaiukmac/Library/RenPy/backups/light_elegance-1':
-Dump and make backups took 20 ms
+Dump and make backups took 22 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
 Initial gc took 23 ms
@@ -130,40 +121,144 @@ Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
 Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
 Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 16 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 12 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 13 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
 Resetting cache.
 Early init took 4 ms
 Loading error handling took 7 ms
-Loading script took 122 ms
-Loading save slot metadata took 6 ms
+Loading script took 133 ms
+Loading save slot metadata took 5 ms
 Loading persistent took 0 ms
-Running init code took 13 ms
+Running init code took 14 ms
 Loading analysis data took 2 ms
 Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
+Reloading save slot metadata took 1 ms
 Backing up script files to '/Users/vkaiukmac/Library/RenPy/backups/light_elegance-1':
 Dump and make backups took 21 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 23 ms
+Initial gc took 22 ms
 DPI scale factor: 1.000000
 Creating interface object took 0 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
 Load screen analysis took 0 ms
 Analyze screens took 4 ms
-Save screen analysis took 7 ms
+Save screen analysis took 6 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 104 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Apple'
+Renderer: 'Apple M2'
+Version: '2.1 Metal - 89.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "renpy/ast.py", line 625, in eval_who
+    return renpy.python.py_eval(who)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "renpy/python.py", line 1305, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1298, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<none>", line 1, in <module>
+NameError: name 'U' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "game/script.rpy", line 876, in script
+    U "..."
+  File "renpy/ast.py", line 2925, in execute
+    Say.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "renpy/ast.py", line 956, in execute
+    who = eval_who(self.who, self.who_fast)
+          ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ast.py", line 627, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'U' is not defined.
+
+While running game code:
+NameError: name 'U' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "game/script.rpy", line 876, in script
+    U "..."
+Exception: Sayer 'U' is not defined.
+Resetting cache.
+Early init took 4 ms
+Loading error handling took 7 ms
+Loading script took 135 ms
+Loading save slot metadata took 6 ms
+Loading persistent took 0 ms
+Running init code took 14 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 1 ms
+Backing up script files to '/Users/vkaiukmac/Library/RenPy/backups/light_elegance-1':
+Dump and make backups took 21 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 22 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 4 ms
+Save screen analysis took 6 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 103 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Apple'
+Renderer: 'Apple M2'
+Version: '2.1 Metal - 89.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4 ms
+Loading error handling took 7 ms
+Loading script took 131 ms
+Loading save slot metadata took 6 ms
+Loading persistent took 0 ms
+Running init code took 14 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 1 ms
+Backing up script files to '/Users/vkaiukmac/Library/RenPy/backups/light_elegance-1':
+Dump and make backups took 21 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 21 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 4 ms
+Save screen analysis took 6 ms
 Save pyanalysis took 0 ms
 Save bytecode took 0 ms
 Running _start took 0 ms
@@ -181,759 +276,3 @@ Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
 Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
 Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 9 ms
-Loading error handling took 85 ms
-Loading script took 230 ms
-Loading save slot metadata took 7 ms
-Loading persistent took 0 ms
-Running init code took 14 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
-Backing up script files to '/Users/vkaiukmac/Library/RenPy/backups/light_elegance-1':
-Dump and make backups took 20 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 21 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 4 ms
-Save screen analysis took 6 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 128 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 89.4'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 4 ms
-Loading error handling took 7 ms
-Loading script took 56 ms
-Loading save slot metadata took 5 ms
-Loading persistent took 0 ms
-
-File "game/script.rpy", line 1095: end of line expected.
-    show text "{size=40}{color=#FFFFFF}UI Design by Skolaztika{/color}{/size}"  "{size=40}{color=#FFFFFF}UI Design by Skolaztika{/color}{/size}"at truecenter
-                                                                                ^
-DPI scale factor: 1.000000
-Interface start took 56 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 89.4'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 8 ms
-Loading script took 60 ms
-Loading save slot metadata took 5 ms
-Loading persistent took 0 ms
-
-File "game/script.rpy", line 1095: end of line expected.
-    show text "{size=40}{color=#FFFFFF}UI Design by Skolaztika{/color}{/size}"  "{size=40}{color=#FFFFFF}UI Design by Skolaztika{/color}{/size}"at truecenter
-                                                                                ^
-DPI scale factor: 1.000000
-Interface start took 50 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 89.4'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 9 ms
-Loading script took 42 ms
-Loading save slot metadata took 5 ms
-Loading persistent took 0 ms
-Running init code took 32 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 1 ms
-Dump and make backups took 21 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 19 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 8 ms
-Analyze screens took 0 ms
-Save screen analysis took 0 ms
-Save pyanalysis took 0 ms
-Save bytecode took 1 ms
-Running _start took 0 ms
-Interface start took 103 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 89.4'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 13 ms
-Loading error handling took 83 ms
-Loading script took 245 ms
-Loading save slot metadata took 7 ms
-Loading persistent took 0 ms
-Running init code took 14 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
-Backing up script files to '/Users/vkaiukmac/Library/RenPy/backups/light_elegance-1':
-Dump and make backups took 21 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 23 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 4 ms
-Save screen analysis took 6 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 125 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 89.4'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 18 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
-Resetting cache.
-Early init took 4 ms
-Loading error handling took 7 ms
-Loading script took 127 ms
-Loading save slot metadata took 7 ms
-Loading persistent took 0 ms
-Running init code took 14 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
-Backing up script files to '/Users/vkaiukmac/Library/RenPy/backups/light_elegance-1':
-Dump and make backups took 21 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 24 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 4 ms
-Save screen analysis took 6 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 105 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 89.4'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 18 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 9 ms
-Loading script took 136 ms
-Loading save slot metadata took 7 ms
-Loading persistent took 0 ms
-Running init code took 14 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
-Backing up script files to '/Users/vkaiukmac/Library/RenPy/backups/light_elegance-1':
-Dump and make backups took 21 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 25 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 4 ms
-Save screen analysis took 7 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 104 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 89.4'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 4 ms
-Loading error handling took 8 ms
-Loading script took 127 ms
-Loading save slot metadata took 5 ms
-Loading persistent took 0 ms
-Running init code took 14 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
-Backing up script files to '/Users/vkaiukmac/Library/RenPy/backups/light_elegance-1':
-Dump and make backups took 21 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 24 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 4 ms
-Save screen analysis took 6 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 104 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 89.4'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 19 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 19 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
-Resetting cache.
-Early init took 9 ms
-Loading error handling took 85 ms
-Loading script took 238 ms
-Loading save slot metadata took 7 ms
-Loading persistent took 0 ms
-Running init code took 14 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
-Backing up script files to '/Users/vkaiukmac/Library/RenPy/backups/light_elegance-1':
-Dump and make backups took 21 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 25 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 4 ms
-Save screen analysis took 6 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 129 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 89.4'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 19 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
-Resetting cache.
-Early init took 10 ms
-Loading error handling took 91 ms
-Loading script took 234 ms
-Loading save slot metadata took 7 ms
-Loading persistent took 0 ms
-Running init code took 14 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
-Backing up script files to '/Users/vkaiukmac/Library/RenPy/backups/light_elegance-1':
-Dump and make backups took 21 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 26 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 4 ms
-Save screen analysis took 7 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 130 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 89.4'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 4 ms
-Loading error handling took 7 ms
-Loading script took 36 ms
-Loading save slot metadata took 5 ms
-Loading persistent took 0 ms
-Running init code took 14 ms
-Loading analysis data took 4 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
-Dump and make backups took 20 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 22 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 8 ms
-Analyze screens took 0 ms
-Save screen analysis took 0 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 105 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 89.4'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 1098, in script
-    show text "{size=40}{color=#FFFFFF}UI Design by Skolaztika \n
-  File "renpy/ast.py", line 1357, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/ast.py", line 730, in show_imspec
-    renpy.config.show(
-    ~~~~~~~~~~~~~~~~~^
-        name, at_list=at_list, layer=layer, what=expression, zorder=zorder, tag=tag, behind=behind, atl=atl
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "renpy/exports/displayexports.py", line 486, in show
-    if not base.find_target() and renpy.config.missing_show:
-           ~~~~~~~~~~~~~~~~^^                               
-  File "renpy/display/image.py", line 444, in find_target
-    self.target = target._duplicate(a)
-                  ~~~~~~~~~~~~~~~~~^^^
-  File "renpy/text/extras.py", line 267, in _duplicate
-    string = renpy.python.py_eval(param)
-             ~~~~~~~~~~~~~~~~~~~~^^^^^^^
-  File "renpy/python.py", line 1303, in py_eval
-    code = py_compile(code, "eval")
-           ~~~~~~~~~~^^^^^^^^^^^^^^
-  File "renpy/python.py", line 1260, in py_compile
-    raise e
-  File "renpy/python.py", line 1190, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, True)
-           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "<none>", line 1
-    "{size=40}{color=#FFFFFF}UI Design by Skolaztika \n
-    ^                                                  
-SyntaxError: unterminated string literal (detected at line 1)
-
-While running game code:
-  File "game/script.rpy", line 1098, in script
-    show text "{size=40}{color=#FFFFFF}UI Design by Skolaztika \n
-  File "<none>", line 1
-    "{size=40}{color=#FFFFFF}UI Design by Skolaztika \n
-    ^                                                  
-SyntaxError: unterminated string literal (detected at line 1)
-Resetting cache.
-Early init took 4 ms
-Loading error handling took 7 ms
-Loading script took 134 ms
-Loading save slot metadata took 8 ms
-Loading persistent took 0 ms
-Running init code took 15 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
-Backing up script files to '/Users/vkaiukmac/Library/RenPy/backups/light_elegance-1':
-Dump and make backups took 21 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 25 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 4 ms
-Save screen analysis took 6 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 107 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 89.4'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 8 ms
-Analyze screens took 0 ms
-Running _start took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 18 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
-Resetting cache.
-Early init took 4 ms
-Loading error handling took 10 ms
-Loading script took 42 ms
-Loading save slot metadata took 7 ms
-Loading persistent took 0 ms
-Running init code took 14 ms
-Loading analysis data took 5 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
-Dump and make backups took 20 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 25 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 9 ms
-Analyze screens took 0 ms
-Save screen analysis took 0 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 112 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 89.4'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 4 ms
-Loading error handling took 6 ms
-Loading script took 124 ms
-Loading save slot metadata took 5 ms
-Loading persistent took 0 ms
-Running init code took 14 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
-Backing up script files to '/Users/vkaiukmac/Library/RenPy/backups/light_elegance-1':
-Dump and make backups took 21 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 25 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 4 ms
-Save screen analysis took 7 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 108 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 89.4'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 20 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
-Resetting cache.
-Early init took 4 ms
-Loading error handling took 7 ms
-Loading script took 125 ms
-Loading save slot metadata took 5 ms
-Loading persistent took 0 ms
-Running init code took 14 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
-Backing up script files to '/Users/vkaiukmac/Library/RenPy/backups/light_elegance-1':
-Dump and make backups took 22 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 27 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 4 ms
-Save screen analysis took 6 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 106 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 89.4'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 4 ms
-Loading error handling took 7 ms
-Loading script took 36 ms
-Loading save slot metadata took 5 ms
-Loading persistent took 0 ms
-Running init code took 14 ms
-Loading analysis data took 4 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
-Dump and make backups took 20 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 24 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 8 ms
-Analyze screens took 1 ms
-Save screen analysis took 0 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 108 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 89.4'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 18 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
-Resetting cache.
-Early init took 4 ms
-Loading error handling took 7 ms
-Loading script took 119 ms
-Loading save slot metadata took 5 ms
-Loading persistent took 0 ms
-Running init code took 14 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
-Backing up script files to '/Users/vkaiukmac/Library/RenPy/backups/light_elegance-1':
-Dump and make backups took 21 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 26 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 4 ms
-Save screen analysis took 6 ms
-Save pyanalysis took 0 ms
-Save bytecode took 1 ms
-Running _start took 0 ms
-Interface start took 107 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 89.4'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 4 ms
-Loading error handling took 6 ms
-Loading script took 38 ms
-Loading save slot metadata took 5 ms
-Loading persistent took 0 ms
-Running init code took 15 ms
-Loading analysis data took 6 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 1 ms
-Dump and make backups took 21 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 28 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 9 ms
-Analyze screens took 1 ms
-Save screen analysis took 0 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 124 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1470, 956)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M2'
-Version: '2.1 Metal - 89.4'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1470, 806) drawable=(2940, 1612)
-Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 16 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 19 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
