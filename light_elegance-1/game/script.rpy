@@ -12,22 +12,17 @@ define u = Character("[first_name]")
 define i = Character("AI748") 
 define c = Character("Cashier")
 
-image sakura normal = Transform("images/Chie_Outfit_Pack_1/s_smile.png", zoom=0.35, ypos=1.5)
-image sakura frown = Transform("images/Chie_Outfit_Pack_1/s_frown.png", zoom=0.35, ypos=1.5 )
-image sakura embarassed = Transform("images/Chie_Outfit_Pack_1/s_open.png", zoom=0.35, ypos=1.5 )
-image sakura serious = Transform("images/Chie_Outfit_Pack_1/s_closed_frown.png", zoom=0.35, ypos=1.5)
-image sakura frown blush = Transform("images/Chie_Outfit_Pack_1/Chie_SummerUni_Frown_Blush.png", zoom=0.35, ypos=1.5)
-image sakura normal blush = Transform("images/Chie_Outfit_Pack_1/Chie_SummerUni_Smile_Blush.png", zoom=0.35, ypos=1.5)
+image sakura normal = Transform("images/images/Sakura/normal.png", zoom=0.25, ypos=1.12)
+image sakura panick = Transform("images/images/Sakura/panick.png", zoom=0.25, ypos=1.12)
+image sakura sad = Transform("images/images/Sakura/sad.png", zoom=0.25, ypos=1.12)
+image sakura blush = Transform("images/images/Sakura/blush.png", zoom=0.25, ypos=1.12)
+image sakura serious = Transform("images/images/Sakura/serious.png", zoom=0.25, ypos=1.12)
 
-
-image kaori normal = Transform("images/Miki Outfit Pack 1/Miki Winter Uniform/Miki_A_WinterUniform_Smile.png", zoom=0.35, ypos=1.5)
-image kaori frown = Transform("images/Miki Outfit Pack 1/Miki Winter Uniform/Miki_A_WinterUniform_Frown.png", zoom=0.35, ypos=1.5)
-image kaori frown closed = Transform("images/Miki Outfit Pack 1/Miki Winter Uniform/Miki_A_WinterUniform_Closed_Frown.png", zoom=0.35, ypos=1.5)
-image kaori happy closed = Transform("images/Miki Outfit Pack 1/Miki Winter Uniform/Miki_A_WinterUniform_Closed_Open_Blush.png", zoom=0.35, ypos=1.5)
-image kaori happy = Transform("images/Miki Outfit Pack 1/Miki Winter Uniform/Miki_A_WinterUniform_Open.png", zoom=0.35, ypos=1.5)
-image kaori frown closed blush = Transform("images/Miki Outfit Pack 1/Miki Winter Uniform/Miki_A_WinterUniform_Closed_Frown_Blush.png", zoom=0.35, ypos=1.5)
-image kaori frown open blush = Transform("images/Miki Outfit Pack 1/Miki Winter Uniform/Miki_A_WinterUniform_Frown_Blush.png", zoom=0.35, ypos=1.5)
-image kaori normal blush = Transform("images/Miki Outfit Pack 1/Miki Winter Uniform/Miki_A_WinterUniform_Smile_Blush.png", zoom=0.35, ypos=1.5)
+image kaori normal = Transform("images/images/Kaori/normal.png", zoom=0.25, ypos=1.1)
+image kaori happy = Transform("images/images/Kaori/happy.png", zoom=0.25, ypos=1.1)
+image kaori sad = Transform("images/images/Kaori/sad.png", zoom=0.25, ypos=1.1)
+image kaori serious = Transform("images/images/Kaori/serious.png", zoom=0.25, ypos=1.1)
+image kaori blush = Transform("images/images/Kaori/blush.png", zoom=0.25, ypos=1.1)
 
 image cashier normal = Transform("images/cashier.png",  ypos=1.4)
 
@@ -124,37 +119,34 @@ label start:
     pause 1.0
 
     scene store_day with fade
-    with fade
 
     pause 1.0
     "On my way to school, I see a girl running toward me. She’s wearing a school uniform, holding a pink hoodie in her hands."
     "She waves one hand in the air, calling out to me from a distance. I can’t really hear her, but I can already guess who it is."
-    show kaori happy
-    with dissolve
+    show sakura normal with dissolve
 
     q "Hey [first_name]! I've been calling you forever! Why didn't you wait for me?"
     "This girl is Kaori and she’s my childhood friend. Our parents work together, and somewhere along the way, we naturally became close."
     "Always smile on her face. I even think I’ve never seen her sad or devastated before. Even today..."
+    show kaori normal with dissolve
     k "It's been a while. How are you?"
     u "I'm fine... You seem awfully cheerful for a day like this."
     k "Well... My friend died, and the whole school sees me as one of the main suspects."
     k "Most people would probably be terrified right now... But not me."
 
-    show kaori happy closed with dissolve
     k "After all, we've known each other for a long time. And I know you're capable of finding the real culprit."
     k "So, I'm not worried."
     u "You sure are confident about me. But don’t expect me to go easy on you just because we’re friends."
+    show kaori happy with dissolve
     k "Haha... Don’t worry. I know how serious you are when it comes to this."
     u "Are you really okay? He was your friend too."
 
-    show kaori frown with dissolve
-
+    show kaori normal with dissolve
     k "Yeah... Honestly, I’m more worried about you. A lot has happened these past few days."
     k "I don’t think anyone could handle all of this alone."
     k "So If you need anything... talk to me. I’ll always be there for you."
     u "Thanks... really, Kaori."
 
-    hide kaori frown
 
 
 
@@ -172,8 +164,7 @@ label start:
     show sakura frown:
         linear 0.2 xpos 0.25 
     
-    show kaori frown at right_kaori
-    with dissolve
+    
 
 
     k "N...No, that's not true"
@@ -207,10 +198,10 @@ label start:
     show sakura normal with dissolve
     s "That's everything from me." 
     s "And [first_name]... I hope you’ll make a right decision."
-    hide kaori frown with dissolve
+
     hide sakura normal with dissolve
     "Sakura turns and walks into the school. Kaori follows after her, but pauses and glances back at me."
-    show kaori happy with dissolve
+
     k "Just wait and see, [first_name]. I'll prove I had nothing to do with it, haha."
     hide kaori normal with dissolve
 
@@ -222,7 +213,7 @@ label start:
     "I walk into the classroom, and every student’s gaze is fixed on me. Well... it’s different from what usually happens."
     "I make my way to my desk, and just like Sakura mentioned, the report case is already there."
 
-    jump test
+    # jump test
 
     return
 #endregion
