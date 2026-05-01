@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 991: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    u "Kaori!"
-    ^
+File "game/script.rpy", line 71: expected statement.
+    This shows a character sprite. A placeholder is used, but you can
+                                 ^
+
+File "game/script.rpy", line 72: end of line expected.
+    replace it by adding a file named "eileen happy.png" to the images
+                                                         ^
+
+File "game/script.rpy", line 73: expecting name after dot.
+    directory.
+              ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Wed Apr  8 22:22:00 2026
+Thu Apr 30 23:35:51 2026
