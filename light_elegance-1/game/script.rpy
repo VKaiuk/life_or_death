@@ -24,7 +24,7 @@ image kaori sad = Transform("images/images/Kaori/sad.png", zoom=0.25, ypos=1.1)
 image kaori serious = Transform("images/images/Kaori/serious.png", zoom=0.25, ypos=1.1)
 image kaori blush = Transform("images/images/Kaori/blush.png", zoom=0.25, ypos=1.1)
 
-image cashier normal = Transform("images/cashier.png",  ypos=1.4)
+image cashier = Transform("images/Side_Pack_1/Maid_A/Maid_A_Casual_Frown.png",zoom=1.1, ypos=1.45)
 
 default time_left = 300
 # 600
@@ -71,6 +71,8 @@ label start:
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
+
+    jump riverbank
     "BEEP! BEEP! BEEP!"
     i "Hmhm... "
     i "Student with ID #2257, it's time to wake up."
@@ -870,9 +872,16 @@ label riverbank:
     pause 1.0
     scene bus with fade
     "Riverbank isn’t far from the school, but getting there requires taking a bus."
-    "When I arrive, there’s obviously nothing suspicious left at the scene. Still, I never really expected to find anything useful there."
-    "What bothers me is why Hiro’s body was found here in the first place. He obviously wasn’t killed at the riverbank."
-    "More likely, his body was thrown into the river somewhere upstream, and the current carried it here."
+    "When I arrive, there’s obviously nothing suspicious left at the scene."
+    "Let's think about what I've read in the report."
+
+    call puzzle_start
+    "Where did Hiro die?"
+    call riverbank_thinking
+
+    "That means Hiro was strangled, thrown into the water, and carried to the riverbank."
+    "More likely, his body was thrown into the river somewhere upstream, and the current brought it here."
+
     scene city with fade
     "The easiest way to do that would be from one of the bridges further along the river. I follow the upstream."
     "About fifteen minutes later, I spot a familiar bridge. I use it every day on my way to the dorm. Hiro used it too."
@@ -884,7 +893,7 @@ label riverbank:
     "Right before reaching the store, I notice Kaori leaving. She seems in a hurry, looking around as she heads back toward the school."
 
     "I head inside"
-    show cashier normal with dissolve 
+    show cashier with dissolve 
     u "Good afternoon. I have some questions to ask."
     c "Huh? Again? What do you want?"
     u "Again? What do you mean?"
@@ -893,7 +902,8 @@ label riverbank:
     c "She wanted to... Wait, who are you?"
     u "Oh... My name is [first_name] [last_name]."
     u "I’m investigating the case assigned by the school."
-    c "From that academy? Bastards. But they’re scary. Can’t really do anything about it."
+    c "From that academy? Between us, I hate those bastards."
+    c "But they’re scary. Not like I can do anything about it."
     u "So, what did she ask?"
     c "She wanted to look at camera footage."
     u "You let her?"
@@ -901,7 +911,7 @@ label riverbank:
     "Special card? Oh... It must be the one inside the report. I put it in my wallet."
     u "Here. May I see the footage, please?"
     c "Hmm... Alright. Come with me."
-    hide cashier normal with dissolve
+    hide cashier with dissolve
     "Did Kaori want to delete the data? I’m curious what I’ll see."
     "We step into the security room."
 
@@ -1563,6 +1573,165 @@ screen ten_min_timer():
         SetVariable("time_left", time_left - 1),
         [SetVariable("time_left", 0), Hide("ten_min_timer"), Jump("timeup_ending")]
     )
+
+
+label riverbank_thinking:
+    $ strangle = 0
+    $ stab = 0
+    $ gun = 0
+    $ school = ""
+    $ riverbank = ""
+    $ unknown = ""
+    $ message_place = ""
+    $ message = ""
+
+    label thinking:
+        menu:
+            "Riverbank":
+                $ riverbank = "Riverbank"
+                "How did he die?"
+                menu:
+                    "Strangulation":
+                        $ strangle = 1
+                        $ message_place = message_display_place(school, riverbank, unknown)
+                        $ message = message_display(strangle, stab, gun)
+                        "[message_place]"
+                        "[message]"
+                        jump riverbank_thinking
+                    "Stabbing":
+                        $ stab = 1
+                        $ message_place = message_display_place(school, riverbank, unknown)
+                        $ message = message_display(strangle, stab, gun)
+                        "[message_place]"
+                        "[message]"
+                        jump riverbank_thinking
+                    "Gunshooting":
+                        $ gun = 1
+                        $ message_place = message_display_place(school, riverbank, unknown)
+                        $ message = message_display(strangle, stab, gun)
+                        "[message_place]"
+                        "[message]"
+                        jump riverbank_thinking
+
+            "Near School":
+                $ school = "School"
+                "How did he die?"
+                menu:
+                    "Strangulation":
+                        $ strangle = 1
+                        $ message_place = message_display_place(school, riverbank, unknown)
+                        $ message = message_display(strangle, stab, gun)
+                        "[message_place]"
+                        "[message]"
+                        jump riverbank_thinking
+                    "Stabbing":
+                        $ stab = 1
+                        $ message_place = message_display_place(school, riverbank, unknown)
+                        $ message = message_display(strangle, stab, gun)
+                        "[message_place]"
+                        "[message]"
+                        jump riverbank_thinking
+                    "Gunshooting":
+                        $ gun = 1
+                        $ message_place = message_display_place(school, riverbank, unknown)
+                        $ message = message_display(strangle, stab, gun)
+                        "[message_place]"
+                        "[message]"
+                        jump riverbank_thinking
+            "Unknown":
+                $ unknown = "Unknown"
+                "How did he die?"
+                menu:
+                    "Strangulation":
+                        $ strangle = 1
+                        $ message_place = message_display_place(school, riverbank, unknown)
+                        $ message = message_display(strangle, stab, gun)
+                        "[message_place]"
+                        "[message]"
+                        return
+                    "Stabbing":
+                        $ stab = 1
+                        $ message_place = message_display_place(school, riverbank, unknown)
+                        $ message = message_display(strangle, stab, gun)
+                        "[message_place]"
+                        "[message]"
+                        jump riverbank_thinking
+                    "Gunshooting":
+                        $ gun = 1
+                        $ message_place = message_display_place(school, riverbank, unknown)
+                        $ message = message_display(strangle, stab, gun)
+                        "[message_place]"
+                        "[message]"
+                        jump riverbank_thinking
+
+    init python:
+        def message_display_place(school, riverbank, unknown):
+            if school == "School":
+                return "Hiro couldn't have been killed near the school. After his conversation with Sakura, he headed toward the boys' dorm."
+            elif riverbank == "Riverbank":
+                return "The report says riverbank, but that doesn't make sense."
+            elif unknown == "Unknown":
+                return "That's right! The riverbank wasn't the place of death. It was where the body was found."
+            return ""
+
+        def message_display(strangle, stab, gun):
+            if strangle == 1:
+                return "That's right! His body's condition suggests that strangulation was the cause of death."
+            elif stab == 1:
+                return "No wounds or signs of stabbing were found on his body. It wasn't a stabbing."
+            elif gun == 1:
+                return "Hiro wasn't killed with a gun. There is no evidence pointing to that."
+
+label puzzle_start:
+    default remaining_steps = [
+        "Skin appears pale and wrinkled.",
+        "Bruising around his neck.",
+        "His blood under his fingernails.",
+    ]
+    "Which details were actually found on Hiro's body?"
+
+    label body_loop:
+        menu:
+            "Signs of struggle on the arms.":
+                "No... there were no signs of struggle mentioned in the report."
+                jump body_loop
+
+            "Stab wound":
+                "No... there was no stab wound mentioned in the report."
+                jump body_loop
+
+            "Skin appears pale and wrinkled." if "Skin appears pale and wrinkled." in remaining_steps:
+                "It wasn't mentioned in the report."
+                "But his skin most likely looked pale and wrinkled because the body was in the water for quite some time."
+                $ remaining_steps.remove("Skin appears pale and wrinkled.")
+                jump body_loop
+
+            "His blood under his fingernails." if "His blood under his fingernails." in remaining_steps:
+                "Correct. That suggests he may have struggled while fighting for his life."
+                $ remaining_steps.remove("His blood under his fingernails.")
+                jump body_loop
+
+            "Bruising on the ribs.":
+                "No... bruising on the ribs was not part of the report."
+                jump body_loop
+
+            "Bruising around his neck." if "Bruising around his neck." in remaining_steps:
+                "Correct. This was mentioned in the report."
+                $ remaining_steps.remove("Bruising around his neck.")
+                jump body_loop
+
+            "End":
+                if not remaining_steps:
+                    jump puzzle_success
+                else:
+                    "Not yet. I have to think about the details before moving forward."
+                    jump body_loop
+
+    label puzzle_success:
+
+        "The important details are the blood under his fingernails, the water exposure, and the injuries around his neck."
+        return
+
 
 # xpos 0.15
 # xpos 0.65

@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 71: expected statement.
-    This shows a character sprite. A placeholder is used, but you can
-                                 ^
-
-File "game/script.rpy", line 72: end of line expected.
-    replace it by adding a file named "eileen happy.png" to the images
-                                                         ^
-
-File "game/script.rpy", line 73: expecting name after dot.
-    directory.
-              ^
+File "game/script.rpy", line 27: invalid syntax. Perhaps you forgot a comma?
+    Transform("images/Side_Pack_1/Maid_A/Maid_A_Casual_Frown.png",zoom=0.25 ypos=1.4)
+                                                                       ^^^^^^^^^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Thu Apr 30 23:35:51 2026
+Fri May  1 18:24:09 2026
