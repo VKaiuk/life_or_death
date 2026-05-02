@@ -39,7 +39,7 @@ init python:
 # Style for the dialogue window
 style window:
     xalign 0.5
-    yalign 1.0 yoffset -50
+    yalign 1.08 yoffset -50
     xysize (1150, 277)
     padding (40, 10, 40, 40)
     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
@@ -92,7 +92,7 @@ screen quick_menu():
 
         frame:
             ysize 35
-            yalign 1.0  xalign 1.0 xoffset -333 yoffset -87 
+            yalign 1.06 xalign 1.0 xoffset -333 yoffset -87 
             background Frame("gui/qm_bg.png", 46, 0, 90, 0)
             left_padding 50 right_padding 50
             hbox:
