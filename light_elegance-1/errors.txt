@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 559: end of line expected.
-    k "Well...this situation just reminded me of something.
-                                                                               ^
+File "game/script.rpy", line 208: end of line expected.
+    "None of you":No, I understand. That’s how this works.
+                  ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Fri May  1 20:20:58 2026
+Tue May  5 15:15:19 2026

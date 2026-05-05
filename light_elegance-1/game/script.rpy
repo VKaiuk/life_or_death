@@ -66,159 +66,218 @@ label start:
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
-    # play music "audio/sybil_system_-_glorytothemachine.mp3" fadein 1.0
-    # pause 1.5
-    # # This shows a character sprite. A placeholder is used, but you can
-    # # replace it by adding a file named "eileen happy.png" to the images
-    # # directory.
+    play music "audio/sybil_system_-_glorytothemachine.mp3" fadein 1.0
+    pause 1.5
+    # This shows a character sprite. A placeholder is used, but you can
+    # replace it by adding a file named "eileen happy.png" to the images
+    # directory.
+    jump test
+    "BEEP! BEEP! BEEP!"
+    scene bedroom
+    i "Hmhm... "
+    i "Student with ID #2257, it's time to wake up."
+    u "Ugh... Damn it. I forgot you people had this perverted side of yours. Who allowed you to put a speaker in my room?"
+    i "You did. When you signed the documents."
+    u "Ugh..."
+    i "You remember the rules, right?"
+    i "You can't speak with the main suspects once you enter the school building."
+    i "You'll have four breaks to find the real culprit."
+    i "Only during those four breaks will you have the opportunity to speak with the suspects."
+    i "At the end of the day, you'll make a choice that can't be changed."
+    i "Hey! Are you listening!?"
+    u "I'm listening."
+    i "Great. Please confirm your understanding by stating your first and last name."
+    $ first_name = 'Sol'
+    $ last_name = 'Payver'
+    u "Sol Payver."
+    # label ask_name:
+    #     $ first_name = renpy.input("Enter the first name: ", length=32).strip()
+    #     if first_name == "":
+    #         "First name is required."
+    #         jump ask_name
+    #     jump last_name
 
-    # jump riverbank
-    # "BEEP! BEEP! BEEP!"
-    # i "Hmhm... "
-    # i "Student with ID #2257, it's time to wake up."
-    # u "Ugh... Damn it. I forgot you people had this perverted side of yours. Who allowed you to put a speaker in my room?"
-    # i "You did. When you signed the documents."
-    # u "Ugh..."
-    # i "You remember the rules, right?"
-    # i "You can't speak with the main suspects once you enter the school building."
-    # i "You'll have four breaks to find the real culprit."
-    # i "Only during those four breaks will you have the opportunity to speak with the suspects."
-    # i "At the end of the day, you'll make a choice that can't be changed."
-    # i "Hey! Are you listening, or are you still half asleep?"
-    # u "I'm listening."
-    # i "Great. Please confirm your understanding by stating your first and last name."
-    # $ first_name = 'Sol'
-    # $ last_name = 'Payver'
-    # u "Sol Payver."
-    # # label ask_name:
-    # #     $ first_name = renpy.input("Enter the first name: ", length=32).strip()
-    # #     if first_name == "":
-    # #         "First name is required."
-    # #         jump ask_name
-    # #     jump last_name
-
-    # # label last_name:
-    # #     $ last_name = renpy.input("Enter the last name: ", length=32).strip()
-    # #     if last_name == "":
-    # #         "Last name is required."
-    # #         jump last_name
-
-
-    # i "Thank you for your confirmation."
-    # i "[first_name] [last_name], I wish you luck."
-
-    # "Meiyaku Academy. A place unlike any ordinary school. It was specifically designed to raise the finest detectives… at least, that’s what they say."
+    # label last_name:
+    #     $ last_name = renpy.input("Enter the last name: ", length=32).strip()
+    #     if last_name == "":
+    #         "Last name is required."
+    #         jump last_name
 
 
-    # "If a crime is committed and it involves me in any way, I am the one responsible for the investigation."
-    # "And once the culprit is found..."
-    # "They face the death penalty."
-    # "Nothing leaves this institution. Every case is resolved within its walls."
+    i "Thank you for your confirmation."
+    u "Can you tell me why I only have one day to solve this?"
+    i "We believe the case can be resolved within a day. And we believe you're capable of it."
+    u "I don't think I am."
+    i "Enough."
+    i "[first_name] [last_name], We wish you luck."
 
-    # "And yesterday... My best friend's body was found."
-    # "As his closest friend, it falls to me to find the person responsible. And today is the day I must make my decision." 
-    # "There are two people considered as the primary suspects."
-    # "My childhood friend..."
-    # "And someone I truly care about."
-    # "Who should I believe? Who should I trust? As a detective, I should let go of my emotions, especially in moments like this."
-    # "But how do I... how do I choose who lives or dies?"
+    "Meiyaku Academy. A place unlike any ordinary school. It was specifically designed to raise the finest detectives… at least, that’s what they say."
 
-    # pause 1.0
+    "If a crime is committed and it involves me in any way, I am the one responsible for the investigation."
+    "And once the culprit is found..."
+    "They face the death penalty."
+    "Nothing leaves this institution. Every case is resolved within its walls."
 
-    # scene store_day with fade
+    "And yesterday... My best friend's body was found."
+    "As his closest friend, it falls to me to find the person responsible. And today is the day I must make my decision." 
+    "There are two people considered as the primary suspects."
+    "My childhood friend..."
+    "And someone I truly care about."
+    "Who should I believe? Who should I trust? As a detective, I should let go of my emotions, especially in moments like this."
+    "But how do I... how do I choose who lives or dies?"
 
-    # pause 1.0
-    # "On my way to school, I see a girl running toward me. She’s wearing a school uniform, holding a pink hoodie in her hands."
-    # "She waves one hand in the air, calling out to me from a distance. I can’t really hear her, but I can already guess who it is."
-    # show kaori happy with dissolve
+    pause 1.0
 
-    # q "Hey [first_name]! I've been calling you forever! Why didn't you wait for me?"
-    # "This girl is Kaori and she’s my childhood friend. Our parents work together, and somewhere along the way, we naturally became close."
-    # "Always smile on her face. I even think I’ve never seen her sad or devastated before. Even today..."
-    # k "It's been a while. How are you?"
-    # u "I'm fine... You seem awfully cheerful for a day like this."
-    # show kaori normal with dissolve
-    # k "Well... My friend died, and the whole school sees me as one of the main suspects."
-    # k "Most people would probably be terrified right now... But not me."
+    scene store_day with fade
 
-    # k "After all, we've known each other for a long time. And I know you're capable of finding the real culprit."
-    # k "So, I'm not worried."
-    # u "You sure are confident about me. But don’t expect me to go easy on you just because we’re friends."
-    # show kaori happy with dissolve
-    # k "Haha... Don’t worry. I know how serious you are when it comes to this."
-    # u "Are you really okay? He was your friend too."
+    pause 1.0
+    "On my way to school, I see a girl running toward me. She’s wearing a school uniform, holding a pink school hoodie in her hands."
+    "She waves one hand in the air, calling out to me from a distance. I can’t really hear her, but I can already guess who it is."
+    show kaori happy with dissolve
 
-    # show kaori serious with dissolve
-    # k "Yeah... Honestly, I’m more worried about you. A lot has happened these past few days."
-    # k "I don’t think anyone could handle all of this alone."
-    # k "So If you need anything... talk to me. I’ll always be there for you."
-    # u "Thanks... really, Kaori."
+    q "Hey [first_name]! I've been calling you forever! Why didn't you wait for me?"
+    "This girl is Kaori and she’s my childhood friend. Our parents work together, and somewhere along the way, we naturally became close."
+    "Always smile on her face. I even think I’ve never seen her sad or devastated before. Even today..."
+    k "It's been a while. How are you?"
+    u "I'm fine... You seem awfully cheerful for a day like this."
+    show kaori normal with dissolve
+    k "Why shouldn't I?"
+    u "Two weeks ago, a boy from our class died. Aren’t you scared?"
+    k "Most people probably are..."
+    k "I think I’m scared too. Just... not that much."
 
-    # hide kaori serious with dissolve
+    k "I know you're capable of finding the real culprit."
+    k "So I choose to believe in you."
+    u "You sure are confident about me. But don’t expect me to go easy on you just because we’re friends."
+    show kaori happy with dissolve
+    k "Haha... Don’t worry. I know how serious you are when it comes to things like this."
+    u "Are you really okay?"
+
+    show kaori serious with dissolve
+    k "Yeah... Honestly, I’m more worried about you. A lot has happened these past few days."
+    k "I don’t think anyone could handle all of this alone."
+    k "So if you need anything... talk to me. I’ll always be there for you."
+    u "Thanks... really, Kaori."
+    k "..."
+
+    show kaori normal with dissolve
+    k "So... who do you think the real culprit is? Between me and Sakura."
+    u "I don't think I should answer."
+    k "Why? If you tell me now, you can see later whether you had good intuition."
+    k "That's an important trait for a great detective. So?"
+    menu:
+        "Kaori":
+            u "Between the two of you, I think it’s you."
+            show kaori serious with dissolve
+            k "What? Why?"
+            u "I just don’t think Sakura is capable of killing someone."
+            k "Oh... so you think I am?"
+            u "No... but-"
+            q "Of course you are."
+
+            "I turn my head to the left. It’s Sakura."
+            "The person I... I feel something deeper for than friendship."
+            show kaori serious
+            show kaori serious:
+                linear 0.2 xpos 0.70
+
+            show sakura normal
+            show sakura normal:
+                linear 0.2 xpos 0.25 
+
+            s "Look at your face. It practically screams, 'I'm the killer.'"
+            k "Ugh... why are you here?"
+        "Sakura":
+            u "Between the two of you, I think it’s Sakura."
+            q "Why?"
+            u "I don’t know her as well as I know you."
+            "I turn my head to the left, expecting to see Kaori, but I see Sakura instead."
+            "The person I... I feel something deeper for than friendship."
+            show kaori serious
+            show kaori serious:
+                linear 0.2 xpos 0.70
+
+            show sakura normal
+            show sakura normal:
+                linear 0.2 xpos 0.25 
+            u "S-Sakura!? What are you doing here?"
+            s "I decided to join your conversarion."
+            u "I'm sorry... I-"
+            s "No, I understand. That’s how this works."
+            show sakura normal with dissolve
+        "None of you":
+            u "I don’t think it was either of you."
+            k "Why is that?"
+            u "I don’t think Sakura is capable of killing someone."
+            u "And you... I’ve known you for a long time, so I know it wasn’t you."
+            q "So who do you think it was?"
+            "I turn my head to the left. It’s Sakura."
+            "The person I... I feel something deeper for than friendship."
+            show kaori serious
+            show kaori serious:
+                linear 0.2 xpos 0.70
+
+            show sakura normal
+            show sakura normal:
+                linear 0.2 xpos 0.25 
+
+            u "S-Sakura!? What are you doing here?"
+            s "I decided to join your conversarion. So?"
+            u "I-I don’t know. I’ll have to read the report first."
+            s "Hmm..."
 
 
     # scene front_school_day
     # scene gate_day at blur_bg
+    s "You both seem... happy this morning. Walking to school together and all."
+    show kaori normal with dissolve
+    show sakura serious with dissolve
+    s "You only met him because of today's situation, right Kaori? You two never walk together."
 
-    # "As we get close to the school, I spot another classmate waiting near the front entrance."
-    # "That is Sakura. The person I... I feel something deeper for than friendship."
+    show kaori serious with dissolve
+    k "N-No, that's not true"
+    k "We're childhood friends. I don't think it's strange for friends to walk to school together."
 
-    # show sakura normal with dissolve
-    # s "Hello, [first_name]."
-    # s "You both seem... happy this morning. Walking to school together and all."
-    # show kaori normal with dissolve
-    # show sakura serious with dissolve
-    # s "You only met him because of today's situation, right Kaori? You two never walk together."
+    k "What about you? Are you scared he’s going to choose you today? Is that why you came out looking for him?"
+    s "No... I’m not. Why would I be... I haven’t done anything wrong."
 
-    # show kaori serious at right_kaori
-    
-    # show sakura serious:
-    #     linear 0.2 xpos 0.25 
-    
-    
-    # k "N...No, that's not true"
-    # k "We're childhood friends. I don't think it's strange for friends to walk to school together."
+    "Right... the two of them weren't on good terms. To be honest, I never knew why."
+    u "Let's calm down everyone..."
+    "An awkward silence settles between us. Still, it feels like Sakura came here for a reason."
+    u "You wanted to tell us something, Sakura?"
 
-    # k "What about you? Are you scared he’s going to choose you today? Is that why you came out to meet him?"
-    # s "No... I’m not. Why would I be... I haven’t done anything wrong."
+    s "Mmm... yes, right."
+    s "You’ve already been informed about the rules, haven’t you?"
+    u "Yes, I were."
+    s "Then, Kaori, you and I are not allowed to speak to each other once we enter the building."
 
-    # "Right... the two of them weren't on good terms. To be honest, I never knew why."
-    # u "Let's calm down everyone..."
-    # "An awkward silence settles between us. Still, it feels like Sakura came here for a reason."
-    # u "You wanted to tell me something, Sakura?"
+    show kaori normal with dissolve
+    k "Phew... I wasn't planning to."
+    u "Kaori..."
+    k "...What?"
+    s "Oh... and the case report, along with all information found is on your desk."
 
-    # s "Mmm... yes, right."
-    # s "I’m here to explain the rules the school has set for today."
-    # s "First, Kaori and I are not allowed speak to each other once we enter the building."
 
-    # show kaori normal with dissolve
-    # k "Phew... I wasn't planning to."
-    # u "Kaori..."
-    # k "...What?"
-    # s "You’ve already been told everything else, haven’t you?"
-    # u "Yes, I were."
-    # s "Oh... and the case report, along with all information found is on your desk."
+    show sakura normal with dissolve
+    s "That's everything from me." 
+    s "And [first_name]... I wish you luck."
 
-    # show sakura normal with dissolve
-    # s "That's everything from me." 
-    # s "And [first_name]... I wish you luck."
+    hide sakura normal with dissolve
+    hide kaori normal with dissolve
+    "Sakura turns and walks into the school. Kaori follows after her, but pauses and glances back at me."
 
-    # hide sakura normal with dissolve
-    # hide kaori normal with dissolve
-    # "Sakura turns and walks into the school. Kaori follows after her, but pauses and glances back at me."
+    show kaori happy with dissolve
+    k "Just wait and see, [first_name]. I'll prove I had nothing to do with it, haha."
+    hide kaori happy with dissolve
 
-    # show kaori happy with dissolve
-    # k "Just wait and see, [first_name]. I'll prove I had nothing to do with it, haha."
-    # hide kaori happy with dissolve
+    "Kaori is different from others. Even though her life may be on the line, she wears a pure smile, as if none of this frightens her at all."
+    "Sakura though, seems anxious. Her eyes are full of sadness, even when she tries to hide that."
 
-    # "Kaori is different from others. Even though her life may be on the line, she wears a pure smile, as if none of this frightens her at all."
-    # "Sakura though, seems anxious. Her eyes are full of sadness, even when she tries to hide that."
+    scene classroom_day at blur_bg 
+    with fade
 
-    # scene classroom_day at blur_bg 
-    # with fade
-
-    # "I walk into the classroom, and every student’s gaze is fixed on me. Well... it’s different from what usually happens."
-    # "I make my way to my desk, and just like Sakura mentioned, the report case is already there."
+    "I walk into the classroom, and every student’s gaze is fixed on me. Well... it’s different from what usually happens."
+    "I make my way to my desk, and just like Sakura mentioned, the report case is already there."
 
     jump test
 
@@ -794,15 +853,16 @@ label sakura_dialogue:
                 s "That’s not..."
                 u "It was also confirmed by the school’s camera footage."
                 s "..."
+                show sakura panick with dissolve
                 "Her expression changes drastically."
                 u "Why would you lie Sakura? Were you involved?"
                 s "I thought no one saw us that night... so, I decided to hide it."
                 s "I thought..."
                 u "Why? Did you kill him, Sakura?"
-                show sakura sad with dissolve
                 s "No, I didn’t... I didn’t...!"
                 "Her voice trembles. Her hands begin to shake."
-                s "Sniff, sniff"
+                show sakura sad with dissolve
+                s "sniff, sniff"
                 s "Please... you have to believe me. We just talked... then he went his way."
                 s "I left a few minutes later. I had nothing to do with it."
                 s "You have to believe me."
