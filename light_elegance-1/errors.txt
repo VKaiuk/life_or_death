@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 208: end of line expected.
-    "None of you":No, I understand. That’s how this works.
-                  ^
+File "game/script.rpy", line 1470: expected ':' not found.
+    label ending
+                 ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Tue May  5 15:15:19 2026
+Thu May  7 16:14:52 2026
