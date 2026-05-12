@@ -17,19 +17,26 @@ screen confirm(message, yes_action, no_action=None):
 
     add "#0008" # You can replace this with your own overlay image
 
+    add "gui/confirm_bg.png"
+
     frame:
         has vbox
-
-        label "Attention" text_font gui.name_text_font text_size 70 xalign 0.5
-
-        label _(message) style "confirm_prompt"
+        xsize 650
+        label _(message) style "confirm_prompt" text_size 55
 
         hbox:
 
-            textbutton _("Confirm") action yes_action
-            # Modified so you can just have a confirmation prompt
-            if no_action is not None:
-                textbutton _("Cancel") action no_action
+            button:
+                xysize(199,56)
+                background "gui/confirm_button.png"
+                text "Confirm" align(0.5, 0.5) idle_color '#3b3738' hover_color '#ffffff'
+                action yes_action
+            
+            button:
+                xysize(199,56)
+                background "gui/confirm_button.png" 
+                text "Cancel" align(0.5, 0.5) idle_color '#3b3738' hover_color '#ffffff'
+                action no_action
 
     ## Right-click and escape answer "no".
     if no_action is not None:
@@ -38,11 +45,10 @@ screen confirm(message, yes_action, no_action=None):
         key "game_menu" action yes_action
 
 style confirm_frame:
-    background Frame("gui/frame.png", 118, 180, 114, 138)
-    padding (70, 85, 70, 110)
+    background None
+    padding (60, 60, 60, 60)
     xalign 0.5
     yalign 0.5
-    xsize 900
 
 style confirm_vbox:
     align (0.5, 0.5)
@@ -51,77 +57,24 @@ style confirm_vbox:
 style confirm_prompt:
     xalign 0.5
 
+style confirm_label_text:
+    size 90
+
 style confirm_prompt_text:
     textalign 0.5
     align (0.5, 0.5)
     layout "subtitle"
-    color mid_accent
-    size 41
-    line_spacing -10
 
 style confirm_hbox:
     xalign 0.5
-    spacing 150
+    spacing 100
 
 style confirm_button:
     xalign 0.5
-    background "gui/confirm_bg.png"
-    xysize(249, 74)
 
 style confirm_button_text:
     textalign 0.5
-    align(0.5, 0.5)
-    idle_color light_accent
-    hover_color mid_accent
-    size 35
 
-
-####Sync frame styles
-
-style sync_frame:
-    background Frame("gui/sync_bg.png", 118, 180, 114, 138)
-    padding (70, 0, 70, 200)
-
-    #ysize 450
-    xalign 0.5
-    yalign 0.5
-    xsize 900
-
-style sync_vbox:
-    align (0.5, 0.5)
-    spacing 45
-
-style sync_label_text:
-    xalign 0.5
-    size 70
-
-style sync_input:
-    color mid_accent
-    size 35
-
-style sync_text:
-    textalign 0.5
-    align (0.5, 0.5)
-    layout "subtitle"
-    color mid_accent
-    size 41
-    line_spacing -10
-
-style sync_hbox:
-    xalign 0.5
-    spacing 150
-
-style sync_button:
-    xalign 0.5 yoffset -20
-    background "gui/confirm_bg.png"
-    xysize(249, 74)
-
-style sync_button_text:
-    textalign 0.5
-    align(0.5, 0.5)
-    idle_color light_accent
-    hover_color mid_accent
-    size 35
 
 
 ## Skip indicator screen #######################################################
@@ -135,15 +88,15 @@ screen skip_indicator():
 
     zorder 100
     style_prefix "skip"
+    text ""
+    #frame:
+    #    has hbox
 
-    frame:
-        has hbox
+    #    text _("Skipping")
 
-        text _("Skipping")
-
-        text "▸" at delayed_blink(0.0, 1.0) style "skip_triangle"
-        text "▸" at delayed_blink(0.2, 1.0) style "skip_triangle"
-        text "▸" at delayed_blink(0.4, 1.0) style "skip_triangle"
+    #    text "▸" at delayed_blink(0.0, 1.0) style "skip_triangle"
+    #    text "▸" at delayed_blink(0.2, 1.0) style "skip_triangle"
+    #    text "▸" at delayed_blink(0.4, 1.0) style "skip_triangle"
 
 
 ## This transform is used to blink the arrows one after another.
@@ -165,20 +118,17 @@ style skip_hbox:
 style skip_frame:
     is empty
     ypos 15
-    xpos -20
-    background Frame("gui/skip.png", 24, 40, 100, 40, tile=False)
-    padding (50, 25, 75, 25)
+    background Frame("gui/skip.png", 24, 8, 75, 8, tile=False)
+    padding (24, 8, 75, 8)
 
 style skip_text:
-    size 30
-    color mid_accent
+    size 24
 
 style skip_triangle:
     is skip_text
     ## We have to use a font that has the BLACK RIGHT-POINTING SMALL TRIANGLE
     ## glyph in it.
     font "DejaVuSans.ttf"
-    yoffset 5
 
 ## Notify screen ###############################################################
 ##
@@ -208,14 +158,14 @@ transform notify_appear:
 
 style notify_frame:
     is empty
-    ypos 100
-    xoffset -20
+    ypos 68
+    xoffset -70
 
-    background Frame("gui/notify.png", 20, 43, 45, 40)
-    padding (50, 25, 60, 25)
+    background Frame("gui/button/choice_hover_background.png", 24, 25, 60, 25, tile=False)
+    padding (100, 25, 60, 25)
 
 style notify_text:
-    size 35
+    size 24
 
 
 

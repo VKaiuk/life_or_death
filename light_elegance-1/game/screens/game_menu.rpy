@@ -11,63 +11,89 @@
 
 screen game_menu(title):
 
-    if main_menu:
-        add "main_menu_image"
-
     style_prefix "game_menu"
 
-    add "gui/game_menu/game_menu.png" align(0.5, 0.5) yoffset 50
+    add "gui/game_menu/bg.png"
 
-    frame:
-        background Frame("gui/game_menu/nav_bg.png", 80, 0, 80, 0) ysize 79 left_padding 60 right_padding 100
-        pos(118, 75)
+    vbox:
+        xpos 128 yalign 0.5 yoffset 160
+        spacing -45
 
-        hbox:
-            
+        style_prefix "nav"
+
+        button:
+            add "gui/icons/save.png" at button_fade
             if not main_menu:
-                textbutton "Save" action ShowMenu("save")
+                action ShowMenu("save")
             else:
-                textbutton "Load" action ShowMenu("load")
-            frame style "framediv" ### a vertical line to act as divider
-            textbutton "Options" action ShowMenu("preferences")
-            frame style "framediv"
-            textbutton "History" action ShowMenu("history")
-            frame style "framediv"
-            # textbutton "Gallery" action ShowMenu("gallery")
-            # frame style "framediv"
-            textbutton "About" action ShowMenu("about")
-            frame style "framediv"
-            textbutton "Help" action ShowMenu("help")
-            frame style "framediv"
-            textbutton "Quit" action Quit()
+                action ShowMenu("load")
+            sensitive True
+            at wiggle_heavy
 
-            ###you may add additional menus here
+        button:
+            add "gui/icons/options_big.png" at button_fade
+            action ShowMenu("preferences")
+            at wiggle_heavy
+
+        button:
+            add "gui/icons/history.png" at button_fade
+            action ShowMenu("history")
+            at wiggle_heavy
 
 
-    
-    ###return button
+        button:
+            add "gui/icons/gallery.png" at button_fade
+            action ShowMenu("gallery")
+            at wiggle_heavy
 
-    textbutton "Return" action Return():
-        ysize 99 
-        text_yoffset -2 text_idle_color light_accent text_hover_color dark_accent
-        background Frame("gui/namebox.png", 40, 0, 40, 0, tile=False, xalign=0.5)
-        padding (100, 5, 100, 5)
+        button:
+            add "gui/icons/quit.png" at button_fade
+            action Quit()
+            at wiggle_heavy
 
-        xalign 0.5 ypos 987
 
-style game_menu_hbox:
-    yalign 0.5 spacing 15
-style framediv:
-    xysize(2, 47)
-    background Solid("#ededed33")
-    yalign 0.5
-style game_menu_button:
-    background None
-    hover_background Frame("gui/game_menu/nav_select.png", 20, 20, 20, 20) 
-    selected_background Frame("gui/game_menu/nav_select.png", 20, 20, 20, 20) 
-    padding(10,0)
-    yalign 0.5
-style game_menu_button_text:
-    size 44
-    color light_accent
+        ###there's space for one or two extra buttons, if needed
+        ###just copy paste one of the previous ones and change as needed
+            
+            
 
+    textbutton _("Return"):
+        style "return_button"
+        text_idle_color u"#fcd3e1" text_hover_color u"#ffffff"
+        text_align(0.5, 0.5) text_xoffset -30
+        text_font "gui/font/MotleyForcesRegular.ttf" text_size 45
+
+        at return_slide
+        action Return()
+
+    ## Remove this line if you don't want to show the screen
+    ## title text as a label (for example, if it's baked into
+    ## the background image.)
+    label title
+
+    if main_menu:
+        key "game_menu" action ShowMenu("main_menu")
+
+
+style nav_button:
+    xysize(146,146)
+    anchor(0.5, 0.5)
+    background "gui/game_menu/btn_bg.png"
+style return_button:
+    xpos 1606 ypos 859 
+    background "gui/game_menu/ret_btn.png" xysize(386,85)
+
+style game_menu_viewport:
+    xysize(1204, 598) pos(369,337)
+
+#style game_menu_side:
+#    yfill True
+#    align (1.0, 0.5)
+
+style game_menu_vscrollbar:
+    unscrollable "hide"
+
+style game_menu_label:
+    padding (10, 10)
+style game_menu_label_text:
+    size 45

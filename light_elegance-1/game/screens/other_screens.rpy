@@ -16,39 +16,31 @@ EasyRenPyGui is made by {a=https://github.com/shawna-p}Feniks{/a} {a=https://fen
 
 screen about():
 
-    tag menu
-
-
-    use game_menu(_("About"))
-
     viewport:
-        style_prefix 'game_menu'
-        mousewheel True draggable True pagekeys True
+        style_prefix 'vport'
+        mousewheel True draggable True pagekeys True xysize(1250, 598) pos(369,337)
         scrollbars "vertical"
-        align(0.5, 0.5)
 
         has vbox
         style_prefix "about"
 
         label "[config.name!t]"
-        text _("Version [config.version!t]\n") xalign 0.5
+        text _("Version [config.version!t]\n")
 
         if gui.about:
-            text "[gui.about!t]\n"
+            text "[gui.about!t]\n" line_spacing -10
 
         text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 
 style about_label_text:
-    size 90
-    font gui.name_text_font
-    outlines [ (1, "#2b262609", 0, 0),  (2, "#00000007", 0, 0), (3, "#00000010", 0, 0), (4, "#00000007", 0, 0), (2, mid_accent, 0, 0) ]
+    size 70
 style about_label:
     xalign 0.5
-style about_vbox:
-    xfill True
 style about_text:
-    outlines [ (1, "#2b262609", 0, 0),  (2, "#00000007", 0, 0), (3, "#00000010", 0, 0), (4, "#00000007", 0, 0) ]
+    xalign 0.5
+    color u"#3b3738"
+    text_align 0.5
 
 
 ## Help screen #################################################################
@@ -59,42 +51,87 @@ style about_text:
 
 screen help():
 
-    tag menu
 
     default device = "keyboard"
-
-    use game_menu(_("Help"))
-
-    frame:
-        style_prefix "page"
-        xalign 0.5 left_padding 100 right_padding 100 yoffset 50
-        hbox:
-            yoffset -1
-            textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
-            frame style "framediv" ysize 30 ###simple little divider. Style defined in game_menu.rpy
-            textbutton _("Mouse") action SetScreenVariable("device", "mouse")
-            frame style "framediv" ysize 30
-            if GamepadExists():
-                textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
-
-    viewport:
-        #style_prefix 'game_menu'
-        mousewheel True draggable True pagekeys True
-        scrollbars "vertical"
-        align(0.5, 0.5) yoffset 100 xysize(1345, 508)
-
-        has vbox
+    
+    hbox:
         style_prefix "help"
-        spacing 23
+        align(0.5, 0.5) spacing 80 yoffset 110
+        frame:
+            padding(50,40,50,85)
+            xysize(484,642)
+            background "gui/about/info_bg.png"
+            viewport:
+                scrollbars "vertical" draggable True mousewheel True 
+                vbox:
+                    spacing 20
+                    style_prefix "lh"
+                    use keyboard_help
 
-       
+        frame:
+            padding(50,40,50,70)
+            xysize(484,642)
+            background "gui/about/info_bg.png"
+            viewport:
+                scrollbars "vertical" draggable True mousewheel True 
+                vbox:
+                    spacing 20
+                    style_prefix "lh"
+                    use mouse_help
+        
 
-        if device == "keyboard":
-            use keyboard_help
-        elif device == "mouse":
-            use mouse_help
-        elif device == "gamepad":
-            use gamepad_help
+style lh_vbox:
+    spacing 5
+style lh_text:
+    justify True
+    size 28
+    xsize 350
+    xalign 0.5
+    text_align 0.5
+
+style lh_button:
+    xalign 0.5 xoffset 7
+style lh_button_text:
+    idle_color u"#fcd3e1"
+    hover_color u"#ffffff"
+    size 35
+
+style help_vbox:
+    xalign 0.5
+    xoffset 10
+    spacing 10
+
+style lh_vbox:
+    xalign 0.5
+    xoffset 10
+    spacing 0
+
+style lh_label:
+    xalign 0.5
+
+style lh_label_text:
+    color u"#fcd3e1"
+    text_align 0.5
+style help_vscrollbar:
+    xoffset 10
+
+
+screen wop:
+    viewport:
+        vbox:
+            xalign 0.5 xsize 600
+            #style_prefix "help"
+            hbox:
+
+                textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
+                textbutton _("Mouse") action SetScreenVariable("device", "mouse")
+
+
+
+            if device == "keyboard":
+                use keyboard_help
+            elif device == "mouse":
+                use mouse_help
 
 
 screen keyboard_help():
@@ -150,6 +187,40 @@ screen keyboard_help():
 
 screen mouse_help():
 
+    if GamepadExists():
+
+        vbox:
+            label _("Right Trigger\nA/Bottom Button")
+            text _("Advances dialogue and activates the interface.")
+
+        vbox:
+            label _("Left Trigger\nLeft Shoulder")
+            text _("Rolls back to earlier dialogue.")
+
+        vbox:
+            label _("Right Shoulder")
+            text _("Rolls forward to later dialogue.")
+
+
+        vbox:
+            label _("D-Pad, Sticks")
+            text _("Navigate the interface.")
+
+        vbox:
+            label _("Start, Guide, B/Right Button")
+            text _("Accesses the game menu.")
+
+        vbox:
+            label _("Y/Top Button")
+            text _("Hides the user interface.")
+
+        vbox:
+            spacing 5
+            text "•" color u"#fcd3e1"
+            textbutton _("Calibrate") action GamepadCalibrate()
+            text "•" color u"#fcd3e1"
+
+
     vbox:
         label _("Left Click")
         text _("Advances dialogue and activates the interface.")
@@ -163,62 +234,11 @@ screen mouse_help():
         text _("Accesses the game menu.")
 
     vbox:
-        label _("Mouse Wheel Up / Click Rollback Side")
+        label _("Mouse Wheel Up\nClick Rollback Side")
         text _("Rolls back to earlier dialogue.")
 
     vbox:
         label _("Mouse Wheel Down")
         text _("Rolls forward to later dialogue.")
 
-
-screen gamepad_help():
-
-    vbox:
-        label _("Right Trigger / A/Bottom Button")
-        text _("Advances dialogue and activates the interface.")
-
-    vbox:
-        label _("Left Trigger / Left Shoulder")
-        text _("Rolls back to earlier dialogue.")
-
-    vbox:
-        label _("Right Shoulder")
-        text _("Rolls forward to later dialogue.")
-
-
-    vbox:
-        label _("D-Pad, Sticks")
-        text _("Navigate the interface.")
-
-    vbox:
-        label _("Start, Guide, B/Right Button")
-        text _("Accesses the game menu.")
-
-    vbox:
-        label _("Y/Top Button")
-        text _("Hides the user interface.")
-
-    textbutton _("Calibrate") action GamepadCalibrate() xalign 0.5 padding(100, 35)  xoffset 10
-
-
-
-style help_label:
-    xalign 0.5
-
-style help_label_text:
-    xalign 0.5
-    textalign 0.5
-    font gui.name_text_font
-    size 47
-    outlines [ (1, "#2b262609", 0, 0),  (2, "#00000007", 0, 0), (3, "#00000010", 0, 0), (4, "#00000007", 0, 0), (2, mid_accent, 0, 0) ]
-
-style help_text:
-    xalign 0.5
-    textalign 0.5
-    outlines [ (1, "#2b262609", 0, 0),  (2, "#00000007", 0, 0), (3, "#00000010", 0, 0), (4, "#00000007", 0, 0) ]
-
-style help_vbox:
-    xfill True
-    xalign 0.5
-
-
+    

@@ -23,22 +23,15 @@ define config.check_conflicting_properties = True
 ## any instances where they are used directly with their value.
 
 # The text font for dialogue and choice menus
-define gui.text_font = "fonts/Nunito-VariableFont_wght.ttf"
+define gui.text_font = gui.preference("font", "gui/font/FranxurterTotallyMedium-gxwjp.ttf")
 # The text font for buttons
-define gui.interface_text_font = gui.preference("interface_font", "fonts/Jost-Light.ttf")
+define gui.interface_text_font = gui.preference("interface_font", "gui/font/FranxurterTotallyMedium-gxwjp.ttf")
 # The default size of in-game text
-define gui.text_size = gui.preference("size", 35)
+define gui.text_size = gui.preference("size", 33)
 # The font for character names
-define gui.name_text_font = gui.preference("interface_font", "fonts/Jost-Light.ttf")
+define gui.name_text_font = gui.preference("name_font", "gui/font/FranxurterTotallyMedium-gxwjp.ttf")
 # The size for character names
-define gui.name_text_size = gui.preference("name_size", 40)
-
-
-###Colors
-
-define light_accent = u"#EDEDED"
-define dark_accent = u"#323F5F"
-define mid_accent = u"#836F4A"
+define gui.name_text_size = gui.preference("name_size", 45)
 
 ## Localization ################################################################
 
@@ -69,7 +62,7 @@ style input:
 
 style hyperlink_text:
     hover_underline True
-    color mid_accent
+    color "#f93c3e"
 
 style gui_text:
     color '#ffffff'
@@ -78,57 +71,65 @@ style gui_text:
 
 style button:
     xysize (None, None)
-    background Frame("gui/button_bg.png", 45, 49, 45, 49, tile=False)
-    padding (48, 27, 48, 30)
+    padding (0, 0)
 
 style button_text:
     is gui_text
     yalign 0.5
     xalign 0.0
-    
-
-    idle_color light_accent 
-    hover_color dark_accent
-    selected_color light_accent
-    insensitive_color u"#9999"
+    ## The color used for a text button when it is neither selected nor hovered.
+    idle_color '#3b3738'
+    ## The color that is used for buttons and bars that are hovered.
+    hover_color '#ffffff'
+    ## The color used for a text button when it is selected but not focused. A
+    ## button is selected if it is the current screen or preference value.
+    selected_color '#ffffff'
+    ## The color used for a text button when it cannot be selected.
+    insensitive_color '#8888887f'
 
 style label_text:
     is gui_text
     size 36
-    color light_accent
+    color  "#3b3738"
 
 
 style bar:
-    ysize 33
-    base_bar Frame("gui/options/slider.png", 20, 6, 20, 6, tile=False)
-    thumb "gui/options/slider_thumb.png"
+    ysize 38
+    left_bar Frame("gui/bar/left.png", 6, 6, 6, 6, tile=False)
+    right_bar Frame("gui/bar/right.png", 6, 6, 6, 6, tile=False)
 
 style vbar:
-    xsize 33
-    base_bar Frame("gui/options/vslider.png", 20, 6, 20, 6, tile=False)
-    thumb "gui/options/slider_thumb.png"
+    xsize 38
+    top_bar Frame("gui/bar/top.png", 6, 6, 6, 6, tile=False)
+    bottom_bar Frame("gui/bar/bottom.png", 6, 6, 6, 6, tile=False)
 
 style scrollbar:
-    ysize 37
-    base_bar None
-    thumb Frame("gui/hscrollbar.png", 0, 30, 0, 30, tile=False)
+    ysize 18
+    base_bar Frame("gui/scrollbar/horizontal_[prefix_]bar.png", 6, 6, 6, 6, tile=False)
+    thumb Frame("gui/scrollbar/horizontal_[prefix_]thumb.png", 6, 6, 6, 6, tile=False)
     unscrollable 'hide'
 
 style vscrollbar:
-    xsize 37
-    base_bar None
-    thumb Frame("gui/scrollbar.png", 0, 30, 0, 30, tile=False)
+    xsize 18
+    base_bar Frame("gui/scrollbar/vertical.png", 0, 20, 0, 20, tile=False)
+    thumb Frame("gui/scrollbar/vertical_thumb.png", 0, 15, 0, 15, tile=False)
     unscrollable 'hide'
+    thumb_offset 15
+    top_gutter 15 bottom_gutter 15
 
 style slider:
-    ysize 33
-    base_bar Frame("gui/options/slider.png", 20, 6, 20, 6, tile=False)
-    thumb "gui/options/slider_thumb.png"
+    ysize 75
+    left_bar Frame("gui/slider/horizontal_hover_bar.png", 35, 0, 35, 0, tile=False)
+    right_bar Frame("gui/slider/horizontal_idle_bar.png", 35, 0, 35, 0, tile=False)
+    thumb "gui/slider/horizontal_[prefix_]thumb.png"
+    thumb_offset 30.5
+    left_gutter 35
+    right_gutter 35
 
 style vslider:
-    xsize 33
-    base_bar Frame("gui/options/vslider.png", 20, 6, 20, 6, tile=False)
-    thumb "gui/options/slider_thumb.png"
+    xsize 38
+    base_bar Frame("gui/slider/vertical_[prefix_]bar.png", 6, 6, 6, 6, tile=False)
+    thumb "gui/slider/vertical_[prefix_]thumb.png"
 
 
 style frame:

@@ -14,13 +14,13 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("life_or_death")
+define config.name = _("black_pink_gui")
 
 ## A short name for the game used for executables and directories in the built
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "life_or_death"
+define build.name = "black_pink_gui"
 
 ## Save directory ##############################################################
 ##
@@ -37,12 +37,12 @@ define build.name = "life_or_death"
 ## literal string, not an expression.
 
 ## Note: a typical save_directory value looks like "FreshProject-1671818013"
-define config.save_directory = "life_or_death-1755006950"
+define config.save_directory = "black_pink_gui-1723136120"
 
 
 ## The version of the game.
 
-define config.version = "Ver. 1"
+define config.version = "1.0"
 
 
 ## Sounds and music ############################################################
@@ -149,22 +149,15 @@ define config.default_music_volume = 0.5
 define config.default_sfx_volume = 0.5
 define config.default_voice_volume = 0.5
 
-
-###Default text speed
-define  config.default_text_cps = 90
-
 ## Optional; this reverts the behaviour of the volume sliders back to pre-8.1,
 ## so muting the game shows the volume sliders all at 0
 # define config.preserve_volume_when_muted = False
 
 ## The number of auto save slots Ren'Py will save to before it starts
 ## overwriting the first one
-define config.autosave_slots = 4
+define config.autosave_slots = 6
 ## Same thing, but for quick save
 define config.quicksave_slots = 6
-
-###Turn off quicksave
-define config.has_quicksave = False
 
 ## Build configuration #########################################################
 ##

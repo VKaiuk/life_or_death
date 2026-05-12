@@ -9,17 +9,12 @@
 
 
 ## The width and height of thumbnails used by the save slots.
-define config.thumbnail_width = 392
-define config.thumbnail_height = 212
-
-
-
-
+define config.thumbnail_width = 330
+define config.thumbnail_height = 168
 screen save():
 
     tag menu
 
-    #add HBox(Transform("#292835", xsize=350), "#21212db2") # The background; can be whatever
 
     use file_slots(_("Save"))
 
@@ -28,11 +23,16 @@ screen load():
 
     tag menu
 
-    #add HBox(Transform("#292835", xsize=350), "#21212db2") # The background; can be whatever
 
     use file_slots(_("Load"))
 
 
+
+style page_button_text:
+    size 45
+    text_align 0.5
+    xalign 0.5
+    xsize 20
 screen file_slots(title):
 
     default page_name_value = FilePageNameInputValue(
@@ -42,226 +42,170 @@ screen file_slots(title):
     use game_menu(title)
 
 
-
-    grid 2 2:
-        align(0.5, 0.5) xspacing 50 yspacing 25  yoffset 60
-        transpose True
-        for i in range(4):
-            $ slot = i + 1
-
-            hbox:
-                style_prefix "slot"
-
-                ##The 3rd and 4th slot should have the save/load/delete buttons on the other side so we reverse the order the hbox is filled in in those cases
-                if slot >= 3:
-                    box_reverse True
-
-                vbox:
-
-
-                    ####Save Button
-                    ###Not needed in main menu so we hide it
-                    if not main_menu:
-                        button:
-                            add "gui/button/ic_save_load.png": 
-                                align(0.5, 0.5) yoffset 3  xoffset 1
-                                
-                                ###the image is black and transparent so here we color it
-                                matrixcolor ColorizeMatrix(mid_accent, mid_accent)
-                                at button_fade ### make it slightly transparent when idle
-                
-                            action FileSave(slot) style "contbutton"
-
-
-                    ###Load Button
-                    button:
-                        add "gui/button/ic_save_load.png": 
-                            align(0.5, 0.5) yoffset -3 xoffset 1 yzoom -1
-                            
-                            ###the image is black and transparent so here we color it
-                            matrixcolor ColorizeMatrix(mid_accent, mid_accent)
-                            at button_fade
-                            
-                        action FileLoad(slot) style "contbutton"
-                        
-
-
-                    ###Delete button
-                    button:
-                        add "gui/button/ic_delete.png": 
-                            align(0.5, 0.5) yoffset 0 xoffset 0 
-                            
-                            ###the image is black and transparent so here we color it
-                            matrixcolor ColorizeMatrix(mid_accent, mid_accent)
-                            at button_fade
-                            
-                        action FileDelete(slot) style "contbutton"
-                        
-
-
-
-                ###The Screenshot + Date part of the save slot
-                button:
-                    text "Empty Slot" align(0.5, 0.5) color mid_accent size 45
-                    add AlphaMask(FileScreenshot(slot), "gui/button/save_mask.png") align(0.5, 0.5) yoffset -7
-                    add "gui/button/save_border.png" align(0.5, 0.5) yoffset -7
-
-    
-                    action NullAction()
-
-                    text FileTime(slot,
-                            format=_("{#file_time}%B %d %Y, %H:%M"),
-                            empty=_("")):
-                                style "slot_time_text"
-
-
-    
-
-    ####page navigation
-
-    frame:
+    ####Page buttons
+    vbox:
         style_prefix "page"
+        align(1.0, 0.5) offset(-150, 35) spacing 10
 
-        hbox:
-            textbutton _("➤") action FilePagePrevious() text_font "DejaVuSans.ttf" text_size 30 yoffset -1 at flip ###no ➤ symbol the other way so we're just transforming it
 
-            if config.has_autosave:
-                textbutton _("{#auto_page}A") action FilePage("auto")
+        ###page arrow
+        button:
+            xysize(34,31) xalign 0.5
+            add "gui/button/page_btn.png":
+                fit "contain"
+                xysize(34,31)
+
+            action FilePagePrevious()
+            at button_fade
+
+
+
+        if config.has_autosave:
+            textbutton _("{#auto_page}A") action FilePage("auto") at page_wiggle_heavy
+
+            if config.has_quicksave:
+                textbutton _("{#quick_page}Q") action FilePage("quick") at page_wiggle_heavy
 
             ## range(1, 10) gives the numbers from 1 to 9.
-            for page in range(1, 10):
-                textbutton "[page]" action FilePage(page)
-
-            textbutton _("➤") action FilePageNext() text_font "DejaVuSans.ttf" text_size 30 yoffset -1
+            for page in range(1, 6):
+                textbutton "{size=15} {/size}[page]" action FilePage(page) at page_wiggle_heavy
 
 
-    
-    ###Sync buttons
-
-    hbox:
-        pos(1210, 213)
+        ###page arrow
         button:
-            background "gui/button/cloud_bg.png" xysize(119,90)
-            add "gui/button/cloud_up.png" align(0.5, 0.5) matrixcolor ColorizeMatrix(light_accent,light_accent) yoffset 1 at button_fade
-            action UploadSync()
+            xysize(34,31) xalign 0.5 
+            add "gui/button/page_btn.png":
+                fit "contain"
+                xysize(34,31)
+                yzoom -1.0
+            action FilePageNext()
+            at button_fade
 
-
-        button:
-            background "gui/button/cloud_bg.png" xysize(119,90)
-            add "gui/button/cloud_down.png" align(0.5, 0.5) matrixcolor ColorizeMatrix(light_accent,light_accent) yoffset 1 at button_fade
-            action DownloadSync()
-
-
-transform flip():
-    xzoom -1
-
-transform button_fade():
-    alpha .5
-    on idle:
-        alpha 0.5
-    on hover:
-        alpha 1.0
-    on selected:
-        alpha .5
-style page_frame:
-    background Frame("gui/button/page_bg.png", 60, 0, 60, 0)
-    ysize 116 padding(60, 34)
-    pos(442, 200)
-style page_button:
-    background None padding(0,0)
-    yalign 0.5 
-style page_button_text:
-    size 34
-    idle_color light_accent
-    hover_color dark_accent
-    selected_color dark_accent
-style page_hbox:
-    spacing 15
-    
-
-
-
-style slot_time_text:
-    align(0.5, 1.0) yoffset 60
-    outlines [ (1, "#2b262609", 0, 0),  (2, "#00000007", 0, 0), (3, "#00000010", 0, 0), (4, "#00000007", 0, 0) ]
-
-    #fixed:
-        #xsize 1500 xalign 1.0
+    fixed:
+        xysize(1250, 598) pos(369,337)
         ## This ensures the input will get the enter event before any of the
         ## buttons do.
-    #    order_reverse True
+        order_reverse True
 
         ## The page name, which can be edited by clicking on it.
         ## This can be pretty easily removed if you want.
         ## Don't forget to also remove the `default` at the top if so.
-    #    button:
-    #        style "page_label"
-    #        key_events True
-    #        action page_name_value.Toggle()
+        button:
+            style "page_label"
+            key_events True
+            action page_name_value.Toggle()
 
-    #        input:
-    #            style "page_label_text"
-    #            value page_name_value
+            input:
+                style "page_label_text"
+                value page_name_value
 
         ## The grid of file slots.
-    #    grid 3 2:
-    #        style_prefix "slot"
+        grid 2 2:
+            style_prefix "slot"
+            yspacing 40 xspacing 50
 
-    #        for i in range(3*2):
-    #            $ slot = i + 1
+            for i in range(2*2):
+                $ slot = i + 1
 
-    #            button:
-    #                action FileAction(slot)
-    #                has vbox
+                button:
+                    xysize(522,254)
+                    background "gui/button/save_bg.png"
+                    hbox:
+                        yalign 0.5 xoffset 35 spacing 15
 
-    #                add FileScreenshot(slot) xalign 0.5
+                        button:
+                            yalign 0.5 xysize(315,182)
+                            add "gui/button/thumbnail_bg.png"
+                            add AlphaMask(FileScreenshot(slot), "gui/button/mask.png")
 
-                    ## https://www.fabriziomusacchio.com/blog/2021-08-15-strftime_Cheat_Sheet/
-    #                text FileTime(slot,
-    #                        format=_("{#file_time}%A, %B %d %Y, %H:%M"),
-    #                        empty=_("empty slot")):
-    #                    style "slot_time_text"
+                            add "gui/button/mask.png" at slot_hover
+                            text FileTime(slot,
+                            format=_("{#file_time}%A, %B %d %Y, %H:%M"),
+                            empty=_("empty slot")):
+                                style "slot_time_text"
+                                at slot_hover_text
+                            
+                            action NullAction() ## this is only here to make the hover animation work
+                            key "save_delete" action FileDelete(slot)
 
-    #                text FileSaveName(slot) style "slot_name_text"
+                        vbox:
+                            spacing -20
+                            button:
+                                xysize(89,94)
+                                background "gui/button/save_btn.png"
+                                add "gui/icons/save_small.png" at button_fade
+                                action FileSave(slot)
+                                at wiggle_heavy
+                            button:
+                                xysize(89,94)
+                                background "gui/button/save_btn.png"
+                                add "gui/icons/load.png" at button_fade
+                                action FileLoad(slot)
+                                at wiggle_heavy
+                        # This means the player can hover this save
+                        # slot and hit delete to delete it
+                    
 
-                    # This means the player can hover this save
-                    # slot and hit delete to delete it
-    #                key "save_delete" action FileDelete(slot)
 
-        ## Buttons to access other pages.
-    #    vbox:
-    #        style_prefix "page"
-    #        hbox:
-    #            textbutton _("<") action FilePagePrevious()
 
-    #           if config.has_autosave:
-    #                textbutton _("{#auto_page}A") action FilePage("auto")
 
-    #            if config.has_quicksave:
-    #                textbutton _("{#quick_page}Q") action FilePage("quick")
 
-                ## range(1, 10) gives the numbers from 1 to 9.
-    #            for page in range(1, 10):
-    #                textbutton "[page]" action FilePage(page)
 
-    #            textbutton _(">") action FilePageNext()
+    hbox:
+        pos(480,986) spacing 15
+        button:
+            xysize(291,59)
+            background "gui/button/sync_btn.png"
+            text "Upload Sync" align(0.5, 0.5) at button_fade
+            action UploadSync()
 
-    #        if config.has_sync:
-    #            if CurrentScreenName() == "save":
-    #                textbutton _("Upload Sync"):
-    #                    action UploadSync()
-    #            else:
-    #                textbutton _("Download Sync"):
-    #                    action DownloadSync()
+        button:
+            xysize(291,59)
+            background "gui/button/sync_btn.png"
+            text "Download Sync" align(0.5, 0.5)  at button_fade
+            action DownloadSync()
+    
+    add "gui/button/save_dec.png"
+
+
+style page_label:
+    xpadding 75
+    ypadding 5
+    xalign 0.0
+    yoffset -35 xoffset 10
+
+style page_label_text:
+    textalign 0.0
+    size 45
+    layout "subtitle"
+    #hover_color '#ff8335'
+
+style page_button_text:
+    color u'#3b3738'
+
+style slot_grid:
+    xalign 0.5
+    yalign 0.5
+    spacing 15
+
+style slot_time_text:
+    size 25
+    xalign 0.5
+    align(0.5, 0.5)
+    text_align 0.5
+    xsize 150
 
 style slot_vbox:
-    yalign 0.5
-    spacing 10
-style slot_button:
-    background "gui/button/save.png"
-    xysize(465,282)
+    spacing 12
 
-style contbutton:
-    background "gui/button/save_btn.png"
-    xysize(63, 63)
+    #background "gui/button/slot_[prefix_]background.png"
+
+style slot_button_text:
+    size 21
+    xalign 0.5
+    idle_color '#aaaaaa'
+    hover_color '#ff8335'
+    selected_idle_color '#ffffff'
+
+
 

@@ -7,45 +7,38 @@
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
+transform choice_delay(t=0):
+    subpixel True
+    xoffset -100 xanchor 0.0 alpha 0.0
+    t * 0.10
+    linear 0.3 xoffset 0 alpha 1.0
+
 screen choice(items):
     style_prefix "choice"
 
     vbox:
-        at menu_appear
+        $ idx = -1
         for i in items:
-            textbutton i.caption action i.action
+            $ idx = idx + 1
+            textbutton i.caption action i.action at choice_delay(t = idx)
 
 
-
-transform menu_appear():
-    subpixel True
-    alpha 0.0
-
-    on show:
-        linear .3 alpha 1
 style choice_vbox:
     xalign 0.5
-    ypos 430
+    ypos 405
     yanchor 0.5
-    spacing 15
+    spacing 33
 
 style choice_button:
     is default # This means it doesn't use the usual button styling
-    xysize (1280, None)
-    idle_background Frame("gui/button/menu_idle.png",
-        150, 50, 150, 50, tile=False)
-    hover_background Frame("gui/button/menu_hover.png",
-        150, 50, 150, 50, tile=False)
-
-    idle_foreground Transform("gui/button/dot_idle.png",yalign=0.5, xalign=0.5, yoffset=-7)
-    hover_foreground Transform("gui/button/dot_hover.png",yalign=0.5, xalign=0.5, yoffset=-7)
-    padding (100, 30)
+    xysize (926, None)
+    background Frame("gui/button/choice_[prefix_]background.png",
+        150, 25, 150, 25, tile=False)
+    padding (42, 22)
 
 style choice_button_text:
     is default # This means it doesn't use the usual button text styling
-    xalign 0.5 yalign 0.5 yoffset -7 size 35
-    idle_color mid_accent
-    hover_color dark_accent
+    xalign 0.5 yalign 0.5
+    idle_color "#fcd3e1"
+    hover_color "#fff"
     insensitive_color "#444"
-    textalign 0.5
-    line_spacing -10

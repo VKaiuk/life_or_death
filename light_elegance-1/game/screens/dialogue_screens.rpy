@@ -20,7 +20,6 @@ screen say(who, what):
 
         if who is not None:
 
-            
             window:
                 id "namebox"
                 style "namebox"
@@ -39,22 +38,16 @@ init python:
 # Style for the dialogue window
 style window:
     xalign 0.5
-    yalign 1.08 yoffset -50
-    xysize (1150, 277)
+    yalign 1.0
+    yoffset -25
+    xysize (1131, 277)
     padding (40, 10, 40, 40)
     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
 
 # Style for the dialogue
 style say_dialogue:
     adjust_spacing False
-    ypos 35
-    justify True
-    line_spacing -3
-    textshader "dissolve"
-    textalign 0.5
-    xalign 0.5
-    ###lot of outlines to create a shadow/glow effect
-    outlines [ (1, "#2b262609", 0, 0),  (2, "#00000007", 0, 0), (3, "#00000010", 0, 0), (4, "#00000007", 0, 0) ]
+    ypos 55
 
 # The style for dialogue said by the narrator
 style say_thought:
@@ -62,20 +55,19 @@ style say_thought:
 
 # Style for the box containing the speaker's name
 style namebox:
-    xalign 0.5 ypos -65
-    xysize (None, 99)
-    background Frame("gui/namebox.png", 40, 0, 40, 0, tile=False, xalign=0.5)
-    padding (80, 5, 80, 5)
+    xalign 0.5 #xoffset 40
+    yoffset -30
+    xysize (None, 81)
+    background Frame("gui/namebox.png", 40, 20, 40, 20, tile=False, xalign=0.5)
+    padding (40, 15, 40, 15)
 
 # Style for the text with the speaker's name
 style say_label:
-    color light_accent
+    color '#fcd3e1'
     xalign 0.5
-    yalign 0.5 yoffset -1
+    yalign 0.5
     size gui.name_text_size
     font gui.name_text_font
-    ###lot of outlines to create a shadow/glow effect
-    outlines [ (1, "#2b262609", 0, 0),  (2, "#00000007", 0, 0), (3, "#00000010", 0, 0), (4, "#00000007", 0, 0), (5, "#00000007", 0, 0), (6, "#00000007", 0, 0) ]
 
 
 ## Quick Menu screen ###########################################################
@@ -88,42 +80,45 @@ screen quick_menu():
     ## Ensure this appears on top of other screens.
     zorder 100
 
-    if quick_menu and not renpy.get_screen("input") and not renpy.get_screen("nvl"):
 
-        frame:
-            ysize 35
-            yalign 1.06 xalign 1.0 xoffset -333 yoffset -87 
-            background Frame("gui/qm_bg.png", 46, 0, 90, 0)
-            left_padding 50 right_padding 50
-            hbox:
-                style_prefix "quick"
-
-                textbutton _("Back") action Rollback()
-                text "•" ###simple dot symbol as a divider
-                textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-                text "•"
-                textbutton _("Auto") action Preference("auto-forward", "toggle")
-                text "•"
-                textbutton _("Save") action ShowMenu('save')
-                text "•"
-                textbutton _("Options") action ShowMenu('preferences')
-
-    ###alternative quic menu for the NVL mode
-    if quick_menu and renpy.get_screen("nvl"):
+    if quick_menu:
 
         hbox:
-            style_prefix "nvlquick"
-            
-            textbutton _("Back") action Rollback()
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Menu") action ShowMenu('save')
-            frame:
-                background Solid(light_accent) xysize(220, 2) yalign 0.5 yoffset 2
+            style_prefix "quick"
 
-        add "gui/nvl_border.png" align(0.5, 1.0)
+            button: 
+                add "gui/qm/auto.png" xzoom -1 xoffset -2 at button_fade
+                action Rollback()
+            button:
+                add "gui/qm/skip.png" at button_fade
+                action Skip() alternate Skip(fast=True, confirm=True)
+            button: 
+                add "gui/qm/auto.png" at button_fade
+                action Preference("auto-forward", "toggle")
+
+        
+
+        mousearea:
+            area (1570, 0, 350, 1.0)
+            hovered Show("side_menu")
+            unhovered Hide("side_menu")
 
 
+
+screen side_menu():
+
+    add "gui/qm/side_bg.png" xalign 1.0 at side_float
+    add "gui/qm/menu_bg.png" xalign 1.0 offset (-50, 50) at side_float
+
+    vbox:
+        at side_float
+        style_prefix "side"
+        textbutton "Quick Save" action QuickSave()
+        textbutton "Quick Load" action QuickLoad()
+        textbutton "Save" action ShowMenu("save")
+        textbutton "Options" action ShowMenu("preferences")
+        textbutton "History" action ShowMenu("history")
+        textbutton "Main Menu" action MainMenu(confirm=True)
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
@@ -132,31 +127,22 @@ init python:
 
 default quick_menu = True
 
-style nvlquick_hbox:
-    pos(730, 167)
+style side_vbox:
+    xalign 1.0 offset(-80, 160)
     spacing 20
-style nvlquick_button:
-    background None padding(0,0)
-style nvlquick_button_text:
-    hover_color mid_accent
-    selected_color mid_accent
-style quick_text:
-    size 20 yalign 0.5 yoffset 20
-    font "DejaVuSans.ttf"
+style side_button:
+    xysize(246,55)
+    background "gui/qm/btn.png"
+style side_button_text:
+    align (0.5,0.5)
 style quick_hbox:
-    xalign 0.5
-    yalign 1.0 yoffset -8
-    spacing -5
+    pos(1242,764)
+    spacing 15
 
 style quick_button:
-    background None
-    padding (15, 6, 15, 0)
-    yalign 0.5 yoffset 15
+    background "gui/qm/small_bg.png"
+    xysize(60,60)
 
-style quick_button_text:
-    size 26
-    selected_color light_accent
-    idle_color light_accent
 
 ## NVL screen ##################################################################
 ##
@@ -171,9 +157,7 @@ screen nvl(dialogue, items=None):
         style "nvl_window"
 
         has vbox
-        xalign 0.5
-        spacing 25
-        xfill True
+        spacing 15
 
         use nvl_dialogue(dialogue)
 
@@ -192,57 +176,55 @@ screen nvl_dialogue(dialogue):
 
     for d in dialogue:
 
-        vbox:
-            spacing 40
-            window:
-                id d.window_id
+        window:
+            id d.window_id
 
-                fixed:
-                    yfit True
+            fixed:
+                yfit True
 
-                    vbox:
-                        xalign 0.5 spacing -30
-                        if d.who is not None:
+                if d.who is not None:
 
-                            text d.who:
-                                id d.who_id
+                    text d.who:
+                        id d.who_id
 
-                        text d.what:
-                            id d.what_id
-
-            frame style "framediv" xysize(200, 2) xalign 0.5 yoffset 20
+                text d.what:
+                    id d.what_id
 
 
 ## This controls the maximum number of NVL-mode entries that can be displayed at
 ## once.
-define config.nvl_list_length = 3
-
+define config.nvl_list_length = 6
 
 # The style for the NVL "textbox"
 style nvl_window:
     is default
     xfill True yfill True
     background "gui/nvl.png"
-    padding (0, 250, 0, 500)
+    padding (0, 15, 0, 30)
 
 # The style for the text of the speaker's name
 style nvl_label:
     is say_label
-    xalign 0.0
-    outlines [ (1, "#2b262609", 0, 0),  (2, "#00000007", 0, 0), (3, "#00000010", 0, 0), (4, "#00000007", 0, 0), (2, mid_accent, 0, 0) ]
+    xpos 645 xanchor 1.0
+    ypos 0 yanchor 0.0
+    xsize 225
+    min_width 225
+    textalign 1.0
+
 # The style for dialogue in NVL
 style nvl_dialogue:
     is say_dialogue
-    xsize 535
-    min_width 535
-    color light_accent
-    size 25
+    xpos 675
+    ypos 12
+    xsize 885
+    min_width 885
 
 # The style for dialogue said by the narrator in NVL
 style nvl_thought:
     is nvl_dialogue
 
 style nvl_button:
+    xpos 675
     xanchor 0.0
 
 

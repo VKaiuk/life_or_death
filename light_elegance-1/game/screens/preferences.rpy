@@ -6,193 +6,244 @@
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
+
 screen preferences():
 
+    default pref_page = "options"
     tag menu
 
     use game_menu(_("Preferences"))
 
+
+    vbox:
+        align(1.0, 0.5) offset(-100, 35) spacing -20
+        add "gui/button/dec.png" xalign 0.5
+        button:
+            xysize(108,107)
+            add "gui/button/cat_bg.png" align(0.5, 0.5)
+            add "gui/icons/options_small.png" at button_fade
+            at wiggle
+            action SetScreenVariable("pref_page", "options")
+        button:
+            xysize(108,107) 
+            add "gui/button/cat_bg.png" align(0.5, 0.5)
+            add "gui/icons/help.png" at button_fade
+            at wiggle
+            action SetScreenVariable("pref_page", "help")
+        button:
+            xysize(108,107)
+            add "gui/button/cat_bg.png" align(0.5, 0.5)
+            add "gui/icons/about.png" at button_fade
+            at wiggle
+            action SetScreenVariable("pref_page", "about")
+        add "gui/button/dec.png" xalign 0.5
+
+    if pref_page == "options":
+        use options
+    elif pref_page == "help":
+        use help
+    else:
+        use about
+
+
+
+
+screen options():
     viewport:
-        style_prefix 'game_menu'
-        mousewheel True draggable True pagekeys True
+        style_prefix 'vport'
+        mousewheel True draggable True pagekeys True xysize(1250, 598) pos(369,337)
         scrollbars "vertical"
-        align(0.5, 0.5)
+        
 
         vbox:
-            xalign 0.5 xfill True spacing -30
+            xsize 1200
+            vbox:
+                style_prefix "radio"
+                label _("Display")
+                button:
+                    xysize(445,75)
+                    add "gui/button/dis_bg.png"
 
-            ###TEXT SPEED BUTTON
-            button:
-                style_prefix "options"
+                    if preferences.fullscreen == True:
+                        text "Fullscreen":
+                            idle_color u"#fcd3e1" hover_color u"#ffffff"
+                            align(0.5, 0.5) size 45 yoffset -2
+                    
+                    else:
+                        text "Windowed":
+                            idle_color u"#fcd3e1" hover_color u"#ffffff"
+                            align(0.5, 0.5) size 45 yoffset -2
+
+                    action CaptureFocus("display_drop")
+
+            vbox:
+                style_prefix "check"
+                label _("Skip")
+
                 hbox:
-                    xfill True yfill True
-                    label "Text Speed"
-                    bar value Preference("text speed"):
-                        yalign 0.5 xsize 554 xalign 1.0 xoffset -30
+                    
+                    textbutton _("Unseen"):
+                        action Preference("skip", "toggle")
+                    textbutton _("After Choices"):
+                        action Preference("after choices", "toggle")
+                    textbutton _("Transitions"):
+                        action InvertSelected(Preference("transitions", "toggle"))
 
-            ###DISPLAY button
-            button:
-                style_prefix "options"
-                hbox:
-                    xfill True yfill True
-                    label "Display"
-                    frame:
-                        style "switch"
 
+            vbox:
+                style_prefix "slider"
+                vbox:
+                    label _("Text Speed")
+                    bar value Preference("text speed")
+
+                vbox:
+                    label _("Auto-Forward Time")
+                    bar value Preference("auto-forward time")
+
+            vbox:
+                style_prefix "slider"
+                if config.has_music:
+                    vbox:
+                        label _("Music Volume")
                         hbox:
-                            style "switch_box"
-                            text "➤" font "DejaVuSans.ttf" at flip:
-                                if preferences.fullscreen == True:
-                                    color u"#999" #### just a visual indicator to show there are options to choose
-                            if preferences.fullscreen == True:
-                                text "Fullscreen" at button_fade
-                            else:
-                                text "Windowed" at button_fade
-                                    
-                            text "➤" font "DejaVuSans.ttf":
-                                if preferences.fullscreen == False:
-                                    color u"#999"
+                            bar value Preference("music volume")
 
-                ####the actual preference button
-                action Preference("display", "toggle")
-
-
-            ###AUDIO SLIDERES
-            button:
-                style_prefix "options"
-                hbox:
-                    xfill True yfill True
-                    label "Music"
-                    bar value Preference("music volume"):
-                        yalign 0.5 xsize 554 xalign 1.0 xoffset -30
-
-            button:
-                style_prefix "options"
-                hbox:
-                    xfill True yfill True
-                    label "Sound"
-                    bar value Preference("sound volume"):
-                        yalign 0.5 xsize 554 xalign 1.0 xoffset -30
-
-
-
-            
-            ####SKIP STUFF
-
-            ###Skip transitions
-            button:
-                style_prefix "options"
-                hbox:
-                    xfill True yfill True
-                    label "Transitions"
-                    frame:
-                        style "switch"
-
+                if config.has_sound:
+                    vbox:
+                        label _("Sound Volume")
                         hbox:
-                            style "switch_box"
-                            text "➤" font "DejaVuSans.ttf" at flip:
-                                if preferences.transitions == 2:
-                                    color u"#999" #### just a visual indicator to show there are options to choose
-                            if preferences.transitions == 2:
-                                text "On" at button_fade
-                            else:
-                                text "Off" at button_fade
-                                    
-                            text "➤" font "DejaVuSans.ttf":
-                                if preferences.transitions == 0:
-                                    color u"#999"
+                            bar value Preference("sound volume")
+                            if config.sample_sound:
+                                textbutton _("Test") action Play("sound", config.sample_sound)
 
-                ####the actual preference button
-                action Preference("transitions", "toggle")
 
-            ###Skip unseen text
-            button:
-                style_prefix "options"
-                hbox:
-                    xfill True yfill True
-                    label "Skip Unseen Text"
-                    frame:
-                        style "switch"
-
+                if config.has_voice:
+                    vbox:
+                        label _("Voice Volume")
                         hbox:
-                            style "switch_box"
-                            text "➤" font "DejaVuSans.ttf" at flip:
-                                if preferences.skip_unseen  == True:
-                                    color u"#999" #### just a visual indicator to show there are options to choose
-                            if preferences.skip_unseen  == True:
-                                text "On" at button_fade
-                            else:
-                                text "Off" at button_fade
-                                    
-                            text "➤" font "DejaVuSans.ttf":
-                                if preferences.skip_unseen  == False:
-                                    color u"#999"
+                            bar value Preference("voice volume")
+                            if config.sample_voice:
+                                textbutton _("Test") action Play("voice", config.sample_voice)
 
-                ####the actual preference button
-                action Preference("skip", "toggle")
-
-            ###Skip after choices
-            button:
-                style_prefix "options"
-                hbox:
-                    xfill True yfill True
-                    label "Skip After Choices"
-                    frame:
-                        style "switch"
-
-                        hbox:
-                            style "switch_box"
-                            text "➤" font "DejaVuSans.ttf" at flip:
-                                if preferences.skip_after_choices  == True:
-                                    color u"#999" #### just a visual indicator to show there are options to choose
-                            if preferences.skip_after_choices  == True:
-                                text "On" at button_fade
-                            else:
-                                text "Off" at button_fade
-                                    
-                            text "➤" font "DejaVuSans.ttf":
-                                if preferences.skip_after_choices  == False:
-                                    color u"#999"
-
-                ####the actual preference button
-                action Preference("after choices", "toggle") 
+                if config.has_music or config.has_sound or config.has_voice:
+                    null height 15
+                    textbutton _("Mute All"):
+                        style_prefix "check"
+                        action Preference("all mute", "toggle")
 
 
-            ###AUTO FORWARD SPEED
-            button:
-                style_prefix "options"
-                hbox:
-                    xfill True yfill True
-                    label "Auto-Forward Speed"
-                    bar value Preference("auto-forward time"):
-                        yalign 0.5 xsize 554 xalign 1.0 xoffset -30
+    if GetFocusRect("display_drop"):
+
+        # If the player clicks outside the frame, dismiss the dropdown.
+        # The ClearFocus action dismisses this dropdown.
+        dismiss action ClearFocus("display_drop")
+
+        # This positions the displayable near (usually under) the button above.
+        nearrect:
+            focus "display_drop"
+
+            style_prefix "dropdown"
+
+            # Finally, this frame contains the choices in the dropdown, with
+            # each using ClearFocus to dismiss the dropdown.
+            frame:
+                background Frame("gui/button/dropdown_bg.png", 10, 0, 10, 50) xsize 445 yoffset -31
+                padding (0, 30, 0, 20)
+                modal True
+
+                has vbox
+
+                frame xysize(300, 1) background Solid(u"#fcd3e154") xalign 0.5
+                textbutton "Fullscreen" action [ Preference("display", "fullscreen"), ClearFocus("display_drop") ]
+                frame xysize(300, 1) background Solid(u"#fcd3e154") xalign 0.5
+                textbutton "Windowed" action [ Preference("display", "window"), ClearFocus("display_drop") ]
+
+### PREF
+style dropdown_vbox:
+    spacing 10
+style dropdown_button:
+    xsize 445
+style dropdown_button_text:
+    xalign 0.5
+    idle_color u"#fcd3e1" hover_color u"#ffffff"
+style pref_label:
+    top_margin 15
+    bottom_margin 3
+
+style pref_label_text:
+    yalign 1.0
+
+style pref_vbox:
+    xsize 338
+    xalign 0.5
+    spacing 30
+
+## RADIO
+style radio_label:
+    is pref_label
+    xalign 0.5
+   
+
+style radio_label_text:
+    is pref_label_text
+    textalign 0.5
+    size 60
+
+style radio_vbox:
+    is pref_vbox
+    spacing 5
+
+style radio_button:
+    xalign 0.0
 
 
-style switch_box:
-    xalign 0.5 spacing 40 yoffset 2
-style switch:
-    background Frame("gui/options/switch_bg.png", 50, 0, 50, 0) xysize(532,70)
-    xalign 1.0 yalign 0.5 yoffset 2
-style game_menu_viewport:
-    xysize(1345, 608)
-    yoffset 40
-style game_menu_vscrollbar:
-    yoffset 40
+## CHECK
+style check_label:
+    is pref_label
+    xalign 0.5
+style check_label_text:
+    is pref_label_text
+    textalign 0.5
+    size 60
 
-style options_button:
-    background "gui/options/frame.png"
-    xysize(1228,182)
-    right_padding 57 left_padding 130
+style check_vbox:
+    is pref_vbox
+    spacing 20
+
+style check_button:
+    xysize(319,71)
+    idle_background "gui/button/check_unselected.png"
+    hover_background "gui/button/check_selected.png"
+    selected_idle_background "gui/button/check_selected.png"
+    selected_hover_background "gui/button/check_selected.png"
+    xalign 0.0
+style check_button_text:
+    size 35
+    align(0.5, 0.5)
+    yoffset -2
+    idle_color u"#fcd3e1" hover_color u"#ffffff"
+style check_hbox:
+    spacing 30
+
+
+## SLIDER
+style slider_label:
+    is pref_label
+    xalign 0.5
+style slider_label_text:
+    is pref_label_text
+    size 60
+
+style slider_slider:
+    xsize 900
     xalign 0.5
 
-style options_label:
+style slider_button:
     yalign 0.5
-style options_label_text:
-    color dark_accent
-    size 44
-style options_text:
-    yalign 0.5 xalign 0.5
-    size 44
+    left_margin 15
 
-#style opslider:
-#    xsize 554
+style slider_vbox:
+    is pref_vbox
+    xsize 675
+    spacing -5
+

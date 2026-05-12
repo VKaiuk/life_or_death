@@ -100,6 +100,7 @@ transform slight_zoom_down:
 
 #region Start
 label start:
+    jump ending
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
@@ -207,6 +208,8 @@ label start:
     k "So if you need anything... talk to me. I’ll always be there for you."
     u "Yeah. Thanks... Kaori."
 
+    scene front_school_day with fade
+    show kaori normal with dissolve
     k "So... who do you think the real culprit is? Between me and Sakura."
     u "I don't think I should answer."
     k "Why? If you tell me now, you can see later whether you had good intuition."
@@ -272,9 +275,6 @@ label start:
             u "I-I don’t know. I’ll have to read the report first."
             s "Hmm..."
 
-
-    # scene front_school_day
-    # scene gate_day at blur_bg
     s "You both seem... happy this morning. Walking to school together and all."
     show kaori normal with dissolve
     show sakura serious with dissolve
@@ -325,13 +325,6 @@ label start:
 
     "Kaori is different from others. Even though her life may be on the line, she wears a pure smile, as if none of this frightens her at all."
     "Sakura though, seems anxious. Her eyes are full of sadness, even when she tries to hide that."
-
-    scene classroom_day at blur_bg 
-    with fade
-
-    "I walk into the classroom, and every student’s gaze is fixed on me. Well... it’s different from what usually happens."
-    "I make my way to my desk, and just like Sakura mentioned, the report case is already there."
-
     jump test
 
     return
@@ -339,8 +332,10 @@ label start:
 
 #region Choice System
 label test:
-    scene classroom_day at blur_bg 
+    scene class
     with fade
+    "I walk into the classroom, and every student’s gaze is fixed on me. Well... it’s different from what usually happens."
+    "I make my way to my desk, and just like Sakura mentioned, the report case is already there."
     # $ talked_kaori = True
     # $ talked_sakura = True
     if not talked_kaori and not talked_sakura:
@@ -514,7 +509,7 @@ label kaori_dialogue:
     scene black with fade
 
     "I go downstairs and step outside to school yard. Kaori is already there, sitting at the bench, staring at a phone. No one else is around."
-    scene yard_day at blur_bg
+    scene yard with fade
     with fade
     u "Hey, Kaori."
     k "..."
@@ -839,8 +834,7 @@ label sakura_dialogue:
     pause 1.0
     scene black with fade
     "I go downstairs and step into the cafeteria. Sakura is already there, sitting at the table, with a book. No one else is around."
-    scene library at blur_bg 
-    with fade
+    scene cafe with fade
 
     u "Hey... Sakura."
     show sakura normal with dissolve
@@ -1107,7 +1101,7 @@ label choice_dialogue:
     pause 1.0 
     scene black with fade
     "I go downstairs and step into the cafeteria. Sakura is already there, sitting at the table, with a book. No one else is around."
-    scene cafeteria_day with fade
+    scene cafe with fade
     pause 0.5 
 
     show sakura normal with dissolve
@@ -1401,7 +1395,7 @@ label choice_dialogue:
     "The sound stops. I take a few seconds to regain my senses. When I look up, no one is standing in front of me."
     u "What the hell?!"
     i "Student with ID #2257. Your time is up. You may no longer speak with the suspects."
-    i "Your final decision must be made in 59 minutes. You know the rules. The side of the roof you choose will determine your final answer."
+    i "Your final decision must be made in 59 minutes. You know the rules. The room you choose will decide who dies."
     u "Hey! You bastards! How was I supposed to figure this out in ten hours?!"
     i "..."
     i "Rules are the rules."
@@ -1438,7 +1432,7 @@ label ending:
         """
 
     pause 1.0
-    scene classroom with fade
+    scene class with fade
 
     label ending_choice:
         $ offensive = True
@@ -1452,14 +1446,19 @@ label ending:
                         "tEXT"
 
                     "Sakura":
+                        i "You have made your decision. Please proceed to Sakura Sato's dorm room."
                         pause 1.0
-                        
-                        i "You have made your decision. Please proceed to the west side of the roof."
-                        "I step out of the classroom and head up the stairs."
+                        scene black with fade
+                        "I step out of the classroom and head toward the women's dorm."
+                        scene building with fade
                         "Before reaching the final door, I wonder if I made the right decision."
-                        "Ugh... It’s not like I can change it now anyway."
-                        "I open the door and see Sakura standing on the edge of the roof."
-                        "Right beside the entrance, I notice a table with a pistol resting on it."
+                        "Will I regret this later? Will I regret it for the rest of my life?"
+                        scene apartment_night with fade
+                        "I open the door to Sakura's room. It's dark inside."
+                        "Near the entrance, I notice a table with a pistol resting on top of it."
+                        scene apartment_day
+                        show sakura panick with dissolve
+                        "I turn on the lights and see Sakura sitting on the sofa, terrified."
                         "The moment our eyes meet, her expression changes drastically." 
                         "Her eyes widen as she understands what my presence means."
                         "I pick up the gun and slowly step closer to her."

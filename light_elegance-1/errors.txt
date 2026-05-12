@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 82: transform statement expects a non-empty block.
-    transform slight_zoom_down:
-                               ^
+File "game/script.rpy", line 511: expected 'simple_expression' not found.
+    scene yard at
+                 ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Tue May 12 14:21:08 2026
+Tue May 12 15:19:36 2026
