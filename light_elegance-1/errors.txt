@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1470: expected ':' not found.
-    label ending
-                 ^
+File "game/script.rpy", line 82: transform statement expects a non-empty block.
+    transform slight_zoom_down:
+                               ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Thu May  7 16:14:52 2026
+Tue May 12 14:21:08 2026
