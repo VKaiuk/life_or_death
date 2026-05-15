@@ -1471,8 +1471,77 @@ label ending:
             "Make a Choice":    
                 menu:
                     "Kaori":
-                        "tEXT"
+                        i "You have made your decision. Please proceed to Kaori Ito's dorm room."
+                        pause 1.0
+                        scene black with fade
+                        "I step out of the classroom and head toward the women's dorm."
+                        scene building with fade
+                        "Before reaching the final door, I wonder if I made the right decision."
+                        "Will I regret this later? Will I regret it for tRhe rest of my life?"
+                        scene kitchen_night with fade
+                        "I open the door to Kaori's apartment. It's dark inside."
+                        "Near the entrance, I notice a table with a pistol resting on top of it."
+                        "A faint light shines from one of the rooms. I pick up the gun."
+                        scene bedroom2:
+                            zoom 1.5
+                        with fade
+                        show kaori normal with dissolve
+                        "I open the bedroom door and see Kaori sitting quietly on the bed."
+                        "As soon as she notices me, she slowly stands up and steps closer."
 
+                        "The same damn smile on her face."
+                        k "So... you came."
+                        u "You're not surprised?"
+                        k "You know who deserves to die and who doesn't."
+                        u "I don't think you deserve to die."
+                        k "And yet you still chose me. Meaning I made mistakes that led you here."
+                        u "Did you really kill Hiro?"
+                        k "..."
+                        k "Does it matter anymore? I'm not leaving this room alive."
+                        i "[first_name] [last_name]..."
+                        "I lift my right hand toward her."
+                        "My fingers tighten around the grip."
+                        "The barrel trembles as it points at her."
+
+                        menu:
+                            "Shoot":
+                                "Text"
+                                jump ending_three
+                            "Don't shoot":
+                                u "No..."
+                                show kaori serious with dissolve
+                                k "[first_name]?"
+                                i "Ugh..."
+                                i "Why are you all so stubborn?"
+                                i "You know the rules."
+                                i "If she lives, then you die."
+                                "Before the sentence is even finished, I notice a red dot near my chest."
+                                k "No! Wait!"
+                                k "D-Don't kill him."
+                                "Kaori lowers her head."
+                                u "Kaori...?"
+                                k "...Kill me."
+                                u "What!?"
+                                show kaori sad with dissolve
+                                "When she raises her head again, tears fill her eyes."
+                                k "I did it. I killed Hiro."
+                                k "I'm the one who deserves to die. Not you!"
+                                k "Please..."
+                                i "Last chance. Decide. Now."
+                                menu:
+                                    "Shoot":
+                                        u "I'm sorry... Kaori."
+                                        k "I love yo-"
+                                        jump ending_three
+                                    "Don't shoot":
+                                        u "No..."
+                                        u "I don't believe you."
+                                        u "And I won't kill you. Not you."
+                                        k "Wait! [first_name]!"
+                                        i "We had high expectations for you."
+                                        i "But... have it your way."
+                                        k "No! Wait!"
+                                        jump ending_x
                     "Sakura":
                         i "You have made your decision. Please proceed to Sakura Sato's dorm room."
                         pause 1.0
@@ -1586,9 +1655,7 @@ label ending:
                                         hide sakura with dissolve
                                         i "We had high expectations for you."
                                         i "But... have it your way."
-                                        jump ending_x
-
-                        
+                                        jump ending_x                      
                     "Return":
                         jump ending_choice
 #endregion
@@ -1810,7 +1877,16 @@ label ending_two:
     scene black with fade
     jump end_credits
 label ending_three:
-    "Text"
+    "Before she can finish her sentence, the bullet strikes her in the chest."
+    "For a moment, she remains standing, as if her body still hasn’t understood what happened."
+    hide kaori with dissolve
+    "Then she stumbles backward and collapses onto the bed, one trembling hand pressing against the wound."
+    k "Nngh..."
+    k "Nngh..."
+    k "..."
+    u "..."
+    u "D-Did she-"
+    i "Kaori Ito is dead."
 label ending_x:
     scene black
     pause 0.5
