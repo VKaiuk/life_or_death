@@ -108,28 +108,28 @@ screen options():
                         hbox:
                             bar value Preference("music volume")
 
-                if config.has_sound:
-                    vbox:
-                        label _("Sound Volume")
-                        hbox:
-                            bar value Preference("sound volume")
-                            if config.sample_sound:
-                                textbutton _("Test") action Play("sound", config.sample_sound)
+                # if config.has_sound:
+                #     vbox:
+                #         label _("Sound Volume")
+                #         hbox:
+                #             bar value Preference("sound volume")
+                #             if config.sample_sound:
+                #                 textbutton _("Test") action Play("sound", config.sample_sound)
 
 
-                if config.has_voice:
-                    vbox:
-                        label _("Voice Volume")
-                        hbox:
-                            bar value Preference("voice volume")
-                            if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
+                # if config.has_voice:
+                #     vbox:
+                #         label _("Voice Volume")
+                #         hbox:
+                #             bar value Preference("voice volume")
+                #             if config.sample_voice:
+                #                 textbutton _("Test") action Play("voice", config.sample_voice)
 
-                if config.has_music or config.has_sound or config.has_voice:
-                    null height 15
-                    textbutton _("Mute All"):
-                        style_prefix "check"
-                        action Preference("all mute", "toggle")
+                # if config.has_music or config.has_sound or config.has_voice:
+                #     null height 15
+                #     textbutton _("Mute All"):
+                #         style_prefix "check"
+                #         action Preference("all mute", "toggle")
 
 
     if GetFocusRect("display_drop"):

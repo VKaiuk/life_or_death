@@ -11,6 +11,7 @@ define s = Character("Sakura")
 define u = Character("[first_name]")
 define i = Character("AI748") 
 define c = Character("Cashier")
+define t = Character("Sakura & Kaori")
 
 image sakura normal = Transform("images/images/Sakura/normal.png", zoom=0.24, ypos=1.05)
 image sakura panick = Transform("images/images/Sakura/panick.png", zoom=0.24, ypos=1.05)
@@ -79,8 +80,8 @@ transform enter_from_right:
 transform exit_to_left:
     linear 0.8 xoffset -1200
 
-transform exit_to_rightt:
-    linear 0.8 xoffset -1200
+transform exit_to_right:
+    linear 0.8 xoffset 1200
 
 transform slight_zoom_up:
     linear 0.25 zoom 1.25 ypos 1.3
@@ -96,6 +97,11 @@ transform walk_bob:
 
 transform slight_zoom_down:
     linear 0.25 zoom 0.95
+
+transform slight_zoom_bounce:
+    linear 0.25 zoom 1.25 ypos 1.3
+    linear 0.25 zoom 1.0 ypos 1.05
+
 # The game starts here.
 
 #region Start
@@ -108,7 +114,7 @@ label start:
     pause 1.5
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    # directory.R
     # jump ending
     "BEEP! BEEP! BEEP!"
     scene bedroom
@@ -288,12 +294,29 @@ label start:
     s "No... I’m not. Why would I be... I haven’t done anything wrong."
 
     "Right... the two of them weren't on good terms. To be honest, I never knew why."
-    u "Let's calm down everyone..."
-    "An awkward silence settles between us. Still, it feels like Sakura came here for a reason."
+    u "Let’s calm down, both of you..."
+    "An awkward silence settles between us."
+    "As we continue walking, I notice how cold it is today. Goosebumps run down my arms."
+    s "What’s wrong, [first_name]? Are you cold?"
+    k "Do you have something to wear?"
+    u "I’m fine. And no, I don’t."
+    u "I lost my hoodie somewhere. I have no idea where."
+    show sakura normal with dissolve
+    show kaori happy with dissolve
+    t "Here. Take mine!"
+    "Sakura and Kaori both hold out their hoodies toward me at the same time."
+    show sakura serious with dissolve
+    show kaori normal with dissolve
+    k "What are you doing?"
+    s "I was about to ask you the same thing."
+    u "Stop it. I’m not taking either of them."
+    u "They’re pink."
+    t "Hmph."
+    "Still, it feels like Sakura came here for a reason."
     u "You wanted to tell us something, Sakura?"
 
     show sakura normal at slight_zoom_up
-    show kaori serious at slight_zoom_down
+    show kaori normal at slight_zoom_down
     s "Mmm... yes, right."
 
     s "You’ve already been informed about the rules, haven’t you?"
@@ -307,19 +330,24 @@ label start:
     s "Oh... and the case report, along with all information found is on your desk."
 
 
-    show sakura normal with dissolve
+    show sakura normal at slight_zoom_bounce
     s "That's everything from me." 
     s "And [first_name]... I wish you luck."
 
-    hide sakura normal with dissolve
+    show sakura normal at exit_to_left, walk_bob
+    pause 0.8
+    hide sakura
 
-    hide kaori normal with dissolve
+    show kaori normal at exit_to_left, walk_bob
+    pause 0.8
+    hide kaori
+    
     "Sakura turns and walks into the school. Kaori follows after her, but pauses and glances back at me."
 
     show kaori happy with dissolve
 
     k "Just wait and see, [first_name]. I'll prove I had nothing to do with it, haha."
-    show kaori happy at exit_to_left, walk_bob
+    show kaori happy at exit_to_right, walk_bob
     pause 0.8
     hide kaori happy
 
@@ -1454,7 +1482,7 @@ label ending:
                         "Before reaching the final door, I wonder if I made the right decision."
                         "Will I regret this later? Will I regret it for the rest of my life?"
                         scene apartment_night with fade
-                        "I open the door to Sakura's room. It's dark inside."
+                        "I open the door to Sakura's apartment. It's dark inside."
                         "Near the entrance, I notice a table with a pistol resting on top of it."
                         scene apartment_day
                         show sakura panick with dissolve
@@ -1465,52 +1493,54 @@ label ending:
 
                         if offensive:
                             show sakura sad with dissolve
-                            s "No. No. No!"
+                            s "No..."
+                            s "No, no, no..."
                             "Tears begin to stream down her face."
-                            s "It wasn't me. It wasn't me!"
-                            s "Why me? It was Kaori, not me."
-                            s "I-I-I... You checked the dorm's cameras?"
-                            u "..."
+                            s "It wasn't me."
+                            s "You know it wasn't me."
+                            s "You checked the dorm cameras, right?"
+                            s "You saw I went back."
+                            u "Sakura, I—"
+                            s "Then why are you here?"
+                            s "Why are you standing there with that gun?"
+                            s "It was Kaori."
+                            u "It wasn't her, Sakura."
                             show sakura panick with dissolve
-                            s "You did, right?"
-                            u "Sakura, I-"
-                            s "Shut up! Shut up! I don't want to die."
-                            s "It... wasn't me. I promise."
-                            s "..."
-                            s "That's right, Kaori planned all of this."
-                            s "You know it wasn’t me, and yet you're here. It’s all because of her."
-                            u "It wasn’t her, Sakura. It was my decision, and mine alone."
-                            s "Then why? You know it wasn't me."
-                            s "Or maybe... you planned this too. Did you want to protect her?"
+                            s "You know I'm innocent, and you're still going to kill me?"
+                            s "Or maybe you knew from the start."
+                            s "Maybe you just needed someone to blame."
                             u "That isn't true."
-                            s "The why did you choose me!?"
+                            s "Then why did you choose me!?"
                         elif normal:
                             show sakura sad with dissolve
-                            s "No. No. No!"
+                            s "No..."
+                            s "No, please..."
                             "Tears begin to stream down her face."
-                            s "It wasn't me. It wasn't me!"
-                            s "Why me? It was Kaori, not me."
-                            s "I-I-I... You checked the dorm's cameras?"
-                            u "..."
-                            s "You did, right?"
-                            u "Sakura, I-"
-                            s "Shut up! Shut up! I don't want to die."
-                            s "It... wasn't me. I promise."
-                            s "..."
+                            s "It wasn't me."
+                            s "You said you believed me."
+                            s "You checked the dorm cameras, right?"
+                            s "You know I went back."
+                            u "Sakura, I—"
+                            s "Then why are you here? Why are you holding that?s"
+                            s "It was Kaori."
+                            u "It wasn't her, Sakura."
+                            s "You told me you loved me."
+                            s "Was that a lie too?"
+                            u "No. I meant it."
+                            s "Then why?"
+                            s "Why am I the one you're choosing?"
+                            u "Sakura, that's not—"
                             show sakura panick with dissolve
-                            s "That's right, Kaori planned all of this."
-                            s "You know it wasn’t me, and yet you're here. It’s all because of her."
-                            u "It wasn’t her, Sakura. It was my decision, and mine alone."
-                            s "Then why? You told me you love me."
-                            u "And I meant it."
-                            s "Maybe... maybe I’m not the one you truly love. Maybe it’s Kaori."
-                            u "Sakura, that's not-"
-                            s "Then why did you choose me!"
-                            s "Or maybe... you together planned all of this. You wanted to protect her."
+                            s "Maybe I was wrong."
+                            s "Maybe I was never the one you wanted to save."
                             u "That isn't true."
+                            s "Then lower the gun."
+                            
 
                         i "[first_name] [last_name]..."
-                        "I lift my right hand toward her. It trembles slightly."
+                        "I lift my right hand toward her."
+                        "My fingers tighten around the grip."
+                        "The barrel trembles as it points at her."
                         menu:
                             "Shoot":
                                 u "I'm sorry... Sakura."
@@ -1522,7 +1552,6 @@ label ending:
                                 show sakura sad with dissolve
                                 u "It wasn't her. I believe her. I won't shoot."
                                 s "Thank you, [first_name]. Thank you."
-                                hide sakura panick with dissolve
                                 i "Ugh..."
                                 i "Why are you all so stubborn?"
                                 i "Well... you know the rules."
@@ -1543,8 +1572,8 @@ label ending:
                                 i "But you still have a choice."
                                 i "You can die knowing nothing."
                                 i "Or you can kill her."
-                                i "And learn the truth, knowing there’s still a chance she might be innocent."
                                 show sakura panick with dissolve
+                                i "And learn the truth, knowing there’s still a chance she might be innocent."
                                 i "Choose."
                                 menu:
                                     "Shoot":
@@ -1567,15 +1596,18 @@ label ending:
 #region Endings
 label ending_one:
     hide sakura with vpunch
-    "Before she can finish her sentence, the bullet strikes her in the stomach."
-    "Unable to keep her balance, she falls from the four-story building."
-    "No sound escapes her mouth, as if she dies midair. Only the sound of her body hitting the ground is heard."
+    "Before she can finish her sentence, the bullet strikes her in the chest."
+    "For a moment, she remains standing, as if her body still hasn’t understood what happened."
+    "Then she stumbles backward and collapses onto the sofa, one trembling hand pressing against the wound."
+    s "Nngh..."
+    s "Nngh..."
+    s "..."
     u "..."
     u "D-Did she-"
     i "Sakura Sato is dead."
     i "Congratulations on your first case, [first_name] [last_name]."
-    u "Was it her?"
-    i "Does the truth matters anymore? She's dead."
+    u "W-Was it her?"
+    i "Does the truth matter anymore? She's dead."
     u "..."
     i "You're free to live as you did before."
     u "...Yeah."
@@ -1584,9 +1616,10 @@ label ending_one:
     scene black with fade
     "Meanwhile..."
     pause 0.5
+    scene bedroom2:
+        zoom 1.5
+    with fade
     i "An interesting choice he made."
-    show kaori normal with dissolve
-    k "Interesting indeed."
     i "How do you feel?"
     show kaori serious with dissolve
     k "I'm not sure. I-I didn't want her to die."
@@ -1612,11 +1645,11 @@ label ending_one:
     pause 1.0
     scene black with fade
 
-    "Two days later, the whole school is still talking about what happened."
-    "Naturally, a lot of eyes are on me. Different kinds of eyes."
+    "We meet with Kaori in front of the apartment building."
+    "We walk together in total silence."
 
     pause 0.5
-    scene store_rain with fade
+    scene store_night with fade
 
     show kaori normal with dissolve
     k "...[first_name]"
@@ -1646,14 +1679,18 @@ label ending_one:
     scene black with fade
     jump end_credits
 label ending_two:
-    "I pull the trigger. The bullet strikes her in the stomach."
     hide sakura with dissolve
-    "Unable to keep her balance, she falls from the four-story building."
-    "No sound escapes her mouth, as if she dies midair. Only the sound of her body hitting the ground is heard."
-    u "D-Did she-"
+    "Before she can finish her sentence, the bullet strikes her in the chest."
+    "For a moment, she remains standing, as if her body still hasn’t understood what happened."
+    "Then she stumbles backward and collapses onto the sofa, one trembling hand pressing against the wound."
+    s "Nngh..."
+    s "Nngh..."
+    s "..."
+    u "..."
+    u "D-Did she..."
     i "Sakura Sato is dead."
     i "Congratulations on your first case, [first_name] [last_name]."
-    i "You showed us the determination required in this world. We are pleased."
+    i "You showed us the determination required in this world."
     i "Now-"
     u "Shut up!"
     u "Enough with your nonsense. Just tell me what you're supposed to tell me."
@@ -1691,7 +1728,7 @@ label ending_two:
     i "Maybe... she wanted to protect someone."
     u "W-What do you—"
     i "[first_name] [last_name], you are the one who killed Hiro Tanaka."
-    u "W-What? How... but I don’t remem—"
+    u "W-What? How... but..."
     "No. No. No. It wasn't me."
     "How is that possible? That night, I was..."
     "What was I doing that night?"
@@ -1703,7 +1740,8 @@ label ending_two:
     i "You left the dorm without your hoodie. Somewhere near the bridge, you put on the hoodie you had hidden beforehand."
     i "After Sakura and Hiro’s conversation, you killed Hiro."
     i "Then you hid your hoodie again and returned without it."
-    i "No student would ever conclude that you had killed your best friend."
+    i "No cameras captured your face anywhere between the dorm and the school."
+    i "No student would ever suspect that you had killed your best friend."
     i "But Kaori made a mistake."
     i "She took the hoodie, not knowing you had everything under control."
     i "She showed it at the store."
@@ -1723,26 +1761,31 @@ label ending_two:
     show kaori sad with dissolve
     "I turn around and see Kaori, tears in her eyes."
     k "I wanted to protect you. I didn't want you to die."
-    u "That doesn't mean an innocent person deserved to die!"
+    u "...Kaori?"
+    u "T-That doesn't mean an innocent person deserved to die!"
     i "But you killed Hiro."
-    u "He was not as innocent as he appeared."
-    k "Innocent or not, everyone deserves to live. Everyone deserves a second chance."
+    u "He wasn’t as innocent as he seemed."
+    k "Innocent or not... everyone deserves to live."
+    k "Everyone deserves a second chance."
     u "A second chance...? You killed Sakura just so I could have one?"
-    k "Why did you choose Sakura? Not me?"
-    k "You knew that everything was pointed toward me."
+    k "Why did you choose Sakura instead of me?"
+    k "You knew everything pointed toward me."
     u "I-I just... I don't know."
     u "I didn't want you to die."
     k "Same as me."
-    k "I just wanted you to live. That was all I needed." 
+    k "I just wanted you to live. That was enough for me." 
     u "..."
-    "I fall on my knees. Tears start to drop."
-    u "I-I killed him. I-I killed her."
+    u "How am I supposed to live now? Knowing I killed two people..."
+    u "People I cared about."
+    u "They're gone because of me!"
+    "My legs give out beneath me. Tears begin falling onto the floor."
     k "[first_name]!"
-    "Behind me, Kaori runs toward me. She gently wraps both arms around my body."
+    "Kaori rushes toward me. She gently wraps both around my body from behind."
     "One hand rests near my chest, while the other softly holds my shoulder."
-    "I can't see her face, but her voice is filled with concern and quiet sadness."
+    "I can't see her face, but her voice is filled with concern and sadness."
     k "Don't worry..."
-    k "E-Everything will be okay. I'm here. I'm with you."
+    k "E-Everything will be okay." 
+    k "I'm here. I'm with you."
 
     menu:
         "Take her hand.":
@@ -1754,11 +1797,12 @@ label ending_two:
         "Stand up":
             "I move her arms away and stand up."
             k "[first_name]?"
-            u "I'll go."
+            "I start moving toward an entrance."
             k "Wait. Where are you going?"
             u "I don't know. My room."
             k "...Okay."
             "Her voice sounds small. Almost fragile."
+            hide kaori with dissolve
             "Without looking back at her, I begin walking away."
     
     pause 1.0

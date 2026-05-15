@@ -136,7 +136,7 @@ style side_button:
 style side_button_text:
     align (0.5,0.5)
 style quick_hbox:
-    pos(1242,764)
+    pos(1242, 1000)
     spacing 15
 
 style quick_button:

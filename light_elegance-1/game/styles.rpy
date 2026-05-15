@@ -27,7 +27,7 @@ define gui.text_font = gui.preference("font", "gui/font/FranxurterTotallyMedium-
 # The text font for buttons
 define gui.interface_text_font = gui.preference("interface_font", "gui/font/FranxurterTotallyMedium-gxwjp.ttf")
 # The default size of in-game text
-define gui.text_size = gui.preference("size", 33)
+define gui.text_size = gui.preference("size", 35)
 # The font for character names
 define gui.name_text_font = gui.preference("name_font", "gui/font/FranxurterTotallyMedium-gxwjp.ttf")
 # The size for character names
