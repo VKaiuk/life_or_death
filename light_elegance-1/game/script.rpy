@@ -13,11 +13,11 @@ define i = Character("AI748")
 define c = Character("Cashier")
 define t = Character("Sakura & Kaori")
 
-image sakura normal = Transform("images/images/Sakura/normal.png", zoom=0.24, ypos=1.05)
-image sakura panick = Transform("images/images/Sakura/panick.png", zoom=0.24, ypos=1.05)
-image sakura sad = Transform("images/images/Sakura/sad.png", zoom=0.24, ypos=1.05)
-image sakura blush = Transform("images/images/Sakura/blush.png", zoom=0.24, ypos=1.05)
-image sakura serious = Transform("images/images/Sakura/serious.png", zoom=0.24, ypos=1.05)
+image sakura normal = Transform("images/images/Sakura/normal.png", zoom=0.24, ypos=1.06)
+image sakura panick = Transform("images/images/Sakura/panick.png", zoom=0.24, ypos=1.06)
+image sakura sad = Transform("images/images/Sakura/sad.png", zoom=0.24, ypos=1.06)
+image sakura blush = Transform("images/images/Sakura/blush.png", zoom=0.24, ypos=1.06)
+image sakura serious = Transform("images/images/Sakura/serious.png", zoom=0.24, ypos=1.06)
 
 image kaori normal = Transform("images/images/Kaori/normal.png", zoom=0.24, ypos=1.06)
 image kaori happy = Transform("images/images/Kaori/happy.png", zoom=0.24, ypos=1.06)
@@ -1526,11 +1526,12 @@ label ending:
                                 "When she raises her head again, tears fill her eyes."
                                 k "I did it. I killed Hiro."
                                 k "I'm the one who deserves to die. Not you!"
+                                u "Kaori? Why are you acting this way?"
                                 k "Please..."
                                 i "Last chance. Decide. Now."
                                 menu:
                                     "Shoot":
-                                        u "I'm sorry... Kaori."
+                                        u "I'm sorry..."
                                         k "I love yo-"
                                         jump ending_three
                                     "Don't shoot":
@@ -1887,6 +1888,53 @@ label ending_three:
     u "..."
     u "D-Did she-"
     i "Kaori Ito is dead."
+    i "Congratulations on your first case, [first_name] [last_name]."
+    i "You showed us the determination required in this world."
+    i "You're free to live as you did before."
+    scene class with fade
+    "Two days later, everyone is still talking about it. People look at me differently now."
+    "I sit in class, staring out the window."
+    show sakura normal with dissolve
+    s "[first_name]?"
+    u "Ugh... I'm sorry. I was lost in thought."
+    s "That's okay. I know it's been tough for you."
+    s "Are you ready for the final test?"
+    u "Test? Oh... yes, I'm ready. Are you?"
+    s "I think I am. At the same time, I'm scared."
+    u "Don't worry. You'll manage."
+    s "I hope so. So, after the test..."
+    s "D-Do you want to go see a movie with me?"
+    s "There's a new comedy coming out. I heard it's great."
+    u "Of course. Let's do it."
+    s "Really? I can't wait. Hehe."
+    s "Oh. You finally got the hoodie you ordered."
+    u "Yeah. I-"
+    "When I think about it. Dark blue is the color assigned to boys' hoodies. Light pink is for girls."
+    s "[first_name]? Everything's alright?"
+    "You can't choose the color. You order one, and they give you the color assigned to you."
+    "Meaning it wasn't Kaori's hoodie, but someone else's."
+    u "Yeah, I'm sorry. I have to go to the bathroom."
+    s "Sure."
+    hide sakura with dissolve
+    "I need to find it."
+    "I leave the school and make my way to the women's dorm."
+    scene building_day with fade
+    "Kaori didn't have many friends. Me, Hiro, Sakura... maybe a few other girls."
+    "It definitely wasn't Hiro's. Did she take mine? Is that why I couldn't find it?"
+    scene kitchen_night with fade
+    "I enter an apartment. It's dark inside."
+    scene kitchen_day
+    "I turn on the light and head toward Kaori's room."
+    i "You're not supposed to be here."
+    u "Damn it! I always forget you can do this."
+    i "You're not allowed to enter the women's dorm when it isn't necessary."
+    u "Come on... she's not here anymore."
+    scene bedroom2:
+        zoom 1.5
+    with fade
+    "I enter her room."
+    "Text"
+
 label ending_x:
     scene black
     pause 0.5
