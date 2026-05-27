@@ -145,7 +145,7 @@ define config.allow_underfull_grids = True
 
 ## Default volume % for the various volume sliders https://www.renpy.org/doc/
 ## html/preferences.html#audio-channel-defaults
-define config.default_music_volume = 0.5
+define config.default_music_volume = 1.0
 define config.default_sfx_volume = 0.5
 define config.default_voice_volume = 0.5
 
@@ -158,7 +158,7 @@ define config.default_voice_volume = 0.5
 define config.autosave_slots = 6
 ## Same thing, but for quick save
 define config.quicksave_slots = 6
-
+define config.main_menu_music = "audio/TownTheme.mp3"
 ## Build configuration #########################################################
 ##
 ## This section controls how Ren'Py turns your project into distribution files.

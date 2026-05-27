@@ -106,11 +106,11 @@ transform slight_zoom_bounce:
 
 #region Start
 label start:
-    jump ending
+    # jump ending
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
-    # play music "audio/sybil_system_-_glorytothemachine.mp3" fadein 1.0
+    play music "audio/TownTheme.mp3" volume 1.5 fadein 1.0
     pause 1.5
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -360,6 +360,8 @@ label start:
 
 #region Choice System
 label test:
+    stop music fadeout 1.0
+    play music "audio/steppingStones.mp3" fadein 1.0
     scene class
     with fade
     "I walk into the classroom, and every student’s gaze is fixed on me. Well... it’s different from what usually happens."
@@ -785,7 +787,9 @@ label kaori_dialogue:
                     u "N-No... I don’t."
                     k "Then I’ll go."
                     "She gets up and rapidly leaves the place."
-                    hide kaori with dissolve
+                    show kaori blush at exit_to_left, walk_bob
+                    pause 0.8
+                    hide kaori
                 else:
                     u "I wanted to ask about Sakura. You two don’t get along very well. Why?"
                     show kaori normal with dissolve
@@ -849,7 +853,9 @@ label kaori_dialogue:
                     u "N-No... I don’t."
                     k "Then I’ll go."
                     "She gets up and rapidly leaves the place."
-                    hide kaori with dissolve
+                    show kaori blush at exit_to_left, walk_bob
+                    pause 0.8
+                    hide kaori
                 $ asked_q2 = True
                 jump kaori_questions
 #endregion
@@ -897,7 +903,10 @@ label sakura_dialogue:
         if asked_qq1 and asked_qq2 and asked_qq3:
             u "That’s all I wanted to ask. You’re free to go."
             "Sakura stands up and leaves the places."
-            hide sakura with dissolve
+            show sakura normal at exit_to_right, walk_bob
+            pause 0.8
+            hide sakura
+
             pause 0.5
 
             if talked_kaori:
@@ -1227,7 +1236,9 @@ label choice_dialogue:
                 s "..."
                 s "...I’ll go. I don't have anything else to say."
                 "She stands up and leaves."
-                hide sakura with dissolve
+                show sakura serious at exit_to_right, walk_bob
+                pause 0.8
+                hide sakura
                 $ offensive = True
             "Be Normal":
                 u "(Whisper) Damn it..."
@@ -1301,7 +1312,9 @@ label choice_dialogue:
                 "She lowers her head and kisses me on the right cheek."
                 s "See you later!"
                 "Then she quickly leaves the room."
-                hide sakura with dissolve
+                show sakura normal at exit_to_right, walk_bob
+                pause 0.8
+                hide sakura
                 $ normal = True
     
     if offensive:
@@ -1423,7 +1436,9 @@ label choice_dialogue:
     k "For putting you in this position."
 
     u "Kaori! What's that supposed to mean?"
-    hide kaori frown with dissolve
+    show kaori normal at exit_to_left, walk_bob
+    pause 0.8
+    hide kaori
     "BEEP! BEEP! BEEP! BEEP! BEEP!" with vpunch
     "A loud sound blasts from the school speakers, hurting my ears. I lower my head and cover them, trying to escape the noise."
     "The sound stops. I take a few seconds to regain my senses. When I look up, no one is standing in front of me."
@@ -1439,6 +1454,8 @@ label choice_dialogue:
 
 #region Ending
 label ending:
+    stop music fadeout 1.0
+    play music "audio/ending.mp3" volume 1.5 fadein 1.0
     $ report = """
         {size=+12}{b}Case No. 234{/b}{/size}
         {b}Summary{/b} 
@@ -1465,7 +1482,7 @@ label ending:
         - After leaving the convenience store, she headed back toward the school. Confirmed by store security footage.
         """
 
-    pause 1.0
+    pause 0.5
     scene class with fade
 
     label ending_choice:
@@ -1831,7 +1848,10 @@ label ending_two:
     i "And we found it amusing."
     u "T-Then Sakura... she died for nothing. W-Why did Kaori—"
     k "To protect you."
-    show kaori sad with dissolve
+    show kaori sad at enter_from_left, walk_bob
+    pause 0.8
+    hide kaori
+    show kaori sad
     "I turn around and see Kaori, tears in her eyes."
     k "I wanted to protect you. I didn't want you to die."
     u "...Kaori?"
@@ -1853,6 +1873,7 @@ label ending_two:
     u "They're gone because of me!"
     "My legs give out beneath me. Tears begin falling onto the floor."
     k "[first_name]!"
+    show kaori sad at slight_zoom_up
     "Kaori rushes toward me. She gently wraps both around my body from behind."
     "One hand rests near my chest, while the other softly holds my shoulder."
     "I can't see her face, but her voice is filled with concern and sadness."
@@ -1899,7 +1920,10 @@ label ending_three:
     scene class with fade
     "Two days later, everyone is still talking about it. People look at me differently now."
     "I sit in class, staring out the window."
-    show sakura normal with dissolve
+    show sakura normal at enter_from_right, walk_bob
+    pause 0.8
+    hide sakura
+    show sakura normal
     s "[first_name]?"
     u "Ugh... I'm sorry. I was lost in thought."
     s "That's okay. I know it's been tough for you."
@@ -1923,7 +1947,9 @@ label ending_three:
     "Meaning it wasn't Kaori's hoodie, but someone else's."
     u "Yeah, I'm sorry. I have to go to the bathroom."
     s "Sure."
-    hide sakura with dissolve
+    show sakura normal at exit_to_left, walk_bob
+    pause 0.8
+    hide sakura
     "I need to find it."
     "I leave the school and make my way to the women's dorm."
     scene building_day with fade
@@ -1963,13 +1989,13 @@ label ending_three:
     k "I saw his death. He was strangled and thrown into the river."
     k "It was [first_name] [last_name]."
     i "[first_name] [last_name]?"
-    k "Like I said, he strangled Hiro. Then he took off his hoodie and left."
+    k "He killed Hiro Tanaka. He strangled him. Then he took off his hoodie and left."
     i "That shouldn't be possible. We checked the dorm cameras. He did left that evening, but he returned around 9 PM."
     k "I don't know. But I made a mistake. I took the hoodie and brought it to the store."
     k "Because I panicked...I showed you the only evidence that existed."
     k "..."
     i "Then why are you here?"
-    k "I visited him the this morning. He cried when I told him that Hiro died."
+    k "I visited him this morning. He cried when I told him that Hiro died."
     k "Those tears were genuine. I know when he lies. That wasn't a lie."
     k "He forgot. He forgot everything. Like that night never happened."
     k "Nobody would ever suspect him, and I made things worse."
@@ -1981,8 +2007,10 @@ label ending_three:
     k "Make him choose. Between me and someone else. You already have enough evidence to make me a suspect."
     i "..."
     k "As for the second suspect... "
-    k "I think Sakura Sato fits for this position."
-    k "She's the reason Hiro was killed after all."
+    k "I think Sakura Sato fits perfectly."
+    k "[first_name] knew Hiro threatened Sakura. He knew what Hiro was doing at this school."
+    k "That's why he killed him. To punish him..."
+    k "So..."
     k "Make him choose between the person he loves..."
     k "...and his childhood friend."
     i "..."
