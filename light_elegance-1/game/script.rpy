@@ -110,7 +110,9 @@ label start:
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
-    play music "audio/TownTheme.mp3" volume 1.5 fadein 1.0
+    # play music "audio/TownTheme.mp3" volume 1.5 fadein 1.0
+    stop music fadeout 1.0
+    play music "audio/steppingStones.mp3" fadein 1.0
     pause 1.5
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -287,7 +289,7 @@ label start:
     s "You only met him because of today's situation, right Kaori? You two never walk together."
 
     show kaori serious with dissolve
-    k "N-No, that's not true"
+    k "N-No, that's not true."
     k "We're childhood friends. I don't think it's strange for friends to walk to school together."
 
     k "What about you? Are you scared he’s going to choose you today? Is that why you came out looking for him?"
@@ -353,6 +355,12 @@ label start:
 
     "Kaori is different from others. Even though her life may be on the line, she wears a pure smile, as if none of this frightens her at all."
     "Sakura though, seems anxious. Her eyes are full of sadness, even when she tries to hide that."
+
+    scene class
+    with fade
+    "I walk into the classroom, and every student’s gaze is fixed on me. Well... it’s different from what usually happens."
+    "I make my way to my desk, and just like Sakura mentioned, the report case is already there."
+
     jump test
 
     return
@@ -360,12 +368,7 @@ label start:
 
 #region Choice System
 label test:
-    stop music fadeout 1.0
-    play music "audio/steppingStones.mp3" fadein 1.0
-    scene class
-    with fade
-    "I walk into the classroom, and every student’s gaze is fixed on me. Well... it’s different from what usually happens."
-    "I make my way to my desk, and just like Sakura mentioned, the report case is already there."
+
     # $ talked_kaori = True
     # $ talked_sakura = True
     if not talked_kaori and not talked_sakura:
@@ -551,6 +554,7 @@ label kaori_dialogue:
     show kaori happy with dissolve
     k "[first_name]? Oh- sorry, I didn’t notice you at all."
     u "Yeah... you really need to start to take this serious."
+    "I quietly sit down beside her."
     u "This isn’t exactly a normal situation. Your life’s kind of on the line here."
     show kaori normal with dissolve
     k "I’m sorry..."
@@ -723,8 +727,7 @@ label kaori_dialogue:
                 k "Yeah."
                 u "And you still remember this?"
                 k "Of course I do. It's the day I got my first friend."
-                u "Hah...me too."
-                k "..."
+                u "..."
                 u "Let's get back to questeniong. Shall we?"
                 k "...Yeah."
                 $ asked_q3 = True
@@ -755,7 +758,6 @@ label kaori_dialogue:
                     k "..."
                     u "..."
                     show kaori serious with dissolve
-                    "An awkward silence settles between us."
                     k "I'm sorry, I shouldn't have talked to you like that."
                     u "No, I should be the one apologizing. My mistake for treating your feelings as a joke."
                     k "..."
@@ -801,7 +803,7 @@ label kaori_dialogue:
                     k "I admire her so much that I end up feeling something negative toward her."
                     u "Admire her in what way?"
                     k "People love her, unlike me. She has this... magnet that attracts people."
-                    k "I'm not like her. I’m not capable of that, even if there’s someone I love."
+                    k "I'm not like her. I’m not capable of that, even if there’s someone I have feelings for."
                     u "Kaori..." 
                     u "Are you serious right now? Don’t tell me there’s actually someone you like?"
                     show kaori serious with dissolve
@@ -821,7 +823,6 @@ label kaori_dialogue:
                     k "..."
                     u "..."
                     show kaori serious with dissolve
-                    "An awkward silence settles between us."
                     k "I'm sorry, I shouldn't have talked to you like that."
                     u "No, I should be the one apologizing. My mistake for treating your feelings as a joke."
                     k "..."
@@ -886,6 +887,7 @@ label sakura_dialogue:
         "When I talk to her when no one is around, I feel nervous. I need to calm down."
         
     s "You look kind of nervous... first case?"
+    "I sit down at the table across from her."
     u "Hm... yeah, something like that. "
     "It’s not just that though."
     show sakura serious with dissolve
@@ -1076,8 +1078,8 @@ label riverbank:
 
     scene city with fade
     "The easiest way to do that would be from one of the bridges further along the river. I follow the upstream."
-    "About fifteen minutes later, I spot a familiar bridge. I use it every day on my way to the dorm. Hiro used it too."
-    "A bridge is almost the perfect place to commit a murder. No cameras. Water underneath. A current strong enough to wash away evidence, maybe even fingerprints."
+    "About fifteen minutes later, I spot a familiar footbridge. I use it every day on my way to the dorm. Hiro used it too."
+    "A footbridge is almost the perfect place to commit a murder. No cameras. Water underneath. A current strong enough to wash away evidence, maybe even fingerprints."
     scene store_afternoon with fade
     "And, almost mockingly, there’s a convenience store just fifty meters before the bridge."
     "The same store Kaori said she was going to that night. The same place Sakura mentioned before returning to her dorm."
@@ -1165,7 +1167,7 @@ label choice_dialogue:
     "It seems like I won’t get an information without bringing up what Kaori told me."
     label choice:
         menu:
-            "Be Offensive":
+            "Offensive Tone":
                 u "(Whisper) Damn it… "
                 show sakura serious with dissolve
                 s "I’m sorry?"
@@ -1213,9 +1215,12 @@ label choice_dialogue:
                 s "Hiro didn’t deserve to die?"
                 s "That scumbag?"
                 u "What's that suppo-?"
-                s "It seems you really knew nothing about him after all."
+                s "It seems you really know nothing about him after all."
                 s "That bastard was someone all the girls at this school were afraid of."
-                s "I don’t know how, but he had tons of 'private' images on his phone, which he used to blackmail us."
+                s "I don't know how, but he had countless private photos on his phone."
+                s "He used them to blackmail us."
+                s "And if someone refused to do what he wanted..."
+                s "...he'd threaten to sell them."
                 s "And that night... I was going to be his next target."
                 u "What are you...?"
                 s "The school didn’t help because of their stupid rules."
@@ -1224,6 +1229,7 @@ label choice_dialogue:
                 s "He was your friend. I didn't want to hurt you."
                 s "I decided to deal with it myself. But then… then he died."
                 s "..."
+                s "You know what?"
                 s "I did not do it..."
                 s "I did not kill Hiro, but I wish that I had."
                 s "Hearing about his death gave me more relief than anything else ever has."
@@ -1240,7 +1246,7 @@ label choice_dialogue:
                 pause 0.8
                 hide sakura
                 $ offensive = True
-            "Be Normal":
+            "Normal Tone":
                 u "(Whisper) Damn it..."
                 s "I'm sorry."
                 "I need to calm down. I don’t want to handle this the wrong way."
@@ -1327,11 +1333,13 @@ label choice_dialogue:
         pause 1.0
         scene black with fade
         "I step outside and see Kaori sitting on the bench. She doesn’t look at me, even though she definitely noticed me."
+
         scene yard with fade
 
         pause 0.5
         show kaori happy with dissolve
         u "Kaori..."
+        "I quietly sit down beside her."
         k "Oh... hey, [first_name]. Haven’t seen you in a while, hehe."
         show kaori serious with dissolve
         k "Hm? What happened?"
@@ -1346,7 +1354,7 @@ label choice_dialogue:
         u "I'm fine. Don't worry about me."
         show kaori normal with dissolve
         k "Good. But you can talk to me if something’s wrong. Okay?"
-        u "Talk? You lied to me. Remember?"
+        u "Talk? You lied to me."
         u "I checked the footage you wanted to see. You never went inside the store. Not until twenty minutes later, after you followed Hiro." 
         u "Care to explain?"
     elif normal:
@@ -1364,6 +1372,7 @@ label choice_dialogue:
         pause 0.5
         show kaori happy with dissolve
         u "Kaori..."
+        "I quietly sit down beside her."
         k "Oh... hey, [first_name]. Haven’t seen you in a while, hehe."
         show kaori serious with dissolve
 
@@ -1413,14 +1422,19 @@ label choice_dialogue:
     k "I understand you. I do..." 
     k "After all, he wasn’t always like that. There was a part of you that still hoped he’d change."
     u "Kaori!"
+    show kaori serious with dissolve
     "Kaori flinches slightly."
     u "I have no idea what you're talking about."
     u "Like I said, I didn’t know anything until Sakura told me."
     k "But..."
     u "But what?"
     k "..."
-    k "Never mind. I guess I was mistaken."
-    show kaori serious with dissolve
+    show kaori happy with dissolve
+    k "Hehe..."
+    k "...I guess I made a mistake."
+    u "...Mistake?"
+    show kaori normal with dissolve
+    k "Ahem..."
     k "T-Then I overheard his conversation with Sakura."
     k "And I couldn't hold myself back anymore."
     k "God... you’ve never seen him like that. That vicious smile of his. I’ll never forget it."
@@ -1454,8 +1468,8 @@ label choice_dialogue:
 
 #region Ending
 label ending:
-    stop music fadeout 1.0
-    play music "audio/ending.mp3" volume 1.5 fadein 1.0
+    stop music fadeout 2.0
+    play music "audio/ending.mp3" volume 1.5 fadein 2.0
     $ report = """
         {size=+12}{b}Case No. 234{/b}{/size}
         {b}Summary{/b} 
@@ -2184,7 +2198,7 @@ screen big_text(info):
             scrollbars "vertical"
             mousewheel True
 
-            text info size 28 color "#000000" outlines [(2, "#FFFFFF", 0, 0)]
+            text info size 28 color "#fff"
         hbox:
             xalign 0.98
 
