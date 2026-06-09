@@ -356,10 +356,6 @@ label start:
     "Kaori is different from others. Even though her life may be on the line, she wears a pure smile, as if none of this frightens her at all."
     "Sakura though, seems anxious. Her eyes are full of sadness, even when she tries to hide that."
 
-    scene class
-    with fade
-    "I walk into the classroom, and every student’s gaze is fixed on me. Well... it’s different from what usually happens."
-    "I make my way to my desk, and just like Sakura mentioned, the report case is already there."
 
     jump test
 
@@ -369,126 +365,158 @@ label start:
 #region Choice System
 label test:
 
+    scene class
+    with fade
+    "I walk into the classroom, and every student’s gaze is fixed on me. Well... it’s different from what usually happens."
+    "I make my way to my desk, and just like Sakura mentioned, the report case is already there."
     # $ talked_kaori = True
     # $ talked_sakura = True
     if not talked_kaori and not talked_sakura:
         $ report = """
-        {size=+12}{b}Case No. 234{/b}{/size}
-        {b}Summary{/b} 
-        Victim: Hiro Tanaka
+        {size=+12}Case No. 234{/size}
+        Summary 
+
+        Victim's Full Name: Hiro Tanaka
         Body discovered: 03:40 AM
         Location: Riverbank, Mizunagi Street
-        Cause of death: Evidence of strangulation (marks present on the neck).
         Estimated time of death: Around 11:00 PM 
 
-        {i}*INFORMATION DISCLOSED TO INVESTIGATOR{/i}
+        Body Evidence:
+            1. Skin appears pale and wrinkled.
+            2. Bruising present around the neck.
+            3. Victim's blood found beneath his fingernails.
+
+        {color=#ff0000}{i}*INFORMATION DISCLOSED TO INVESTIGATOR*{/i}{/color}
         
-        {b}Kaori Ito{/b}
+        Kaori Ito
+
         {i}Relationship to victim: Friend / Classmate{/i}
         - Kaori Ito was the last person seen with the victim after school, around 6:00 PM on the day of his death. 
         - She was added to the list of suspects as a secondary person of interest.
 
-        {b}Sakura Sato{/b}
+        Sakura Sato
+
         {i}Relationship to victim: Friend / Classmate{/i}
         - According to the anonymous witness, Sakura was seen speaking with the victim near the school at
-        approximately 10:40PM. The two remained there for some time, though the content of their conversation is 
-        unknown.
+        approximately 10:40PM. The two remained there for some time.
+        - The content of their conversation is unknown.
         - At around 10:50 PM, the victim left the area. Sakura reportedly walked in the same direction a few
         minutes later. 
-        - All events described above were confirmed by the principal using security camera footage.
+
+        {color=#ff0000}All events described above were confirmed by the principal using security camera footage.{/color}
         """
     elif talked_sakura and not talked_kaori:
         $ report = """
-        {size=+12}{b}Case No. 234{/b}{/size}
-        {b}Summary{/b} 
-        Victim: Hiro Tanaka
+        {size=+12}Case No. 234{/size}
+        Summary
+        Victim's Full Name: Hiro Tanaka
         Body discovered: 03:40 AM
         Location: Riverbank, Mizunagi Street
-        Cause of death: Evidence of strangulation (marks present on the neck).
         Estimated time of death: Around 11:00 PM 
 
-        {i}*INFORMATION DISCLOSED TO INVESTIGATOR{/i}
+        Body Evidence:
+            1. Skin appears pale and wrinkled.
+            2. Bruising present around the neck.
+            3. Victim's blood found beneath his fingernails.
+
+        {color=#ff0000}{i}*INFORMATION DISCLOSED TO INVESTIGATOR*{/i}{/color}
         
-        {b}Kaori Ito{/b}
+        Kaori Ito
+
         {i}Relationship to victim: Friend / Classmate{/i}
         - Kaori Ito was the last person seen with the victim after school, around 6:00 PM on the day of his death. 
         - She was added to the list of suspects as a secondary person of interest.
 
-        {b}Sakura Sato{/b}
-        {i}Relationship to victim: {s}Friend / Classmate{/s} {color=#ff0000}More complex than stated.{/color} {/i}
+        Sakura Sato
+
+        {i}Relationship to victim: {color=#ff0000}More complex than stated.{/color} {/i}
         - According to the anonymous witness, Sakura was seen speaking with the victim near the school at
-        approximately 10:40PM. The two remained there for some time, though the content of their conversation is 
-        unknown.
-        {color=#ff0000}- Lied about her whereabouts. Is she scared it could rocket back at her? Or is there something else?{/color}
-        {color=#ff0000}- Content of their conversation still unknown.{/color}
+        approximately 10:40PM. The two remained there for some time.
+        {color=#ff0000}- Lied about her whereabouts.{/color}
+        {color=#ff0000}- The content of their conversation is still unknown.{/color}
         - At around 10:50PM, the victim left the area. Sakura reportedly walked in the same direction a few
         minutes later. 
         {color=#ff0000}- She headed to the convenience store.{/color}
         {color=#ff0000}- Reported seeing a suspicious person wearing a dark-blue hoodie.{/color}
-        {color=#ff0000}- After that, she headed straight to her dorm room.{/color}
-        - All events described above were confirmed by the principal using security camera footage.
+
+        {color=#ff0000}All events described above were confirmed by the principal using security camera footage.{/color}
+        """
+
+    elif talked_kaori and not talked_sakura:
+        $ report = """
+        {size=+12}Case No. 234{/size}
+        Summary 
+
+        Victim's Full Name: Hiro Tanaka
+        Body discovered: 03:40 AM
+        Location: Riverbank, Mizunagi Street
+        Estimated time of death: Around 11:00 PM 
+
+        Body Evidence:
+            1. Skin appears pale and wrinkled.
+            2. Bruising present around the neck.
+            3. Victim's blood found beneath his fingernails.
+
+        {color=#ff0000}{i}*INFORMATION DISCLOSED TO INVESTIGATOR*{/i}{/color}
+        
+        Kaori Ito
+
+        {i}Relationship to victim: Friend / Classmate{/i}
+        {color=#ff0000}- Hiro Tanaka requested to borrow the suspect's flash drive.{/color}
+        {color=#ff0000}- She went to convenience store around 11PM that night, allegedly to buy a charger.{/color}
+        {color=#ff0000}- Kaori reported that she did not see Sakura Sato or Hiro Tanaka that night.{/color}
+
+        Sakura Sato
+
+        {i}Relationship to victim: Friend / Classmate{/i}
+        - According to the anonymous witness, Sakura was seen speaking with the victim near the school at
+        approximately 10:40PM. The two remained there for some time.
+        - The content of their conversation is unknown.
+        - At around 10:50 PM, the victim left the area. Sakura reportedly walked in the same direction a few
+        minutes later. 
+
+        {color=#ff0000}All events described above were confirmed by the principal using security camera footage.{/color}
         """
     elif talked_sakura and talked_kaori and not is_riverbank:
         $ report = """
-        {size=+12}{b}Case No. 234{/b}{/size}
-        {b}Summary{/b} 
-        Victim: Hiro Tanaka
+        {size=+12}Case No. 234{/size}
+        Summary 
+
+        Victim's Full Name: Hiro Tanaka
         Body discovered: 03:40 AM
         Location: Riverbank, Mizunagi Street
-        Cause of death: Evidence of strangulation (marks present on the neck).
         Estimated time of death: Around 11:00 PM 
 
-        {i}*INFORMATION DISCLOSED TO INVESTIGATOR{/i}
+        Body Evidence:
+            1. Skin appears pale and wrinkled.
+            2. Bruising present around the neck.
+            3. Victim's blood found beneath his fingernails.
+
+        {color=#ff0000}{i}*INFORMATION DISCLOSED TO INVESTIGATOR*{/i}{/color}\
         
-        {b}Kaori Ito{/b}
+        Kaori Ito
+
         {i}Relationship to victim: Friend / Classmate{/i}
-        - {s}Kaori Ito was the last person seen with the victim after school, around 6:00 PM on the day of his death.{/s}
-        {color=#ff0000}- She went to convenience store around 11PM that night, allegedly to buy a charger.{/color}
-        - {s}She was added to the list of suspects as a secondary person of interest.{/s}
-        - {color=#ff0000}No longer considered a secondary person of interest.{/color}
+        - Hiro Tanaka requested to borrow the suspect's flash drive.
+        - She went to convenience store around 11PM that night, allegedly to buy a charger.
+        - Kaori reported that she did not see Sakura Sato or Hiro Tanaka that night.
 
 
-        {b}Sakura Sato{/b}
-        {i}Relationship to victim: {s}Friend / Classmate{/s} {color=#ff0000}More complex than stated.{/color} {/i}
+        Sakura Sato
+
+        {i}Relationship to victim: More complex than stated. {/i}
         - According to the anonymous witness, Sakura was seen speaking with the victim near the school at
-        approximately 10PM. The two remained there for some time, though the content of their conversation is 
-        unknown.
-        {color=#ff0000}- Lied about her whereabouts. Is she scared it could rocket back at her? Or is there something else?{/color}
-        {color=#ff0000}- Content of their conversation still unknown.{/color}
-        - At around 10:30 PM, the victim left the area. Sakura reportedly walked in the same direction a few
+        approximately 10:40PM. The two remained there for some time.
+        - Lied about her whereabouts.
+        - The content of their conversation is still unknown.
+        - At around 10:50PM, the victim left the area. Sakura reportedly walked in the same direction a few
         minutes later. 
-        {color=#ff0000}- She headed to the convenience store.{/color}
-        {color=#ff0000}- {s}Reported seeing a suspicious person wearing a dark-blue hoodie.{/s} It was Kaori.{/color}
-        - All events described above were confirmed by the principal using security camera footage.
-
-        {color=#ff0000}{s}They both love me. No. No. Not now.{/s}{/color}
-        """
-
-    elif talked_sakura and talked_kaori and is_riverbank:
-        $ report = """
-        {size=+12}{b}Case No. 234{/b}{/size}
-        {b}Summary{/b} 
-        Victim: Hiro Tanaka
-        Body discovered: 03:40 AM
-        Location: Riverbank, Mizunagi Street
-        Cause of death: Evidence of strangulation (marks present on the neck).
-        Estimated time of death: Around 11:00 PM 
-
-        {i}*INFORMATION DISCLOSED TO INVESTIGATOR{/i}
-        
-        {b}Kaori Ito{/b}
-        {i}Relationship to victim: Friend / Classmate{/i}
-        - She went to the convenience store around 11:00 PM that night, allegedly to buy a charger.
-        - Kaori lied about going into the store. She passed it and followed Hiro instead.
-        - Kaori returned about 20 minutes later, holding her hoodie in her hands. She was sweaty, as if she was running.
-
-        {b}Sakura Sato{/b}
-        {i}Relationship to victim: {s}Friend / Classmate{/s} {color=#ff0000}More complex than stated.{/color}{/i}
-        - According to an anonymous witness, Sakura was seen speaking with the victim near the school at approximately 10:00 PM.
-        - The content of their conversation remains unknown. {color=#ff0000}It might be the key.{/color}
-        - At around 10:30 PM, the victim left the area. Sakura reportedly walked in the same direction a few minutes later.
         - She headed to the convenience store.
-        - After leaving the convenience store, she headed back toward the school. Confirmed by store security footage.
+        - Reported seeing a suspicious person wearing a dark-blue hoodie.
+
+        {color=#ff0000}All events described above were confirmed by the principal using security camera footage.{/color}
+
+        {s}They both love me. No. No. Not now.{/s}
         """
 
     label case:
@@ -500,17 +528,56 @@ label test:
                 "Riverbank":
                     jump riverbank
         elif is_riverbank:
-                menu:
-                    "Report":
-                        call screen big_text(report)
-                        jump case
-                    "Talk to Sakura":
-                        jump choice_dialogue 
-        elif not talked_sakura or not talked_kaori:
+            scene class
+            $ report = """
+                {size=+12}Case No. 234{/size}
+                Summary 
+
+                Victim's Full Name: Hiro Tanaka
+                Body discovered: 03:40 AM
+                Location: Riverbank, Mizunagi Street
+                Estimated time of death: Around 11:00 PM 
+
+                {color=#ff0000}Cause of Death: Strangulation{/color}
+                {color=#ff0000}Location of Death: Footbridge{/color}
+
+                {color=#ff0000}{i}*INFORMATION DISCLOSED TO INVESTIGATOR*{/i}{/color}
+                
+                Kaori Ito
+
+                {i}Relationship to victim: Friend / Classmate{/i}
+                - She went to convenience store around 11PM that night, allegedly to buy a charger.
+                {color=#ff0000}- Kaori didn't enter the store. She continued in the same direction as Hiro.{/color}
+                {color=#ff0000}- Ten minutes later, she returned carrying a dark-blue hoodie.{/color}
+                {color=#ff0000}- She appeared frightened and conflicted when speaking with the store employee.{/color}
+                {color=#ff0000}- Kaori requested access to the store's security footage. Motive unknown.{/color}
+
+
+                Sakura Sato
+
+                {i}Relationship to victim: More complex than stated. {/i}
+                - The content of the conversation is still unknown.
+                - At around 10:50PM, the victim left the area. Sakura reportedly walked in the same direction a few
+                minutes later. 
+                - She headed to the convenience store.
+                {color=#ff0000}- Sakura left the convenience store and proceeded toward the women's dorm. Confirmed by store security footage.{/color}
+                - Reported seeing a suspicious person wearing a dark-blue hoodie. {color=#ff0000}It was Kaori.{/color}
+
+                {color=#ff0000}All events described above were confirmed by the principal using security camera footage.{/color}
+
+                {s}They both love me. No. No. Not now.{/s}
+                """
             menu:
                 "Report":
                     call screen big_text(report)
                     jump case
+                "Talk to Sakura":
+                    jump choice_dialogue 
+
+        elif not talked_sakura or not talked_kaori:
+            menu:
+                "Report":
+                    call screen big_text(report)
                 "Investigate":
                     jump dialogue_scene
     
@@ -1069,11 +1136,17 @@ label riverbank:
     "When I arrive, there’s obviously nothing suspicious left at the scene."
     "Let's think about what I've read in the report."
 
-    call puzzle_start
+    "His body was found here at 3:40AM."
+    "His skin appeared pale and wrinkled."
+    "Considering the amount of water exposure, the body was most likely in the river for quite some time before it was discovered."
+    "Blood was found beneath his fingernails."
+    "That suggests he fought desperately for his life."
+
+    "Let's answer a simple question."
     "Where did Hiro die?"
     call riverbank_thinking
 
-    "That means Hiro was strangled, thrown into the water, and carried to the riverbank."
+    "That means Hiro was strangled."
     "More likely, his body was thrown into the river somewhere upstream, and the current brought it here."
 
     scene city with fade
@@ -1086,7 +1159,7 @@ label riverbank:
 
     "Right before reaching the store, I notice Kaori leaving. She seems in a hurry, looking around as she heads back toward the school."
 
-    "I head inside"
+    "I head inside."
     show cashier with dissolve 
     u "Good afternoon. I have some questions to ask."
     c "Huh? Again? What do you want?"
@@ -1116,7 +1189,7 @@ label riverbank:
 
     if first_sakura:
         "I guess she wasn’t lying. But what about Kaori? She passed the store and followed Hiro."
-        "I scroll through twenty more minutes of footage. Kaori returns to the store, holding the hoodie in her hands. She looks sweaty, like she’s been running."
+        "I scroll through ten more minutes of footage. Kaori returns to the store, holding the hoodie in her hands. She looks sweaty, like she’s been running."
         "She came to the store at 11:05PM. That’s around Hiro’s estimated time of death."
         "I watch her for a few minutes. She paces back and forth, thinking about something."
         "Then she suddenly stopped. Her expression changes."
@@ -1124,7 +1197,7 @@ label riverbank:
         "The fact that Kaori wanted to see the footage almost confirms her involvement."
     elif first_kaori:
         "I guess she wasn’t lying. But what about Kaori? I haven't see her yet. Was she here way before?"
-        "I scroll through twenty more minutes of footage. Kaori returns to the store, holding hoodie in her hands."
+        "I scroll through ten more minutes of footage. Kaori returns to the store, holding hoodie in her hands."
         "So the person wearing the dark blue hoodie was Kaori? She was the one who passed Sakura."
         "She didn’t tell me that. She told me she didn’t see her."
         "I watch her for a few minutes. She paces back and forth, thinking about something."
@@ -1135,9 +1208,9 @@ label riverbank:
     "But why would she kill him? Nothing really comes to mind."
     "Maybe she was there when Sakura talked to Hiro."
     "I need to talk to Sakura. Their conversation might be the key."
-    scene classroom with fade
+    
     $ is_riverbank = True
-    jump test
+    jump case
 #endregion
 
 #region Second Dialogues
@@ -1168,6 +1241,8 @@ label choice_dialogue:
     label choice:
         menu:
             "Offensive Tone":
+                stop music fadeout 2.0
+                play music "audio/ending.mp3" volume 1.5 fadein 2.0
                 u "(Whisper) Damn it… "
                 show sakura serious with dissolve
                 s "I’m sorry?"
@@ -1176,19 +1251,23 @@ label choice_dialogue:
                 u "Look, Sakura. I don't have much time right now. I don't need your lies."
                 show sakura normal with dissolve
                 s "B-But I'm telling the truth. Why would I lie?"
-                u "I'm asking myself the same thing. Why would you?"
+                u "I'm asking myself the same thing."
+                u "Why would you hide the fact that Hiro confessed to you?"
+                u "Were you embarrassed?"
+                u "Because if your life is on the line, embarrassment shouldn't matter."
                 s "I- just ask my friends... right, my friends. I’m sure they’ll confirm it."
                 u "Your friends? What friends?"
                 s "That's... oh, right. Ask Himari. She'll definetely tell you."
-                u "Which Himari are you talking about? The one who talks behind your back the moment she gets the chance?"
+                s "You know I don't have time for that."
+                u "And Himari? Oh... The same Himari who talks behind your back the moment she gets the chance?"
                 s "That's not true. She's not like-"
-                u "Of course she is. The people around you don’t care about you or your feelings."
-                u "You still don't understand it, do you?"
-                u "All they care about is their own future. That’s the kind of school we’re in."
-                u "And the moment you seem useful, they start circling around you."
+                u "Of course she is. That’s the kind of school we’re in."
+                u "You still don't get it, do you?"
+                u "All they care about are themselves."
+                u "And the moment you seem useful, they start clinging to you."
                 show sakura serious with dissolve
                 s "[first_name]? Why are you…"
-                u "Do you even understand what’s happening right now? I’m one break away from deciding who dies." 
+                u "I’m one break away from deciding who dies." 
                 u "I don’t care about you or what you feel toward me."
                 show sakura blush with dissolve
                 s "What's that supposed to mean?"
@@ -1232,7 +1311,6 @@ label choice_dialogue:
                 s "You know what?"
                 s "I did not do it..."
                 s "I did not kill Hiro, but I wish that I had."
-                s "Hearing about his death gave me more relief than anything else ever has."
                 s "He deserved it. Not because of me, but because of all the girls he hurt."
                 s "And you..."
                 s "Ugh... I hope you're acting like this because of today."
@@ -1259,23 +1337,24 @@ label choice_dialogue:
                 u "Because I don't want to make the wrong choice. Not when it comes to you."
                 s "W-When it comes to me?"
                 u "..."
-                u "Hmhm..."
-                s "Everything's alright?"
+                u "Heh..."
+                s "Everything alright?"
                 u "Y-Yeah... I just..."
                 "You can do this. Come on."
-                u "Y-Your kidness. The way you help people without thinking about yourself."
-                u "Your strength. The way you keep smiling... even when you’re hurting."
+                u "I love you, Sakura Sato."
                 show sakura blush with dissolve
-                u "Your smile. The kind that can light a room, not matter how dark it feels."
-                s "[first_name]... W-Why are you saying all of this..."
-                u "Because you matter to me. Not just as a friend, but as something more."
-                s "Does that mean you-"
-                u "Yes... I love you, Sakura Sato."
+                s "Huh?"
+                u "I like your kidness. The way you help people without expecting anything in return."
+                u "Your strength. The way you keep smiling... even when you're hurting."
+                u "Your smile. The kind that can make everything feel a little brighter."
+                s "[first_name]..."
                 s "..."
+                u "S-Sakura? Please... say something."
+                "Was I wrong after all?"
                 s "I-I...."
                 "She lowers her head."
+                s "sniff... sniff..."
                 show sakura sad with dissolve
-                "sniff... sniff..."
                 "She looks up again, her eyes filled with tears."
                 s "I'm so happy..."
                 s "I'm so happy you said that."
@@ -1306,7 +1385,7 @@ label choice_dialogue:
                 u "Why? Why didn't you tell me?"
                 s "I don't know. I didn't want to hurt you. He was your friend."
                 u "..."
-                u "That's okay. And I'm sorry for what he did. I-"
+                u "That's okay. And... I'm sorry for what he did. I-"
                 show sakura normal with dissolve
                 s "Why are you apologizing? You're not him. And it's not like you knew."
                 s "You're different."
@@ -1324,12 +1403,14 @@ label choice_dialogue:
                 $ normal = True
     
     if offensive:
-        "I don't want to believe it. Is it true? Was Hiro really that kind of person?"
+        "I don't want to believe it. Was Hiro really that kind of person?"
         "How did I never notice any of it?"
         "He tried to hurt Sakura, and I did nothing."
-        "I hope the same didn't happen to Kaori. I need to ask her about it."
+        "Did the same thing happened to Kaori. I need to ask her."
         "I sit there for a few more minutes, then leave the cafeteria and head to the school yard to speak with Kaori."
 
+        stop music fadeout 2.0
+        play music "audio/ending.mp3" volume 1.5 fadein 2.0
         pause 1.0
         scene black with fade
         "I step outside and see Kaori sitting on the bench. She doesn’t look at me, even though she definitely noticed me."
@@ -1358,11 +1439,18 @@ label choice_dialogue:
         u "I checked the footage you wanted to see. You never went inside the store. Not until twenty minutes later, after you followed Hiro." 
         u "Care to explain?"
     elif normal:
-        "I don't want to believe it. Is it true? Was Hiro really that kind of person?"
+        "I don't want to believe it. Was Hiro really that kind of person?"
         "How did I never notice any of it?"
         "He tried to hurt Sakura, and I did nothing."
-        "I hope the same didn't happen to Kaori. I need to ask her about it."
+        "Did the same thing happened to Kaori? I need to ask her."
         "I sit there for a few more minutes, then leave the cafeteria and head to the school yard to speak with Kaori."
+        "Wait?"
+        "Did she kiss me?"
+        "..."
+        "She did."
+
+        stop music fadeout 2.0
+        play music "audio/ending.mp3" volume 1.5 fadein 2.0
 
         pause 1.0
         scene black with fade
@@ -1468,32 +1556,27 @@ label choice_dialogue:
 
 #region Ending
 label ending:
-    stop music fadeout 2.0
-    play music "audio/ending.mp3" volume 1.5 fadein 2.0
     $ report = """
-        {size=+12}{b}Case No. 234{/b}{/size}
-        {b}Summary{/b} 
-        Victim: Hiro Tanaka
+        {size=+12}Case No. 234{/size}
+        Summary 
+
+        Victim's Full Name: Hiro Tanaka
         Body discovered: 03:40 AM
         Location: Riverbank, Mizunagi Street
-        Cause of death: Evidence of strangulation (marks present on the neck).
         Estimated time of death: Around 11:00 PM 
 
-        {i}*INFORMATION DISCLOSED TO INVESTIGATOR{/i}
-        
-        {b}Kaori Ito{/b}
-        {i}Relationship to victim: Friend / Classmate{/i}
-        - She went to the convenience store around 11:00 PM that night, allegedly to buy a charger.
-        - Kaori lied about going into the store. She passed it and followed Hiro instead.
-        - Kaori returned about 20 minutes later, holding her hoodie in her hands. She was sweaty, as if she had been running.
+        Cause of Death: Strangulation
+        Location of Death: Footbridge
 
-        {b}Sakura Sato{/b}
-        {i}Relationship to victim: {s}Friend / Classmate{/s} {color=#ff0000}More complex than stated.{/color}{/i}
-        - According to an anonymous witness, Sakura was seen speaking with the victim near the school at approximately 10:00 PM.
-        - The content of their conversation remains unknown. {color=#ff0000}It might be the key.{/color}
-        - At around 10:30 PM, the victim left the area. Sakura reportedly walked in the same direction a few minutes later.
-        - She headed to the convenience store.
-        - After leaving the convenience store, she headed back toward the school. Confirmed by store security footage.
+        {color=#ff0000}{i}*INFORMATION DISCLOSED TO INVESTIGATOR*{/i}{/color}
+
+        Both Sakura and Kaori showed a clear hatred toward Hiro. Both of them had reasons to wish for his death.
+        Kaori was not one of Hiro's victims. Her hatred seemed to stem from the way he treated me and those around him.
+        That alone doesn't feel like enough reason to commit murder.
+        Sakura was one of Hiro's victims. Her hatred came from the harm he caused her and other girls at this school. 
+        She had a far stronger motive.
+        Yet the evidence points toward Kaori. The store's security footage places her near the victim before the estimated time of death.
+        There is still no definitive proof against either suspect. Both could be innocent. Both could be guilty.
         """
 
     pause 0.5
@@ -1508,6 +1591,7 @@ label ending:
             "Make a Choice":    
                 menu:
                     "Kaori":
+                        u "...Kaori"
                         i "You have made your decision. Please proceed to Kaori Ito's dorm room."
                         pause 1.0
                         scene black with fade
@@ -1549,7 +1633,6 @@ label ending:
                                 show kaori serious with dissolve
                                 k "[first_name]?"
                                 i "Ugh..."
-                                i "Why are you all so stubborn?"
                                 i "You know the rules."
                                 i "If she lives, then you die."
                                 "Before the sentence is even finished, I notice a red dot near my chest."
@@ -1581,10 +1664,11 @@ label ending:
                                         k "No! Wait!"
                                         jump ending_x
                     "Sakura":
-                        i "You have made your decision. Please proceed to Sakura Sato's dorm room."
+                        u "...Sakura"
+                        i "You have made your decision. Please proceed to Sakura Sato's dormitory room."
                         pause 1.0
                         scene black with fade
-                        "I step out of the classroom and head toward the women's dorm."
+                        "I step out of the classroom and head toward the women's dormitory."
                         scene building with fade
                         "Before reaching the final door, I wonder if I made the right decision."
                         "Will I regret this later? Will I regret it for the rest of my life?"
@@ -1609,7 +1693,7 @@ label ending:
                             s "You saw I went back."
                             u "Sakura, I—"
                             s "Then why are you here?"
-                            s "Why are you standing there with that gun?"
+                            s "Why are you standing here with that gun?"
                             s "It was Kaori."
                             u "It wasn't her, Sakura."
                             show sakura panick with dissolve
@@ -1633,10 +1717,10 @@ label ending:
                             u "It wasn't her, Sakura."
                             s "You told me you loved me."
                             s "Was that a lie too?"
-                            u "No. I meant it."
+                            u "No... I meant it."
                             s "Then why?"
                             s "Why am I the one you're choosing?"
-                            u "Sakura, that's not—"
+                            u "That's-"
                             show sakura panick with dissolve
                             s "Maybe I was wrong."
                             s "Maybe I was never the one you wanted to save."
@@ -1657,42 +1741,37 @@ label ending:
                             "Don't shoot":
                                 u "No! I can't."
                                 show sakura sad with dissolve
-                                u "It wasn't her. I believe her. I won't shoot."
+                                u "I won't shoot."
                                 s "Thank you, [first_name]. Thank you."
-                                i "Ugh..."
-                                i "Why are you all so stubborn?"
-                                i "Well... you know the rules."
-                                i "Someone has to die. And this time, it will be you."
+                                u "I don't think either of them did it. They're innocent."
+                                i "Ugh..."                           
+                                i "You know the rules."
+                                i "Someone has to die. If it isn't Sakura, it will be you."
                                 "Before the sentence is even finished, I notice a red dot near my chest."
                                 u "No! Wait!"
                                 i "..."
-                                i "You don't want to die."
-                                i "But you also don't want to kill to survive."
-                                i "What are we supposed to do with people like you?"
-                                i "Fine... if not Sakura, then who? Kaori?"
-                                u "No. I don't th-"
-                                i "So if not Kaori, then someone completely unrelated."
-                                u "Yes, bu-"
-                                i "But you don't know who that is."
-                                i "Hmm... let's do this."
-                                i "It doesn't matter. One of you will die today."
-                                i "But you still have a choice."
-                                i "You can die knowing nothing."
-                                i "Or you can kill her."
-                                show sakura panick with dissolve
-                                i "And learn the truth, knowing there’s still a chance she might be innocent."
-                                i "Choose."
+                                i "Interesting. You don't want to die."
+                                i "But you refuse to kill."
+                                i "Most people choose one or the other."
+                                i "Very well. I'll give you one final opportunity."
+                                i "Think carefully. Your life..."
+                                i "...or the life of the person you love."
                                 menu:
                                     "Shoot":
                                         u "..."
                                         s "[first_name]?"
-                                        u "I'm sorry... Sakura"
-                                        jump ending_two
+                                        u "I'm sorry... Sakura."
+                                        s "No! Wai-"
+                                        jump ending_one
                                     "Don't shoot":
-                                        u "No, I won’t. I won’t kill an innocent person."
+                                        u "No..."
+                                        "My arm slowly lowers."
+                                        u "I won't do it."
+                                        s "[first_name]..."
                                         hide sakura with dissolve
                                         i "We had high expectations for you."
-                                        i "But... have it your way."
+                                        i "But..."
+                                        i "Have it your way."
                                         jump ending_x                      
                     "Return":
                         jump ending_choice
@@ -1713,9 +1792,18 @@ label ending_one:
     i "Congratulations on your first case, [first_name] [last_name]."
     u "W-Was it her?"
     i "Does the truth matter anymore? She's dead."
+    u "I'm starting to think this school is nothing more than an excuse for you people to entertain yourselves."
+    u "What's the point of all this?"
+    u "How is a detective supposed to live with a sacrifice like that if he doesn't even know whether it was for justice."
+    i "..."
+    u "Why are you silent?!"
+    i "Because we're not certain either."
+    u "What?"
+    i "We have no confirmation of the real killer. Only a collection of facts. And a conclusion we chose to believe."
+    i "Now, you are free to return to your life."
+    i "Assuming you're still capable of it."
+
     u "..."
-    i "You're free to live as you did before."
-    u "...Yeah."
 
     pause 1.0
     scene black with fade
@@ -1728,19 +1816,22 @@ label ending_one:
     i "How do you feel?"
     show kaori serious with dissolve
     k "I'm not sure. I-I didn't want her to die."
-    k "And yet... deep down, I feel happy about the choice he made."
+    k "And yet... Deep down, part of me is happy."
     k "He chose me."
     k "..."
     k "We both ended up killing for someone we love."
     i "Do you think he feels the same way you do?"
-    k "Then why did he choose me?"
-    k "He had all the facts in his hands."
-    k "Everything pointed to me, and yet he chose Sakura... knowing it wasn’t her."
-    k "That’s more than just love."
+    k "I don't know. Maybe."
+    k "But he had every reason to choose me."
+    k "Everything pointed to me, and yet he chose Sakura."
+    k "Even though he knew she was innocent."
+    k "..."
+    show kaori normal with dissolve
+    k "I can't stop thinking about that."
     i "..."
     i "What do you plan to do next?"
-    k "Nothing. If you mean whether I’ll tell him the truth, I won’t."
-    k "You people are the only ones who know the whole truth."
+    k "Nothing. If you're asking whether I’ll tell him the truth... I won’t."
+    k "You people are the only ones who know everything."
     i "Don't worry. You prepared a wonderful experience, one that will be remembered for quite some time."
     i "And it was we who decided to play your game. You satisfied us enough."
     i "You're free to live as you did before."
@@ -1761,28 +1852,37 @@ label ending_one:
     k "[first_name]!"
     u "Ugh..."
     u "I'm sorry. I was lost in thought."
-    k "It’s okay. You’ll probably think about this for the rest of your life."
+    k "It’s okay. I think you'll be thinking about this for a long time."
     u "Yeah..."
+    u "Why are you coming with me?"
+    k "..."
+    k "I just didn't want you to be alone."
     u "Do you think I made the right choice?"
-    k "Um... I don't think I'm the right person to ask."
-    u "Heh. That's true."
-    k "But if you need me for anything else, I'll always be there to help you."
+    k "Um... I don't think I'm the right person to answer that."
+    u "Heh... That's true."
+    u "I don't know how I'm supposed to feel. I killed her."
+    u "And I failed her. I wasn't able to find the real killer."
+    k "You tried. More than anyone else would have."
+    k "But you're not alone now. You don't have to carry all of this by yourself."
+    k "I'm here for you."
     u "Thanks, Kaor-"
     "She looks at me with that same gentle smile."
-    "But now... I see it differently."
-    "For the first time, I realize just how beautiful she is."
+    "A smile I've seen countless times before."
+    "But today, it feels different."
+    "Maybe because, right now, she's the only thing keeping me from falling apart."
     "I quietly reach for her hand."
     show kaori blush with dissolve
-    k "Hey! What are you—"
+    k "Huh! What are you—"
     u "I'm sorry. I-I just..."
-    u "You don’t want me to?"
+    u "..."
     k "..."
-    k "No, I-It's not like that."
-    k "I-I don't mind."
+    k "I-It's okay."
+    k "I don't mind."
     pause 1.0
     hide kaori with dissolve
     scene black with fade
     jump end_credits
+
 label ending_two:
     hide sakura with dissolve
     "Before she can finish her sentence, the bullet strikes her in the chest."
@@ -1917,6 +2017,7 @@ label ending_two:
     hide kaori with dissolve
     scene black with fade
     jump end_credits
+
 label ending_three:
     "Before she can finish her sentence, the bullet strikes her in the chest."
     "For a moment, she remains standing, as if her body still hasn’t understood what happened."
@@ -1931,6 +2032,7 @@ label ending_three:
     i "Congratulations on your first case, [first_name] [last_name]."
     i "You showed us the determination required in this world."
     i "You're free to live as you did before."
+    pause 0.5
     scene class with fade
     "Two days later, everyone is still talking about it. People look at me differently now."
     "I sit in class, staring out the window."
@@ -2009,8 +2111,8 @@ label ending_three:
     k "Because I panicked...I showed you the only evidence that existed."
     k "..."
     i "Then why are you here?"
-    k "I visited him this morning. He cried when I told him that Hiro died."
-    k "Those tears were genuine. I know when he lies. That wasn't a lie."
+    k "I visited him this morning. He was surprised when I told him that Hiro died."
+    k "His eyes were genuine. I know when he lies. That wasn't a lie."
     k "He forgot. He forgot everything. Like that night never happened."
     k "Nobody would ever suspect him, and I made things worse."
     k "So I have a proposal."
@@ -2194,15 +2296,17 @@ screen big_text(info):
         ysize 900
         padding (90, 140, 90, 120)
         
-        viewport:
-            scrollbars "vertical"
-            mousewheel True
+        vbox:
+            viewport:
+                scrollbars "vertical"
+                mousewheel True
+                text info size 28 color "#fff"
 
-            text info size 28 color "#fff"
-        hbox:
-            xalign 0.98
+            textbutton "CLOSE":
+                text_color "#fff"
 
-            textbutton "Close":
+                xpos 10
+                ypos -700
                 action Return()
 
 screen ten_min_timer():

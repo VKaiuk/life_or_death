@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1914: unterminated string literal
-    ""You can't choose the color. You order one, and they give you the color assigned to you."
+File "game/script.rpy", line 2294: 'hover_color' is not a keyword argument or valid child of the textbutton statement.
+    hover_color "#ff4444"
+               ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Tue May 19 17:02:25 2026
+Mon Jun  8 18:58:23 2026
