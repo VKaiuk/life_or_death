@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 2294: 'hover_color' is not a keyword argument or valid child of the textbutton statement.
-    hover_color "#ff4444"
-               ^
+File "game/script.rpy", line 2063: expected statement.
+    In the end, I decide to visit her room one last time.
+              ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Mon Jun  8 18:58:23 2026
+Tue Jun  9 17:11:22 2026

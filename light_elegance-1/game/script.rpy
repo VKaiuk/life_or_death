@@ -86,6 +86,9 @@ transform exit_to_right:
 transform slight_zoom_up:
     linear 0.25 zoom 1.25 ypos 1.3
 
+transform face_zoom:
+    linear 0.25 zoom 1.8 ypos 1.85
+
 transform walk_bob:
     yoffset 0
     xoffset 0
@@ -151,10 +154,6 @@ label start:
 
 
     i "Thank you for your confirmation."
-    u "Can you tell me why I only have one day to solve this?"
-    i "We believe the case can be resolved within a day. And we believe you're capable of it."
-    u "I don't think I am."
-    i "Enough."
     i "[first_name] [last_name], We wish you luck."
 
     "Meiyaku Academy. A place unlike any ordinary school. It was specifically designed to raise the finest detectives… at least, that’s what they say."
@@ -792,10 +791,11 @@ label kaori_dialogue:
                 k "We played together until your parents came to take you home."
                 u "Was that the first time we met?"
                 k "Yeah."
-                u "And you still remember this?"
-                k "Of course I do. It's the day I got my first friend."
+                u "I can't believe you remember something like this."
+                k "You..."
+                k "Well, it's the day I got my first friend."
                 u "..."
-                u "Let's get back to questeniong. Shall we?"
+                u "Ahem. Let's get back to questeniong."
                 k "...Yeah."
                 $ asked_q3 = True
                 jump kaori_questions
@@ -1533,6 +1533,7 @@ label choice_dialogue:
     u "...Kaori?"
     show kaori normal with dissolve
     k "I will go."
+    u "Wait! We're not done yet."
     k "And [first_name]..."
     k "I'm sorry..."
     k "For putting you in this position."
@@ -1613,9 +1614,11 @@ label ending:
                         "The same damn smile on her face."
                         k "So... you came."
                         u "You're not surprised?"
-                        k "You know who deserves to die and who doesn't."
-                        u "I don't think you deserve to die."
+                        k "I excpected as much."
+                        u "Excpected? I'm still not sure it was you."
                         k "And yet you still chose me. Meaning I made mistakes that led you here."
+                        u "What happened to your eyes? They're red."
+                        k "I'm just... a little bit of tired."
                         u "Did you really kill Hiro?"
                         k "..."
                         k "Does it matter anymore? I'm not leaving this room alive."
@@ -1626,7 +1629,6 @@ label ending:
 
                         menu:
                             "Shoot":
-                                "Text"
                                 jump ending_three
                             "Don't shoot":
                                 u "No..."
@@ -1648,11 +1650,14 @@ label ending:
                                 k "I'm the one who deserves to die. Not you!"
                                 u "Kaori? Why are you acting this way?"
                                 k "Please..."
-                                i "Last chance. Decide. Now."
+                                i "I'll give you one final opportunity."
                                 menu:
                                     "Shoot":
                                         u "I'm sorry..."
+                                        "My hands start to shake violently."
+                                        k "[first_name]..."
                                         k "I love yo-"
+                                        "The gun fires."
                                         jump ending_three
                                     "Don't shoot":
                                         u "No..."
@@ -1812,7 +1817,6 @@ label ending_one:
     scene bedroom2:
         zoom 1.5
     with fade
-    i "An interesting choice he made."
     i "How do you feel?"
     show kaori serious with dissolve
     k "I'm not sure. I-I didn't want her to die."
@@ -1826,16 +1830,6 @@ label ending_one:
     k "Everything pointed to me, and yet he chose Sakura."
     k "Even though he knew she was innocent."
     k "..."
-    show kaori normal with dissolve
-    k "I can't stop thinking about that."
-    i "..."
-    i "What do you plan to do next?"
-    k "Nothing. If you're asking whether I’ll tell him the truth... I won’t."
-    k "You people are the only ones who know everything."
-    i "Don't worry. You prepared a wonderful experience, one that will be remembered for quite some time."
-    i "And it was we who decided to play your game. You satisfied us enough."
-    i "You're free to live as you did before."
-    k "...I most definitely will."
     hide kaori with dissolve
 
     pause 1.0
@@ -1865,7 +1859,7 @@ label ending_one:
     k "You tried. More than anyone else would have."
     k "But you're not alone now. You don't have to carry all of this by yourself."
     k "I'm here for you."
-    u "Thanks, Kaor-"
+    u "Thanks, Kaori"
     "She looks at me with that same gentle smile."
     "A smile I've seen countless times before."
     "But today, it feels different."
@@ -1883,145 +1877,11 @@ label ending_one:
     scene black with fade
     jump end_credits
 
-label ending_two:
-    hide sakura with dissolve
-    "Before she can finish her sentence, the bullet strikes her in the chest."
-    "For a moment, she remains standing, as if her body still hasn’t understood what happened."
-    "Then she stumbles backward and collapses onto the sofa, one trembling hand pressing against the wound."
-    s "Nngh..."
-    s "Nngh..."
-    s "..."
-    u "..."
-    u "D-Did she..."
-    i "Sakura Sato is dead."
-    i "Congratulations on your first case, [first_name] [last_name]."
-    i "You showed us the determination required in this world."
-    i "Now-"
-    u "Shut up!"
-    u "Enough with your nonsense. Just tell me what you're supposed to tell me."
-    u "Tell me the truth."
-    i "As promised."
-    i "As you probably guessed, Hiro Tanaka was strangled. The marks on his neck confirm it."
-    i "His skin appeared wrinkled and pale, which suggests his body spent time in the river."
-    i "The boy died at 10:57 PM on the bridge and was thrown into the river."
-    i "The person wearing the dark blue hoodie killed him, just as you thought."
-
-    i "But who was that mysterious person?"
-    i "We didn't know."
-    u "What do you mean you-"
-
-    i "Do you think Hiro Tanaka deserved to die?"
-    i "Now that you know the facts about him."
-
-    u "I think he deserved it."
-    i "Hm."
-    i "That is something we did not know before."
-    i "No cameras captured it. No evidence was left behind."
-    i "But a witness came to us. The person who saw everything."
-    i "It was Kaori Ito."
-    u "Kaori?"
-    i "She was the one who saw the real culprit."
-    u "But... she came back with the hoodie in her hands."
-    i "The first thing you should have noticed was that the hoodie’s color belonged to the boys."
-    i "Light pink is the color assigned to the girls. You see it every day."
-    i "Did she borrow it? If so, from whom?"
-    i "She doesn’t have many friends. Just you, Sakura, and Hiro."
-    i "It wasn’t Hiro. Sakura didn’t have one. So what about you?"
-    u "I-I couldn’t find mine. So... I ordered a new one yesterday."
-    i "Bingo. It was yours."
-    i "But how is that possible? Kaori was the witness, not the killer."
-    i "Maybe... she wanted to protect someone."
-    u "W-What do you—"
-    i "[first_name] [last_name], you are the one who killed Hiro Tanaka."
-    u "W-What? How... but..."
-    "No. No. No. It wasn't me."
-    "How is that possible? That night, I was..."
-    "What was I doing that night?"
-    i "Dissociative amnesia, localized type, triggered by acute psychological trauma."
-    i "The person tends to forget a specific traumatic period."
-    i "Not only that, but memories from before or after the event can become scattered."
-    i "The truth about Hiro was one of those memories. That is why you were so shocked today."
-    i "Even we have no idea how did you do that."
-    i "Hiro Tanaka died at 10:57 PM."
-    i "After Sakura and Hiro’s conversation, you killed Hiro."
-    i "What happened afterward remains unclear. No cameras captured your face."
-    i "According to the dorm cameras, you returned to your room before 9 PM and never left again."
-    i "No student would ever suspect that you had killed your best friend."
-    i "But Kaori made a mistake."
-    i "She took the hoodie, not knowing you had everything under control."
-    i "She said she panicked. She showed it at the store."
-    i "Only later did she realize we would check it, and that it would lead back to you."
-    i "The next morning, she ran over to you, only to find that you remembered nothing from that night."
-    i "That is when she came to us."
-    i "She made a proposal"
-    i "To make you choose between her and Sakura, without knowing that both of them were innocent..."
-    i "And that you were the real killer."
-    i "Sakura Sato was innocent. She had nothing to do with any of this."
-    i "Until Kaori told us that Sakura was the reason you killed Hiro."
-    i "She prepared the stage for your investigation."
-    i "And we found it amusing."
-    u "T-Then Sakura... she died for nothing. W-Why did Kaori—"
-    k "To protect you."
-    show kaori sad at enter_from_left, walk_bob
-    pause 0.8
-    hide kaori
-    show kaori sad
-    "I turn around and see Kaori, tears in her eyes."
-    k "I wanted to protect you. I didn't want you to die."
-    u "...Kaori?"
-    u "T-That doesn't mean an innocent person deserved to die!"
-    i "But you killed Hiro."
-    u "He wasn’t as innocent as he seemed."
-    k "Innocent or not... everyone deserves to live."
-    k "Everyone deserves a second chance."
-    u "A second chance...? You killed Sakura just so I could have one?"
-    k "Why did you choose Sakura instead of me?"
-    k "You knew everything pointed toward me."
-    u "I-I just... I don't know."
-    u "I didn't want you to die."
-    k "Same as me."
-    k "I just wanted you to live. That was enough for me." 
-    u "..."
-    u "How am I supposed to live now? Knowing I killed two people..."
-    u "People I cared about."
-    u "They're gone because of me!"
-    "My legs give out beneath me. Tears begin falling onto the floor."
-    k "[first_name]!"
-    show kaori sad at slight_zoom_up
-    "Kaori rushes toward me. She gently wraps both around my body from behind."
-    "One hand rests near my chest, while the other softly holds my shoulder."
-    "I can't see her face, but her voice is filled with concern and sadness."
-    k "Don't worry..."
-    k "E-Everything will be okay." 
-    k "I'm here. I'm with you."
-
-    menu:
-        "Take her hand.":
-            "I slowly place my hand over hers."
-            "Her fingers tremble slightly, but she doesn’t pull away."
-            "Her embrace tightens for just a moment."
-            "And strangely enough... I don't want her to let go."
-
-        "Stand up":
-            "I move her arms away and stand up."
-            k "[first_name]?"
-            "I start moving toward an entrance."
-            k "Wait. Where are you going?"
-            u "I don't know. My room."
-            k "...Okay."
-            "Her voice sounds small. Almost fragile."
-            hide kaori with dissolve
-            "Without looking back at her, I begin walking away."
-    
-    pause 1.0
-    hide kaori with dissolve
-    scene black with fade
-    jump end_credits
-
 label ending_three:
+    show kaori serious with dissolve
     "Before she can finish her sentence, the bullet strikes her in the chest."
     "For a moment, she remains standing, as if her body still hasn’t understood what happened."
-    hide kaori with dissolve
+    hide kaori with vpunch
     "Then she stumbles backward and collapses onto the bed, one trembling hand pressing against the wound."
     k "Nngh..."
     k "Nngh..."
@@ -2030,8 +1890,9 @@ label ending_three:
     u "D-Did she-"
     i "Kaori Ito is dead."
     i "Congratulations on your first case, [first_name] [last_name]."
-    i "You showed us the determination required in this world."
-    i "You're free to live as you did before."
+    i "Now, you are free to return to your life."
+    i "Assuming you're still capable of it."
+    u "..."
     pause 0.5
     scene class with fade
     "Two days later, everyone is still talking about it. People look at me differently now."
@@ -2043,113 +1904,140 @@ label ending_three:
     s "[first_name]?"
     u "Ugh... I'm sorry. I was lost in thought."
     s "That's okay. I know it's been tough for you."
+    u "Yeah..."
     s "Are you ready for the final test?"
-    u "Test? Oh... yes, I'm ready. Are you?"
-    s "I think I am. At the same time, I'm scared."
-    u "Don't worry. You'll manage."
-    s "I hope so. So, after the test..."
-    s "D-Do you want to go see a movie with me?"
-    s "There's a new comedy coming out. I heard it's great."
-    "Movie? With Sakura?"
-    u "Of course I want!"
-    "I shouted slighty."
-    s "Really? I can't wait. Hehe."
-    s "Oh. You finally got the hoodie you ordered."
-    u "Yeah. I-"
-    "When I think about it."
-    "Dark blue is the color assigned to boys' hoodies. Light pink is for girls."
-    s "[first_name]? Everything's alright?"
-    "You can't choose the color. You order one, and they give you the color assigned to you."
-    "Meaning it wasn't Kaori's hoodie, but someone else's."
-    u "Yeah, I'm sorry. I have to go to the bathroom."
+    u "Test? Oh... yes, I'm ready."
+    u "Um..."
+    u "D-Do you want to go see a movie with me tommorow?"
+    u "There's a new comedy coming out. I heard it's great."
+    "I want to spend some time with Sakura."
+    s "Movie? With you? Yes! I want to!"
+    u "Great."
+    s "I can't wait. Hehe."
+    u "I'm sorry. I have to go to the bathroom."
     s "Sure."
     show sakura normal at exit_to_left, walk_bob
     pause 0.8
     hide sakura
-    "I need to find it."
-    "I leave the school and make my way to the women's dorm."
-    scene building_day with fade
-    "Kaori didn't have many friends. Me, Hiro, Sakura... maybe a few other girls."
-    "It definitely wasn't Hiro's. Did she take mine? Is that why I couldn't find it?"
+    "There is no confirmation that it was Kaori. The school refuses to tell me anything."
+    "Was it the right choice? Did her death bring justice?"
+    scene bedroom_evening with fade
+    "After classes end, I return to my dorm room."
+    "But the more I think about her, the more restless I become."
+    "In the end, I decide to visit her room one last time."
     scene kitchen_night with fade
     "I enter an apartment. It's dark inside."
     scene kitchen_day
     "I turn on the light and head toward Kaori's room."
     i "You're not supposed to be here."
     u "Damn it! I always forget you can do this."
-    i "You're not allowed to enter the women's dorm when it isn't necessary."
+    i "You're not allowed to enter the women's dormitory when it isn't necessary."
     u "Come on... she's not here anymore."
     scene bedroom2:
         zoom 1.5
     with fade
     "I enter her room."
-    "Obviously, she isn't here anymore. And yet... her presence still remains."
     "I walk toward her desk and notice a dark blue hoodie draped over the chair."
-    "Was this here when I talked to Kaori?"
+    "It's the same Kaori was wearing that night?"
+    "Was this here when I talked to her?"
     "I pick it up and check the pockets. A flash drive falls into my hand."
     "I insert it into the laptop resting on the desk."
-    "Inside, I find a single video. 'Interrogation.mp4'"
-    i "Kaori Ito. What's the purpose of your visit?"
-    k "I-I wish to confess."
-    k "About the crime I commited."
-    k "I'm guilty."
-    i "You admit involvement in Hiro Tanaka's death?"
-    k "No. Of that I'm innocent."
-    i "I don't understand."
-    k "I'm guilty of betraying my friend."
-    i "Your friend?"
-    k "[first_name] [last_name]"
-    i "The school appears to have an interest in this student. Why does he matter right now?"
-    k "Hiro Tanaka died at 10:57 PM."
-    k "You don't forget the time when you witness something you never wanted to see."
-    k "I saw his death. He was strangled and thrown into the river."
-    k "It was [first_name] [last_name]."
-    i "[first_name] [last_name]?"
-    k "He killed Hiro Tanaka. He strangled him. Then he took off his hoodie and left."
-    i "That shouldn't be possible. We checked the dorm cameras. He did left that evening, but he returned around 9 PM."
-    k "I don't know. But I made a mistake. I took the hoodie and brought it to the store."
-    k "Because I panicked...I showed you the only evidence that existed."
+    "Inside, I find a single video. 'Untitled1.mp4'"
+    scene black with fade
+    pause 0.5
+
+    scene bk:
+        zoom 3
+        blur 6
+    with fade
+
+    show kaori serious:
+        zoom 1.85
+        xalign 0.5
+        yalign 0.25
+    with dissolve
+
+    k "Ahem..."
+    k "It's time."
+    k "It's time for you to choose.."
+    k "If you're watching this video... then you chose me."
+    show kaori happy with dissolve
+    k "Hehe. Not in the way I hoped."
+    show kaori normal with dissolve
+    k "I'm not sure if this is the right time to tell you the truth."
+    k "I lied. I lied a lot. Especially today. And I hope you'll understand why."
+    k "I hope you'll understand that everything I did... I did it because of you."
+    k "It was you..."
+    k "You were the one who killed Hiro Tanaka."
+    k "I saw it with my own eyes. I saw your face when you were killing him."
+    "What? That's impossible. I don't rem-"
+    show kaori serious with dissolve
+    k "Dissociative amnesia, localized type, triggered by acute psychological trauma."
+    k "The person tends to forget a specific traumatic period."
+    k "Sometimes memories from before or after the event become fragmented as well."
+    k "You were wearing the hoodie that's hanging on that chair."
+    k "Afterward, you hid it and returned to your room."
+    k "The moment I found it, I knew it could lead back to you, so I made myself a suspect instead."
+    k "I visited you the following day. That's when I realized something was wrong."
+    k "You forgot everything you did."
+    k "You idiot don't even remember how we first met."
+    k "Do you have any idea how sad that made me?"
+    k "And I was really startled when I discovered that you also didn't remember the truth about Hiro."
+    k "After all, it's the reason you killed him in the first place."
+    k "You wanted to protect her."
+    k "And Sakura..."
+    k "She's innocent."
+    k "It was me who told the school about her meeting with Hiro."
+    k "I was the one who made her a suspect."
+    k "I was the one who dragged her into this."
+    k "She's just a victim of mine."
+    k "I-I wanted to protect you."
     k "..."
-    i "Then why are you here?"
-    k "I visited him this morning. He was surprised when I told him that Hiro died."
-    k "His eyes were genuine. I know when he lies. That wasn't a lie."
-    k "He forgot. He forgot everything. Like that night never happened."
-    k "Nobody would ever suspect him, and I made things worse."
-    k "So I have a proposal."
-    i "Proposal?"
-    k "You won't enjoy spectating this case. It's too easy."
-    k "So..."
-    k "Make [first_name] the investigator."
-    k "Make him choose. Between me and someone else. You already have enough evidence to make me a suspect."
-    i "..."
-    k "As for the second suspect... "
-    k "I think Sakura Sato fits perfectly."
-    k "[first_name] knew Hiro threatened Sakura. He knew what Hiro was doing at this school."
-    k "That's why he killed him. To punish him..."
-    k "So..."
-    k "Make him choose between the person he loves..."
-    k "...and his childhood friend."
-    i "..."
-    i "Why are you willing to go this far?"
+    k "Ugh..."
+    k "Who am I trying to fool?"
+    k "I wanted to protect myself."
+    k "I didn't want to die. So I chose her."
+    k "Deep down, I was hoping you'd choose Sakura."
+    k "I'm terrified."
+    show kaori sad with dissolve
     k "..."
-    k "...Because I love him."
+    k "I really don't want to die."
+    k "I want to stay by your side. I want to see you graduate."
+    k "I want to walk to school with you again. I want all of it."
+    k "Even if someone innocent has to pay the price."
+    k "Even if that makes me a terrible person."
+    k "Your memories..."
+    k "They'll probably return eventually."
+    k "I thought it would be better if I was the one to tell you the truth."
+    k "So you wouldn't have to fight those memories by yourself."
+    k "But that's not completely true either."
+    k "The truth is, I want you to remember me."
+    k "The person who loved you more than anyone else."
+    "She wipes her eyes."
+    show kaori normal with dissolve
+    k "..."
+    k "Heh."
+    k "How selfish."
+    "A door opens somewhere in the background."
+    k "..."
+    k "It's time."
+    k "I guess this is goodbye."
+    k "I love you, my dear friend."
+    k "I always will."
     "The video ends."
+    hide kaori with dissolve
+    scene bedroom2:
+        zoom 1.5
+    with fade
+    u "..."
     "Tears begin to fall."
     u "B-But I-"
-    i "Dissociative amnesia, localized type, triggered by acute psychological trauma."
-    i "The person tends to forget a specific traumatic period."
-    i "Not only that, but memories from before or after the event can become scattered."
-    u "..."
-    i "How did you do that?"
-    u "..."
-    i "How were you in two places at once?"
-    u "I'm sorry..."
+    u "I'm sorry."
     u "Kaori."
-    u "I'm so sorry."
+    u "I'm so sorry."   
     "I slowly turn toward her bed."
+    u "..."
     "All that's left is a dark stain where her blood dried."
-    u "I don't know."
-    u "I don't remember."
     jump end_credits
 
 label ending_x:
@@ -2325,7 +2213,6 @@ screen ten_min_timer():
         [SetVariable("time_left", 0), Hide("ten_min_timer"), Jump("timeup_ending")]
     )
 
-
 label riverbank_thinking:
     $ strangle = 0
     $ stab = 0
@@ -2432,56 +2319,6 @@ label riverbank_thinking:
                 return "No wounds or signs of stabbing were found on his body. It wasn't a stabbing."
             elif gun == 1:
                 return "Hiro wasn't killed with a gun. There is no evidence pointing to that."
-
-label puzzle_start:
-    default remaining_steps = [
-        "Skin appears pale and wrinkled.",
-        "Bruising around his neck.",
-        "His blood under his fingernails.",
-    ]
-    "Which details were actually found on Hiro's body?"
-
-    label body_loop:
-        menu:
-            "Signs of struggle on the arms.":
-                "No... there were no signs of struggle mentioned in the report."
-                jump body_loop
-
-            "Stab wound":
-                "No... there was no stab wound mentioned in the report."
-                jump body_loop
-
-            "Skin appears pale and wrinkled." if "Skin appears pale and wrinkled." in remaining_steps:
-                "It wasn't mentioned in the report."
-                "But his skin most likely looked pale and wrinkled because the body was in the water for quite some time."
-                $ remaining_steps.remove("Skin appears pale and wrinkled.")
-                jump body_loop
-
-            "His blood under his fingernails." if "His blood under his fingernails." in remaining_steps:
-                "Correct. That suggests he may have struggled while fighting for his life."
-                $ remaining_steps.remove("His blood under his fingernails.")
-                jump body_loop
-
-            "Bruising on the ribs.":
-                "No... bruising on the ribs was not part of the report."
-                jump body_loop
-
-            "Bruising around his neck." if "Bruising around his neck." in remaining_steps:
-                "Correct. This was mentioned in the report."
-                $ remaining_steps.remove("Bruising around his neck.")
-                jump body_loop
-
-            "End":
-                if not remaining_steps:
-                    jump puzzle_success
-                else:
-                    "Not yet. I have to think about the details before moving forward."
-                    jump body_loop
-
-    label puzzle_success:
-
-        "The important details are the blood under his fingernails, the water exposure, and the injuries around his neck."
-        return
 
 
 # xpos 0.15
