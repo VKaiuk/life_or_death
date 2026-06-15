@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 2063: expected statement.
-    In the end, I decide to visit her room one last time.
-              ^
+File "game/script.rpy", line 292: end of line expected.
+    show kaori serious with at slight_zoom_up
+                               ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Tue Jun  9 17:11:22 2026
+Sun Jun 14 14:27:55 2026
