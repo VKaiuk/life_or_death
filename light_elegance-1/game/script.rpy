@@ -109,13 +109,27 @@ transform slight_zoom_bounce:
 
 #region Start
 label start:
+    define playlist = [
+        "audio/TownTheme.mp3",
+        "audio/sound3.mp3",
+        "audio/sound3.mp3",
+        "audio/sound3.mp3",
+        "audio/sound3.mp3",
+        "audio/sound2.ogg",
+        "audio/sound4.ogg",
+        "audio/end.mp3",
+        "audio/sound4.mp3",
+        "audio/sound1.mp3",
+        "audio/mystery.mp3",
+    ]
+
     # jump ending
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
     # play music "audio/TownTheme.mp3" volume 1.5 fadein 1.0
     stop music fadeout 1.0
-    play music "audio/steppingStones.mp3" fadein 1.0
+    play music playlist loop
     pause 1.5
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -124,7 +138,7 @@ label start:
     "BEEP! BEEP! BEEP!"
     scene bedroom
     i "Hmhm... "
-    i "Student with ID #2257, it's time to wake up."
+    i "It's time to wake up."
     u "Ugh... Damn it. I forgot you people had this perverted side of yours. Who allowed you to put a speaker in my room?"
     i "You did. When you signed the documents."
     u "Ugh..."
@@ -184,8 +198,8 @@ label start:
     show kaori happy
 
     q "Hey [first_name]! I've been calling you forever! Why didn't you wait for me?"
-    "This girl is Ivy and she’s my childhood friend. Our parents work together, and somewhere along the way, we naturally became close."
-    "There's always a smile on her face. I even think I’ve never seen her sad or devastated before. Even today..."
+    "Her name's Ivy and she’s my childhood friend. Our parents work together, and somewhere along the way, we naturally became close."
+    "There's always a smile on her face. I’ve never seen her sad or devastated before. Even today..."
     k "It's been a while. How are you?"
     u "I'm fine... You seem awfully cheerful for a day like this."
     show kaori normal with dissolve
@@ -204,9 +218,10 @@ label start:
     show kaori serious with dissolve
     k "Yeah... Honestly, I’m more worried about you. A lot has happened these past few days."
     k "I don’t think anyone could handle all of this alone."
-    u "I don't know how I feel."
-    u "I think I'm sad, but at the same time... it also feels like I don't care."
-    u "Do you think it's normal to feel this way?"
+    u "I think I'm sad. I think I should be."
+    u "But I don't know..."
+    u "The more I think about his death, the less I seem to care."
+    u "Do you think it's normal?"
     k "..."
     k "I think you still don’t fully understand what’s happening right now."
     k "It’s normal to feel lost when you lose someone close."
@@ -776,7 +791,7 @@ label kaori_dialogue:
                 u "Do you see one?"
                 k "Hmm... Meanie."
                 show kaori normal with dissolve
-                u "Ugh. What happened after you bought the charger?"
+                u "What happened after you bought the charger?"
                 k "I went to my dorm. The cameras can confirm it."
                 $ asked_q1 = True
                 jump kaori_questions
@@ -788,10 +803,16 @@ label kaori_dialogue:
                 u "Reminded you of what?"
                 k "My eighth birthday. You were there too."
                 u "What about it?"
-                k "Do you remember my cousin, Hina? She's about my age."
+                k "Do you remember my cousin, Elena?"
                 u "Um... not really."
-                k "She lost her doll. She couldn’t find it anywhere, so she started crying."
-                k "You saw that and immediately found it in my room."
+                k "She's about my age. She used to live in Chicago too."
+                u "..."
+                k "Doesn't matter."
+                k "She thought she lost her favorite doll. She looked everywhere for it."
+                k "When she couldn't find it, she started crying."
+                k "You saw her and immediately went looking for it."
+                k "A few minutes later, you found it in my room."
+                u "..."
                 u "Did you steal it?"
                 show kaori serious with dissolve
                 k "I didn't steal it. I just wanted to play with it. I was a child."
@@ -807,9 +828,12 @@ label kaori_dialogue:
                 u "I can't believe you remember something like this."
                 show kaori serious with dissolve
                 k "You..."
-                k "Well, it's the day I got my first friend."
+                k "Well... It was the day I made my first friend."
                 u "..."
-                u "Ahem. Let's get back to questeniong."
+                k "So of course I remember it."
+                u "..."
+                u "Ahem."
+                u "Let's get back to questeniong."
                 show kaori normal with dissolve
                 k "...Yeah."
                 $ asked_q3 = True
@@ -836,7 +860,7 @@ label kaori_dialogue:
                     show kaori normal with dissolve
                     k "Obvious? Please. The whole class knows that."
                     u "The whole..."
-                    "I lower my head in embarrassment"
+                    "I lower my head in embarrassment."
                     k "..."
                     u "..."
                     show kaori serious with dissolve
@@ -878,15 +902,15 @@ label kaori_dialogue:
                 else:
                     u "I wanted to ask about Kaori. You two don’t get along very well. Why?"
                     show kaori normal with dissolve
-                    k "You've never asked this before."
+                    k "You've never asked that before."
                     u "I never really cared. But I want to know now."
                     k "I don’t really hate her. She’s actually pretty nice."
                     k "It's just that I admire her."
                     show kaori serious with dissolve
                     k "I admire her so much that I end up feeling something negative toward her."
-                    u "Admire her in what way?"
-                    k "People love her, unlike me. She has this... magnet that attracts people."
-                    k "I'm not like her. I’m not capable of that, even if there’s someone I have feelings for."
+                    k "People are drawn to her. She has this strange ability to make everyone like her."
+                    k "I'm not like that. No matter how hard I try, I can't connect with people the way she does."
+                    k "Even when there's someone I have feelings for."
                     u "Ivy..." 
                     u "Are you serious right now? Don’t tell me there’s actually someone you like?"
                     show kaori serious with dissolve
@@ -902,7 +926,7 @@ label kaori_dialogue:
                     show kaori normal with dissolve
                     k "Obvious? Please. The whole class knows that."
                     u "The whole..."
-                    "I lower my head in embarrassment"
+                    "I lower my head in embarrassment."
                     k "..."
                     u "..."
                     show kaori serious with dissolve
@@ -969,7 +993,8 @@ label sakura_dialogue:
         u "I mean... yeah. I just thought it made more sense to start here."
         "When I talk to her when no one is around, I feel nervous. I need to calm down."
         
-    s "You look kind of nervous... first case?"
+    s "You look kind of nervous..."
+    s "Is it because of everything that's happening?"
     "I sit down at the table across from her."
     u "Hm... yeah, something like that. "
     show sakura serious with dissolve
@@ -1012,7 +1037,6 @@ label sakura_dialogue:
             "What were you doing the night Hiro died?" if not asked_qq1:
                 u "Simple question. What were you doing around 11PM that night?"
                 s "I... I was in my dorm. Getting ready to sleep. You know, shower and... stuff."
-                "Shower... No, no what am I even thinking about."
                 "She's lying. Is she scared it could rocket back at her?"
                 u "Kaori... Do you know why you’re on the suspect list?"
                 show sakura serious with dissolve
@@ -1255,8 +1279,6 @@ label choice_dialogue:
     label choice:
         menu:
             "Offensive Tone":
-                stop music fadeout 2.0
-                play music "audio/ending.mp3" volume 1.5 fadein 2.0
                 u "(Whisper) Damn it… "
                 show sakura serious with dissolve
                 s "I’m sorry?"
@@ -1355,6 +1377,7 @@ label choice_dialogue:
                 s "Everything alright?"
                 u "Y-Yeah... I just..."
                 "You can do this. Come on."
+                u "I-I..."
                 u "I love you, Kaori Ito."
                 show sakura blush with dissolve
                 s "Huh?"
@@ -1364,7 +1387,8 @@ label choice_dialogue:
                 u "Your smile. The kind that can make everything feel a little brighter."
                 s "[first_name]..."
                 s "..."
-                u "S-Kaori? Please... say something."
+                u "K-Kaori?"
+                u "Please... say something."
                 "Was I wrong after all?"
                 s "I-I...."
                 "She lowers her head."
@@ -1387,10 +1411,10 @@ label choice_dialogue:
                 s "I'll tell you."
                 s "I'm sorry to say this, but Hiro wasn't a good person."
                 u "What do you mean?"
-                s "It turned out that he was harming female students."
-                s "He used to blackmail them using 'private' images."
-                u "But where did he get those from?"
-                s "I'm not sure. Maybe there were a hidden camera inside girls' changing room."
+                s "It turned out he had been harming girls at this school."
+                s "He blackmailed them using private photos."
+                u "Private... Where did he get those?"
+                s "I don't know. There were rumors about a hidden camera in the girls' changing room."
                 s "The school didn’t help because of their stupid rules."
                 s "'The school doesn’t interfere in students’ lives unless a death occurs.'"
                 s "I wanted to confront him and do something about it."
@@ -1426,7 +1450,7 @@ label choice_dialogue:
         "I sit there for a few more minutes, then leave the cafeteria and head to the school yard to speak with Ivy."
 
         stop music fadeout 2.0
-        play music "audio/ending.mp3" volume 1.5 fadein 2.0
+        play music "audio/sound5.mp3" volume 1.5 fadein 2.0
         pause 1.0
         scene black with fade
         "I step outside and see Ivy sitting on the bench. She doesn’t look at me, even though she definitely noticed me."
@@ -1466,7 +1490,7 @@ label choice_dialogue:
         "She did."
 
         stop music fadeout 2.0
-        play music "audio/ending.mp3" volume 1.5 fadein 2.0
+        play music "audio/sound5.mp3" volume 1.5 fadein 2.0
 
         pause 1.0
         scene black with fade
@@ -1564,7 +1588,7 @@ label choice_dialogue:
     u "What the hell?!"
     i "Your time is up. You may no longer speak with the suspects."
     i "Final decision must be made within an hour. You know the rules. The room you choose will decide who dies."
-    u "Hey! You bastards! How was I supposed to figure this out in ten hours?!"
+    u "Hey! You bastards! How was I supposed to figure this out in one day?!"
     i "..."
     i "Rules are the rules."
 
@@ -1625,7 +1649,6 @@ label ending:
                         show kaori normal with dissolve
                         "I open the bedroom door and see Ivy sitting quietly on the bed."
                         "As soon as she notices me, she slowly stands up and steps closer."
-
                         "The same damn smile on her face."
                         k "So... you're here."
                         u "You're not surprised?"
@@ -1644,6 +1667,10 @@ label ending:
 
                         menu:
                             "Shoot":
+                                u "I-I'm sorry..."
+                                "My hands start to shake violently."
+                                k "It's okay..."
+                                k "I love yo-"
                                 jump ending_three
                             "Don't shoot":
                                 u "No..."
@@ -1831,6 +1858,10 @@ label ending_one:
 
     u "..."
 
+    stop music fadeout 2.0
+    play music "audio/end.mp3" volume 1.5 fadein 2.0
+
+
     pause 1.0
     scene black with fade
     "Meanwhile..."
@@ -1922,6 +1953,9 @@ label ending_three:
     i "Now, you are free to return to your life."
     i "Assuming you're still capable of it."
     u "..."
+
+    stop music fadeout 2.0
+    play music "audio/end.mp3" volume 1.5 fadein 2.0
     pause 0.5
     scene class with fade
     "Two days later, everyone is still talking about it. People look at me differently now."
@@ -1974,7 +2008,7 @@ label ending_three:
     with fade
     "I enter her room."
     "I walk toward her desk and notice a dark blue hoodie draped over the chair."
-    "It's the same Ivy was wearing that night?"
+    "Is it the same hoodie Ivy was wearing that night?"
     "Was this here when I talked to her?"
     "I pick it up and check the pockets. A flash drive falls into my hand."
     "I insert it into the laptop resting on the desk."
@@ -1994,7 +2028,7 @@ label ending_three:
     with dissolve
 
     k "Ahem..."
-    k "It's time for you to choose.."
+    k "It's time for you to choose..."
     k "And If you're watching this video... then you chose me."
     show kaori happy with dissolve
     k "Hehe. Not in the way I hoped."
@@ -2017,8 +2051,8 @@ label ending_three:
     k "After you killed Hiro..."
     k "You hid it and returned to your room."
     k "The moment I found it, I knew it would lead back to you..."
-    k "So, I made myself a suspect instead."
-    k "..."
+    k "Without thinking, I made myself a suspect instead."
+    k "..." 
     k "The next day, I came to see you. To prepare a plan."
     k "That's when I realized something was wrong."
     k "You remembered nothing."
@@ -2095,6 +2129,7 @@ label ending_three:
     "I slowly turn toward her bed."
     u "..."
     "All that's left is a dark stain where her blood dried."
+    pause 1.0
     jump end_credits
 
 label ending_x:
@@ -2147,90 +2182,6 @@ label end_credits:
     pause 0.5
 
     return
-
-label timeup_ending:
-    "Timer is up!"
-
-
-
-
-    # "Was it Ivy? She lied to me about going into the store but instead passed by and followed Hiro. But why would she kill him? Was she angry because of what he was doing?"
-    # "Was it Kaori? She was angry, that’s for sure. And her words… about wishing to kill him. But would someone who actually killed him say something like that?"
-    # "I have a report to read. Maybe I should try to build a chain of what happened."
-    # "Player chooses to kill Ivy."
-    # "Beep!"
-    # i "...Ivy. Interesting choice."
-    # "I go upstairs and approach the door leading to the roof. I feel unsure about my decision. I really don’t want to open that door."
-    # "Ivy… she’s someone precious to me. I never realized how much she cared about me."
-    # "Maybe if I had noticed sooner, it wouldn’t have come to this. Hiro wouldn’t have died, and I…"
-    # "…Tch. I only care about myself."
-    # "I never even tried to understand her feelings. Was she scared? …Of course she was. She always hid her true feelings behind that smile."
-    # "I open the door."
-    # "I see Ivy standing on the edge of the roof. Some kind of mechanism is holding her in place, as if waiting to be activated."
-    # k "[first_name]…"
-    # "Beep!"
-    # k "[first_name]. There is no turning back. You cannot escape this situation. Neither by running away nor changing your decision. Before Ivy Lee dies, you may have one last conversation."
-    # "I walk closer to her."
-    # k "[first_name]… That’s the choice I expected."
-    # k "What are you…"
-    # k "You love her, don’t you? I guess that’s your answer to my confession, haha."
-    # k "…"
-    # k "Did you really kill him?"
-    # k "Does it matter anymore? It’s not like you can change the past. Oh… don’t be sad. Your life won’t change much. I wasn’t that important anyway—"
-    # k "That’s not true!"
-    # k "You were…"
-    # k "My friend. My closest friend. It wasn’t Hiro… it was you. Only you."
-    # u "And I’m sorry I realized it too late. If I hadn’t… then today wouldn’t have happ—"
-    # k "[first_name]… I think it’s time to say goodbye. Don’t forget me, okay? At least for two years… haha."
-    # i "Ivy Lee."
-    # k "I love you, [first_name]. I love you so mu—"
-    # "The mechanism activates before she can finish."
-    # "She falls from the four-story building."
-    # "Ivy dies."
-    # "I can’t bring myself to leave the roof."
-    # "Maybe because I know I’ll never come back here again."
-    # "Did Ivy really kill Hiro? Was I wrong?"
-    # "Those questions keep spinning in my head."
-    # "I decide to go to Ivy’s dorm room. I don’t even know why. I just… haven’t been there in a long time."
-    # "I stand in front of the girls’ dorm building. I’m not allowed to be here this late, but I don’t care."
-    # "I go upstairs and open the door with the key Ivy once gave me."
-    # "BEEP!"
-    # i "[first_name]. You are violating the rules. You are not allowed to be here."
-    # u "…I forgot you people had this perverted side. Even inside the girls’ dorm. Are you all insane?"
-    # i "You chose this school yourself."
-    # u "I wish I didn’t."
-    # "I step inside her room. It’s surprisingly clean."
-    # "I walk over to the sofa and sit down."
-    # i "Initiating playback of the final message requested by Ivy Lee."
-    # u "What—?"
-    # k "Testing, testing. Is this working?"
-    # k "Testing, testing. Is this working?"
-    # k "[first_name]… if you’re hearing this, then I’m already dead."
-    # k "There are 30 minutes left before your final decision. I decided to record this message."
-    # k "You’re probably wondering… even now… which parts of what I said were truth, and which were lies."
-    # k "Like you guessed, it was a perfect crime. The bridge is the perfect place to dispose of evidence. No cameras, easy escape."
-    # k "But what if someone saw something?"
-    # k "A normal person would report it and move on."
-    # k "But someone obsessed… someone who truly cares… might stay silent."
-    # k "They would try to protect that person instead."
-    # k "So, when that person returned the next morning, they discovered something strange."
-    # k "The culprit didn’t remember anything."
-    # k "I don’t know how or why… but there were no signs they even knew what they had done."
-    # k "I guess it was short-term memory loss. I read it could stem from extreme stress and chronic anxiety. I guess he wasn’t ready to kill someone."
-    # k "Later, when the news of Hiro’s death spread, that person was genuinely shaken."
-    # k "That’s when I decided to help them."
-    # k "I called the school and reported Kaori… even though she had nothing to do with it."
-    # k "I was ready to sacrifice anyone… as long as it wasn’t you."
-    # k "But when I saw Kaori today… those eyes… she was innocent."
-    # k "That’s when I decided to include myself."
-    # k "To even the odds."
-    # k "I lied. A lot."
-    # k "You were so focused on finding the truth… and trying to save us…"
-    # k "that you couldn’t even see something simple."
-    # k "The hoodie."
-    # k "Dark blue is for boys. Girls wear pink."
-    # k "I was even wearing it this morning… when I walked to school with you."
-#endregion
 
 screen big_text(info):
 
