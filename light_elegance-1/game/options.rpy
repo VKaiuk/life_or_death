@@ -14,13 +14,13 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("black_pink_gui")
+define config.name = _("culprit_I_love")
 
 ## A short name for the game used for executables and directories in the built
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "black_pink_gui"
+define build.name = "culprit_I_love"
 
 ## Save directory ##############################################################
 ##
@@ -37,7 +37,7 @@ define build.name = "black_pink_gui"
 ## literal string, not an expression.
 
 ## Note: a typical save_directory value looks like "FreshProject-1671818013"
-define config.save_directory = "black_pink_gui-1723136120"
+define config.save_directory = "culprit_I_love-1723136120"
 
 
 ## The version of the game.

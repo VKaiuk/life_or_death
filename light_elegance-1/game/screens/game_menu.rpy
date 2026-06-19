@@ -41,10 +41,10 @@ screen game_menu(title):
             at wiggle_heavy
 
 
-        button:
-            add "gui/icons/gallery.png" at button_fade
-            action ShowMenu("gallery")
-            at wiggle_heavy
+        # button:
+        #     add "gui/icons/gallery.png" at button_fade
+        #     action ShowMenu("gallery")
+        #     at wiggle_heavy
 
         button:
             add "gui/icons/quit.png" at button_fade

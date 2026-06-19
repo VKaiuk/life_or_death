@@ -17,7 +17,7 @@ screen main_menu():
     add "gui/main_menu/bg.png"
 
 
-    label "Your Title \nHere" 
+    label "The Culprit \nI love" 
 
 
     ###The black border + strip
