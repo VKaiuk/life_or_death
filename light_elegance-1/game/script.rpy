@@ -168,6 +168,8 @@ label start:
 
 
     i "Thank you for your confirmation."
+    i "Please remember that you will be the one carrying out the execution."
+    i "I advise you to prepare yourself."
     i "[first_name] [last_name], We wish you luck."
 
     "Meiyaku Academy. A place unlike any ordinary school. It was specifically designed to raise the finest detectives… at least, that’s what they say."
@@ -204,7 +206,14 @@ label start:
     u "I'm fine... You seem awfully cheerful for a day like this."
     show kaori normal with dissolve
     k "Why shouldn't I?"
-    u "Two weeks ago, a boy from our class died. Aren’t you scared?"
+    u "A boy from our class died two weeks ago."
+    "I think his name was Paolo."
+    "His girlfriend killed him. According to her, he was the one who murdered her best friend."
+    "There's a rumor she only did it because he cheated on her."
+    "..."
+    "Yeah."
+    "I think I've just developed a lifelong fear of cheating."
+    u "Doesn't that scare you?"
     k "Most people probably are..."
     k "I think I’m scared too. Just... not that much."
 
@@ -218,6 +227,7 @@ label start:
     show kaori serious with dissolve
     k "Yeah... Honestly, I’m more worried about you. A lot has happened these past few days."
     k "I don’t think anyone could handle all of this alone."
+    "I rub my neck, trying to organize my thoughts."
     u "I think I'm sad. I think I should be."
     u "But I don't know..."
     u "The more I think about his death, the less I seem to care."
@@ -242,6 +252,7 @@ label start:
         "Ivy":
             u "Between the two of you, I think it’s you."
             show kaori serious with dissolve
+            "She stops and crosses her arms with a huff."
             k "What? Why?"
             u "I just don’t think Kaori is capable of killing someone."
             k "Oh... so you think I am?"
@@ -316,6 +327,7 @@ label start:
     show sakura serious at slight_zoom_bounce
 
     "Right... the two of them weren't on good terms. To be honest, I never knew why."
+    "A long sigh escapes my lips."
     u "Let’s calm down, both of you..."
     "An awkward silence settles between us."
     "As we continue walking, I notice how cold it is today. Goosebumps run down my arms."
@@ -343,6 +355,7 @@ label start:
     u "They’re pink."
     t "Hmph."
     "Both of them turn their heads away at the same time."
+    u "Haha."
     "Still, it feels like Kaori came here for a reason."
     u "You wanted to tell us something, Kaori?"
 
@@ -648,35 +661,38 @@ label kaori_dialogue:
     "I raise my voice a little. She flinches slightly."
     show kaori happy with dissolve
     k "[first_name]? Oh- sorry, I didn’t notice you at all."
-    u "Yeah... you really need to start to take this serious."
-    "I quietly sit down beside her."
+    "She quickly locks her phone and puts it into her pocket."
+    u "Yeah... you really need to start taking this seriously."
+    "I sit down beside her."
     u "This isn’t exactly a normal situation. Your life’s kind of on the line here."
     show kaori normal with dissolve
     k "I’m sorry..."
     if talked_sakura:
         show kaori serious with dissolve
-        k "Wait, why I’m the one apologizing. Shouldn’t you be apologizing for not coming to me first!?"
+        k "Wait, why am I the one apologizing? Shouldn’t you be apologizing for not coming to me first!?"
         u "Why would I do that?"
         k "We're friends."
         u "So? Kaori's my friend too."
         u "Besides… I had my reasons."
-        u "The way you’re reacting, are you jealous or something?"
+        u "The way you’re reacting... Are you jealous or something?"
         show kaori blush with dissolve
         k "No, I’m not... I mean- maybe, just a little."
         u "Huh? What’s wrong with you?"
         k "Hmph..."
         show kaori serious with dissolve
-        "She turns her head away."
+        "Her eyes drift toward the ground."
         "Sometimes, I really don’t understand her."
         u "Look, you’re not the one I’m most suspicious of."
-        u "Kaori... had more strange behaviour that night. I decided to start with her."
-        u "So, can we just start the questioning."
+        u "Kaori had more suspicious behavior that night, so I decided to start with her."
+        u "Can we just start the questioning?"
         show kaori happy with dissolve
-        k "Haha... I was just joking. Don’t be so serious."
+        k "Haha... I was just joking."
+        k "Don’t be so serious."
         "This girl."
     else:
         show kaori happy with dissolve
         k "You came to me first. Hehe. Am I that significant to you?"
+        "She leans forward slightly, clearly interested in my answer."
         u "No, it's not like that."
         show kaori normal with dissolve
         k "Hmm."
@@ -690,6 +706,7 @@ label kaori_dialogue:
         u "I don't think it works like this."
         k "I think it does."
         u "You're acting weird."
+        "She shrugs and leans back against the bench."
         k "I'm always weird in people's eyes."
         u "Not in mine."
         show kaori happy with dissolve
@@ -744,8 +761,10 @@ label kaori_dialogue:
                     k "I think I do know something."
                     show kaori happy with dissolve
                     k "It was me. Haha..."
+                    "She raises her hand as if volunteering in class."
                     u "..."
                     u "...Damn it."
+                    "There goes one of my better theories."
                     k "Was that who you thought the real culprit was?"
                     u "Yes. It was."
                     k "Hahaha... I'm sorry for that."
@@ -758,8 +777,11 @@ label kaori_dialogue:
                     k "Hmm..."
                     k "I don’t think so."
                     u "What about Hiro? He was heading the same way."
-                    k "...Hiro?... I didn't see him."
-                    "It’s as if he vanished. Neither of them saw him. And yet, they both were headed the same direction."
+                    "She tilts her head and thinks for a moment before answering."
+                    k "...Hiro?"
+                    k "I didn't see him."
+                    "I let out a long breath."
+                    "It's as if he vanished. Neither of them saw him. Yet both of them were headed the same direction."
                 $ asked_q1 = True
                 jump kaori_questions
             "According to report..." if not asked_q1 and not talked_sakura:
@@ -773,7 +795,9 @@ label kaori_dialogue:
                 u "A flash drive?"
                 k "Yeah... I found it weird too. He said his drive was full."
                 k "I've never filled up all the storage in my life."
+                "Obviously. You've never downloaded anything larger than a selfie."
                 u "Unless you have a lot of data. Do you know what he needed it for?"
+                "She shrugs."
                 k "No. But he said he needed it quickly. He couldn't even wait a day, so we went to my dorm."
                 u "And?"
                 k "I gave it to him. Then he left."
@@ -785,8 +809,10 @@ label kaori_dialogue:
                 k "No, I don't think so."
                 u "What about Kaori? Did you see her with Hiro?"
                 k "No, I didn't."
+                "I rub the back of my neck and sigh."
                 u "Huh... you're pretty useless."
                 show kaori serious with dissolve
+                "She stares at me in disbelief."
                 k "Useless? That's not how you talk to a lady."
                 u "Do you see one?"
                 k "Hmm... Meanie."
@@ -937,6 +963,7 @@ label kaori_dialogue:
                     k "S-so... about the person I like."
                     u "What about them? Was it Hiro?"
                     k "N-No, it’s not him. It’s... um..."
+                    "She takes a deep breath."
                     show kaori blush with dissolve
                     k "Hehe..."
                     k "I-It’s you."
@@ -982,6 +1009,7 @@ label sakura_dialogue:
     u "Hey... Kaori."
     show sakura normal with dissolve
     s "Oh... [first_name], you’re here."
+    "She closes her book and sets it aside."
 
     if talked_kaori:
         "She’s... cute."
@@ -1003,8 +1031,10 @@ label sakura_dialogue:
     show sakura normal with dissolve
     s "Hiro seemed like a really good person. I was quite curious about him."
     s "Smart, athletic... I kind of wish I got to know him better."
-    "Seemed? According to the report, they met at night, secretively. Doesn’t that mean they weren’t strangers in the end."
-    "And what’s with the whole ‘athletic’ thing? Was she interested in him romantically?"
+    "Seemed? According to the report, they met in secret at night."
+    "People usually don't schedule mysterious nighttime meetings with strangers."
+    "And why did she mention that he was athletic?"
+    "That's a very specific compliment."
     u "Yeah... he was."
 
     label sakura_questions:
@@ -1036,6 +1066,8 @@ label sakura_dialogue:
         menu:
             "What were you doing the night Hiro died?" if not asked_qq1:
                 u "Simple question. What were you doing around 11PM that night?"
+                "The moment I ask, her eyes begin darting around the room."
+                "Her fingers tighten around the edge of her skirt."
                 s "I... I was in my dorm. Getting ready to sleep. You know, shower and... stuff."
                 "She's lying. Is she scared it could rocket back at her?"
                 u "Kaori... Do you know why you’re on the suspect list?"
@@ -1050,6 +1082,7 @@ label sakura_dialogue:
                 "Her expression changes drastically."
                 u "Why would you lie Kaori? Were you involved?"
                 s "I thought no one saw us that night... so, I decided to hide it."
+                "She lowers her gaze and twists the fabric of her sleeve."
                 s "I thought..."
                 u "Why? Did you kill him, Kaori?"
                 s "No, I didn’t... I didn’t...!"
@@ -1071,6 +1104,7 @@ label sakura_dialogue:
                 u "...Alright."
                 u "Then why did you lie?"
                 s "I-I'm just... scared."
+                "She wraps her arms around herself."
                 s "Scared that I might... die."
                 u "Hey. Don’t worry. I’ll do my best to find the real culprit."
                 u "From now on, all I want is the truth. Do you understand that?"
@@ -1093,6 +1127,7 @@ label sakura_dialogue:
                     s "It's quite embarrassing to say... haha."
                     u "I still need to know."
                     show sakura blush with dissolve
+                    "She fidgets with a strand of her hair."
                     s "You see... it happens that we both like the same person."
                     u "What?!" with vpunch
                     "My voice comes out louder than I expected. Kaori flinches slightly."
@@ -1104,10 +1139,11 @@ label sakura_dialogue:
                         s "Something happened, [first_name]? Your face suddenly went pale."
                         u "No, no, I’m just surprised. What about you? Your face is red."
                         s "Oh... is it? It's just... umm, I'm fine."
-                        "She looks away, embarrassed."
+                        "She presses her knees together and looks away."
                         "Looking at her face... it has to be true. She’s really in love with me."
                         "Damn... I'm happy."
                         s "A-Are you alright?"
+                        "I can feel my face getting warmer."
                         u "Y-Yeah. I'm fine. I'm fine."
                         "I need to calm down. I really should."
                         "But I can’t. I’m just... that happy."
@@ -1123,6 +1159,7 @@ label sakura_dialogue:
                         s "Something happened, [first_name]? Your face suddenly went pale."
                         u "No, no, I’m just surprised. Do you mind telling me who it is?"
                         s "..."
+                        "She shifts uncomfortably in her seat."
                         show sakura blush with dissolve
                         s "I don’t want to. It doesn’t have anything to do with the case anyway. And I’m not required to tell you, ahem..."
                         u "...Is it Hiro?"
@@ -1149,7 +1186,9 @@ label sakura_dialogue:
                     s "I don’t think so... Hm...Wait."
                     s "When I was walking, a person passed me. They were wearing a dark blue school hoodie."
                     u "Did you see their face? Anything else?"
-                    s "It was too dark. I couldn’t see anything. But their steps were fast... like they were in a hurry."
+                    s "It was too dark. I couldn’t see anything."
+                    "She shakes her head apologetically."
+                    s "Their steps were fast... like they were in a hurry."
                     u "What happened after that?"
                     s "I don't know where that person went. Once I reached the convenience store, I couldn’t see them anymore."
                     u "You bought what you needed. What happened next?"
@@ -1230,7 +1269,13 @@ label riverbank:
     if first_sakura:
         "I guess she wasn’t lying. But what about Ivy? She passed the store and followed Hiro."
         "I scroll through ten more minutes of footage. Ivy returns to the store, holding the hoodie in her hands. She looks sweaty, like she’s been running."
-        "She came to the store at 11:05PM. That’s around Hiro’s estimated time of death."
+        "The school is divided in almost every way. Nearly everything is separated between boys and girls."
+        "The hoodies are no exception. Blue belongs to the boys. Pink belongs to the girls."
+        "Did Ivy borrow the hoodie from another guy? She doesn't have many male friends."
+        "Only Hiro and me."
+        "..."
+        "Is that why I couldn't find mine?"
+        "Ivy came to the store at 11:05PM. That’s around Hiro’s estimated time of death."
         "I watch her for a few minutes. She paces back and forth, thinking about something."
         "Was she really involved?"
         "The fact that Ivy wanted to see the footage almost confirms her involvement."
@@ -1239,13 +1284,20 @@ label riverbank:
         "I scroll through ten more minutes of footage. Ivy returns to the store, holding hoodie in her hands."
         "So the person wearing the dark blue hoodie was Ivy? She was the one who passed Kaori."
         "She didn’t tell me that. She told me she didn’t see her."
-        "I watch her for a few minutes. She paces back and forth, thinking about something."
+        "The school is divided in almost every way. Nearly everything is separated between boys and girls."
+        "The hoodies are no exception. Blue belongs to the boys. Pink belongs to the girls."
+        "Did Ivy borrow the hoodie from another guy? She doesn't have many male friends."
+        "Only Hiro and me."
+        "..."
+        "Is that why I couldn't find mine?"
+        "I watch Ivy for a few minutes. She paces back and forth, thinking about something."
         "Was she really involved?"
         "The fact that she wanted to see the footage almost confirms her involvement."
 
-    "But why would she kill him? Nothing really comes to mind."
-    "Maybe she was there when Kaori talked to Hiro."
-    "I need to talk to Kaori. Their conversation might be the key."
+    "But I can't think of a reason for her to kill him. The same goes for Kaori."
+    "Ivy was coming from the same direction as Hiro and Kaori."
+    "There's a chance she overheard their conversation."
+    "It's worth asking about. I should talk to Kaori next."
     
     $ is_riverbank = True
     jump case
@@ -1274,8 +1326,8 @@ label choice_dialogue:
     s "Not very comfortable to say, but..."
     show sakura normal with dissolve
     s "I confessed to him... that I... that I liked him."
-    "Confessed… Why is she so stubborn?"
-    "It seems like I won’t get an information without bringing up what Ivy told me."
+    "Confessed... Why is she still lying?"
+    "It looks like I won't get anywhere without bringing up what Ivy told me."
     label choice:
         menu:
             "Offensive Tone":
@@ -1329,13 +1381,16 @@ label choice_dialogue:
                 s "..."
                 s "Hiro didn’t deserve to die?"
                 s "That scumbag?"
+                "A bitter laugh escapes her lips."
                 u "What's that suppo-?"
                 s "It seems you really know nothing about him after all."
+                "She leans closer to me."
                 s "That bastard was someone all the girls at this school were afraid of."
                 s "I don't know how, but he had countless private photos on his phone."
                 s "He used them to blackmail us."
                 s "And if someone refused to do what he wanted..."
                 s "...he'd threaten to sell them."
+                "Her voice trembles with anger."
                 s "And that night... I was going to be his next target."
                 u "What are you...?"
                 s "The school didn’t help because of their stupid rules."
@@ -1352,10 +1407,12 @@ label choice_dialogue:
                 s "Ugh... I hope you're acting like this because of today."
                 s "Because if not..."
                 s "...Damn it."
+                "She wipes her eyes with the back of her hand."
                 s "I imagined my confession would be different."
                 s "..."
                 s "...I’ll go. I don't have anything else to say."
-                "She stands up and leaves."
+                "She pushes her chair back and gets to her feet."
+                "She turns around and walks away."
                 show sakura serious at exit_to_right, walk_bob
                 pause 0.8
                 hide sakura
@@ -1372,6 +1429,7 @@ label choice_dialogue:
                 u "And I don’t want to accuse you without understanding what really happened."
                 u "Because I don't want to make the wrong choice. Not when it comes to you."
                 s "W-When it comes to me?"
+                "Her eyes widen slightly."
                 u "..."
                 u "Heh..."
                 s "Everything alright?"
@@ -1389,6 +1447,7 @@ label choice_dialogue:
                 s "..."
                 u "K-Kaori?"
                 u "Please... say something."
+                "My heart pounds against my chest."
                 "Was I wrong after all?"
                 s "I-I...."
                 "She lowers her head."
@@ -1396,6 +1455,7 @@ label choice_dialogue:
                 show sakura sad with dissolve
                 "She looks up again, her eyes filled with tears."
                 s "I'm so happy..."
+                "A relieved laugh escapes her between sobs."
                 s "I'm so happy you said that."
                 s "I-I love you too... [first_name]. I love you so much."
                 "I take out a napkin and give it to her."
@@ -1431,7 +1491,7 @@ label choice_dialogue:
                 u "Thanks, Kaori." 
                 u "You should go. I need to talk to Ivy."
                 s "Sure..."
-                "She stands up and walks closer to me."
+                "She stands up and steps closer to me."
                 show sakura normal at slight_zoom_up
                 "She lowers her head and kisses me on the right cheek."
                 show sakura blush at slight_zoom_bounce
@@ -1536,6 +1596,7 @@ label choice_dialogue:
     k "Oh... no it doesn't." 
     k "I just... thought she was smarter than the others."
     k "Hiro couldn’t do anything to me. And yet I’m the one people think is the fool?"
+    "She looks away, clicking her tongue in irritation."
     u "Ivy..."
     k "I did hate him, that's true. But not because of that."
     u "Then wh-"
@@ -1551,7 +1612,7 @@ label choice_dialogue:
     k "After all, he wasn’t always like that. There was a part of you that still hoped he’d change."
     u "Ivy!"
     show kaori serious with dissolve
-    "Ivy flinches slightly."
+    "She freezes."
     u "I have no idea what you're talking about."
     u "Like I said, I didn’t know anything until Kaori told me."
     k "But..."
@@ -1565,7 +1626,9 @@ label choice_dialogue:
     k "Ahem..."
     k "T-Then I overheard his conversation with Kaori."
     k "And I couldn't hold myself back anymore."
-    k "God... you’ve never seen him like that. That vicious smile of his. I’ll never forget it."
+    k "God... you’ve never seen him like that."
+    "Her fingers curl into fists."
+    k "That vicious smile of his. I’ll never forget it."
     k "And that girl... still acting like she didn’t matter to anyone. Thinking about others while being blackmailed..."
     k "..."
     k "She’s a good person. Better than me, that’s for sure."
@@ -1656,6 +1719,7 @@ label ending:
                         u "Excpected? I'm still not sure it was you."
                         k "And yet you still chose me. Meaning I made mistakes that led you here."
                         u "What happened to your eyes? They're red."
+                        "She quickly looks away."
                         k "I'm just... a little bit of tired."
                         u "Did you really kill Hiro?"
                         k "..."
@@ -1664,11 +1728,24 @@ label ending:
                         "I lift my right hand toward her."
                         "My fingers tighten around the grip."
                         "The barrel trembles as it points at her."
+                        "I try to steady my hand."
+                        "A realization suddenly hits me."
+                        "This is the first time I've ever pointed a gun at another person."
+                        "The first time I've even held one."
+                        "My throat feels dry."
+                        "Who thought this was a good idea?"
+                        "Who allowed them to make teenagers do something like this?"
+                        "I knew a day like this might come eventually."
+                        "But now that it's here..."
+                        "I regret choosing this school."
 
                         menu:
                             "Shoot":
                                 u "I-I'm sorry..."
                                 "My hands start to shake violently."
+                                "My vision blurs."
+                                "I can barely keep the gun pointed at her."
+                                "She takes a small step toward me."
                                 k "It's okay..."
                                 k "I love yo-"
                                 jump ending_three
@@ -1684,6 +1761,7 @@ label ending:
                                 k "No! Wait!"
                                 k "D-Don't kill him."
                                 "Ivy lowers her head."
+                                "Her hands curl into fists at her sides."
                                 u "Ivy...?"
                                 k "...Kill me."
                                 "Her voice trembles."
@@ -1692,18 +1770,20 @@ label ending:
                                 "When she raises her head again, tears fill her eyes."
                                 k "I did it. I killed Hiro."
                                 k "I'm the one who deserves to die. Not you!"
-                                u "Ivy? Why are you acting this way?"
+                                u "Ivy?"
                                 k "Please..."
+                                "She takes a step forward."
                                 i "I'll give you one final opportunity."
                                 menu:
                                     "Shoot":
                                         u "I'm sorry..."
                                         "My hands start to shake violently."
+                                        "I can barely keep the gun pointed at her."
                                         k "[first_name]..."
                                         k "I love yo-"
                                         "The gun fires."
                                         jump ending_three
-                                    "Don't shoot":
+                                    "I don't believe you":
                                         u "No..."
                                         u "I don't believe you."
                                         u "And I won't kill you. Not you."
@@ -1711,6 +1791,18 @@ label ending:
                                         i "We had high expectations for you."
                                         i "But... have it your way."
                                         k "No! Wait!"
+                                        "The gun fires."
+                                        "A sharp pain tears through my chest."
+                                        "My stomach drops."
+                                        "No..."
+                                        "My legs give out beneath me."
+                                        "I fall on my knees."
+                                        k "[first_name]!"
+                                        "Ivy rushes to me."
+                                        k "Why?"
+                                        k "Why would you do something so stupid...?"
+                                        u "Iv..."
+                                        u "..."
                                         jump ending_x
                     "Kaori":
                         u "...Kaori"
@@ -1783,11 +1875,27 @@ label ending:
                         "I lift my right hand toward her."
                         "My fingers tighten around the grip."
                         "The barrel trembles as it points at her."
+
+                        "A realization suddenly hits me."
+                        "This is the first time I've ever pointed a gun at another person."
+                        "The first time I've even held one."
+                        "My throat feels dry."
+                        "Who thought this was a good idea?"
+                        "Who allowed them to make teenagers do something like this?"
+                        "I knew a day like this might come eventually."
+                        "But now that it's here..."
+                        "I regret choosing this school."
+
+
                         menu:
                             "Shoot":
                                 u "I'm sorry... Kaori."
+                                "My hands start to shake violently."
                                 s "No! It wasn't me."
+                                "My vision blurs."
+                                "I can barely keep the gun pointed at her."
                                 s "I hate yo-"
+                                "The gun fires."
                                 jump ending_one
                             "Don't shoot":
                                 u "No! I can't."
@@ -1811,7 +1919,9 @@ label ending:
                                     "Shoot":
                                         u "..."
                                         s "[first_name]?"
+                                        "My hands start to shake violently."
                                         u "I'm sorry... Kaori."
+                                        "My vision blurs."
                                         s "No! Wai-"
                                         jump ending_one
                                     "Don't shoot":
@@ -1819,10 +1929,16 @@ label ending:
                                         "My arm slowly lowers."
                                         u "I won't do it."
                                         s "[first_name]..."
-                                        hide sakura with dissolve
-                                        i "We had high expectations for you."
-                                        i "But..."
-                                        i "Have it your way."
+                                        i "But... have it your way."
+                                        "The gun fires."
+                                        "A sharp pain tears through my chest."
+                                        "My stomach drops."
+                                        "No..."
+                                        "My legs give out beneath me."
+                                        "I fall on my knees."
+                                        s "[first_name]?"
+                                        u "Kao..."
+                                        u "..."
                                         jump ending_x                      
                     "Return":
                         jump ending_choice
@@ -1838,6 +1954,11 @@ label ending_one:
     s "Nngh..."
     s "..."
     u "..."
+    "My hands won't stop shaking."
+    "I've never liked the sight of blood. This case is no different."
+    "My stomach twists."
+    "I quickly turn away and start coughing."
+    "Just looking at the blood makes me want to throw up."
     u "D-Did she-"
     i "Kaori Ito is dead."
     i "Congratulations on your first case, [first_name] [last_name]."
@@ -1910,10 +2031,12 @@ label ending_one:
     u "Why are you coming with me?"
     k "..."
     k "I just didn't want you to be alone."
+    "She keeps her eyes fixed on the ground as she walks."
     u "Do you think I made the right choice?"
     k "Um... I don't think I'm the right person to answer that."
     u "Heh... That's true."
     u "I don't know how I'm supposed to feel. I killed her."
+    "My voice barely rises above a whisper."
     u "I failed her. I wasn't able to find the real killer."
     k "You tried. More than anyone else would have. I know that."
     k "But you're not alone now. You don't have to carry all of this by yourself."
@@ -1932,6 +2055,7 @@ label ending_one:
     k "I-It's okay."
     k "I don't mind."
     "She gently squeezes my hand."
+    "I squeeze back."
     "Neither of us says another word as we walk to my apartment together."
     pause 1.0
     hide kaori with dissolve
@@ -1947,6 +2071,10 @@ label ending_three:
     k "Nngh..."
     k "..."
     u "..."
+    "I've never liked the sight of blood. This case is no different."
+    "My stomach twists."
+    "I quickly turn away and start coughing."
+    "Just looking at the blood makes me want to throw up."
     u "D-Did she-"
     i "Ivy Lee is dead."
     i "Congratulations on your first case, [first_name] [last_name]."
@@ -1970,6 +2098,7 @@ label ending_three:
     u "Yeah..."
     show sakura at slight_zoom_up
     "She steps closer and gently takes my hand."
+    "Her grip is warm."
     s "Are you ready for the final test?"
     u "Test? Oh... yeah, I think so. Are you?"
     s "I think I am. I'm just nervous."
@@ -1992,7 +2121,7 @@ label ending_three:
     scene bedroom_evening with fade
     "After school, I return to my room."
     "There is no confirmation that it was Ivy. The school refuses to tell me anything."
-    "Was it the right choice? Did her death bring justice?"
+    "I lean back against the wall and let out a long sigh."
     "But the more I think about her, the more restless I become."
     "In the end, I decide to visit her room one last time."
     scene kitchen_night with fade
@@ -2093,6 +2222,7 @@ label ending_three:
     k "I want to walk to school with you again."
     k "I want to work at the same company as you."
     k "I want all of it."
+    "Her voice cracks."
     k "Even if someone innocent has to pay the price."
     k "Even if that makes me a terrible person."
     k "..."
@@ -2105,6 +2235,7 @@ label ending_three:
     k "I want to be the person you think about."
     k "The person you can't forget."
     k "The person who loved you more than anyone else."
+    "She laughs weakly through her tears."
     k "..."
     k "Heh."
     k "How selfish."
@@ -2134,21 +2265,14 @@ label ending_three:
 
 label ending_x:
     scene black
-    pause 0.5
-    show text "You died." at truecenter
-    with fade
     pause 2
-    show text "Two days later, Kaori Ito leaves the school." at truecenter
+    show text "The loss of someone Kaori truly cared about broke her. She tried to act normally, as if nothing happened. She attended classes. Answered questions. Smiled when people talked to her. But each day became a little harder than the last. Eventually, the weight became too much to bear. A week later, Kaori Ito withdrew from the academy." at truecenter
     with fade
-    pause 3
-    show text "She couldn't remain at the academy after witnessing the death of her friend... and the person she loved." at truecenter
+    pause 12
+    show text "Ivy Lee decided to remain at the academy. The smile that once seemed permanently etched onto her face was gone. At first, people assumed it was temporary. Yet the days turned into weeks, and the smile never returned. Eventually, a rumor began to spread throughout the academy. There was a student who had lost her smile. Ivy Lee." at truecenter
     with fade
-    pause 3
-    show text "Three days later, Ivy Lee is found dead in the bathroom of her dorm room." at truecenter
-    with fade
-    pause 3
-    show text "Probable cause of death: suicide." at truecenter
-    with fade
+    pause 14
+
     pause 3
 
     jump end_credits
