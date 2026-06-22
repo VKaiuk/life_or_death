@@ -20,7 +20,7 @@ define config.name = _("culprit_I_love")
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "culprit_I_love"
+define build.name = "TheCulpritILove"
 
 ## Save directory ##############################################################
 ##
