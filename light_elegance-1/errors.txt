@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 292: end of line expected.
-    show kaori serious with at slight_zoom_up
-                               ^
+File "game/script.rpy", line 1223: expected statement.
+    "Where did Hiro die?" from _call_riverbank_thinking
+                                                       ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Sun Jun 14 14:27:55 2026
+Fri Jun 19 23:32:10 2026
