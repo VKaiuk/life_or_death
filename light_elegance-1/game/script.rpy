@@ -874,7 +874,7 @@ label kaori_dialogue:
                 "Well..."
                 "She remembered."
                 u "Ahem."
-                u "Let's get back to questeniong."
+                u "Let’s get back to questioning."
                 show kaori normal with dissolve
                 k "...Yeah."
                 $ asked_q3 = True
@@ -1236,13 +1236,80 @@ label riverbank:
     "Blood was found beneath his fingernails."
     "That suggests he fought desperately for his life."
 
-    "Let's answer a simple question."
-    "Where did Hiro die?"
-    call riverbank_thinking from _call_riverbank_thinking
+    "I close my eyes and try to put the facts in order."
+    scene board:
+        zoom 1.025 
+    with fade
 
-    "That means Hiro was strangled."
+    label drag_select:
+        $ quick_menu = False
+
+        $ selected_place = None
+        $ selected_cause = None
+        $ correct_place = False
+        $ correct_cause = False
+
+        call screen drag_both_scene
+        
+        $ quick_menu = True
+
+        if correct_place:
+            if correct_cause:
+                "Right. The riverbank wasn't where Hiro died."
+                "It was only the place where his body was discovered."
+                "And judging by the report, strangulation is the most likely cause of death."
+                "The marks on his body and the lack of other fatal injuries point to it."
+            elif selected_cause == "stabbing":
+                "Right. The riverbank wasn't where Hiro died."
+                "It was only the place where his body was discovered."
+                "But stabbing doesn't fit."
+                "The report never mentioned any stab wounds."
+                "If Hiro had been stabbed, it would have been immediately obvious."
+                jump drag_select
+            elif selected_cause == "gunshooting":
+                "Right. The riverbank wasn't where Hiro died."
+                "It was only the place where his body was discovered."
+                "But a gunshot doesn't make sense."
+                "There were no bullet wounds and no mention of a firearm in the report."
+                jump drag_select
+        elif selected_place == "riverbank":
+            if correct_cause:
+                "Strangulation seems correct."
+                "But the riverbank doesn't."
+                "The condition of the body suggests it had been in the water for quite some time."
+                jump drag_select
+            elif selected_cause == "stabbing":
+                "Neither conclusion feels right."
+                "The riverbank was where the body was found, not necessarily where the murder happened."
+                "And there were no signs of stabbing mentioned in the report."
+                jump drag_select
+            elif selected_cause == "gunshooting":
+                "No. That doesn't fit the evidence."
+                "The riverbank being the murder scene already seems unlikely."
+                "And nothing suggests a firearm was involved."
+                jump drag_select
+        elif selected_place == "school":
+            if correct_cause:
+                "Strangulation makes sense."
+                "But the school doesn't."
+                "After speaking with Kaori, Hiro headed toward the dormitory area."
+                "There's nothing placing him back at the school afterward."
+                jump drag_select
+            elif selected_cause == "stabbing":
+                "I don't think either answer is correct."
+                "Hiro was last seen heading away from the school."
+                "And the report contains no evidence of stab wounds."
+                jump drag_select
+            elif selected_cause == "gunshooting":
+                "That doesn't add up."
+                "The school is the wrong location."
+                "And there's no evidence Hiro was shot."
+                jump drag_select
+        else:
+            jump drag_select
+
+
     "More likely, his body was thrown into the river somewhere upstream, and the current brought it here."
-
     scene city with fade
     "The easiest way to do that would be from one of the bridges further along the river. I follow the upstream."
     "About fifteen minutes later, I spot a familiar footbridge. I use it every day on my way to the dorm. Hiro used it too."
@@ -1754,7 +1821,7 @@ label ending:
                         k "And yet you still chose me. Meaning I made mistakes that led you here."
                         u "What happened to your eyes? They're red."
                         "She quickly looks away."
-                        k "I'm just... a little bit of tired."
+                        k "I'm just... a little tired."
                         u "Did you really kill Hiro?"
                         k "..."
                         k "Does it matter anymore? I'm not leaving this room alive."
@@ -2229,16 +2296,21 @@ label ending_three:
     k "Sometimes memories from before or after the event become fragmented as well."
     k "It was you in that hoodie."
     k "After you killed Hiro..."
-    k "You hid it and returned to your room."
-    k "The moment I found it, I knew it would lead back to you..."
-    k "Without thinking, I made myself a suspect instead."
+    k "You hid it and ran."
+    k "I didn't know what to think."
+    k "I knew it would lead back to you..."
+    k "That's why I decided to make myself a suspect instead."
+    k "I'm not sure if it was the right choice."
+    k "But I don't regret it."
     k "..." 
-    k "The next day, I came to see you. To prepare a plan."
+    k "The next day, I came to see you. I wanted to talk to you. To figure out what to do."
     k "That's when I realized something was wrong."
     k "You remembered nothing."
     k "Not what you did. Not the bridge."
     k "Your memories... just disappeared."
     k "I can't imagine what kind of night you went through."
+    k "You were alone..."
+    k "And I wasn't there to help you."
     show kaori normal with dissolve
     k "Heh."
     k "You couldn't even remember how we first met."
@@ -2365,29 +2437,68 @@ label end_credits:
     if current_ending == "ivy" and not persistent.seen_ivy_ending_note:
         $ persistent.seen_ivy_ending_note = True
         if persistent.seen_kaori_ending_note:
-            call screen ending_note("You've seen Kaori's and Ivy's endings. Additionally Refuse ending.")
+            $ note = """
+            You've completed Ivy's and Kaori's Endings.
+            
+            I had a great time creating this story, and I hope you enjoyed
+            Sol's journey as much as I enjoyed writing it. 
+            There's still one more ending to discover. Try choosing "Don't 
+            Shoot" during the final decision to unlock a short additional 
+            ending.
+
+            I hope you enjoyed the story.
+            And if you did, please consider leaving a review. It really helps
+            and means a lot to me as a developer.
+            """
+            call screen ending_note(note)
         else:
-            call screen ending_note("You've unlocked Ivy's ending. Not unlocked Kaori.")
+            $ note = """
+            You've completed Ivy's Ending.
+            
+            I had a great time creating this story, and I hope you enjoyed
+            Sol's journey as much as I enjoyed writing it. 
+            You can unlock another ending by choosing Kaori during the final
+            decision.
+
+            I hope you enjoyed the story.
+            And if you did, please consider leaving a review. It really helps
+            and means a lot to me as a developer.
+            """
+            call screen ending_note(note)
 
     elif current_ending == "kaori" and not persistent.seen_kaori_ending_note:
         $ persistent.seen_kaori_ending_note = True
         if persistent.seen_ivy_ending_note:
-            call screen ending_note("You've seen Kaori's and Ivy's endings. Additionally Refuse ending.")
+            $ note = """
+            You've completed Ivy's and Kaori's Endings.
+            
+            I had a great time creating this story, and I hope you enjoyed
+            Sol's journey as much as I enjoyed writing it. 
+            There's still one more ending to discover. Try choosing "Don't
+            Shoot" during the final decision to unlock a short additional
+            ending.
+
+            I hope you enjoyed the story.
+            And if you did, please consider leaving a review. It really helps
+            and means a lot to me as a developer.
+            """
+            call screen ending_note(note)
         else:
-            call screen ending_note("You've unlocked Kaori's ending. Not unlocked Ivy")
+            $ note = """
+            You've completed Kaori's Ending.
+            
+            I had a great time creating this story, and I hope you enjoyed
+            Sol's journey as much as I enjoyed writing it. 
+            You can unlock another ending by choosing Ivy during the final
+            decision.
 
+            I hope you enjoyed the story.
+            And if you did, please consider leaving a review. It really helps
+            and means a lot to me as a developer.
+            """
+            call screen ending_note(note)
 
-    elif current_ending == "refuse" and not persistent.seen_refuse_ending_note:
-        $ persistent.seen_refuse_ending_note = True
-        call screen ending_note("You've unlocked additional ending.")
     $ current_ending = None
-
-
-    # $ persistent.seen_ivy_ending_note = False
-    # $ persistent.seen_kaori_ending_note = False
-    # $ persistent.seen_refuse_ending_note = False
-    # $ persistent.seen_all_endings_note = False
-
 
     scene black with Fade(1.0, 1.0, 1.0)
     pause 1.0
@@ -2406,11 +2517,13 @@ screen ending_note(message):
         vbox:
             spacing 30
 
-            text "Ending Note" size 45
+            text "Thank you for playing The Culprit I Love!" size 45
             text message size 28
 
-            textbutton "Close":
-                xalign 0.5
+            textbutton "Continue":
+                text_color "#fff"
+
+                xalign 2
                 action Return()
 
 screen big_text(info):
@@ -2435,6 +2548,247 @@ screen big_text(info):
                 ypos -700
                 action Return()
 
+screen drag_both_scene:
+    #LEFT HALF
+    frame:
+        xpos 0
+        ypos 0
+        xsize 960
+        ysize 1080
+        background None
+        text "Where did Hiro die?" xpos 570 ypos 40 size 50 color "#4e4e4e"
+
+        draggroup:
+            if selected_place != "riverbank":
+                drag:
+                    drag_name "riverbank"
+                    xpos 0.20
+                    ypos 0.20
+                    drag_raise True
+                    draggable True
+                    droppable False
+                    dragged drag_place
+
+                    fixed:
+                        xsize 200
+                        ysize 100
+
+                        add "gui/drag_dark.png":
+                            xsize 200
+                            ysize 100
+                        
+                        text "Riverbank":
+                            xalign 0.5
+                            yalign 0.5
+
+            if selected_place != "school":
+                drag:
+                    drag_name "school"
+                    xpos 0.40
+                    ypos 0.35
+                    drag_raise True
+                    draggable True
+                    droppable False
+                    dragged drag_place
+
+                    fixed:
+                        xsize 200
+                        ysize 100
+
+                        add "gui/drag_dark.png":
+                            xsize 200
+                            ysize 100
+                        
+                        text "School":
+                            xalign 0.5
+                            yalign 0.5
+
+            if selected_place != "unknown":
+                drag:
+                    drag_name "unknown"
+                    xpos 0.60
+                    ypos 0.50
+                    drag_raise True
+                    draggable True
+                    droppable False
+                    dragged drag_place
+                    
+                    fixed:
+                        xsize 200
+                        ysize 100
+
+                        add "gui/drag_dark.png":
+                            xsize 200
+                            ysize 100
+                        
+                        text "Unknown":
+                            xalign 0.5
+                            yalign 0.5
+
+            drag:
+                drag_name "place_of_death"
+                xpos 0.2
+                ypos 0.65
+                draggable False
+                droppable True
+
+                fixed:
+                    xsize 600
+                    ysize 300
+
+                    add "gui/drag_back.png":
+                        xsize 600
+                        ysize 300
+
+                    text "Place of Death":
+                        xalign 0.5
+                        yalign 0.5
+    
+    # RIGHT HALF
+    frame:
+        xpos 960
+        ypos 0
+        xsize 960
+        ysize 1080
+        background None
+        text 'How did Hiro die?' xpos 25 ypos 40 size 50 color "#4e4e4e"
+
+        draggroup:
+
+            if selected_cause != "strangulation":
+                drag:
+                    drag_name "strangulation"
+                    xpos 0.60
+                    ypos 0.20
+                    drag_raise True
+                    draggable True
+                    droppable False
+                    dragged cause_place
+
+                    fixed:
+                        xsize 200
+                        ysize 100
+
+                        add "gui/drag_dark.png":
+                            xsize 200
+                            ysize 100
+                        
+                        text "Strangulation":
+                            xalign 0.5
+                            yalign 0.5
+
+            if selected_cause != "stabbing":
+                drag:
+                    drag_name "stabbing"
+                    xpos 0.40
+                    ypos 0.35
+                    drag_raise True
+                    draggable True
+                    droppable False
+                    dragged cause_place
+
+                    fixed:
+                        xsize 200
+                        ysize 100
+
+                        add "gui/drag_dark.png":
+                            xsize 200
+                            ysize 100
+                        
+                        text "Stabbing":
+                            xalign 0.5
+                            yalign 0.5
+            
+            if selected_cause != "gunshooting":
+                drag:
+                    drag_name "gunshooting"
+                    xpos 0.20
+                    ypos 0.50
+                    drag_raise True
+                    draggable True
+                    droppable False
+                    dragged cause_place
+                    
+                    fixed:
+                        xsize 200
+                        ysize 100
+
+                        add "gui/drag_dark.png":
+                            xsize 200
+                            ysize 100
+                        
+                        text "Gunshooting":
+                            xalign 0.5
+                            yalign 0.5
+
+            drag:
+                drag_name "cause_of_death"
+                xpos 0.18
+                ypos 0.65
+                draggable False
+                droppable True
+
+                fixed:
+                    xsize 600
+                    ysize 300
+
+                    add "gui/drag_back.png":
+                        xsize 600
+                        ysize 300
+
+                    text "Cause of Death":
+                        xalign 0.5
+                        yalign 0.5
+
+    add Solid("#e9626840"):
+        xpos 952
+        ypos 30
+        xsize 20
+        ysize 1080
+
+    add Solid("#e96268"):
+        xpos 959
+        ypos 30
+        xsize 4
+        ysize 1080
+
+
+    if selected_place and selected_cause:
+        timer 0.1 action Return()
+
+default selected_place = None
+default selected_cause = None
+default correct_place = False
+default correct_cause = False
+
+init python:
+
+    def drag_place(drags, drop):
+        if not drop:
+            return
+
+        store.selected_place = drags[0].drag_name
+
+        if store.selected_place == "unknown" and drop.drag_name == "place_of_death":
+            store.correct_place = True
+        else:
+            store.correct_place = False
+
+        renpy.restart_interaction()
+
+    def cause_place(drags, drop):
+        if not drop:
+            return
+
+        store.selected_cause  = drags[0].drag_name
+
+        if store.selected_cause == "strangulation" and drop.drag_name == "cause_of_death":
+            store.correct_cause = True
+        else:
+            store.correct_cause = False
+
+        renpy.restart_interaction()
+
 
 screen ten_min_timer():
 
@@ -2451,114 +2805,6 @@ screen ten_min_timer():
         SetVariable("time_left", time_left - 1),
         [SetVariable("time_left", 0), Hide("ten_min_timer"), Jump("timeup_ending")]
     )
-
-label riverbank_thinking:
-    $ strangle = 0
-    $ stab = 0
-    $ gun = 0
-    $ school = ""
-    $ riverbank = ""
-    $ unknown = ""
-    $ message_place = ""
-    $ message = ""
-
-    label thinking:
-        menu:
-            "Riverbank":
-                $ riverbank = "Riverbank"
-                "How did he die?"
-                menu:
-                    "Strangulation":
-                        $ strangle = 1
-                        $ message_place = message_display_place(school, riverbank, unknown)
-                        $ message = message_display(strangle, stab, gun)
-                        "[message_place]"
-                        "[message]"
-                        jump riverbank_thinking
-                    "Stabbing":
-                        $ stab = 1
-                        $ message_place = message_display_place(school, riverbank, unknown)
-                        $ message = message_display(strangle, stab, gun)
-                        "[message_place]"
-                        "[message]"
-                        jump riverbank_thinking
-                    "Gunshooting":
-                        $ gun = 1
-                        $ message_place = message_display_place(school, riverbank, unknown)
-                        $ message = message_display(strangle, stab, gun)
-                        "[message_place]"
-                        "[message]"
-                        jump riverbank_thinking
-
-            "Near School":
-                $ school = "School"
-                "How did he die?"
-                menu:
-                    "Strangulation":
-                        $ strangle = 1
-                        $ message_place = message_display_place(school, riverbank, unknown)
-                        $ message = message_display(strangle, stab, gun)
-                        "[message_place]"
-                        "[message]"
-                        jump riverbank_thinking
-                    "Stabbing":
-                        $ stab = 1
-                        $ message_place = message_display_place(school, riverbank, unknown)
-                        $ message = message_display(strangle, stab, gun)
-                        "[message_place]"
-                        "[message]"
-                        jump riverbank_thinking
-                    "Gunshooting":
-                        $ gun = 1
-                        $ message_place = message_display_place(school, riverbank, unknown)
-                        $ message = message_display(strangle, stab, gun)
-                        "[message_place]"
-                        "[message]"
-                        jump riverbank_thinking
-            "Unknown":
-                $ unknown = "Unknown"
-                "How did he die?"
-                menu:
-                    "Strangulation":
-                        $ strangle = 1
-                        $ message_place = message_display_place(school, riverbank, unknown)
-                        $ message = message_display(strangle, stab, gun)
-                        "[message_place]"
-                        "[message]"
-                        return
-                    "Stabbing":
-                        $ stab = 1
-                        $ message_place = message_display_place(school, riverbank, unknown)
-                        $ message = message_display(strangle, stab, gun)
-                        "[message_place]"
-                        "[message]"
-                        jump riverbank_thinking
-                    "Gunshooting":
-                        $ gun = 1
-                        $ message_place = message_display_place(school, riverbank, unknown)
-                        $ message = message_display(strangle, stab, gun)
-                        "[message_place]"
-                        "[message]"
-                        jump riverbank_thinking
-
-    init python:
-        def message_display_place(school, riverbank, unknown):
-            if school == "School":
-                return "Hiro couldn't have been killed near the school. After his conversation with Kaori, he headed toward the boys' dorm."
-            elif riverbank == "Riverbank":
-                return "The report says riverbank, but that doesn't make sense."
-            elif unknown == "Unknown":
-                return "That's right! The riverbank wasn't the place of death. It was where the body was found."
-            return ""
-
-        def message_display(strangle, stab, gun):
-            if strangle == 1:
-                return "That's right! His body's condition suggests that strangulation was the cause of death."
-            elif stab == 1:
-                return "No wounds or signs of stabbing were found on his body. It wasn't a stabbing."
-            elif gun == 1:
-                return "Hiro wasn't killed with a gun. There is no evidence pointing to that."
-
 
 # xpos 0.15
 # xpos 0.65

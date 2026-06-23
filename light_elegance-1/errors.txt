@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 2313: expected 'name' not found.
-    call screen
-               ^
+File "game/script.rpy", line 2719: add expects a non-empty block.
+    add Solid("#e96268"):
+                         ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Mon Jun 22 23:36:29 2026
+Tue Jun 23 15:07:12 2026

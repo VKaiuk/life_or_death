@@ -159,6 +159,8 @@ define config.autosave_slots = 6
 ## Same thing, but for quick save
 define config.quicksave_slots = 6
 define config.main_menu_music = "audio/Dream.mp3"
+define config.rollback_length = 10
+
 ## Build configuration #########################################################
 ##
 ## This section controls how Ren'Py turns your project into distribution files.

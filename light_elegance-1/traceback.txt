@@ -1,35 +1,33 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 1722, in script
-    "Final Report":
-renpy.display.screen.ScreenNotFound: Screen 'big_text' is not known.
+  File "game/script.rpy", line 1270, in script
+  File "game/script.rpy", line 1282
+    selected_place = "riverbank"
+                   ^^^^^^^^^^^^^
+SyntaxError: invalid syntax
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/script.rpy", line 1722, in script
-    "Final Report":
-  File "renpy/ast.py", line 2241, in execute
-    self.call("execute")
-    ~~~~~~~~~^^^^^^^^^^^
-  File "renpy/ast.py", line 2195, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/statements.py", line 381, in call
-    return method(parsed, *args, **kwargs)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/common/000statements.rpy", line 695, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/exports/statementexports.py", line 334, in call_screen
-    renpy.exports.show_screen(_screen_name, *args, _transient=True, **kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/screen.py", line 1355, in show_screen
-    raise ScreenNotFound(name[0])
-renpy.display.screen.ScreenNotFound: Screen 'big_text' is not known.
+  File "game/script.rpy", line 1270, in script
+  File "renpy/ast.py", line 2079, in execute
+    if renpy.python.py_eval(condition):
+       ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^ 
+  File "renpy/python.py", line 1303, in py_eval
+    code = py_compile(code, "eval")
+           ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1260, in py_compile
+    raise e
+  File "renpy/python.py", line 1190, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, True)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/script.rpy", line 1282
+    selected_place = "riverbank"
+                   ^^^^^^^^^^^^^
+SyntaxError: invalid syntax
 
 Windows-11-10.0.26200-SP0 AMD64
 Ren'Py 8.5.2.26010301
 culprit_I_love 1.0
-Tue Jun 23 00:00:06 2026
+Tue Jun 23 14:40:12 2026
