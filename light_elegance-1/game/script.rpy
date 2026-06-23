@@ -48,6 +48,12 @@ default is_riverbank = False
 default offensive = False
 default normal = False
 
+default current_ending = None
+default persistent.seen_ivy_ending_note = False
+default persistent.seen_kaori_ending_note = False
+default persistent.seen_refuse_ending_note = False
+
+
 transform left_char: 
     zoom 0.25
     xpos 0.25
@@ -1520,10 +1526,10 @@ label choice_dialogue:
         "No."
         "I don't believe it. I don't want to."
         "Was Hiro really this kind of person the whole time?"
-        "And I never saw it.?"
+        "And I never saw it?"
         "He tried to hurt Kaori..."
         u "And I did nothing!"
-        "What about Ivy? Did the same thing happen to her too?"
+        u "What about Ivy? Did the same thing happen to her too?"
         "I sit there for a few more minutes, then leave the cafeteria and head to the school yard to speak with Ivy."
 
         stop music fadeout 2.0
@@ -1548,7 +1554,7 @@ label choice_dialogue:
         u "Stop it. Don’t you have anything else to think about?"
         k "I do. But I’m your friend..."
         show kaori blush with dissolve
-        k "And I l-like you too. So it’s normal to worry about you."
+        k "Maybe even more. So it’s normal to worry about you."
         u "I'm fine. Don't worry about me."
         show kaori normal with dissolve
         k "Good. But you can talk to me if something’s wrong. Okay?"
@@ -1729,7 +1735,7 @@ label ending:
                         "I step out of the classroom and head toward the women's dormitory."
                         scene building with fade
                         "Before reaching the final door, I wonder if I made the right decision."
-                        "Will I regret this later? Will I regret it for tRhe rest of my life?"
+                        "Will I regret this later? Will I regret it for the rest of my life?"
                         scene kitchen_night with fade
                         "I open the door to Ivy's apartment. It's dark inside."
                         "Near the entrance, I notice a table with a pistol resting on top of it."
@@ -1743,8 +1749,8 @@ label ending:
                         "The same damn smile on her face."
                         k "So... you're here."
                         u "You're not surprised?"
-                        k "I excpected as much."
-                        u "Excpected? I'm still not sure it was you."
+                        k "I expected as much."
+                        u "Expected? I'm still not sure it was you."
                         k "And yet you still chose me. Meaning I made mistakes that led you here."
                         u "What happened to your eyes? They're red."
                         "She quickly looks away."
@@ -2002,6 +2008,7 @@ label ending_one:
     i "We have no confirmation of the real killer. Only a collection of facts. And a conclusion we chose to believe."
     i "You'll never know for certain whether you fought for justice..."
     i "...or condemned an innocent person. Not everyone tells the truth."
+    i "This is the reality of the world you're about to enter."
     i "Now, you are free to return to your life."
     i "Assuming you're still capable of it."
 
@@ -2093,6 +2100,10 @@ label ending_one:
     pause 1.0
     hide kaori with dissolve
     scene black with fade
+
+    $ current_ending = "kaori"
+
+
     jump end_credits
 
 label ending_three:
@@ -2111,9 +2122,18 @@ label ending_three:
     u "D-Did she-"
     i "Ivy Lee is dead."
     i "Congratulations on your first case, [first_name] [last_name]."
+    u "W-Was it her?"
+    i "Does the truth matter anymore? She's dead."
+    u "I'm starting to think this school is nothing more than an excuse for you people to entertain yourselves."
+    u "What's the point of all this?"
+    u "How is a detective supposed to live with a sacrifice like that if he doesn't even know whether it was for justice."
+    i "..."
+    u "Why are you silent?!"
+    i "You'll never know for certain whether you fought for justice..."
+    i "...or condemned an innocent person. Not everyone tells the truth."
+    i "This is the reality of the world you're about to enter."
     i "Now, you are free to return to your life."
     i "Assuming you're still capable of it."
-    u "..."
 
     stop music fadeout 2.0
     play music "audio/end.mp3" volume 1.5 fadein 2.0
@@ -2145,12 +2165,10 @@ label ending_three:
     s "Yes! I-I'd love to."
     u "Great. I'll... I'll wait for you after school."
     s "I can't wait. Hehe."
-    u "I'm sorry. I have to go to the bathroom."
-    show sakura at slight_zoom_bounce
-    s "Sure."
-    show sakura normal at exit_to_left, walk_bob
-    pause 0.8
-    hide sakura
+    "Her smile makes my chest feel lighter."
+    "For the first time in days, I feel like things might be okay."
+
+    hide sakura with dissolve
     scene bedroom_evening with fade
     "After school, I return to my room."
     "There is no confirmation that it was Ivy. The school refuses to tell me anything."
@@ -2169,9 +2187,9 @@ label ending_three:
         zoom 1.5
     with fade
     "I enter her room."
-    "I walk toward her desk and notice a dark blue hoodie draped over the chair."
-    "Is it the same hoodie Ivy was wearing that night?"
-    "Was this here when I talked to her?"
+    "I walk toward her desk and notice that damn hoodie draped over the chair."
+    "Is it the same one Ivy was wearing that night?"
+    "Was it here when I talked to her?"
     "I pick it up and check the pockets. A flash drive falls into my hand."
     "I insert it into the laptop resting on the desk."
     "Inside, I find a single video. 'Untitled1.mp4'"
@@ -2294,10 +2312,16 @@ label ending_three:
     u "..."
     "All that's left is a dark stain where her blood dried."
     pause 1.0
+
+    $ current_ending = "ivy"
+
     jump end_credits
 
 label ending_x:
     scene black
+    pause 2
+    show text "Sol Paver died." at truecenter
+    with fade
     pause 2
     show text "The loss of someone Kaori truly cared about broke her. She tried to act normally, as if nothing happened. She attended classes. Answered questions. Smiled when people talked to her. But each day became a little harder than the last. Eventually, the weight became too much to bear. A week later, Kaori Ito withdrew from the academy." at truecenter
     with fade
@@ -2306,8 +2330,10 @@ label ending_x:
     with fade
     pause 14
 
-    pause 3
+    $ current_ending = "refuse"
 
+    pause 3
+    
     jump end_credits
 #endregion
 
@@ -2336,10 +2362,56 @@ label end_credits:
     hide text
     with fade
 
+    if current_ending == "ivy" and not persistent.seen_ivy_ending_note:
+        $ persistent.seen_ivy_ending_note = True
+        if persistent.seen_kaori_ending_note:
+            call screen ending_note("You've seen Kaori's and Ivy's endings. Additionally Refuse ending.")
+        else:
+            call screen ending_note("You've unlocked Ivy's ending. Not unlocked Kaori.")
+
+    elif current_ending == "kaori" and not persistent.seen_kaori_ending_note:
+        $ persistent.seen_kaori_ending_note = True
+        if persistent.seen_ivy_ending_note:
+            call screen ending_note("You've seen Kaori's and Ivy's endings. Additionally Refuse ending.")
+        else:
+            call screen ending_note("You've unlocked Kaori's ending. Not unlocked Ivy")
+
+
+    elif current_ending == "refuse" and not persistent.seen_refuse_ending_note:
+        $ persistent.seen_refuse_ending_note = True
+        call screen ending_note("You've unlocked additional ending.")
+    $ current_ending = None
+
+
+    # $ persistent.seen_ivy_ending_note = False
+    # $ persistent.seen_kaori_ending_note = False
+    # $ persistent.seen_refuse_ending_note = False
+    # $ persistent.seen_all_endings_note = False
+
+
     scene black with Fade(1.0, 1.0, 1.0)
     pause 1.0
 
     return
+
+screen ending_note(message):
+    modal True
+
+    frame:
+        xalign 0.5
+        yalign 0.5
+        xsize 900
+        padding (50, 50)
+
+        vbox:
+            spacing 30
+
+            text "Ending Note" size 45
+            text message size 28
+
+            textbutton "Close":
+                xalign 0.5
+                action Return()
 
 screen big_text(info):
 
@@ -2362,6 +2434,7 @@ screen big_text(info):
                 xpos 10
                 ypos -700
                 action Return()
+
 
 screen ten_min_timer():
 

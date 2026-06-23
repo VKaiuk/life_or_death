@@ -1,33 +1,177 @@
-2026-06-22 05:39:53 UTC
+2026-06-23 05:46:24 UTC
 Windows-11-10.0.26200-SP0
 Ren'Py 8.5.2.26010301
 
-Early init took 35 ms
-Loading error handling took 40 ms
-Loading script took 274 ms
-Loading save slot metadata took 91 ms
+Early init took 32 ms
+Loading error handling took 26 ms
+Loading script took 528 ms
+Loading save slot metadata took 23 ms
 Loading persistent took 0 ms
-Running init code took 72 ms
-Loading analysis data took 10 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 49 ms
+Running init code took 47 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 5 ms
 Dump and make backups took 26 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 22 ms
+Initial gc took 33 ms
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 186 ms
+Creating interface object took 207 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
-Load screen analysis took 19 ms
-Analyze screens took 0 ms
+Load screen analysis took 11 ms
+Analyze screens took 1 ms
 Save screen analysis took 0 ms
 Save pyanalysis took 0 ms
-Save bytecode took 0 ms
+Save bytecode took 19 ms
 Running _start took 0 ms
-Interface start took 144 ms
+Interface start took 147 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 1721, in script
+    "Final Report":
+  File "renpy/ast.py", line 2241, in execute
+    self.call("execute")
+    ~~~~~~~~~^^^^^^^^^^^
+  File "renpy/ast.py", line 2195, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/statements.py", line 381, in call
+    return method(parsed, *args, **kwargs)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/000statements.rpy", line 695, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/statementexports.py", line 334, in call_screen
+    renpy.exports.show_screen(_screen_name, *args, _transient=True, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/screen.py", line 1355, in show_screen
+    raise ScreenNotFound(name[0])
+renpy.display.screen.ScreenNotFound: Screen 'big_text' is not known.
+
+While running game code:
+  File "game/script.rpy", line 1721, in script
+    "Final Report":
+renpy.display.screen.ScreenNotFound: Screen 'big_text' is not known.
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 13 ms
+Loading script took 383 ms
+Loading save slot metadata took 14 ms
+Loading persistent took 0 ms
+Running init code took 21 ms
+Loading analysis data took 5 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 5 ms
+Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
+Dump and make backups took 29 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 40 ms
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 210 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 123 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 8 ms
+Loading script took 352 ms
+Loading save slot metadata took 18 ms
+Loading persistent took 0 ms
+Running init code took 24 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 7 ms
+Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
+Dump and make backups took 28 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 39 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 6 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 150 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
+Cleaning stores took 0 ms
+Load screen analysis took 14 ms
+Analyze screens took 0 ms
+Running _start took 0 ms
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 9 ms
+Loading script took 363 ms
+Loading save slot metadata took 18 ms
+Loading persistent took 0 ms
+Running init code took 22 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
+Dump and make backups took 32 ms
+Cleaning cache took 1 ms
+Making clean stores took 0 ms
+Initial gc took 54 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 4 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 174 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -41,329 +185,30 @@ Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
 Resetting cache.
 Early init took 5 ms
-Loading error handling took 16 ms
-Loading script took 375 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 1 ms
-Running init code took 21 ms
-Loading analysis data took 4 ms
-Analyze and compile ATL took 3 ms
-Reloading save slot metadata took 5 ms
+Loading error handling took 8 ms
+Loading script took 371 ms
+Loading save slot metadata took 15 ms
+Loading persistent took 0 ms
+Running init code took 19 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 7 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 37 ms
+Dump and make backups took 28 ms
 Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 38 ms
+Making clean stores took 0 ms
+Initial gc took 46 ms
 DPI scale factor: 1.000000
 Creating interface object took 0 ms
 Init translation took 1 ms
 Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 7 ms
-Save screen analysis took 11 ms
-Save pyanalysis took 4 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 151 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 10 ms
-Loading script took 385 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 5 ms
-Analyze and compile ATL took 3 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 30 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 56 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 8 ms
-Save screen analysis took 10 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 9 ms
 Save pyanalysis took 4 ms
 Save bytecode took 2 ms
 Running _start took 0 ms
-Interface start took 176 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Cleaning stores took 1 ms
-Load screen analysis took 12 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 7 ms
-Loading script took 358 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 19 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 30 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 56 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 9 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 4 ms
-Save bytecode took 1 ms
-Running _start took 0 ms
-Interface start took 173 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 9 ms
-Loading script took 375 ms
-Loading save slot metadata took 12 ms
-Loading persistent took 0 ms
-Running init code took 22 ms
-Loading analysis data took 4 ms
-Analyze and compile ATL took 3 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 35 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 48 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 10 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 172 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 7 ms
-Loading error handling took 8 ms
-Loading script took 346 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 20 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 30 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 54 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 10 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 161 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 8 ms
-Loading script took 351 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 25 ms
-Loading analysis data took 4 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 7 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 36 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 59 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 8 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 211 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 10 ms
-Loading script took 439 ms
-Loading save slot metadata took 16 ms
-Loading persistent took 1 ms
-Running init code took 27 ms
-Loading analysis data took 4 ms
-Analyze and compile ATL took 3 ms
-Reloading save slot metadata took 7 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 37 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 70 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 8 ms
-Save screen analysis took 13 ms
-Save pyanalysis took 4 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 196 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 7 ms
-Loading error handling took 7 ms
-Loading script took 102 ms
-Loading save slot metadata took 15 ms
-Loading persistent took 0 ms
-Running init code took 22 ms
-Loading analysis data took 7 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 6 ms
-Dump and make backups took 31 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 45 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 14 ms
-Analyze screens took 1 ms
-Save screen analysis took 0 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 190 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 9 ms
-Loading script took 386 ms
-Loading save slot metadata took 12 ms
-Loading persistent took 0 ms
-Running init code took 22 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 34 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 53 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 9 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 0 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 201 ms
+Interface start took 184 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -379,28 +224,28 @@ Resetting cache.
 Early init took 6 ms
 Loading error handling took 9 ms
 Loading script took 357 ms
-Loading save slot metadata took 17 ms
-Loading persistent took 0 ms
-Running init code took 38 ms
-Loading analysis data took 4 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 1 ms
+Running init code took 20 ms
+Loading analysis data took 2 ms
 Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 8 ms
+Reloading save slot metadata took 6 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 34 ms
+Dump and make backups took 29 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 64 ms
+Initial gc took 52 ms
 DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
+Creating interface object took 0 ms
+Init translation took 1 ms
 Cleaning stores took 0 ms
 Load screen analysis took 0 ms
-Analyze screens took 10 ms
-Save screen analysis took 12 ms
+Analyze screens took 6 ms
+Save screen analysis took 8 ms
 Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 238 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 180 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -413,66 +258,29 @@ Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 25
 Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 4 ms
+Early init took 6 ms
 Loading error handling took 9 ms
-Loading script took 372 ms
-Loading save slot metadata took 12 ms
+Loading script took 389 ms
+Loading save slot metadata took 13 ms
 Loading persistent took 0 ms
-Running init code took 22 ms
+Running init code took 23 ms
 Loading analysis data took 2 ms
 Analyze and compile ATL took 2 ms
 Reloading save slot metadata took 5 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 30 ms
+Dump and make backups took 29 ms
 Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 57 ms
+Making clean stores took 0 ms
+Initial gc took 48 ms
 DPI scale factor: 1.000000
 Creating interface object took 0 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
 Load screen analysis took 1 ms
 Analyze screens took 6 ms
-Save screen analysis took 9 ms
+Save screen analysis took 8 ms
 Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 187 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 7 ms
-Loading error handling took 9 ms
-Loading script took 385 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 1 ms
-Running init code took 21 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 4 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 37 ms
-Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 60 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 10 ms
-Save screen analysis took 12 ms
-Save pyanalysis took 3 ms
-Save bytecode took 2 ms
+Save bytecode took 1 ms
 Running _start took 0 ms
 Interface start took 181 ms
 
@@ -488,29 +296,103 @@ Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
 Resetting cache.
 Early init took 6 ms
-Loading error handling took 10 ms
-Loading script took 385 ms
-Loading save slot metadata took 14 ms
+Loading error handling took 11 ms
+Loading script took 354 ms
+Loading save slot metadata took 13 ms
 Loading persistent took 0 ms
-Running init code took 20 ms
+Running init code took 19 ms
 Loading analysis data took 3 ms
 Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 6 ms
+Reloading save slot metadata took 5 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
 Dump and make backups took 30 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 67 ms
+Initial gc took 50 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 173 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 8 ms
+Loading script took 346 ms
+Loading save slot metadata took 15 ms
+Loading persistent took 0 ms
+Running init code took 27 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
+Dump and make backups took 33 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 53 ms
 DPI scale factor: 1.000000
 Creating interface object took 0 ms
 Init translation took 1 ms
 Cleaning stores took 0 ms
 Load screen analysis took 0 ms
 Analyze screens took 6 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 3 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
 Save bytecode took 1 ms
 Running _start took 1 ms
+Interface start took 177 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 7 ms
+Loading error handling took 8 ms
+Loading script took 384 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 19 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 5 ms
+Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
+Dump and make backups took 30 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 49 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
 Interface start took 210 ms
 
 Initializing gl2 renderer:
@@ -524,31 +406,68 @@ Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 25
 Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 6 ms
-Loading error handling took 9 ms
-Loading script took 382 ms
+Early init took 5 ms
+Loading error handling took 7 ms
+Loading script took 359 ms
 Loading save slot metadata took 14 ms
-Loading persistent took 1 ms
-Running init code took 22 ms
+Loading persistent took 0 ms
+Running init code took 20 ms
 Loading analysis data took 3 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 33 ms
+Dump and make backups took 30 ms
 Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 62 ms
+Making clean stores took 0 ms
+Initial gc took 56 ms
 DPI scale factor: 1.000000
 Creating interface object took 0 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
 Load screen analysis took 0 ms
-Analyze screens took 6 ms
+Analyze screens took 7 ms
 Save screen analysis took 9 ms
 Save pyanalysis took 0 ms
 Save bytecode took 0 ms
 Running _start took 1 ms
-Interface start took 192 ms
+Interface start took 184 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 12 ms
+Loading script took 351 ms
+Loading save slot metadata took 14 ms
+Loading persistent took 0 ms
+Running init code took 21 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
+Dump and make backups took 29 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 58 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 6 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 190 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -562,30 +481,30 @@ Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
 Resetting cache.
 Early init took 7 ms
-Loading error handling took 10 ms
-Loading script took 359 ms
+Loading error handling took 11 ms
+Loading script took 366 ms
 Loading save slot metadata took 14 ms
 Loading persistent took 0 ms
-Running init code took 26 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 6 ms
+Running init code took 22 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 5 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 33 ms
+Dump and make backups took 28 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 57 ms
+Initial gc took 56 ms
 DPI scale factor: 1.000000
 Creating interface object took 0 ms
 Init translation took 1 ms
 Cleaning stores took 0 ms
 Load screen analysis took 0 ms
-Analyze screens took 7 ms
+Analyze screens took 8 ms
 Save screen analysis took 9 ms
 Save pyanalysis took 0 ms
-Save bytecode took 0 ms
+Save bytecode took 1 ms
 Running _start took 0 ms
-Interface start took 207 ms
+Interface start took 204 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -598,29 +517,139 @@ Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 25
 Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 6 ms
-Loading error handling took 15 ms
-Loading script took 389 ms
+Early init took 8 ms
+Loading error handling took 9 ms
+Loading script took 380 ms
 Loading save slot metadata took 15 ms
-Loading persistent took 0 ms
-Running init code took 26 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 1 ms
+Loading persistent took 1 ms
+Running init code took 22 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
 Reloading save slot metadata took 5 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 29 ms
+Dump and make backups took 30 ms
 Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 60 ms
+Making clean stores took 1 ms
+Initial gc took 57 ms
 DPI scale factor: 1.000000
-Creating interface object took 1 ms
+Creating interface object took 0 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
 Load screen analysis took 0 ms
 Analyze screens took 6 ms
 Save screen analysis took 9 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 187 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 8 ms
+Loading script took 101 ms
+Loading save slot metadata took 15 ms
+Loading persistent took 0 ms
+Running init code took 23 ms
+Loading analysis data took 11 ms
+Analyze and compile ATL took 3 ms
+Reloading save slot metadata took 7 ms
+Dump and make backups took 29 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 59 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 12 ms
+Analyze screens took 1 ms
+Save screen analysis took 0 ms
 Save pyanalysis took 0 ms
 Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 195 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 9 ms
+Loading script took 354 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 1 ms
+Running init code took 21 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
+Dump and make backups took 28 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 60 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 1 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 187 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 8 ms
+Loading script took 369 ms
+Loading save slot metadata took 14 ms
+Loading persistent took 0 ms
+Running init code took 22 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
+Dump and make backups took 31 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 58 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 7 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
 Running _start took 1 ms
 Interface start took 200 ms
 
@@ -634,32 +663,73 @@ Version: '4.6.0 NVIDIA 591.86'
 Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
 Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
+Cleaning stores took 0 ms
+Load screen analysis took 14 ms
+Analyze screens took 0 ms
+Running _start took 1 ms
 Resetting cache.
 Early init took 6 ms
-Loading error handling took 10 ms
-Loading script took 380 ms
-Loading save slot metadata took 14 ms
+Loading error handling took 8 ms
+Loading script took 350 ms
+Loading save slot metadata took 16 ms
 Loading persistent took 0 ms
-Running init code took 20 ms
+Running init code took 25 ms
 Loading analysis data took 2 ms
 Analyze and compile ATL took 2 ms
 Reloading save slot metadata took 5 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
+Dump and make backups took 30 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 67 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 5 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 191 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 9 ms
+Loading script took 361 ms
+Loading save slot metadata took 14 ms
+Loading persistent took 0 ms
+Running init code took 29 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
 Dump and make backups took 29 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 59 ms
+Initial gc took 57 ms
 DPI scale factor: 1.000000
 Creating interface object took 1 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
 Load screen analysis took 0 ms
 Analyze screens took 6 ms
-Save screen analysis took 9 ms
+Save screen analysis took 8 ms
 Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 194 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 193 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -671,60 +741,54 @@ Version: '4.6.0 NVIDIA 591.86'
 Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
 Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
+Cleaning stores took 1 ms
+Load screen analysis took 13 ms
+Analyze screens took 0 ms
+Running _start took 2 ms
+
+Full traceback:
+  File "game/script.rpy", line 1722, in script
+    "Final Report":
+  File "renpy/ast.py", line 2241, in execute
+    self.call("execute")
+    ~~~~~~~~~^^^^^^^^^^^
+  File "renpy/ast.py", line 2195, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/statements.py", line 381, in call
+    return method(parsed, *args, **kwargs)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/000statements.rpy", line 695, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/statementexports.py", line 334, in call_screen
+    renpy.exports.show_screen(_screen_name, *args, _transient=True, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/screen.py", line 1355, in show_screen
+    raise ScreenNotFound(name[0])
+renpy.display.screen.ScreenNotFound: Screen 'big_text' is not known.
+
+While running game code:
+  File "game/script.rpy", line 1722, in script
+    "Final Report":
+renpy.display.screen.ScreenNotFound: Screen 'big_text' is not known.
 Resetting cache.
-Early init took 7 ms
+Early init took 9 ms
 Loading error handling took 9 ms
-Loading script took 345 ms
-Loading save slot metadata took 14 ms
+Loading script took 370 ms
+Loading save slot metadata took 15 ms
 Loading persistent took 0 ms
 Running init code took 20 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
 Dump and make backups took 31 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 65 ms
+Initial gc took 64 ms
 DPI scale factor: 1.000000
 Creating interface object took 0 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 6 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 209 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 9 ms
-Loading script took 346 ms
-Loading save slot metadata took 14 ms
-Loading persistent took 0 ms
-Running init code took 20 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 27 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 61 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
 Load screen analysis took 0 ms
@@ -745,21 +809,278 @@ Version: '4.6.0 NVIDIA 591.86'
 Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
 Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
+Cleaning stores took 0 ms
+Load screen analysis took 15 ms
+Analyze screens took 0 ms
+Running _start took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 11 ms
+Analyze screens took 0 ms
+Running _start took 1 ms
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 8 ms
+Loading script took 384 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 20 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
+Dump and make backups took 34 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 66 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 7 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 211 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
 Resetting cache.
 Early init took 9 ms
-Loading error handling took 11 ms
-Loading script took 381 ms
+Loading error handling took 10 ms
+Loading script took 364 ms
 Loading save slot metadata took 14 ms
 Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 4 ms
+Running init code took 19 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
+Dump and make backups took 28 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 66 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 6 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 205 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 11 ms
+Loading script took 374 ms
+Loading save slot metadata took 14 ms
+Loading persistent took 1 ms
+Running init code took 22 ms
+Loading analysis data took 3 ms
 Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
+Dump and make backups took 33 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 64 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 6 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 213 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
+Cleaning stores took 0 ms
+Load screen analysis took 13 ms
+Analyze screens took 0 ms
+Running _start took 1 ms
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 8 ms
+Loading script took 409 ms
+Loading save slot metadata took 16 ms
+Loading persistent took 0 ms
+Running init code took 23 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 7 ms
+Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
+Dump and make backups took 37 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 73 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 10 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 200 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 8 ms
+Loading script took 354 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 20 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
+Dump and make backups took 27 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 63 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 196 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
+Cleaning stores took 0 ms
+Load screen analysis took 13 ms
+Analyze screens took 0 ms
+Running _start took 2 ms
+Cleaning stores took 0 ms
+Load screen analysis took 12 ms
+Analyze screens took 0 ms
+Running _start took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 15 ms
+Analyze screens took 0 ms
+Running _start took 2 ms
+Cleaning stores took 0 ms
+Load screen analysis took 11 ms
+Analyze screens took 0 ms
+Running _start took 1 ms
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 9 ms
+Loading script took 92 ms
+Loading save slot metadata took 15 ms
+Loading persistent took 0 ms
+Running init code took 20 ms
+Loading analysis data took 7 ms
+Analyze and compile ATL took 3 ms
 Reloading save slot metadata took 5 ms
+Dump and make backups took 28 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 67 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 12 ms
+Analyze screens took 0 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 200 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
+Cleaning stores took 0 ms
+Load screen analysis took 10 ms
+Analyze screens took 0 ms
+Running _start took 2 ms
+Cleaning stores took 0 ms
+Load screen analysis took 11 ms
+Analyze screens took 0 ms
+Running _start took 1 ms
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 9 ms
+Loading script took 386 ms
+Loading save slot metadata took 15 ms
+Loading persistent took 0 ms
+Running init code took 26 ms
+Loading analysis data took 7 ms
+Analyze and compile ATL took 3 ms
+Reloading save slot metadata took 7 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
 Dump and make backups took 31 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 71 ms
+Initial gc took 76 ms
 DPI scale factor: 1.000000
 Creating interface object took 0 ms
 Init translation took 0 ms
@@ -767,7 +1088,81 @@ Cleaning stores took 0 ms
 Load screen analysis took 1 ms
 Analyze screens took 6 ms
 Save screen analysis took 8 ms
-Save pyanalysis took 6 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 224 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 9 ms
+Loading script took 348 ms
+Loading save slot metadata took 15 ms
+Loading persistent took 0 ms
+Running init code took 20 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
+Dump and make backups took 28 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 69 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 10 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 205 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 9 ms
+Loading script took 410 ms
+Loading save slot metadata took 15 ms
+Loading persistent took 1 ms
+Running init code took 23 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 3 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
+Dump and make backups took 33 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 80 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 8 ms
+Save screen analysis took 12 ms
+Save pyanalysis took 0 ms
 Save bytecode took 1 ms
 Running _start took 1 ms
 Interface start took 212 ms
@@ -784,141 +1179,30 @@ Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
 Resetting cache.
 Early init took 5 ms
-Loading error handling took 8 ms
-Loading script took 372 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 22 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 40 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 63 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 6 ms
-Save screen analysis took 8 ms
-Save pyanalysis took 1 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 211 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 9 ms
-Loading script took 368 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 25 ms
-Loading analysis data took 4 ms
-Analyze and compile ATL took 3 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 35 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 67 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 6 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 217 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 9 ms
-Loading error handling took 10 ms
-Loading script took 356 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 34 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 68 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 6 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 203 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 8 ms
-Loading script took 342 ms
+Loading error handling took 7 ms
+Loading script took 346 ms
 Loading save slot metadata took 13 ms
 Loading persistent took 0 ms
 Running init code took 21 ms
 Loading analysis data took 2 ms
 Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
+Reloading save slot metadata took 6 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
 Dump and make backups took 28 ms
-Cleaning cache took 1 ms
+Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 70 ms
+Initial gc took 71 ms
 DPI scale factor: 1.000000
 Creating interface object took 0 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
-Load screen analysis took 1 ms
+Load screen analysis took 0 ms
 Analyze screens took 6 ms
 Save screen analysis took 9 ms
 Save pyanalysis took 0 ms
 Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 206 ms
+Running _start took 1 ms
+Interface start took 212 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -931,67 +1215,31 @@ Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 25
 Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 7 ms
-Loading error handling took 12 ms
-Loading script took 373 ms
-Loading save slot metadata took 13 ms
+Early init took 6 ms
+Loading error handling took 8 ms
+Loading script took 357 ms
+Loading save slot metadata took 15 ms
 Loading persistent took 0 ms
-Running init code took 22 ms
-Loading analysis data took 3 ms
+Running init code took 23 ms
+Loading analysis data took 2 ms
 Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
+Reloading save slot metadata took 7 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 30 ms
+Dump and make backups took 33 ms
 Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 72 ms
+Making clean stores took 0 ms
+Initial gc took 77 ms
 DPI scale factor: 1.000000
-Creating interface object took 0 ms
+Creating interface object took 1 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
 Load screen analysis took 0 ms
 Analyze screens took 7 ms
 Save screen analysis took 11 ms
-Save pyanalysis took 4 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 222 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 9 ms
-Loading script took 81 ms
-Loading save slot metadata took 12 ms
-Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 7 ms
-Analyze and compile ATL took 3 ms
-Reloading save slot metadata took 5 ms
-Dump and make backups took 26 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 67 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 13 ms
-Analyze screens took 1 ms
-Save screen analysis took 0 ms
 Save pyanalysis took 0 ms
 Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 207 ms
+Running _start took 1 ms
+Interface start took 214 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1003,30 +1251,33 @@ Version: '4.6.0 NVIDIA 591.86'
 Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
 Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
+Cleaning stores took 0 ms
+Load screen analysis took 16 ms
+Analyze screens took 0 ms
+Running _start took 1 ms
 Resetting cache.
 Early init took 6 ms
-Loading error handling took 8 ms
-Loading script took 381 ms
-Loading save slot metadata took 14 ms
+Loading error handling took 7 ms
+Loading script took 80 ms
+Loading save slot metadata took 13 ms
 Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 3 ms
+Running init code took 19 ms
+Loading analysis data took 8 ms
+Analyze and compile ATL took 2 ms
 Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 35 ms
+Dump and make backups took 25 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 72 ms
+Initial gc took 74 ms
 DPI scale factor: 1.000000
 Creating interface object took 0 ms
 Init translation took 0 ms
-Cleaning stores took 1 ms
-Load screen analysis took 0 ms
-Analyze screens took 7 ms
-Save screen analysis took 9 ms
+Cleaning stores took 0 ms
+Load screen analysis took 13 ms
+Analyze screens took 0 ms
+Save screen analysis took 0 ms
 Save pyanalysis took 0 ms
-Save bytecode took 1 ms
+Save bytecode took 0 ms
 Running _start took 1 ms
 Interface start took 220 ms
 
@@ -1043,128 +1294,17 @@ Maximum texture size: 4096x4096
 Resetting cache.
 Early init took 6 ms
 Loading error handling took 8 ms
-Loading script took 395 ms
-Loading save slot metadata took 15 ms
-Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 34 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 76 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 7 ms
-Save screen analysis took 12 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 234 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 7 ms
-Loading script took 361 ms
-Loading save slot metadata took 16 ms
-Loading persistent took 1 ms
-Running init code took 21 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 34 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 78 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 7 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 247 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 8 ms
-Loading error handling took 10 ms
-Loading script took 370 ms
-Loading save slot metadata took 17 ms
-Loading persistent took 0 ms
-Running init code took 24 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 32 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 72 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 6 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 264 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 7 ms
-Loading error handling took 10 ms
-Loading script took 346 ms
+Loading script took 355 ms
 Loading save slot metadata took 13 ms
 Loading persistent took 0 ms
-Running init code took 20 ms
-Loading analysis data took 2 ms
+Running init code took 21 ms
+Loading analysis data took 3 ms
 Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
+Reloading save slot metadata took 6 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 31 ms
+Dump and make backups took 28 ms
 Cleaning cache took 0 ms
-Making clean stores took 1 ms
+Making clean stores took 0 ms
 Initial gc took 74 ms
 DPI scale factor: 1.000000
 Creating interface object took 0 ms
@@ -1172,85 +1312,11 @@ Init translation took 0 ms
 Cleaning stores took 0 ms
 Load screen analysis took 1 ms
 Analyze screens took 6 ms
-Save screen analysis took 9 ms
+Save screen analysis took 8 ms
 Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 224 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 10 ms
-Loading script took 369 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 23 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 32 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 77 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 6 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 3 ms
 Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 226 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 10 ms
-Loading script took 373 ms
-Loading save slot metadata took 14 ms
-Loading persistent took 0 ms
-Running init code took 22 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 7 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 34 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 106 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 12 ms
-Save screen analysis took 14 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
 Running _start took 0 ms
-Interface start took 242 ms
+Interface start took 206 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1262,169 +1328,29 @@ Version: '4.6.0 NVIDIA 591.86'
 Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
 Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
+Cleaning stores took 0 ms
+Load screen analysis took 16 ms
+Analyze screens took 0 ms
+Running _start took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 10 ms
+Analyze screens took 0 ms
+Running _start took 2 ms
 Resetting cache.
-Early init took 6 ms
+Early init took 8 ms
 Loading error handling took 9 ms
-Loading script took 367 ms
-Loading save slot metadata took 14 ms
+Loading script took 378 ms
+Loading save slot metadata took 13 ms
 Loading persistent took 0 ms
 Running init code took 20 ms
 Loading analysis data took 2 ms
 Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 32 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 76 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 6 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 226 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 9 ms
-Loading script took 374 ms
-Loading save slot metadata took 14 ms
-Loading persistent took 0 ms
-Running init code took 26 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 3 ms
-Reloading save slot metadata took 5 ms
+Reloading save slot metadata took 6 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
 Dump and make backups took 30 ms
 Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 83 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 8 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 4 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 262 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 9 ms
-Loading script took 364 ms
-Loading save slot metadata took 16 ms
-Loading persistent took 0 ms
-Running init code took 26 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 32 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 86 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 6 ms
-Save screen analysis took 12 ms
-Save pyanalysis took 1 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 250 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 9 ms
-Loading script took 354 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 1 ms
-Running init code took 19 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 29 ms
-Cleaning cache took 0 ms
 Making clean stores took 0 ms
 Initial gc took 78 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 6 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 253 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 10 ms
-Loading script took 356 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 32 ms
-Cleaning cache took 1 ms
-Making clean stores took 0 ms
-Initial gc took 79 ms
 DPI scale factor: 1.000000
 Creating interface object took 1 ms
 Init translation took 0 ms
@@ -1432,84 +1358,10 @@ Cleaning stores took 0 ms
 Load screen analysis took 0 ms
 Analyze screens took 6 ms
 Save screen analysis took 8 ms
-Save pyanalysis took 3 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 250 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 7 ms
-Loading error handling took 8 ms
-Loading script took 346 ms
-Loading save slot metadata took 16 ms
-Loading persistent took 0 ms
-Running init code took 22 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 34 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 78 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 6 ms
-Save screen analysis took 11 ms
 Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 229 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 9 ms
-Loading error handling took 9 ms
-Loading script took 384 ms
-Loading save slot metadata took 16 ms
-Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 33 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 84 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 6 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 3 ms
 Save bytecode took 1 ms
 Running _start took 1 ms
-Interface start took 252 ms
+Interface start took 232 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1523,30 +1375,30 @@ Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
 Resetting cache.
 Early init took 6 ms
-Loading error handling took 8 ms
-Loading script took 358 ms
-Loading save slot metadata took 12 ms
-Loading persistent took 1 ms
+Loading error handling took 9 ms
+Loading script took 373 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
 Running init code took 20 ms
 Loading analysis data took 2 ms
 Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
+Reloading save slot metadata took 6 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 34 ms
+Dump and make backups took 28 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 80 ms
+Initial gc took 77 ms
 DPI scale factor: 1.000000
 Creating interface object took 0 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 6 ms
-Save screen analysis took 12 ms
+Load screen analysis took 1 ms
+Analyze screens took 9 ms
+Save screen analysis took 9 ms
 Save pyanalysis took 0 ms
 Save bytecode took 1 ms
-Running _start took 2 ms
-Interface start took 259 ms
+Running _start took 0 ms
+Interface start took 261 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1559,30 +1411,30 @@ Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 25
 Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 8 ms
-Loading error handling took 10 ms
-Loading script took 350 ms
-Loading save slot metadata took 12 ms
+Early init took 5 ms
+Loading error handling took 11 ms
+Loading script took 343 ms
+Loading save slot metadata took 13 ms
 Loading persistent took 0 ms
-Running init code took 22 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 1 ms
+Running init code took 21 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
 Reloading save slot metadata took 5 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 33 ms
+Dump and make backups took 31 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 81 ms
+Initial gc took 79 ms
 DPI scale factor: 1.000000
-Creating interface object took 1 ms
+Creating interface object took 0 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
-Load screen analysis took 0 ms
+Load screen analysis took 1 ms
 Analyze screens took 6 ms
 Save screen analysis took 10 ms
 Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
 Interface start took 233 ms
 
 Initializing gl2 renderer:
@@ -1596,31 +1448,31 @@ Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 25
 Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 7 ms
-Loading error handling took 9 ms
-Loading script took 392 ms
-Loading save slot metadata took 14 ms
-Loading persistent took 0 ms
-Running init code took 22 ms
+Early init took 6 ms
+Loading error handling took 8 ms
+Loading script took 367 ms
+Loading save slot metadata took 16 ms
+Loading persistent took 1 ms
+Running init code took 20 ms
 Loading analysis data took 3 ms
 Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
+Reloading save slot metadata took 6 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 35 ms
+Dump and make backups took 33 ms
 Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 86 ms
+Making clean stores took 1 ms
+Initial gc took 66 ms
 DPI scale factor: 1.000000
-Creating interface object took 0 ms
+Creating interface object took 1 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 9 ms
-Save screen analysis took 10 ms
+Load screen analysis took 1 ms
+Analyze screens took 5 ms
+Save screen analysis took 11 ms
 Save pyanalysis took 0 ms
 Save bytecode took 0 ms
 Running _start took 1 ms
-Interface start took 236 ms
+Interface start took 207 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1632,21 +1484,25 @@ Version: '4.6.0 NVIDIA 591.86'
 Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
 Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
+Cleaning stores took 0 ms
+Load screen analysis took 14 ms
+Analyze screens took 0 ms
+Running _start took 1 ms
 Resetting cache.
 Early init took 5 ms
 Loading error handling took 9 ms
-Loading script took 374 ms
-Loading save slot metadata took 13 ms
+Loading script took 362 ms
+Loading save slot metadata took 16 ms
 Loading persistent took 0 ms
-Running init code took 22 ms
-Loading analysis data took 3 ms
+Running init code took 25 ms
+Loading analysis data took 2 ms
 Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
+Reloading save slot metadata took 6 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 32 ms
+Dump and make backups took 34 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 91 ms
+Initial gc took 82 ms
 DPI scale factor: 1.000000
 Creating interface object took 0 ms
 Init translation took 0 ms
@@ -1656,8 +1512,8 @@ Analyze screens took 6 ms
 Save screen analysis took 9 ms
 Save pyanalysis took 0 ms
 Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 259 ms
+Running _start took 1 ms
+Interface start took 224 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1669,141 +1525,43 @@ Version: '4.6.0 NVIDIA 591.86'
 Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
 Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 9 ms
-Loading error handling took 13 ms
-Loading script took 100 ms
-Loading save slot metadata took 16 ms
-Loading persistent took 0 ms
-Running init code took 22 ms
-Loading analysis data took 9 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Dump and make backups took 33 ms
-Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 90 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
 Cleaning stores took 0 ms
 Load screen analysis took 13 ms
 Analyze screens took 0 ms
-Save screen analysis took 0 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
 Running _start took 1 ms
-Interface start took 251 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
+Cleaning stores took 0 ms
+Load screen analysis took 10 ms
+Analyze screens took 1 ms
+Running _start took 1 ms
+Cleaning stores took 1 ms
+Load screen analysis took 10 ms
+Analyze screens took 0 ms
+Running _start took 2 ms
 Resetting cache.
-Early init took 7 ms
-Loading error handling took 8 ms
-Loading script took 375 ms
-Loading save slot metadata took 13 ms
+Early init took 5 ms
+Loading error handling took 10 ms
+Loading script took 349 ms
+Loading save slot metadata took 14 ms
 Loading persistent took 0 ms
 Running init code took 20 ms
-Loading analysis data took 6 ms
+Loading analysis data took 2 ms
 Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
+Reloading save slot metadata took 6 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 30 ms
+Dump and make backups took 37 ms
 Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 84 ms
+Making clean stores took 1 ms
+Initial gc took 80 ms
 DPI scale factor: 1.000000
 Creating interface object took 1 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
 Load screen analysis took 0 ms
 Analyze screens took 6 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 5 ms
-Save bytecode took 2 ms
+Save screen analysis took 13 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
 Running _start took 1 ms
-Interface start took 243 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 10 ms
-Loading script took 377 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 37 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 90 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 7 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 243 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 10 ms
-Loading script took 355 ms
-Loading save slot metadata took 14 ms
-Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 7 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 34 ms
-Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 84 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 10 ms
-Save screen analysis took 11 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 2 ms
 Interface start took 249 ms
 
 Initializing gl2 renderer:
@@ -1816,1069 +1574,77 @@ Version: '4.6.0 NVIDIA 591.86'
 Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
 Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 8 ms
-Loading script took 379 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 1 ms
-Running init code took 22 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 3 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 37 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 91 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 8 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 250 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 8 ms
-Loading error handling took 11 ms
-Loading script took 105 ms
-Loading save slot metadata took 15 ms
-Loading persistent took 0 ms
-Running init code took 23 ms
-Loading analysis data took 8 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Dump and make backups took 30 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 89 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 13 ms
-Analyze screens took 1 ms
-Save screen analysis took 0 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 259 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 7 ms
-Loading error handling took 10 ms
-Loading script took 405 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 27 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 30 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 95 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 11 ms
-Save screen analysis took 12 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 284 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 9 ms
-Loading script took 359 ms
-Loading save slot metadata took 18 ms
-Loading persistent took 1 ms
-Running init code took 23 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 34 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 94 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 6 ms
-Save screen analysis took 12 ms
-Save pyanalysis took 4 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 246 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 9 ms
-Loading script took 341 ms
-Loading save slot metadata took 14 ms
-Loading persistent took 0 ms
-Running init code took 22 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 36 ms
-Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 86 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 7 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 236 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 9 ms
-Loading script took 363 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 22 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 7 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 42 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 89 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 6 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 0 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 250 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 9 ms
-Loading script took 359 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 24 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 31 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 93 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 7 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 248 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 7 ms
-Loading error handling took 9 ms
-Loading script took 108 ms
-Loading save slot metadata took 14 ms
-Loading persistent took 0 ms
-Running init code took 25 ms
-Loading analysis data took 8 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 6 ms
-Dump and make backups took 30 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 79 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
 Cleaning stores took 0 ms
 Load screen analysis took 14 ms
-Analyze screens took 1 ms
-Save screen analysis took 0 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 287 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 11 ms
-Loading error handling took 9 ms
-Loading script took 381 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 1 ms
-Running init code took 23 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 31 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 111 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 8 ms
-Save screen analysis took 11 ms
-Save pyanalysis took 0 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 268 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 9 ms
-Loading error handling took 10 ms
-Loading script took 397 ms
-Loading save slot metadata took 14 ms
-Loading persistent took 0 ms
-Running init code took 22 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 33 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 100 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 7 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 1 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 270 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 7 ms
-Loading error handling took 9 ms
-Loading script took 341 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 30 ms
-Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 84 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 6 ms
-Save screen analysis took 8 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 266 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 7 ms
-Loading error handling took 9 ms
-Loading script took 359 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 1 ms
-Running init code took 20 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 32 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 98 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 7 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 4 ms
-Save bytecode took 1 ms
-Running _start took 0 ms
-Interface start took 241 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 9 ms
-Loading script took 347 ms
-Loading save slot metadata took 15 ms
-Loading persistent took 0 ms
-Running init code took 26 ms
-Loading analysis data took 4 ms
-Analyze and compile ATL took 3 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 35 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 93 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 6 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 5 ms
-Save bytecode took 1 ms
-Running _start took 0 ms
-Interface start took 247 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 8 ms
-Loading script took 335 ms
-Loading save slot metadata took 17 ms
-Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 30 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 89 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 8 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 244 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 8 ms
-Loading script took 368 ms
-Loading save slot metadata took 20 ms
-Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 4 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 31 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 97 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 8 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 5 ms
-Save bytecode took 1 ms
-Running _start took 0 ms
-Interface start took 267 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 9 ms
-Loading script took 371 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 24 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 31 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 100 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 8 ms
-Save screen analysis took 8 ms
-Save pyanalysis took 5 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 265 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 7 ms
-Loading error handling took 8 ms
-Loading script took 375 ms
-Loading save slot metadata took 14 ms
-Loading persistent took 0 ms
-Running init code took 20 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 34 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 93 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 6 ms
-Save screen analysis took 8 ms
-Save pyanalysis took 4 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 256 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 8 ms
-Loading script took 373 ms
-Loading save slot metadata took 14 ms
-Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 34 ms
-Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 95 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 1 ms
-Load screen analysis took 0 ms
-Analyze screens took 8 ms
-Save screen analysis took 11 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 251 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 7 ms
-Loading error handling took 7 ms
-Loading script took 74 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 9 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 4 ms
-Dump and make backups took 26 ms
-Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 90 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 12 ms
-Analyze screens took 0 ms
-Save screen analysis took 0 ms
-Save pyanalysis took 1 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 258 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 8 ms
-Loading script took 358 ms
-Loading save slot metadata took 14 ms
-Loading persistent took 1 ms
-Running init code took 21 ms
-Loading analysis data took 4 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 4 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 32 ms
-Cleaning cache took 1 ms
-Making clean stores took 0 ms
-Initial gc took 96 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 8 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 0 ms
-Save bytecode took 2 ms
-Running _start took 0 ms
-Interface start took 271 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 8 ms
-Loading script took 337 ms
-Loading save slot metadata took 12 ms
-Loading persistent took 0 ms
-Running init code took 19 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 33 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 95 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 6 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 3 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 256 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 7 ms
-Loading script took 334 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 29 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 98 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 7 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 4 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 251 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 8 ms
-Loading error handling took 7 ms
-Loading script took 335 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 20 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 34 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 95 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 7 ms
-Save screen analysis took 8 ms
-Save pyanalysis took 4 ms
-Save bytecode took 1 ms
-Running _start took 0 ms
-Interface start took 254 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 7 ms
-Loading error handling took 9 ms
-Loading script took 373 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 4 ms
-Analyze and compile ATL took 3 ms
-Reloading save slot metadata took 4 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 33 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 103 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 6 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 251 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 10 ms
-Loading script took 366 ms
-Loading save slot metadata took 15 ms
-Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 29 ms
-Cleaning cache took 1 ms
-Making clean stores took 0 ms
-Initial gc took 102 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 6 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 275 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 7 ms
-Loading script took 338 ms
-Loading save slot metadata took 12 ms
-Loading persistent took 0 ms
-Running init code took 20 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 32 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 97 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 7 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 4 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 258 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 8 ms
-Loading script took 335 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 19 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 4 ms
-Reloading save slot metadata took 4 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 38 ms
-Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 104 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 7 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 3 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 264 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 8 ms
-Loading script took 353 ms
-Loading save slot metadata took 12 ms
-Loading persistent took 0 ms
-Running init code took 20 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 28 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 101 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 6 ms
-Save screen analysis took 8 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 273 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 15 ms
 Analyze screens took 0 ms
 Running _start took 2 ms
 Resetting cache.
-Early init took 7 ms
+Early init took 6 ms
 Loading error handling took 8 ms
-Loading script took 364 ms
-Loading save slot metadata took 13 ms
+Loading script took 349 ms
+Loading save slot metadata took 14 ms
 Loading persistent took 0 ms
-Running init code took 23 ms
+Running init code took 21 ms
 Loading analysis data took 2 ms
 Analyze and compile ATL took 2 ms
 Reloading save slot metadata took 6 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
 Dump and make backups took 30 ms
 Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 114 ms
+Making clean stores took 0 ms
+Initial gc took 81 ms
 DPI scale factor: 1.000000
 Creating interface object took 0 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
 Load screen analysis took 1 ms
+Analyze screens took 5 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 216 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 591.86'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
+Maximum texture size: 4096x4096
+Cleaning stores took 0 ms
+Load screen analysis took 14 ms
+Analyze screens took 0 ms
+Running _start took 2 ms
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 11 ms
+Loading script took 362 ms
+Loading save slot metadata took 14 ms
+Loading persistent took 1 ms
+Running init code took 20 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
+Dump and make backups took 27 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 82 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
 Analyze screens took 6 ms
 Save screen analysis took 9 ms
 Save pyanalysis took 0 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 283 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 214 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -2893,66 +1659,41 @@ Maximum texture size: 4096x4096
 Cleaning stores took 0 ms
 Load screen analysis took 13 ms
 Analyze screens took 0 ms
+Running _start took 2 ms
+Cleaning stores took 0 ms
+Load screen analysis took 10 ms
+Analyze screens took 0 ms
+Running _start took 2 ms
+Cleaning stores took 1 ms
+Load screen analysis took 12 ms
+Analyze screens took 0 ms
 Running _start took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 11 ms
+Analyze screens took 0 ms
+Running _start took 2 ms
+Cleaning stores took 0 ms
+Load screen analysis took 12 ms
+Analyze screens took 0 ms
+Running _start took 2 ms
 Resetting cache.
-Early init took 6 ms
-Loading error handling took 9 ms
-Loading script took 349 ms
-Loading save slot metadata took 14 ms
+Early init took 5 ms
+Loading error handling took 7 ms
+Loading script took 382 ms
+Loading save slot metadata took 15 ms
 Loading persistent took 0 ms
-Running init code took 20 ms
-Loading analysis data took 3 ms
+Running init code took 21 ms
+Loading analysis data took 2 ms
 Analyze and compile ATL took 2 ms
 Reloading save slot metadata took 6 ms
 Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 29 ms
+Dump and make backups took 32 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 113 ms
+Initial gc took 85 ms
 DPI scale factor: 1.000000
 Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 6 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 285 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 15 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
-Resetting cache.
-Early init took 7 ms
-Loading error handling took 9 ms
-Loading script took 377 ms
-Loading save slot metadata took 16 ms
-Loading persistent took 0 ms
-Running init code took 22 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 3 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 33 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 115 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
+Init translation took 1 ms
 Cleaning stores took 0 ms
 Load screen analysis took 0 ms
 Analyze screens took 6 ms
@@ -2960,7 +1701,7 @@ Save screen analysis took 9 ms
 Save pyanalysis took 0 ms
 Save bytecode took 1 ms
 Running _start took 0 ms
-Interface start took 313 ms
+Interface start took 237 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -2972,118 +1713,3 @@ Version: '4.6.0 NVIDIA 591.86'
 Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
 Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
 Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 7 ms
-Loading error handling took 15 ms
-Loading script took 396 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 33 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 134 ms
-DPI scale factor: 1.000000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 8 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 4 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 297 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 9 ms
-Loading error handling took 8 ms
-Loading script took 368 ms
-Loading save slot metadata took 16 ms
-Loading persistent took 1 ms
-Running init code took 23 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 36 ms
-Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 102 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 9 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 4 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 312 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 12 ms
-Loading script took 373 ms
-Loading save slot metadata took 14 ms
-Loading persistent took 0 ms
-Running init code took 21 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\vitya\\AppData\\Roaming/RenPy/backups\\light_elegance-1':
-Dump and make backups took 31 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 116 ms
-DPI scale factor: 1.000000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 6 ms
-Save screen analysis took 8 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 288 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 4060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 591.86'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 144, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1570, 883) drawable=(1570, 883)
-Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 15 ms
-Analyze screens took 0 ms
-Running _start took 1 ms

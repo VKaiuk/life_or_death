@@ -1,52 +1,35 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 308, in script
-    show kaori happy with slight_zoom_up
-TypeError: got an unexpected keyword argument 'old_widget'
+  File "game/script.rpy", line 1722, in script
+    "Final Report":
+renpy.display.screen.ScreenNotFound: Screen 'big_text' is not known.
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/script.rpy", line 308, in script
-    show kaori happy with slight_zoom_up
-  File "renpy/ast.py", line 1581, in execute
-    renpy.exports.with_statement(trans, paired=paired)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/exports/statementexports.py", line 260, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/core.py", line 1478, in do_with
-    return self.interact(
-           ~~~~~~~~~~~~~^
-        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "renpy/display/core.py", line 2154, in interact
-    repeat, rv = self.interact_core(
-                 ~~~~~~~~~~~~~~~~~~^
-        preloads=preloads,
-        ^^^^^^^^^^^^^^^^^^
-    ...<4 lines>...
-        **kwargs,
-        ^^^^^^^^^
-    )
-    ^
-  File "renpy/display/core.py", line 2623, in interact_core
-    trans = instantiate_transition(None, old_root, layers_root)
-            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/core.py", line 2539, in instantiate_transition
-    trans = self.ongoing_transition[layer](old_widget=old_d, new_widget=new_d)
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/atl.py", line 545, in __call__
-    new_scope = signature.apply(args, kwargs, partial=True, apply_defaults=False)
-                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/parameter.py", line 398, in apply
-    raise TypeError("got an unexpected keyword argument {arg!r}".format(arg=next(iter(kwargs))))
-TypeError: got an unexpected keyword argument 'old_widget'
+  File "game/script.rpy", line 1722, in script
+    "Final Report":
+  File "renpy/ast.py", line 2241, in execute
+    self.call("execute")
+    ~~~~~~~~~^^^^^^^^^^^
+  File "renpy/ast.py", line 2195, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/statements.py", line 381, in call
+    return method(parsed, *args, **kwargs)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/000statements.rpy", line 695, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/statementexports.py", line 334, in call_screen
+    renpy.exports.show_screen(_screen_name, *args, _transient=True, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/screen.py", line 1355, in show_screen
+    raise ScreenNotFound(name[0])
+renpy.display.screen.ScreenNotFound: Screen 'big_text' is not known.
 
-macOS-15.7.4-arm64-arm-64bit arm64
+Windows-11-10.0.26200-SP0 AMD64
 Ren'Py 8.5.2.26010301
-black_pink_gui 1.0
-Sun Jun 14 14:24:32 2026
+culprit_I_love 1.0
+Tue Jun 23 00:00:06 2026

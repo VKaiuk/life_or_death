@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1223: expected statement.
-    "Where did Hiro die?" from _call_riverbank_thinking
-                                                       ^
+File "game/script.rpy", line 2313: expected 'name' not found.
+    call screen
+               ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Fri Jun 19 23:32:10 2026
+Mon Jun 22 23:36:29 2026
