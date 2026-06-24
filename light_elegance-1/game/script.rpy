@@ -2412,7 +2412,6 @@ label ending_x:
     pause 3
     
     jump end_credits
-#endregion
 
 label end_credits:
     # $ quick_menu = False
@@ -2509,7 +2508,9 @@ label end_credits:
     pause 1.0
 
     return
+#endregion
 
+#region Screens
 screen ending_note(message):
     modal True
 
@@ -2761,7 +2762,6 @@ screen drag_both_scene:
     if selected_place and selected_cause:
         timer 0.1 action Return()
 
-
 transform report_hover_smooth:
     xanchor 0.5
     yanchor 0.5
@@ -2775,7 +2775,6 @@ transform report_hover_smooth:
 
     on hover:
         ease 0.20 zoom 1.06
-
 
 transform phone_hover_smooth:
     xanchor 0.5
@@ -2813,8 +2812,7 @@ screen desk_case_screen(report, continue_label):
         
         sensitive buttons_active
         action Jump(continue_label)
-
-
+#endregion
 
 default selected_place = None
 default selected_cause = None
@@ -2865,7 +2863,6 @@ label _call_screen_from_action(screen_name, args):
         call screen big_text(report_text)
 
     return
-
 
 screen ten_min_timer():
 
