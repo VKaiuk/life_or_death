@@ -52,6 +52,8 @@ default current_ending = None
 default persistent.seen_ivy_ending_note = False
 default persistent.seen_kaori_ending_note = False
 default persistent.seen_refuse_ending_note = False
+default buttons_active = False
+
 
 
 transform left_char: 
@@ -419,7 +421,8 @@ label start:
 
 #region Choice System
 label test:
-    scene class with fade
+    $ buttons_active = False
+
 
     # $ talked_kaori = True
     # $ talked_sakura = True
@@ -571,16 +574,27 @@ label test:
         {s}They both love me. No. No. Not now.{/s}
         """
 
+
+    scene desk:
+        zoom 0.8
+    with fade
+
+    show screen desk_case_screen(report, "dialogue_scene") with dissolve
+    
+    "Hover over the report and click it to open the case file."
+    "To continue the story, press the phone in the bottom-left corner."
+
+    $ buttons_active = True
+    $ renpy.restart_interaction()
+
     label case:
         if talked_kaori and talked_sakura and not is_riverbank:
-            menu:
-                "Report":
-                    call screen big_text(report)
-                    jump case
-                "Visit the Riverbank":
-                    jump riverbank
+            call screen desk_case_screen(report, "riverbank")
+            hide desk_case_screen with dissolve
         elif is_riverbank:
-            scene class
+            scene desk:
+                zoom 0.8
+            with fade
             $ report = """
                 {size=+12}Case No. 234{/size}
                 Summary 
@@ -619,20 +633,12 @@ label test:
 
                 {s}They both love me. No. No. Not now.{/s}
                 """
-            menu:
-                "Report":
-                    call screen big_text(report)
-                    jump case
-                "Talk to Kaori":
-                    jump choice_dialogue 
+            call screen desk_case_screen(report, "choice_dialogue")
+            hide desk_case_screen with dissolve
 
         elif not talked_sakura or not talked_kaori:
-            menu:
-                "Report":
-                    call screen big_text(report)
-                    jump case
-                "Investigate...":
-                    jump dialogue_scene
+            call screen desk_case_screen(report, "dialogue_scene")
+            hide desk_case_screen with dissolve
     
             
     label dialogue_scene:
@@ -1391,7 +1397,6 @@ label riverbank:
 #region Second Dialogues
 label choice_dialogue:
     # $ first_name = "Viktor"
-    pause 1.0 
     scene black with fade
     "I go downstairs and step into the cafeteria. Kaori is already there, sitting at the table, with a book. No one else is around."
     scene cafe with fade
@@ -2756,6 +2761,61 @@ screen drag_both_scene:
     if selected_place and selected_cause:
         timer 0.1 action Return()
 
+
+transform report_hover_smooth:
+    xanchor 0.5
+    yanchor 0.5
+    xpos 950
+    ypos 570
+    zoom 1.0
+
+
+    on idle:
+        ease 0.20 zoom 1.0
+
+    on hover:
+        ease 0.20 zoom 1.06
+
+
+transform phone_hover_smooth:
+    xanchor 0.5
+    yanchor 0.5
+
+    on insensitive:
+        xpos 200
+        ypos 810
+        zoom 1.0
+
+    on idle:
+        ease 0.20 xpos 180 ypos 850 zoom 1.0
+
+    on hover:
+        ease 0.20 xpos 240 ypos 770 zoom 1.06
+
+screen desk_case_screen(report, continue_label):
+
+
+    imagebutton:
+        idle Transform("images/report_idle.png", xsize=1000, ysize=1200)
+        hover Transform("images/report_hover_black.png", xsize=1000, ysize=1200)
+
+        at report_hover_smooth
+
+        sensitive buttons_active
+        action CallScreen("big_text", report)
+
+    imagebutton:
+
+        idle Transform("images/phone_idle.png", xsize=600, ysize=700)
+        hover Transform("images/phone_hover.png", xsize=600, ysize=700)
+
+        at phone_hover_smooth
+        
+        sensitive buttons_active
+        action Jump(continue_label)
+
+
+
 default selected_place = None
 default selected_cause = None
 default correct_place = False
@@ -2788,6 +2848,23 @@ init python:
             store.correct_cause = False
 
         renpy.restart_interaction()
+
+
+    class CallScreen(Action):
+        def __init__(self, screen_name, *args):
+            self.screen_name = screen_name
+            self.args = args
+
+        def __call__(self):
+            renpy.call_in_new_context("_call_screen_from_action", self.screen_name, self.args)
+
+label _call_screen_from_action(screen_name, args):
+
+    if screen_name == "big_text":
+        $ report_text = args[0]
+        call screen big_text(report_text)
+
+    return
 
 
 screen ten_min_timer():

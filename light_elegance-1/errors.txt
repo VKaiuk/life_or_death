@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 2719: add expects a non-empty block.
-    add Solid("#e96268"):
-                         ^
+File "game/script.rpy", line 2755: The screen statement is not a valid child of the imagebutton statement.
+    action call screen big_text(report)
+                      ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Tue Jun 23 15:07:12 2026
+Wed Jun 24 15:12:49 2026
