@@ -2565,7 +2565,7 @@ screen drag_both_scene:
                     xpos 0.20
                     ypos 0.20
                     drag_raise True
-                    draggable True
+                    draggable selected_place is None
                     droppable False
                     dragged drag_place
 
@@ -2587,7 +2587,7 @@ screen drag_both_scene:
                     xpos 0.40
                     ypos 0.35
                     drag_raise True
-                    draggable True
+                    draggable selected_place is None
                     droppable False
                     dragged drag_place
 
@@ -2609,7 +2609,7 @@ screen drag_both_scene:
                     xpos 0.60
                     ypos 0.50
                     drag_raise True
-                    draggable True
+                    draggable selected_place is None
                     droppable False
                     dragged drag_place
                     
@@ -2661,7 +2661,7 @@ screen drag_both_scene:
                     xpos 0.60
                     ypos 0.20
                     drag_raise True
-                    draggable True
+                    draggable selected_cause is None
                     droppable False
                     dragged cause_place
 
@@ -2683,7 +2683,7 @@ screen drag_both_scene:
                     xpos 0.40
                     ypos 0.35
                     drag_raise True
-                    draggable True
+                    draggable selected_cause is None
                     droppable False
                     dragged cause_place
 
@@ -2705,7 +2705,7 @@ screen drag_both_scene:
                     xpos 0.20
                     ypos 0.50
                     drag_raise True
-                    draggable True
+                    draggable selected_cause is None
                     droppable False
                     dragged cause_place
                     
@@ -2746,7 +2746,7 @@ screen drag_both_scene:
         xsize 20
         ysize 1080
 
-    add Solid("#e96268"):
+    add Solid("#d374b5"):
         xpos 959
         ypos 30
         xsize 4
