@@ -26,6 +26,7 @@ image kaori serious = Transform("images/images/Kaori/serious.png", zoom=0.24, yp
 image kaori blush = Transform("images/images/Kaori/blush.png", zoom=0.24, ypos=1.06)
 
 image cashier = Transform("images/Side_Pack_1/Maid_A/Maid_A_Casual_Frown.png",zoom=1.1, ypos=1.45)
+image white = Solid("#ffffff")
 
 default time_left = 300
 # 600
@@ -642,20 +643,26 @@ label test:
     
             
     label dialogue_scene:
+        $ buttons_active = False
+
+        scene white with fade
+        show screen choice_card with dissolve
+
         if not talked_kaori and not talked_sakura:
             "It's time to decide who to investigate first."
         elif talked_kaori:
             "I talked to Ivy. Now it's time for Kaori."
+            hide screen choice_card
             jump sakura_dialogue
         elif talked_sakura:
             "I talked to Kaori. Now it's time for Ivy."
+            hide screen choice_card
             jump kaori_dialogue
-        menu:
 
-            "Ivy" if not talked_kaori:
-                jump kaori_dialogue
-            "Kaori" if not talked_sakura:
-                jump sakura_dialogue
+        $ buttons_active = True
+        $ renpy.restart_interaction()
+
+        call screen choice_card
     return 
 #endregion
 
@@ -1763,291 +1770,275 @@ label choice_dialogue:
 
 #region Ending
 label ending:
-    $ report = """
-        {size=+12}Case No. 234{/size}
-        Summary 
+    $ buttons_active = False
 
-        Victim's Full Name: Hiro Tanaka
-        Body discovered: 03:40 AM
-        Location: Riverbank, Mizunagi Street
-        Estimated time of death: Around 11:00 PM 
-
-        Cause of Death: Strangulation
-        Location of Death: Footbridge
-
-        {color=#ff0000}{i}*INFORMATION DISCLOSED TO INVESTIGATOR*{/i}{/color}
-
-        Both Kaori and Ivy showed a clear hatred toward Hiro. Both of them had reasons to wish for his death.
-        Ivy was not one of Hiro's victims. Her hatred seemed to stem from the way he treated me and those around him.
-        That alone doesn't feel like enough reason to commit murder.
-        Kaori was one of Hiro's victims. Her hatred came from the harm he caused her and other girls at this school. 
-        She had a far stronger motive.
-        Yet the evidence points toward Ivy. The store's security footage places her near the victim before the estimated time of death.
-        There is still no definitive proof against either suspect. Both could be innocent. Both could be guilty.
-        """
 
     pause 0.5
-    scene class with fade
+    # scene desk:
+    #     zoom 0.8
+    # with fade
 
-    label ending_choice:
+    scene white with fade
+    show screen final_desk_screen() with dissolve
+
+    "This is the final decision."
+    "You may want to save your progress now if you'd like to return later and see another ending."
+    "Click either report to make your final decision."
+
+    $ buttons_active = True
+    $ renpy.restart_interaction()
+
+    call screen final_desk_screen()
+
+
+    label ivy_choice:
+        u "...Ivy"
+        i "You have made your decision. Please proceed to Ivy Lee's dormitory room."
+        pause 1.0
+        scene black with fade
+        "I step out of the classroom and head toward the women's dormitory."
+        scene building with fade
+        "Before reaching the final door, I wonder if I made the right decision."
+        "Will I regret this later? Will I regret it for the rest of my life?"
+        scene kitchen_night with fade
+        "I open the door to Ivy's apartment. It's dark inside."
+        "Near the entrance, I notice a table with a pistol resting on top of it."
+        "A faint light shines from one of the rooms. I pick up the gun."
+        scene bedroom2:
+            zoom 1.5
+        with fade
+        show kaori normal with dissolve
+        "I open the bedroom door and see Ivy sitting quietly on the bed."
+        "As soon as she notices me, she slowly stands up and steps closer."
+        "The same damn smile on her face."
+        k "So... you're here."
+        u "You're not surprised?"
+        k "I expected as much."
+        u "Expected? I'm still not sure it was you."
+        k "And yet you still chose me. Meaning I made mistakes that led you here."
+        u "What happened to your eyes? They're red."
+        "She quickly looks away."
+        k "I'm just... a little tired."
+        u "Did you really kill Hiro?"
+        k "..."
+        k "Does it matter anymore? I'm not leaving this room alive."
+        i "[first_name] [last_name]..."
+        "I lift my right hand toward her."
+        "My fingers tighten around the grip."
+        "The barrel trembles as it points at her."
+        "I try to steady my hand."
+        "A realization suddenly hits me."
+        "This is the first time I've ever pointed a gun at another person."
+        "The first time I've even held one."
+        "My throat feels dry."
+        "Who thought this was a good idea?"
+        "Who allowed them to make teenagers do something like this?"
+        "I knew a day like this might come eventually."
+        "But now that it's here..."
+        "I regret choosing this school."
+
         menu:
-            "Final Report":
-                call screen big_text(report)
-                jump ending_choice
-            "Final Decision":  
-                "This is the final decision."
-                "You may want to save your progress now if you'd like to return later and see another ending."
-
+            "Shoot":
+                u "I-I'm sorry..."
+                "My hands start to shake violently."
+                "My vision blurs."
+                "I can barely keep the gun pointed at her."
+                "She takes a small step toward me."
+                k "It's okay..."
+                k "I love yo-"
+                jump ending_three
+            "Don't shoot":
+                u "No..."
+                show kaori serious with dissolve
+                k "[first_name]?"
+                i "Ugh..."
+                i "You know the rules."
+                i "If she lives, then you die."
+                "Before the sentence is even finished, I notice a red dot near my chest."
+                show kaori serious at slight_zoom_up
+                k "No! Wait!"
+                k "D-Don't kill him."
+                "Ivy lowers her head."
+                "Her hands curl into fists at her sides."
+                u "Ivy...?"
+                k "...Kill me."
+                "Her voice trembles."
+                u "What!?"
+                show kaori sad with dissolve
+                "When she raises her head again, tears fill her eyes."
+                k "I did it. I killed Hiro."
+                k "I'm the one who deserves to die. Not you!"
+                u "Ivy?"
+                k "Please..."
+                "She takes a step forward."
+                i "I'll give you one final opportunity."
                 menu:
-                    "Ivy":
-                        u "...Ivy"
-                        i "You have made your decision. Please proceed to Ivy Lee's dormitory room."
-                        pause 1.0
-                        scene black with fade
-                        "I step out of the classroom and head toward the women's dormitory."
-                        scene building with fade
-                        "Before reaching the final door, I wonder if I made the right decision."
-                        "Will I regret this later? Will I regret it for the rest of my life?"
-                        scene kitchen_night with fade
-                        "I open the door to Ivy's apartment. It's dark inside."
-                        "Near the entrance, I notice a table with a pistol resting on top of it."
-                        "A faint light shines from one of the rooms. I pick up the gun."
-                        scene bedroom2:
-                            zoom 1.5
-                        with fade
-                        show kaori normal with dissolve
-                        "I open the bedroom door and see Ivy sitting quietly on the bed."
-                        "As soon as she notices me, she slowly stands up and steps closer."
-                        "The same damn smile on her face."
-                        k "So... you're here."
-                        u "You're not surprised?"
-                        k "I expected as much."
-                        u "Expected? I'm still not sure it was you."
-                        k "And yet you still chose me. Meaning I made mistakes that led you here."
-                        u "What happened to your eyes? They're red."
-                        "She quickly looks away."
-                        k "I'm just... a little tired."
-                        u "Did you really kill Hiro?"
-                        k "..."
-                        k "Does it matter anymore? I'm not leaving this room alive."
-                        i "[first_name] [last_name]..."
-                        "I lift my right hand toward her."
-                        "My fingers tighten around the grip."
-                        "The barrel trembles as it points at her."
-                        "I try to steady my hand."
-                        "A realization suddenly hits me."
-                        "This is the first time I've ever pointed a gun at another person."
-                        "The first time I've even held one."
-                        "My throat feels dry."
-                        "Who thought this was a good idea?"
-                        "Who allowed them to make teenagers do something like this?"
-                        "I knew a day like this might come eventually."
-                        "But now that it's here..."
-                        "I regret choosing this school."
+                    "Shoot":
+                        u "I'm sorry..."
+                        "My hands start to shake violently."
+                        "I can barely keep the gun pointed at her."
+                        k "[first_name]..."
+                        k "I love yo-"
+                        "The gun fires."
+                        jump ending_three
+                    "I don't believe you":
+                        u "No..."
+                        u "I don't believe you."
+                        u "And I won't kill you. Not you."
+                        k "Wait! [first_name]!"
+                        i "We had high expectations for you."
+                        i "But... have it your way."
+                        k "No! Wait!"
+                        "The gun fires."
+                        "A sharp pain tears through my chest."
+                        "My stomach drops."
+                        "No..."
+                        "My legs give out beneath me."
+                        "I fall on my knees."
+                        k "[first_name]!"
+                        "Ivy rushes to me."
+                        k "Why?"
+                        k "Why would you do something so stupid...?"
+                        u "Iv..."
+                        u "..."
+                        jump ending_x
+    
+    label kaori_choice:
+        u "...Kaori"
+        i "You have made your decision. Please proceed to Kaori Ito's dormitory room."
+        pause 1.0
+        scene black with fade
+        "I step out of the classroom and head toward the women's dormitory."
+        scene building with fade
+        "Before reaching the final door, I wonder if I made the right decision."
+        "Will I regret this later? Will I regret it for the rest of my life?"
+        scene apartment_night with fade
+        "I open the door to Kaori's apartment. It's dark inside."
+        "Near the entrance, I notice a table with a pistol resting on top of it."
+        scene apartment_day
+        show sakura panick with dissolve
+        "I turn on the lights and see Kaori sitting on the sofa, terrified."
+        "The moment our eyes meet, her expression changes drastically." 
+        "Her eyes widen as she understands what my presence means."
+        "I pick up the gun and slowly step closer to her."
 
-                        menu:
-                            "Shoot":
-                                u "I-I'm sorry..."
-                                "My hands start to shake violently."
-                                "My vision blurs."
-                                "I can barely keep the gun pointed at her."
-                                "She takes a small step toward me."
-                                k "It's okay..."
-                                k "I love yo-"
-                                jump ending_three
-                            "Don't shoot":
-                                u "No..."
-                                show kaori serious with dissolve
-                                k "[first_name]?"
-                                i "Ugh..."
-                                i "You know the rules."
-                                i "If she lives, then you die."
-                                "Before the sentence is even finished, I notice a red dot near my chest."
-                                show kaori serious at slight_zoom_up
-                                k "No! Wait!"
-                                k "D-Don't kill him."
-                                "Ivy lowers her head."
-                                "Her hands curl into fists at her sides."
-                                u "Ivy...?"
-                                k "...Kill me."
-                                "Her voice trembles."
-                                u "What!?"
-                                show kaori sad with dissolve
-                                "When she raises her head again, tears fill her eyes."
-                                k "I did it. I killed Hiro."
-                                k "I'm the one who deserves to die. Not you!"
-                                u "Ivy?"
-                                k "Please..."
-                                "She takes a step forward."
-                                i "I'll give you one final opportunity."
-                                menu:
-                                    "Shoot":
-                                        u "I'm sorry..."
-                                        "My hands start to shake violently."
-                                        "I can barely keep the gun pointed at her."
-                                        k "[first_name]..."
-                                        k "I love yo-"
-                                        "The gun fires."
-                                        jump ending_three
-                                    "I don't believe you":
-                                        u "No..."
-                                        u "I don't believe you."
-                                        u "And I won't kill you. Not you."
-                                        k "Wait! [first_name]!"
-                                        i "We had high expectations for you."
-                                        i "But... have it your way."
-                                        k "No! Wait!"
-                                        "The gun fires."
-                                        "A sharp pain tears through my chest."
-                                        "My stomach drops."
-                                        "No..."
-                                        "My legs give out beneath me."
-                                        "I fall on my knees."
-                                        k "[first_name]!"
-                                        "Ivy rushes to me."
-                                        k "Why?"
-                                        k "Why would you do something so stupid...?"
-                                        u "Iv..."
-                                        u "..."
-                                        jump ending_x
-                    "Kaori":
-                        u "...Kaori"
-                        i "You have made your decision. Please proceed to Kaori Ito's dormitory room."
-                        pause 1.0
-                        scene black with fade
-                        "I step out of the classroom and head toward the women's dormitory."
-                        scene building with fade
-                        "Before reaching the final door, I wonder if I made the right decision."
-                        "Will I regret this later? Will I regret it for the rest of my life?"
-                        scene apartment_night with fade
-                        "I open the door to Kaori's apartment. It's dark inside."
-                        "Near the entrance, I notice a table with a pistol resting on top of it."
-                        scene apartment_day
-                        show sakura panick with dissolve
-                        "I turn on the lights and see Kaori sitting on the sofa, terrified."
-                        "The moment our eyes meet, her expression changes drastically." 
-                        "Her eyes widen as she understands what my presence means."
-                        "I pick up the gun and slowly step closer to her."
+        if offensive:
+            s "No..."
+            show sakura sad with dissolve
+            s "No, no, no..."
+            "Tears begin to stream down her face."
+            s "It wasn't me."
+            s "You know it wasn't me."
+            s "You checked the dorm cameras, right?"
+            s "You saw I went back."
+            u "Kaori, I—"
+            s "Then why are you here?"
+            s "Why are you standing here with that gun?"
+            s "It was Ivy."
+            u "It wasn't her, Kaori."
+            show sakura panick with dissolve
+            s "You know I'm innocent, and you're still going to kill me?"
+            s "Or maybe you knew from the start."
+            s "Maybe you just needed someone to blame."
+            u "That isn't true."
+            s "Then why did you choose me!?"
+        elif normal:
+            show sakura sad with dissolve
+            s "No..."
+            s "No, please..."
+            "Tears begin to stream down her face."
+            s "It wasn't me."
+            s "You said you believed me."
+            s "You checked the dorm cameras, right?"
+            s "You know I went back."
+            u "Kaori, I—"
+            s "Then why are you here? Why are you holding that?"
+            s "It was Ivy."
+            u "It wasn't her, Kaori."
+            show sakura sad with dissolve
+            s "You told me you loved me."
+            s "Was that a lie too?"
+            u "No... I meant it."
+            s "Then why?"
+            s "Why me?"
+            u "That's-"
+            s "..."
+            show sakura panick with dissolve
+            s "Maybe I was wrong."
+            s "Maybe I was never the one you wanted to save."
+            u "That isn't true."
+            s "Then lower the gun."
+            
 
-                        if offensive:
-                            s "No..."
-                            show sakura sad with dissolve
-                            s "No, no, no..."
-                            "Tears begin to stream down her face."
-                            s "It wasn't me."
-                            s "You know it wasn't me."
-                            s "You checked the dorm cameras, right?"
-                            s "You saw I went back."
-                            u "Kaori, I—"
-                            s "Then why are you here?"
-                            s "Why are you standing here with that gun?"
-                            s "It was Ivy."
-                            u "It wasn't her, Kaori."
-                            show sakura panick with dissolve
-                            s "You know I'm innocent, and you're still going to kill me?"
-                            s "Or maybe you knew from the start."
-                            s "Maybe you just needed someone to blame."
-                            u "That isn't true."
-                            s "Then why did you choose me!?"
-                        elif normal:
-                            show sakura sad with dissolve
-                            s "No..."
-                            s "No, please..."
-                            "Tears begin to stream down her face."
-                            s "It wasn't me."
-                            s "You said you believed me."
-                            s "You checked the dorm cameras, right?"
-                            s "You know I went back."
-                            u "Kaori, I—"
-                            s "Then why are you here? Why are you holding that?"
-                            s "It was Ivy."
-                            u "It wasn't her, Kaori."
-                            show sakura sad with dissolve
-                            s "You told me you loved me."
-                            s "Was that a lie too?"
-                            u "No... I meant it."
-                            s "Then why?"
-                            s "Why me?"
-                            u "That's-"
-                            s "..."
-                            show sakura panick with dissolve
-                            s "Maybe I was wrong."
-                            s "Maybe I was never the one you wanted to save."
-                            u "That isn't true."
-                            s "Then lower the gun."
-                            
+        i "[first_name] [last_name]..."
+        "I lift my right hand toward her."
+        "My fingers tighten around the grip."
+        "The barrel trembles as it points at her."
 
-                        i "[first_name] [last_name]..."
-                        "I lift my right hand toward her."
-                        "My fingers tighten around the grip."
-                        "The barrel trembles as it points at her."
-
-                        "A realization suddenly hits me."
-                        "This is the first time I've ever pointed a gun at another person."
-                        "The first time I've even held one."
-                        "My throat feels dry."
-                        "Who thought this was a good idea?"
-                        "Who allowed them to make teenagers do something like this?"
-                        "I knew a day like this might come eventually."
-                        "But now that it's here..."
-                        "I regret choosing this school."
+        "A realization suddenly hits me."
+        "This is the first time I've ever pointed a gun at another person."
+        "The first time I've even held one."
+        "My throat feels dry."
+        "Who thought this was a good idea?"
+        "Who allowed them to make teenagers do something like this?"
+        "I knew a day like this might come eventually."
+        "But now that it's here..."
+        "I regret choosing this school."
 
 
-                        menu:
-                            "Shoot":
-                                u "I'm sorry... Kaori."
-                                "My hands start to shake violently."
-                                s "No! It wasn't me."
-                                "My vision blurs."
-                                "I can barely keep the gun pointed at her."
-                                s "I hate yo-"
-                                "The gun fires."
-                                jump ending_one
-                            "Don't shoot":
-                                u "No! I can't."
-                                show sakura sad with dissolve
-                                u "I won't shoot."
-                                s "Thank you, [first_name]. Thank you."
-                                u "I don't think either of them did it. They're innocent."
-                                i "Ugh..."                           
-                                i "You know the rules."
-                                i "Someone has to die. If it isn't Kaori, it will be you."
-                                "Before the sentence is even finished, I notice a red dot near my chest."
-                                u "No! Wait!"
-                                i "..."
-                                i "Interesting. You don't want to die."
-                                i "But you refuse to kill."
-                                i "Most people choose one or the other."
-                                i "Very well. I'll give you one final opportunity."
-                                i "Think carefully. Your life..."
-                                i "...or the life of the person you love."
-                                menu:
-                                    "Shoot":
-                                        u "..."
-                                        s "[first_name]?"
-                                        "My hands start to shake violently."
-                                        u "I'm sorry... Kaori."
-                                        "My vision blurs."
-                                        s "No! Wai-"
-                                        jump ending_one
-                                    "Don't shoot":
-                                        u "No..."
-                                        "My arm slowly lowers."
-                                        u "I won't do it."
-                                        s "[first_name]..."
-                                        i "But... have it your way."
-                                        "The gun fires."
-                                        "A sharp pain tears through my chest."
-                                        "My stomach drops."
-                                        "No..."
-                                        "My legs give out beneath me."
-                                        "I fall on my knees."
-                                        s "[first_name]?"
-                                        u "Kao..."
-                                        u "..."
-                                        jump ending_x                      
-                    "Return":
-                        jump ending_choice
+        menu:
+            "Shoot":
+                u "I'm sorry... Kaori."
+                "My hands start to shake violently."
+                s "No! It wasn't me."
+                "My vision blurs."
+                "I can barely keep the gun pointed at her."
+                s "I hate yo-"
+                "The gun fires."
+                jump ending_one
+            "Don't shoot":
+                u "No! I can't."
+                show sakura sad with dissolve
+                u "I won't shoot."
+                s "Thank you, [first_name]. Thank you."
+                u "I don't think either of them did it. They're innocent."
+                i "Ugh..."                           
+                i "You know the rules."
+                i "Someone has to die. If it isn't Kaori, it will be you."
+                "Before the sentence is even finished, I notice a red dot near my chest."
+                u "No! Wait!"
+                i "..."
+                i "Interesting. You don't want to die."
+                i "But you refuse to kill."
+                i "Most people choose one or the other."
+                i "Very well. I'll give you one final opportunity."
+                i "Think carefully. Your life..."
+                i "...or the life of the person you love."
+                menu:
+                    "Shoot":
+                        u "..."
+                        s "[first_name]?"
+                        "My hands start to shake violently."
+                        u "I'm sorry... Kaori."
+                        "My vision blurs."
+                        s "No! Wai-"
+                        jump ending_one
+                    "Don't shoot":
+                        u "No..."
+                        "My arm slowly lowers."
+                        u "I won't do it."
+                        s "[first_name]..."
+                        i "But... have it your way."
+                        "The gun fires."
+                        "A sharp pain tears through my chest."
+                        "My stomach drops."
+                        "No..."
+                        "My legs give out beneath me."
+                        "I fall on my knees."
+                        s "[first_name]?"
+                        u "Kao..."
+                        u "..."
+                        jump ending_x
 #endregion
 
 #region Endings
@@ -2791,12 +2782,40 @@ transform phone_hover_smooth:
     on hover:
         ease 0.20 xpos 240 ypos 770 zoom 1.06
 
+transform ivy_report_smooth:
+    xanchor 0.5
+    yanchor 0.5
+
+    on insensitive:
+        xpos 500
+        ypos 550
+        zoom 1.0
+    
+    on idle: 
+        ease 0.20 xpos 500 ypos 550 zoom 1.0
+    on hover:
+        ease 0.20 xpos 500 ypos 550 zoom 1.06
+
+transform kaori_report_smooth:
+    xanchor 0.5
+    yanchor 0.5
+
+    on insensitive:
+        xpos 1400
+        ypos 550
+        zoom 1.0
+    
+    on idle: 
+        ease 0.20 xpos 1400 ypos 550 zoom 1.0
+    on hover:
+        ease 0.20 xpos 1400 ypos 550 zoom 1.06
+
 screen desk_case_screen(report, continue_label):
 
 
     imagebutton:
-        idle Transform("images/report_idle.png", xsize=1000, ysize=1200)
-        hover Transform("images/report_hover_black.png", xsize=1000, ysize=1200)
+        idle Transform("images/graphics/report_idle.png", xsize=1000, ysize=1200)
+        hover Transform("images/graphics/report_hover_black.png", xsize=1000, ysize=1200)
 
         at report_hover_smooth
 
@@ -2805,13 +2824,52 @@ screen desk_case_screen(report, continue_label):
 
     imagebutton:
 
-        idle Transform("images/phone_idle.png", xsize=600, ysize=700)
-        hover Transform("images/phone_hover.png", xsize=600, ysize=700)
+        idle Transform("images/graphics/phone_idle.png", xsize=600, ysize=700)
+        hover Transform("images/graphics/phone_hover.png", xsize=600, ysize=700)
 
         at phone_hover_smooth
         
         sensitive buttons_active
         action Jump(continue_label)
+
+screen choice_card():
+    imagebutton:
+        idle Transform("images/graphics/ivy_card_idle.png", xsize=900, ysize=600)
+        hover Transform("images/graphics/ivy_card_hover.png", xsize=900, ysize=600)
+
+        at ivy_report_smooth
+
+        sensitive buttons_active
+        action Jump("kaori_dialogue")
+
+    
+    imagebutton:
+        idle Transform("images/graphics/kaori_card_idle.png", xsize=900, ysize=600)
+        hover Transform("images/graphics/kaori_card_hover.png", xsize=900, ysize=600)
+
+        at kaori_report_smooth
+
+        sensitive buttons_active
+        action Jump("sakura_dialogue")
+
+screen final_desk_screen():
+    imagebutton:
+        idle Transform("images/graphics/ivy_idle_shadow.png", xsize=800, ysize=1000)
+        hover Transform("images/graphics/ivy_hover.png")
+        
+        at ivy_report_smooth
+
+        sensitive buttons_active
+        action Jump("ivy_choice")
+
+    imagebutton:
+        idle Transform("images/graphics/kaori_idle.png", xsize=800, ysize=1000)
+        hover Transform("images/graphics/kaori_hover.png")
+
+        at kaori_report_smooth
+
+        sensitive buttons_active
+        action Jump("kaori_choice")
 #endregion
 
 default selected_place = None
