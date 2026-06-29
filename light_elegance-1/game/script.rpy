@@ -1948,10 +1948,6 @@ label ending:
         k "..."
         k "Does the answer matter anymore? I'm not walking out of this room alive."
         i "[first_name] [last_name]..."
-
-        camera:
-            linear 1.0 zoom 1.35 xalign 0.5 yalign -1
-
         "I slowly raise the pistol."
         "My fingers tighten around the grip."
         "The barrel trembles as it points at her."
@@ -2108,9 +2104,6 @@ label ending:
 
         i "[first_name] [last_name]..."
         
-        camera:
-            linear 1.0 zoom 1.35 xalign 0.5 yalign -1
-
         "I slowly raise the pistol."
         "My fingers tighten around the grip."
         "The barrel trembles as it points at her."
