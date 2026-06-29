@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 2588: '{' was never closed
-    
-                            ^
+File "game/script.rpy", line 657: Indentation mismatch.
+    with fade
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Sun Jun 28 19:57:26 2026
+Sun Jun 28 20:25:14 2026

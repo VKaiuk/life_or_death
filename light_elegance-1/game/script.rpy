@@ -50,9 +50,10 @@ default offensive = False
 default normal = False
 
 default current_ending = None
+
 default persistent.seen_ivy_ending_note = False
 default persistent.seen_kaori_ending_note = False
-default persistent.seen_refuse_ending_note = False
+
 default buttons_active = False
 
 
@@ -653,7 +654,10 @@ label test:
     label dialogue_scene:
         $ buttons_active = False
 
-        scene white with fade
+        scene bk:
+            zoom 3
+        with fade
+
         show screen choice_card with dissolve
 
         if not talked_kaori and not talked_sakura:
@@ -1818,7 +1822,7 @@ label choice_dialogue:
     k "Because he never deserved someone like you."
     k "He thought you were blind. That he was smarter than you. Better than you."
     k "He looked down on you."
-    k "And the worst part? You let him"
+    k "And the worst part? You let him."
     u "What-"
     k "I've known you for years."
     k "Nothing escapes your eyes... unless you choose not to see it." 
@@ -1886,6 +1890,7 @@ label choice_dialogue:
 #region Ending
 label ending:
     $ buttons_active = False
+
     camera:
         zoom 1.0
 
@@ -1894,7 +1899,9 @@ label ending:
     #     zoom 0.8
     # with fade
 
-    scene white with fade
+    scene bk:
+        zoom 3
+    with fade
     show screen final_desk_screen() with dissolve
 
     "This is the final decision."
@@ -2633,6 +2640,10 @@ label end_credits:
             You can unlock another ending by choosing Kaori during the final
             decision.
 
+            You can also replay the story and choose different routes. While 
+            they don't change the main story, they feature different 
+            dialogue and character interactions.
+
             I hope you enjoyed the story.
             And if you did, please consider leaving a review. It really helps
             and means a lot to me as a developer.
@@ -2664,6 +2675,10 @@ label end_credits:
             Sol's journey as much as I enjoyed writing it. 
             You can unlock another ending by choosing Ivy during the final
             decision.
+
+            You can also replay the story and choose different routes. While 
+            they don't change the main story, they feature different 
+            dialogue and character interactions.
 
             I hope you enjoyed the story.
             And if you did, please consider leaving a review. It really helps
@@ -3012,8 +3027,8 @@ screen desk_case_screen(report, continue_label):
 
 screen choice_card():
     imagebutton:
-        idle Transform("images/graphics/ivy_card_idle.png", xsize=900, ysize=600)
-        hover Transform("images/graphics/ivy_card_hover.png", xsize=900, ysize=600)
+        idle Transform("images/graphics/ivy_info_idle.png", xsize=900, ysize=600)
+        hover Transform("images/graphics/ivy_info_hover.png", xsize=900, ysize=600)
 
         at ivy_report_smooth
 
@@ -3022,8 +3037,8 @@ screen choice_card():
 
     
     imagebutton:
-        idle Transform("images/graphics/kaori_card_idle.png", xsize=900, ysize=600)
-        hover Transform("images/graphics/kaori_card_hover.png", xsize=900, ysize=600)
+        idle Transform("images/graphics/kaori_info_idle.png", xsize=900, ysize=600)
+        hover Transform("images/graphics/kaori_info_hover.png", xsize=900, ysize=600)
 
         at kaori_report_smooth
 
