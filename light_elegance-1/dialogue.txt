@@ -1,52 +1,57 @@
 BEEP! BEEP! BEEP!
 Hmhm... 
 It's time to wake up.
-Ugh... Damn it. I forgot you people had this perverted side of yours. Who allowed you to put a speaker in my room?
-You did. When you signed the documents.
 Ugh...
+Damn it. I forgot you people had this creepy side of yours. Who thought putting a speaker in my room was a good idea?
+You did. It was included in the documents you signed.
+And here I thought I read them carefully.
 You remember the rules, right?
 You can't speak to the main suspects once you enter the school building.
 You'll have four breaks to find the real culprit.
 Only during those four breaks will you have the opportunity to speak with the suspects.
 At the end of the day, you'll make a choice that can't be changed.
 Hey! Are you listening!?
-I'm listening.
-Great. Please confirm your understanding by stating your first and last name.
-Sol Payver.
+Ha? Yeah, I'm listening.
+...
+Please confirm your understanding by stating your first and last name.
+[first_name] [last_name]. Ahhh...
 Thank you for your confirmation.
 Please remember that you will be the one carrying out the execution.
 I advise you to prepare yourself.
 [first_name] [last_name], We wish you luck.
-Meiyaku Academy. A place unlike any ordinary school. It was specifically designed to raise the finest detectives… at least, that’s what they say.
+...
+Meiyaku Academy. A place unlike any ordinary school. It was specifically designed to raise the finest detective... at least, that’s what they say.
 If a crime is committed and it involves me in any way, I am the one responsible for the investigation.
+Nothing leaves this institution. Every case is resolved within its walls.
 And once the culprit is found...
 They face the death penalty.
-Nothing leaves this institution. Every case is resolved within its walls.
 And yesterday... My best friend's body was found.
 As his closest friend, it falls to me to find the person responsible. And today is the day I must make my decision.
 There are two people considered as the primary suspects.
 My childhood friend...
 And someone I truly care about.
-Who should I believe? Who should I trust? As a detective, I should let go of my emotions, especially in moments like this.
-But how do I... how do I choose who lives or dies?
-On my way to school, I see a girl running toward me. She’s wearing a school uniform, holding a pink school hoodie in her hands.
+Who should I believe? Who should I trust?
+As an aspiring detective, I should let go of my emotions, especially in moments like this.
+But how do I...
+How do I choose who lives or dies?
+On my way to school, I see a girl running toward me. She’s wearing a school uniform, holding school hoodie in her hands.
 She waves one hand in the air, calling out to me from a distance. I can’t really hear her, but I can already guess who it is.
 Hey [first_name]! I've been calling you forever! Why didn't you wait for me?
 Her name's Ivy and she’s my childhood friend. Our parents work together, and somewhere along the way, we naturally became close.
-There's always a smile on her face. I’ve never seen her sad or devastated before. Even today...
+There's always a smile on her face. Today is no exception.
+I remember that smile irritating me quite a bit. I'm not sure why, but that's in the past.
 It's been a while. How are you?
 I'm fine... You seem awfully cheerful for a day like this.
 Why shouldn't I?
 A boy from our class died two weeks ago.
-I think his name was Paolo.
+I think his name was Ronn.
 His girlfriend killed him. According to her, he was the one who murdered her best friend.
 There's a rumor she only did it because he cheated on her.
 ...
 Yeah.
-I think I've just developed a lifelong fear of cheating.
+I've just developed a lifelong fear of cheating.
 Doesn't that scare you?
-Most people probably are...
-I think I’m scared too. Just... not that much.
+A little. But not as much as it should.
 I know you're capable of finding the real culprit.
 So I choose to believe in you.
 You sure are confident about me. But don’t expect me to go easy on you just because we’re friends.
@@ -69,53 +74,54 @@ We continued our walk to school in silence.
 So... who do you think the real culprit is? Between me and Kaori.
 I don't think I should answer.
 Why? If you tell me now, you can see later whether you had good intuition.
-That's an important trait for a great detective. So?
+That's an important trait for a great detective.
 Between the two of you, I think it’s you.
 She stops and crosses her arms with a huff.
 What? Why?
-I just don’t think Kaori is capable of killing someone.
+I mean... I don't think Kaori's capable of it.
 Oh... so you think I am?
-No... but-
+Well...
 Of course you are.
 I turn my head to the left. It’s Kaori.
 The person I... I feel something deeper for than friendship.
 Look at your face. It practically screams, 'I'm the killer.'
+K-Kaori...
 Ugh... why are you here?
 Between the two of you, I think it’s Kaori.
 Why?
 I don’t know her as well as I know you.
 I turn my head to the left, expecting to see Ivy, but I see Kaori instead.
 The person I... I feel something deeper for than friendship.
-S-Kaori!? What are you doing here?
-I decided to join your conversarion.
+K-Kaori!? What are you doing here?
 I'm sorry... I-
 No, I understand. That’s how this works.
 I don’t think it was either of you.
 Why is that?
-I don’t think Kaori is capable of killing someone.
+I don’t think Kaori's capable of it.
 And you... I’ve known you for a long time, so I know it wasn’t you.
 So who do you think it was?
 I turn my head to the left. It’s Kaori.
 The person I... I feel something deeper for than friendship.
-S-Kaori!? What are you doing here?
-I decided to join your conversarion. So?
-I-I don’t know. I’ll have to read the report first.
+K-Kaori!? What are you doing here?
+So?
+I-I don't know. I haven't even read the report.
+For all I know, the killer could be the janitor.
 Hmm...
-You both seem... happy this morning. Walking to school together and all.
-You only met him because of today's situation? You two never walk together.
+You two seem... happy this morning. And you're walking to school together.
+Didn't you only meet because of today's situation? You never used to do that.
 N-No, that's not true.
 We're childhood friends. I don't think it's strange for friends to walk to school together.
-What about you? Are you scared he’s going to choose you today? Is that why you came out looking for him?
+What about you? Are you worried he'll choose you today? Is that why you came looking for him?
 No... I’m not. Why would I be... I haven’t done anything wrong.
-Right... the two of them weren't on good terms. To be honest, I never knew why.
+Right... those two could barely stand each other.
+Come to think of it, I introduced them... and they started arguing almost immediately.
 A long sigh escapes my lips.
 Let’s calm down, both of you...
-An awkward silence settles between us.
 As we continue walking, I notice how cold it is today. Goosebumps run down my arms.
 What’s wrong, [first_name]? Are you cold?
 Do you have a hoodie or something?
 I’m fine. And no, I don’t.
-I lost my hoodie somewhere. I have no idea where.
+I lost mine somewhere.
 Here. Take mine!
 Kaori and Ivy both hold out their hoodies toward me at the same time.
 What are you doing?
@@ -129,8 +135,8 @@ Still, it feels like Kaori came here for a reason.
 You wanted to tell us something, Kaori?
 Mmm... yes, right.
 You’ve already been informed about the rules, haven’t you?
-Yes, I was.
-Then, Ivy, you and I are not allowed to speak to each other once we enter the building.
+I nod.
+Then you know Ivy and I won't be able to speak to each other once we're inside the school.
 Phew... I wasn't planning to.
 Ivy...
 ...What?
@@ -143,6 +149,8 @@ Ivy is different from others. Even though her life may be on the line, she wears
 Kaori though, seems anxious. Her eyes are full of sadness, even when she tries to hide that.
 I walk into the classroom, and every student’s gaze is fixed on me. Well... it’s different from what usually happens.
 I make my way to my desk, and just like Kaori mentioned, the report case is already there.
+Hover over the report and click it to open the case file.
+To continue the story, press the phone in the bottom-left corner.
 It's time to decide who to investigate first.
 I talked to Ivy. Now it's time for Kaori.
 I talked to Kaori. Now it's time for Ivy.
@@ -248,7 +256,7 @@ I didn't see him.
 I let out a long breath.
 It's as if he vanished. Neither of them saw him. Yet both of them were headed the same direction.
 According to the report, you were seen with Hiro around 6 PM after school.
-Yes, that's true.
+She gives a few small nods.
 What were you doing together? What did you talk about?
 Why? Are you jealous?
 Answer the question.
@@ -256,8 +264,7 @@ Ugh. He asked if he could borrow my flash drive.
 A flash drive?
 Yeah... I found it weird too. He said his drive was full.
 I've never filled up all the storage in my life.
-Obviously. You've never downloaded anything larger than a selfie.
-Unless you have a lot of data. Do you know what he needed it for?
+Do you know what he needed it for?
 She shrugs.
 No. But he said he needed it quickly. He couldn't even wait a day, so we went to my dorm.
 And?
@@ -289,135 +296,152 @@ Um... not really.
 She's about my age. She used to live in Chicago too.
 ...
 Doesn't matter.
-She thought she lost her favorite doll. She looked everywhere for it.
-When she couldn't find it, she started crying.
-You saw her and immediately went looking for it.
+It happened at my house.
+She lost her favorite doll, or at least she thought she had.
+After searching everywhere and still not finding it, she started crying.
+You saw what happened and immediately started looking for it.
 A few minutes later, you found it in my room.
 ...
 Did you steal it?
 I didn't steal it. I just wanted to play with it. I was a child.
-She told her mom about it. Then my parents nagged me, like they always did. Even on my birthday.
+She told her mom about it. And my parents nagged me, like they always did. Even on my birthday.
 I cried and ran away to my room. No one came to see me, to check if everything was alright.
 Until you came. You sat next to me, and said nothing. You were just sitting there, playing with your robot.
 ...I was shy back then.
-I'm not sure why, but I calmed down pretty quickly. Maybe I was too embarrassed to cry in front of you.
-We played together until your parents came to take you home.
-Was that the first time we met?
+I'm not sure why, but I calmed down pretty quickly. Maybe I was just too embarrassed to cry in front of you.
+We spent the rest of the day playing until your parents came to pick you up.
+So... that was the first time we met?
 Yeah.
-I can't believe you remember something like this.
+I can't believe you still remember something like that.
 You...
 Well... It was the day I made my first friend.
 ...
-So of course I remember it.
+Of course I remember it.
+You don't?
 ...
+I'm sorry.
+N-No...
+It's okay.
+It happened almost eleven years ago. How could I possibly remember something like that?
+Well...
+She remembered.
 Ahem.
-Let's get back to questeniong.
+Let’s get back to questioning.
 ...Yeah.
-I wanted to ask about Kaori. You two don’t get along very well. Why?
+You and Kaori don't get along very well. What's going on between you two?
 Didn’t she already tell you.
-She did, but I want to hear your version.
-I don’t really hate her. She’s actually pretty nice.
-It just like she said. We both like the same person, haha.
-Ivy... are you serious right now? Don’t tell me there’s actually someone you like?
-I do... Is that really something extraordinary?
-In your case? Yeah, a little. Well... I’m more worried about that person, haha.
-Hey! That’s mean, you know! And what about you?
-Aren’t you worried that someone might take your precious Kaori from you.
-What are you... where is that coming from?
+She did. But I want to hear your side of the story.
+I don’t really hate her. She's actually a really nice person.
+It's just like she said.
+We both happen to like the same person.
+...
+Wait... are you serious?
+Don't tell me you actually have a crush on someone.
+I do... Is that really so hard to believe?
+In your case? Yeah, a little. Though... I feel more sorry for the poor guy, haha.
+Hey! That’s mean! And what about you?
+Aren't you worried someone might steal your precious Kaori away?
+What are you... Where did that come from?
 Don’t play dumb, I’m not Kaori. 
-I’ve known you for a long time. I see your eyes when you look at her. The way you act around her. 
+I’ve known you for a long time. I see the way you look at her. The way you act around her.
 ...
 Is it really that obvious?
-Obvious? Please. The whole class knows that.
-The whole...
+Obvious? Almost everyone knows that.
+...
 I lower my head in embarrassment.
 ...
 ...
-I'm sorry, I shouldn't have talked to you like that.
-No, I should be the one apologizing. My mistake for treating your feelings as a joke.
+I'm sorry... I shouldn't have spoken to you like that.
+No... I should be the one apologizing. I treated your feelings like they were a joke.
 ...
-S-so... about the person we like.
+S-So...
+About the person we both like.
 What about them? Was it Hiro?
 N-No, it’s not him. It’s... um...
 Hehe...
 I-It’s you.
 Me? What are you talking about?
-The person we both like.
+The person Kaori and I both like.
 ...
-Ivy, stop. This isn’t a time for jokes.
+Ivy... This isn't the time to joke around.
 I’m... not joking.
 Her voice trembles. I lift my head and see her looking awkwardly away, her cheeks slightly red.
 Her hands rest on her lap, tightly gripping her skirt.
-What?! What d-d-do you mean?
-What do you mean what do I mean! Don’t make me say it again.
-Yes, I l-like you, I’ve liked you for quite a while now. Happy?
+W-Wait?! What d-d-do you mean?
+What do you mean what do I mean! Don't make me say it again...
+Yes, I l-like you, I’ve liked you for a long time.
+...
 ...I-I
 Why aren’t you saying anything? Just say something.
 I'm sorry... I just don't know what to say! It's so sudden!
 I-I... Ugh.
-I’m happy, I really am.
-Probably just about Kaori, right?
+I’m happy. Really.
+Probably just about Kaori.
 N-No, about you too! It’s just...
-That’s fine. I already knew how this would end. I just wanted to tell you today. Because, you know, If not today, then when?
+It's okay. I already knew how this would end. I just wanted you to know.
+Because... If not today, then when?
 Ivy...
-I said it’s fine! Do you have any more questions?
-N-No... I don’t.
+I said it’s okay! Do you have any more questions?
+N-No...
 Then I’ll go.
 She gets up and rapidly leaves the place.
-I wanted to ask about Kaori. You two don’t get along very well. Why?
+You and Kaori don't get along very well. What's going on between you two?
 You've never asked that before.
 I never really cared. But I want to know now.
-I don’t really hate her. She’s actually pretty nice.
-It's just that I admire her.
-I admire her so much that I end up feeling something negative toward her.
-People are drawn to her. She has this strange ability to make everyone like her.
+I don't really hate her. She's actually pretty nice.
+It's just that... I admire her.
+Maybe I admire her a little too much.
+People are naturally drawn to her. She has this strange ability to make everyone like her.
 I'm not like that. No matter how hard I try, I can't connect with people the way she does.
-Even when there's someone I have feelings for.
-Ivy...
-Are you serious right now? Don’t tell me there’s actually someone you like?
-I do... Is that really something extraordinary?
-In your case? Yeah, a little. Well... I’m more worried about that person, haha.
-Hey! That’s mean, you know! And what about you?
-Aren’t you worried that someone might take your precious Kaori from you.
-What are you... where is that coming from?
+Sometimes... I catch myself feeling jealous of her.
+...
+Especially when there's someone I have feelings for.
+Wait... you? You actually have a crush on someone?
+...Is that really so hard to believe?
+In your case? Yeah, a little. Though... I feel more sorry for the poor guy, haha.
+Hey! That’s mean! And what about you?
+Aren't you worried someone might steal your precious Kaori away?
+What are you... Where did that come from?
 Don’t play dumb, I’m not Kaori.
-I’ve known you for a long time. I see your eyes when you look at her. The way you act around her. 
+I’ve known you for a long time. I see the way you look at her. The way you act around her.
 ...
 Is it really that obvious?
-Obvious? Please. The whole class knows that.
-The whole...
+Obvious? Almost everyone knows that.
+...
 I lower my head in embarrassment.
 ...
 ...
-I'm sorry, I shouldn't have talked to you like that.
-No, I should be the one apologizing. My mistake for treating your feelings as a joke.
+I'm sorry... I shouldn't have spoken to you like that.
+No... I should be the one apologizing. I treated your feelings like they were a joke.
 ...
-S-so... about the person I like.
+S-So...
+About the person we both like.
 What about them? Was it Hiro?
 N-No, it’s not him. It’s... um...
-She takes a deep breath.
 Hehe...
 I-It’s you.
 Me? What are you talking about?
-The person I-I like.
+The person Kaori and I both like.
 ...
-Ivy, stop. This isn’t a time for jokes.
+Ivy... This isn't the time to joke around.
 I’m... not joking.
 Her voice trembles. I lift my head and see her looking awkwardly away, her cheeks slightly red.
 Her hands rest on her lap, tightly gripping her skirt.
-What?! What d-d-do you mean?
-What do you mean what do I mean! Don’t make me say it again.
-Yes, I l-like you, I’ve liked you for quite a while now. Happy?
+W-Wait?! What d-d-do you mean?
+What do you mean what do I mean! Don't make me say it again...
+Yes, I l-like you, I’ve liked you for a long time.
+...
 ...I-I
 Why aren’t you saying anything? Just say something.
 I'm sorry... I just don't know what to say! It's so sudden!
+I-I... Ugh.
 You probably don't even care.
-N-No, I'm happy, I really am. It’s just...
-That’s fine. I already knew how this would end. I just wanted to tell you today.
-Because, you know, If not today, then when?
+No... I’m happy. Really. It’s just...
+It's okay. I already knew how this would end. I just wanted you to know.
+Because... If not today, then when?
 Ivy...
-I said it’s fine! Do you have any more questions?
-N-No... I don’t.
+I said it’s okay! Do you have any more questions?
+N-No...
 Then I’ll go.
 She gets up and quickly leaves.
 I go downstairs and step into the cafeteria. Kaori is already there, sitting at the table, with a book. No one else is around.
@@ -496,74 +520,82 @@ Hey. Don’t worry. I’ll do my best to find the real culprit.
 From now on, all I want is the truth. Do you understand that?
 I know she’s a vulnerable person, but I’m still surprised to see her like this.
 Yes... I understand.
-You and Ivy don’t seem to get along. I’ve never questioned this, but now I think it’s time to know the truth.
+You and Ivy don't seem to get along. I never really questioned it before, but... I think it's time I knew why.
 That’s true.
 Why? Something must have happened.
-I just... hate her. She’s annoying, narcissistic. Always acting like she’s better than everyone.
-That doesn’t come out of nowhere.
-It's quite embarrassing to say... haha.
+I just... don't like her. She's always so confident. Like nothing ever gets to her.
+That can't be the only reason.
+It's a little embarrassing to say... haha.
 I still need to know.
 She fidgets with a strand of her hair.
 You see... it happens that we both like the same person.
 What?!
-My voice comes out louder than I expected. Kaori flinches slightly.
-I'm sorry for this.
-Wait. Ivy told me she likes me. Was it a lie? Or is Kaori telling the truth?
-Also, looking at her face... she seems uncomfortable, like she’s embarrassed in front of me.
-Something happened, [first_name]? Your face suddenly went pale.
+My voice comes out louder than I expected. Kaori flinches.
+S-Sorry...
+Wait. Ivy told me she likes me. So was she lying...
+...or is Kaori telling the truth?
+I glance back at her.
+She won't meet my eyes. Her cheeks are red. Is she... embarrassed?
+Is something wrong, [first_name]? You suddenly went pale.
 No, no, I’m just surprised. What about you? Your face is red.
 Oh... is it? It's just... umm, I'm fine.
-She presses her knees together and looks away.
-Looking at her face... it has to be true. She’s really in love with me.
+She presses her knees together and quickly looks away.
+...
+Could she really...
+My heart starts pounding.
 Damn... I'm happy.
+[first_name]?
 A-Are you alright?
 I can feel my face getting warmer.
 Y-Yeah. I'm fine. I'm fine.
-I need to calm down. I really should.
+I need to calm down.
+I really need to calm down.
 But I can’t. I’m just... that happy.
-Still... I should make sure.
+Still... I need to be sure.
 ...Is it Hiro?
 Hiro? No, it’s not him. Don’t worry. He has nothing to do with this.
 That’s... good. I mean... it’s nothing.
-Ivy likes someone. That girl can’t like anyone but herself. Ha... Is she doing this on purpose? Yeah... hundred percent.
-Also to think that Kaori already likes someone... and it’s not me.
-Something happened, [first_name]? Your face suddenly went pale.
+Ivy likes someone? That girl? Ha... Is she doing this on purpose? Yeah... probably.
+And Kaori...
+She already likes someone. And it isn't me.
+Is something wrong, [first_name]? You suddenly went pale.
 No, no, I’m just surprised. Do you mind telling me who it is?
 ...
 She shifts uncomfortably in her seat.
-I don’t want to. It doesn’t have anything to do with the case anyway. And I’m not required to tell you, ahem...
+I'd rather not. It doesn't have anything to do with the case.
+And I’m not required to tell you, ahem...
 ...Is it Hiro?
 Hiro? No, it’s not him. Don’t worry. He has nothing to do with this.
 That’s... good. I mean... it’s nothing.
-Let’s talk more about that night.
+Let's talk more about that night.
 Alright...
-You said you went the same way a few minutes later after your conversation ended. 
+You said you went the same way a few minutes after Hiro left.
 I didn’t say that.
-The report did. Why did you go that way? The women’s dorm is in the opposite direction.
+The report did. Why did you go that way? The women's dormitory is in the opposite direction.
 I had to stop by the convenience store.
-Why? What's the reason?
-I needed to buy a few things for myself.
-Weren’t you scared to go there alone?
-Why would I be? We live in a quiet area.
+For what?
+I needed to buy a few things.
+You weren't afraid to walk there alone that late?
+Why would I be? This area is usually pretty quiet.
 Not so quiet as it appears.
-Did you see anything unusual? Anyone suspicious?
+Did you notice anything unusual? Anyone suspicious?
 I don’t think so... Hm...Wait.
-When I was walking, a person passed me. They were wearing a dark blue school hoodie.
-Did you see their face? Anything else?
-It was too dark. I couldn’t see anything.
+Someone walked past me.
+Did you see their face? Anything that stood out?
 She shakes her head apologetically.
-Their steps were fast... like they were in a hurry.
+It was too dark. I couldn’t see anything.
+But they were wearing the school hoodie. The blue one.
+And they were walking really fast...
 What happened after that?
-I don't know where that person went. Once I reached the convenience store, I couldn’t see them anymore.
-You bought what you needed. What happened next?
-I went back to my dorm room.
-Can anyone confirm that?
-I'm sure the dorm's cameras would have recorded me.
-Did you maybe see Ivy that night?
+I don't know. By the time I reached the convenience store, they were already gone.
+You bought what you needed?
+Yeah. Then I went straight back to my dorm.
+The dormitory security cameras should have recorded me coming back.
+Did you happen to see Ivy that night?
 No, I didn't. Was she there?
-What about the store? She was heading in that direction.
+She was heading toward the convenience store.
 Not that I remember.
-Riverbank isn’t far from the school, but getting there requires taking a bus.
+The riverbank where Hiro's body was found isn't far from the school, but getting there requires taking a bus.
 When I arrive, there’s obviously nothing suspicious left at the scene.
 Let's think about what I've read in the report.
 His body was found here at 3:40AM.
@@ -571,70 +603,113 @@ His skin appeared pale and wrinkled.
 Considering the amount of water exposure, the body was most likely in the river for quite some time before it was discovered.
 Blood was found beneath his fingernails.
 That suggests he fought desperately for his life.
-Let's answer a simple question.
-Where did Hiro die?
-That means Hiro was strangled.
+I close my eyes and try to put the facts in order.
+Right. The riverbank wasn't where Hiro died.
+It was only the place where his body was discovered.
+And judging by the report, strangulation is the most likely cause of death.
+The marks on his body and the lack of other fatal injuries point to it.
+Right. The riverbank wasn't where Hiro died.
+It was only the place where his body was discovered.
+But stabbing doesn't fit.
+The report never mentioned any stab wounds.
+If Hiro had been stabbed, it would have been immediately obvious.
+Right. The riverbank wasn't where Hiro died.
+It was only the place where his body was discovered.
+But a gunshot doesn't make sense.
+There were no bullet wounds and no mention of a firearm in the report.
+Strangulation seems correct.
+But the riverbank doesn't.
+The condition of the body suggests it had been in the water for quite some time.
+Neither conclusion feels right.
+The riverbank was where the body was found, not necessarily where the murder happened.
+And there were no signs of stabbing mentioned in the report.
+No. That doesn't fit the evidence.
+The riverbank being the murder scene already seems unlikely.
+And nothing suggests a firearm was involved.
+Strangulation makes sense.
+But the school doesn't.
+After speaking with Kaori, Hiro headed toward the dormitory area.
+There's nothing placing him back at the school afterward.
+I don't think either answer is correct.
+Hiro was last seen heading away from the school.
+And the report contains no evidence of stab wounds.
+That doesn't add up.
+The school is the wrong location.
+And there's no evidence Hiro was shot.
 More likely, his body was thrown into the river somewhere upstream, and the current brought it here.
 The easiest way to do that would be from one of the bridges further along the river. I follow the upstream.
 About fifteen minutes later, I spot a familiar footbridge. I use it every day on my way to the dorm. Hiro used it too.
 A footbridge is almost the perfect place to commit a murder. No cameras. Water underneath. A current strong enough to wash away evidence, maybe even fingerprints.
 And, almost mockingly, there’s a convenience store just fifty meters before the bridge.
 The same store Ivy said she was going to that night. The same place Kaori mentioned before returning to her dorm.
-Right before reaching the store, I notice Ivy leaving. She seems in a hurry, looking around as she heads back toward the school.
+Right before reaching the store, I spot Ivy leaving.
+She keeps glancing over her shoulder as she hurries back toward the school.
+That's interesting.
 I head inside.
-Good afternoon. I have some questions to ask.
-Huh? Again? What do you want?
+Good afternoon. I'd like to ask you a few questions.
+Huh? Again? What is it this time?
 Again? What do you mean?
-Some kind of girl was here before you. She gave me a hard time.
-A hard time? What did she ask?
-She wanted to... Wait, who are you?
+Some girl was just here. She gave me a real headache.
+What did she want?
+She wanted to... Hold on. Who are you?
 Oh... My name is [first_name] [last_name].
 I’m investigating the case assigned by the school.
-From that academy? Between us, I hate those bastards.
-But they’re scary. Not like I can do anything about it.
-So, what did she ask?
-She wanted to look at camera footage.
-You let her?
-Obviously not! They told me to only show it if a special card is presented by a student.
-Special card? Oh... It must be the one inside the report. I put it in my wallet.
-Here. May I see the footage, please?
-Hmm... Alright. Come with me.
-Did Ivy want to delete the data? I’m curious what I’ll see.
+You're from that academy? Ugh... Can't stand that place.
+But you're scary people. Not like I can refuse your requests.
+So what did she ask for?
+She wanted to see the security footage.
+And you let her?
+Of course not! I'm only allowed to show it to students carrying a special authorization card.
+Special authorization card...
+Oh... It must be the one inside the report. I take it out of my wallet.
+Would this do?
+...
+...Yeah. Come with me.
+Was Ivy trying to delete the footage? I’m curious what I’ll see.
 We step into the security room.
-Please be careful. Last time, a boy from your academy deleted a week of footage.
-Sure...
-I open the footage from the night Hiro was killed. On the screen, I see Hiro walking past the store. Then, a person in a dark hoodie passes by.
-Looking at the build of the person, I don't think of a girl. A boy comes to mind instead.
-And after that... Kaori enters the store. She picks up a few items and leaves, heading back toward the school.
-I guess she wasn’t lying. But what about Ivy? She passed the store and followed Hiro.
-I scroll through ten more minutes of footage. Ivy returns to the store, holding the hoodie in her hands. She looks sweaty, like she’s been running.
-The school is divided in almost every way. Nearly everything is separated between boys and girls.
-The hoodies are no exception. Blue belongs to the boys. Pink belongs to the girls.
-Did Ivy borrow the hoodie from another guy? She doesn't have many male friends.
-Only Hiro and me.
+Please be careful. Last time, a student from your academy deleted an entire week's worth of footage.
+Heh.
+I guess you really weren't innocent after all, Ronn.
+Don't worry.
+I rewind the recording to the night Hiro was killed.
+Hiro appears on the screen, walking past the store. A few seconds later, someone wearing a dark blue hoodie follows him.
+Their build doesn't look feminine. If I had to guess... I'd say it was a boy.
+The academy separates almost everything between boys and girls.
+The hoodies are no exception. Blue for boys. Pink for girls.
+Did Ivy borrow that hoodie from another student? She doesn't have many male friends.
+Only Hiro...
+...And me.
 ...
-Is that why I couldn't find mine?
-Ivy came to the store at 11:05PM. That’s around Hiro’s estimated time of death.
-I watch her for a few minutes. She paces back and forth, thinking about something.
+Is that why I couldn't find my hoodie?
+And then Kaori enters the store.
+She buys a few things before leaving and heading back toward the school.
+I guess Kaori wasn't lying. But what about Ivy? She walked past the store and followed Hiro.
+I fast-forward another ten minutes. Ivy comes back into view, carrying a blue hoodie in her hands.
+She looks exhausted. Like she’s been running.
+The timestamp reads 11:05 PM. That's almost exactly Hiro's estimated time of death.
+I keep watching. She paces back and forth outside the store.
+She looks nervous. Like she's trying to decide what to do.
+...
 Was she really involved?
-The fact that Ivy wanted to see the footage almost confirms her involvement.
+She came here before me. She wanted to see this footage.
+Whatever happened that night... She's definitely hiding something.
 I guess she wasn’t lying. But what about Ivy? I haven't see her yet. Was she here way before?
-I scroll through ten more minutes of footage. Ivy returns to the store, holding hoodie in her hands.
-So the person wearing the dark blue hoodie was Ivy? She was the one who passed Kaori.
-She didn’t tell me that. She told me she didn’t see her.
-The school is divided in almost every way. Nearly everything is separated between boys and girls.
-The hoodies are no exception. Blue belongs to the boys. Pink belongs to the girls.
-Did Ivy borrow the hoodie from another guy? She doesn't have many male friends.
-Only Hiro and me.
+I fast-forward another ten minutes. Ivy comes back into view, carrying a blue hoodie in her hands.
+So the person wearing the hoodie
+... was Ivy?
+She was the one who walked past Kaori.
+But she never told me that. She said she didn't see Kaori at all.
+I keep watching. She paces back and forth outside the store.
+She looks nervous. Like she's trying to decide what to do.
 ...
-Is that why I couldn't find mine?
-I watch Ivy for a few minutes. She paces back and forth, thinking about something.
 Was she really involved?
-The fact that she wanted to see the footage almost confirms her involvement.
-But I can't think of a reason for her to kill him. The same goes for Kaori.
-Ivy was coming from the same direction as Hiro and Kaori.
-There's a chance she overheard their conversation.
-It's worth asking about. I should talk to Kaori next.
+Whatever happened that night... She's definitely hiding something.
+Even so...
+I still can't think of a reason for Ivy to kill Hiro. The same goes for Kaori.
+Ivy came from the same direction as Hiro and Kaori.
+There's a good chance she overheard their conversation.
+That could explain some of her behavior.
+It's worth asking about. I should ask Kaori about it next.
 I go downstairs and step into the cafeteria. Kaori is already there, sitting at the table, with a book. No one else is around.
 Hey again, [first_name].
 H-Hi... I have something else to ask.
@@ -647,93 +722,108 @@ What did you and Hiro talk about? I know you asked me not to bring it up, but I 
 I need this information.
 Not very comfortable to say, but...
 I confessed to him... that I... that I liked him.
-Confessed... Why is she still lying?
+Confessed...
 It looks like I won't get anywhere without bringing up what Ivy told me.
 (Whisper) Damn it… 
 I’m sorry?
-I don’t really want to do this. It might destroy our relationship.
-I stand up and start pacing.
-Look, Kaori. I don't have much time right now. I don't need your lies.
+I don't want to do this. It might destroy everything between us.
+I stand up and begin pacing.
+Kaori. I don't have much time. So I need you to stop lying to me.
 B-But I'm telling the truth. Why would I lie?
-I'm asking myself the same thing.
-Why would you hide the fact that Hiro confessed to you?
+That's exactly what I'm trying to figure out.
+Why did you hide the fact that Hiro confessed to you?
 Were you embarrassed?
 Because if your life is on the line, embarrassment shouldn't matter.
-I- just ask my friends... right, my friends. I’m sure they’ll confirm it.
-Your friends? What friends?
-That's... oh, right. Ask Himari. She'll definetely tell you.
+I- just ask my friends... right, my friends. They'll tell you.
+Your friends? Which ones?
+That's... oh, right. Himari. Ask Himari.
 You know I don't have time for that.
-And Himari? Oh... The same Himari who talks behind your back the moment she gets the chance?
+Besides. Isn't she the same person who talks behind your back whenever she gets the chance?
 That's not true. She's not like-
-Of course she is. That’s the kind of school we’re in.
+Kaori. This school changes people.
 You still don't get it, do you?
-All they care about are themselves.
-And the moment you seem useful, they start clinging to you.
-[first_name]? Why are you…
-I’m one break away from deciding who dies.
-Right now, I don't care about your feelings.
+Everyone looks out for themselves.
+The moment you seem useful, they start clinging to you.
+[first_name]...
+Why are you saying all this?
+I'm one break away from deciding who dies.
+I can't afford to let my feelings cloud my judgment.
+Right now. I need the truth.
+Even if it means hurting you.
 What's that supposed to mean?
 I know everything...
 About your feelings. Ivy told me.
 W-What do you mean?
-What you feel toward me. You love me, don’t you?
-I-I... Did Ivy tell you that?
-She did. And your face confirms it well enough.
+How you feel about me.
+You love me... don’t you?
+I-I... Did Ivy really tell you that?
+She did.
+And your face tells me the rest.
 About your feelings.
 W-What do you mean?
-What you feel toward me. You love me, don’t you?
+How you feel about me.
+You love me... don’t you?
 H-How do you-
-Doesn't matter. Your face confirms it well enough.
+It doesn't matter. Your face tells me everything.
 [first_name], I-I...
-Whether it’s you or Ivy, I’m ready to choose either of you.
-It’s not like you… You’re not thinking clearly.
-Oh… believe me, I’m perfectly fine. This damn school put me in this position, so I don’t care anymore.
-Hiro... Hiro didn’t deserve to die.
+Whether it's you...
+... or Ivy.
+I'm prepared to choose either of you.
+N-No... You're not thinking clearly.
+Maybe I'm not. But this school doesn't care whether I am.
+One of you is going to die today.
+Hiro... Hiro didn't deserve to die.
 ...
-Hiro didn’t deserve to die?
+Hiro didn't deserve to die?
 That scumbag?
 A bitter laugh escapes her lips.
-What's that suppo-?
-It seems you really know nothing about him after all.
+W-What are you talking about?
+...
+You really knew nothing about him.
 She leans closer to me.
-That bastard was someone all the girls at this school were afraid of.
-I don't know how, but he had countless private photos on his phone.
+That bastard was someone every girl at this school was afraid of.
+I don't know how he got them.
+But he had countless private photos on his phone.
 He used them to blackmail us.
 And if someone refused to do what he wanted...
 ...he'd threaten to sell them.
 Her voice trembles with anger.
-And that night... I was going to be his next target.
-What are you...?
-The school didn’t help because of their stupid rules.
-'The school doesn’t interfere in students’ lives unless a death occurs.'
-I never intended to tell you this. I wanted to keep you away from all of it.
-He was your friend. I didn't want to hurt you.
-I decided to deal with it myself. But then… then he died.
+That night... I was supposed to be his next victim.
+What...?
+The school refused to help.
+'The academy doesn't interfere in students' lives unless someone dies.'
+Those were their exact words.
+I never wanted to tell you any of this.
+I didn't want to destroy the image you had of him.
+He was your best friend.
+I decided I'd deal with it myself. But then… then he died.
 ...
 You know what?
-I did not do it...
-I did not kill Hiro, but I wish that I had.
-He deserved it. Not because of me, but because of all the girls he hurt.
+I didn't do it...
+I didn't kill Hiro, but I wish that I had.
+He deserved it. Not because of what he did to me, but because of what he did to everyone else.
 And you...
-Ugh... I hope you're acting like this because of today.
-Because if not...
-...Damn it.
+Ugh... I hope you're only acting like this because of today.
+Because if this...
+...is the real you.
+... then I don't know you anymore.
 She wipes her eyes with the back of her hand.
-I imagined my confession would be different.
+I always imagined my confession would be different.
 ...
 ...I’ll go. I don't have anything else to say.
 She pushes her chair back and gets to her feet.
-She turns around and walks away.
+Without looking back, she walks toward the door.
 (Whisper) Damn it...
-I'm sorry.
-I need to calm down. I don’t want to handle this the wrong way.
-Kaori, I need to know the truth. The whole truth.
-Because I’m not buying that 'confessed' story.
+I'm sorry?
+I need to calm down. I don't want to handle this the wrong way.
+Kaori. I need to know the truth. The whole truth.
+Because I'm not buying that 'confessed' story.
 I-I’ve been telling the truth...
-I know. Or at least... I want to believe that.
-But, I don't have much time.
-And I don’t want to accuse you without understanding what really happened.
-Because I don't want to make the wrong choice. Not when it comes to you.
+I know. Or at least... I want to believe you.
+But I don't have much time.
+And I don't want to accuse you without understanding what really happened.
+Because I don't want to make the wrong choice. Especially when it comes to you.
+Her eyes widen.
 W-When it comes to me?
 Her eyes widen slightly.
 ...
@@ -744,212 +834,258 @@ You can do this. Come on.
 I-I...
 I love you, Kaori Ito.
 Huh?
-What do you m-mean?
-I-I like your kidness. The way you help people without expecting anything in return.
-Your strength. The way you keep smiling... even when you're hurting.
-Your smile. The kind that can make everything feel a little brighter.
+W-What do you mean?
+I-I love your kidness.
+The way you help people without expecting anything in return.
+The way you keep smiling... even when you're hurting.
+And your smile...
+Somehow it always makes my day a little brighter.
 [first_name]...
 ...
 K-Kaori?
-Please... say something.
+Please...
+Say something.
 My heart pounds against my chest.
-Was I wrong after all?
+Did I misunderstand everything?
 I-I....
 She lowers her head.
-sniff... sniff...
-She looks up again, her eyes filled with tears.
+Sniff...
+When she looks up again, her eyes are filled with tears.
 I'm so happy...
-A relieved laugh escapes her between sobs.
+A small laugh escapes between her sobs.
 I'm so happy you said that.
-I-I love you too... [first_name]. I love you so much.
-I take out a napkin and give it to her.
-You know... I don’t have an infinite supply of napkins. Hehe...
-I'm sorry. I shouldn't-
+I-I love you too... [first_name].
+I've loved you for so long.
+I love y...
+She cuts herself off, trying to hold back another sob.
+I reach my pocket and hand her a napkin.
+You know... I'm starting to run out of those. Hehe...
+I'm sorry. I shouldn't be crying...
 It's okay.
+Take your time.
 ...
-A minute passes before she calms down.
+A minute passes before she finally calms down.
 ...I don't want to lose you.
-You don't need to force yourself, but if there is something you're hiding... I need to know.
+So if there's anything you're hiding...
+Please. Tell me.
 ...
-I'll tell you.
-I'm sorry to say this, but Hiro wasn't a good person.
+I will.
+I'm sorry to say this, but Hiro wasn't the person you thought he was.
 What do you mean?
-It turned out he had been harming girls at this school.
+He'd been hurting the girls at this school.
 He blackmailed them using private photos.
-Private... Where did he get those?
+Blackmailed?
+Private... How did he get them?
 I don't know. There were rumors about a hidden camera in the girls' changing room.
-The school didn’t help because of their stupid rules.
-'The school doesn’t interfere in students’ lives unless a death occurs.'
-I wanted to confront him and do something about it.
-But it turned out that he had something on me as well.
-And I... eventually became his target that night.
+The school refused to help.
+'The academy doesn't interfere in students' lives unless someone dies.'
+Those were their exact words.
+I wanted to confront him. I wanted to put an end to it myself.
+But... He had something on me too.
+That night I became his next victim.
 Why? Why didn't you tell me?
-I don't know. I didn't want to hurt you. He was your friend.
+Because...
+He was your best friend.
+I didn't want to be the one who shattered your image of him.
 ...
-That's okay. And... I'm sorry for what he did. I-
-Why are you apologizing? You're not him. And it's not like you knew.
-You're different.
+That's okay. And... I'm sorry for everything he put you through.
+Why are you apologizing? You didn't know. You're nothing like him.
 ...
-Thanks, Kaori.
+Thank you, Kaori.
 You should go. I need to talk to Ivy.
-Sure...
-She stands up and steps closer to me.
-She lowers her head and kisses me on the right cheek.
+Okay...
+She stands and takes a few steps toward me.
+She hesitates for a moment.
+Then she leans forward and gently kisses my cheek.
 See you later!
-Then she quickly leaves the room.
-I don't want to believe it. Was Hiro really that kind of person?
-How did I never notice any of it?
-He tried to hurt Kaori, and I did nothing.
-Did the same thing happen to Ivy. I need to ask her.
-I sit there for a few more minutes, then leave the cafeteria and head to the school yard to speak with Ivy.
+Then she quickly leaves the room with a smalle smile.
+No.
+I don't believe it. I don't want to.
+Was Hiro really that kind of person all along?
+And I never noticed?
+He tried to hurt Kaori...
+And I did nothing!
+What about Ivy? Did the same thing happen to her too?
+I stay in the cafeteria for a few more minutes, trying to process everything.
+In the end, I stand up and head toward the school yard. I need to talk to Ivy.
+...
 I step outside and see Ivy sitting on the bench. She doesn’t look at me, even though she definitely noticed me.
 Ivy...
-I quietly sit down beside her.
-Oh... hey, [first_name]. Haven’t seen you in a while, hehe.
+I sit down beside her.
+Oh... Hey, [first_name]. Haven't seen you in a while. Hehe.
 Hm? What happened?
-Nothing in particular.
-Was it Kaori? Did she reject you or something? I should go talk to her and-
+Nothing.
+Was it Kaori? Did she reject you? I should go talk to her and-
 She starts to stand up.
 Ivy...
-Stop it. Don’t you have anything else to think about?
-I do. But I’m your friend...
-And I l-like you too. So it’s normal to worry about you.
-I'm fine. Don't worry about me.
-Good. But you can talk to me if something’s wrong. Okay?
+Sit down.
+Without saying a word, she slowly sits back down.
+Don't worry about me. You've got enough to think about.
+I know. But I’m your friend...
+Maybe even more than that. So of course I'm worried.
+I'm fine.
+Okay. But if something's wrong, you can always talk to me.
 Talk? You lied to me.
-I checked the footage you wanted to see. You never went inside the store. Not until twenty minutes later, after you followed Hiro.
-Care to explain?
-I don't want to believe it. Was Hiro really that kind of person?
-How did I never notice any of it?
-He tried to hurt Kaori, and I did nothing.
-Did the same thing happen to Ivy? I need to ask her.
-I sit there for a few more minutes, then leave the cafeteria and head to the school yard to speak with Ivy.
-Wait?
-Did she kiss me?
+I checked the security footage. You never went into the convenience store. Not until twenty minutes later, after you followed Hiro.
 ...
-She did.
+Care to explain?
+No.
+I don't believe it. I don't want to.
+Was Hiro really that kind of person all along?
+And I never noticed?
+He tried to hurt Kaori...
+And I did nothing!
+What about Ivy? Did the same thing happen to her too?
+I stay in the cafeteria for a few more minutes, trying to process everything.
+In the end, I stand up and head toward the school yard. I need to talk to Ivy.
+...
+Wait?
+Did Kaori just...
+Kiss me?
+My hand slowly rises to my cheek.
+...
+She really did.
 I step outside and see Ivy sitting on the bench. She doesn’t look at me, even though she definitely noticed me.
 Ivy...
-I quietly sit down beside her.
-Oh... hey, [first_name]. Haven’t seen you in a while, hehe.
-Huh? What’s with that look?
+I sit down beside her.
+Oh... hey, [first_name]. Haven't seen you in a while. Hehe.
+Huh? What's with that look?
 What about it?
-Did something good happen? You’re practically glowing.
-Uh... you could say that.
-What? Did you two get together or something?
+Did something good happen? You're practically glowing.
+Uh... You could say that.
+What? Did you two finally get together?
 I'm not sure. I just told her how I feel.
-Oh...
+...
+Oh.
 I see.
-It doesn't really matter right now. Care to explain something for me?
+A faint smile appears on her face.
+It doesn't really matter right now. There's something I need you to explain.
 Explain what?
-I'm talking about your lie. I checked the footage you wanted to see.
-You never went inside the store. Not until twenty minutes later, after you followed Hiro.
+Your lie. I checked the security footage.
+You never went into the convenience store. Not until twenty minutes later, after you followed Hiro.
 Well... I never said I went inside, hehe.
 Was it you?
 Me? Um-
-Even if it was... I still keep questioning it.
-Because I realized that you didn’t really like Hiro.
-You always acted strange around him. Avoided him. You never spent time with us together.
-Well... that’s not entirely true. But I did find him strange. Still, he was your friend, and I...
-Finding someone strange doesn’t make them deserve to die. So there must be something else.
+Even if it was... There's still something I can't understand.
+Because I realized that you never liked Hiro.
+You always kept your distance. You avoided him. You never wanted to spend time with the two of us.
+Well... that's not entirely true. I did think he was strange. But he was your friend and I...
+Thinking someone's strange isn't a reason to kill them. So there has to be something else.
 Something else?
 Like blackmail.
 ...
-So, you knew?
+You knew
 Kaori told me.
-Kaori... interesting. Was she one of his victims too?
+Kaori... Interesting. Was she one of his victims too?
 Does it matter?
 Oh... no it doesn't.
 I just... thought she was smarter than the others.
 Hiro couldn’t do anything to me. And yet I’m the one people think is the fool?
-She looks away, clicking her tongue in irritation.
+She clicks her tongue and looks away.
 Ivy...
 I did hate him, that's true. But not because of that.
-Then wh-
-He didn't deserve to have a friend like you.
-What kind of person thinks their best friend is that blind?
-He really thought he was better and smarter than you.
+Then why?
+...
+Because he never deserved someone like you.
+He thought you were blind. That he was smarter than you. Better than you.
+He looked down on you.
+And the worst part? You let him
 What-
-Oh, it was obvious. Remember, I've known you for a long time.
+I've known you for years.
 Nothing escapes your eyes... unless you choose not to see it.
-...And you never did anything to stop it. Kind of disappointing.
+You saw him changing.
 Ivy, I-
 I understand you. I do...
-After all, he wasn’t always like that. There was a part of you that still hoped he’d change.
+You just kept hoping he'd become the person he used to be again.
 Ivy!
 She freezes.
-I have no idea what you're talking about.
-Like I said, I didn’t know anything until Kaori told me.
+I don't know what you're talking about.
+Like I said, I didn't know any of this until Kaori told me.
 But...
 But what?
 ...
+She stares at me for a long moment.
 Hehe...
-...I guess I made a mistake.
-...Mistake?
+...I guess I was wrong.
+...Wrong?
 Ahem...
+Forget it.
 T-Then I overheard his conversation with Kaori.
-And I couldn't hold myself back anymore.
-God... you’ve never seen him like that.
-Her fingers curl into fists.
-That vicious smile of his. I’ll never forget it.
-And that girl... still acting like she didn’t matter to anyone. Thinking about others while being blackmailed...
+Don't change the subject.
 ...
-She’s a good person. Better than me, that’s for sure.
-She stands up, preparing to leave.
+She looks away.
+I couldn't hold myself back anymore.
+Ivy...
+Her hands slowly clench into fists.
+You should've seen him.
+That smile of his. I've never hated someone so much.
+And Kaori... Even while he was threatening her, she was still worried about other people.
+...
+She’s a good person. Better than I am, that’s for sure.
+She slowly gets to her feet.
 ...Ivy?
-I will go.
+I should go.
 Wait! We're not done yet.
-And [first_name]...
+[first_name]...
 I'm sorry...
 For putting you in this position.
 Ivy! What's that supposed to mean?
 BEEP! BEEP! BEEP! BEEP! BEEP!
-A loud sound blasts from the school speakers, hurting my ears. I lower my head and cover them, trying to escape the noise.
-The sound stops. I take a few seconds to regain my senses. When I look up, no one is standing in front of me.
+A loud sound blasts from the school speakers, hurting my ears. I instinctively cover my ears.
+After several agonizing seconds, it finally stops.
+I take a few seconds to regain my senses.
+Ivy is gone.
 What the hell?!
-Your time is up. You may no longer speak with the suspects.
-Final decision must be made within an hour. You know the rules. The room you choose will decide who dies.
-Hey! You bastards! How was I supposed to figure this out in one day?!
+Investigation period has ended. You may no longer communicate with the suspects.
+Your final decision must be made within one hour. The room you choose will determine who dies.
+Hey! You bastards! How was I supposed to solve a murder in a single day?!
 ...
-Rules are the rules.
+That uncertainty is part of your job.
+Proceed to your final decision.
+This is the final decision.
+You may want to save your progress now if you'd like to return later and see another ending.
+Click either report to make your final decision.
 ...Ivy
 You have made your decision. Please proceed to Ivy Lee's dormitory room.
-I step out of the classroom and head toward the women's dormitory.
+I leave the classroom and head toward the women's dormitory.
 Before reaching the final door, I wonder if I made the right decision.
-Will I regret this later? Will I regret it for tRhe rest of my life?
-I open the door to Ivy's apartment. It's dark inside.
-Near the entrance, I notice a table with a pistol resting on top of it.
+Will I regret this later? Will I regret it for the rest of my life?
+I open the door to Ivy's apartment. It's dark.
+Near the entrance, I spot a table with a pistol resting on top of it.
 A faint light shines from one of the rooms. I pick up the gun.
-I open the bedroom door and see Ivy sitting quietly on the bed.
-As soon as she notices me, she slowly stands up and steps closer.
-The same damn smile on her face.
-So... you're here.
-You're not surprised?
-I excpected as much.
-Excpected? I'm still not sure it was you.
-And yet you still chose me. Meaning I made mistakes that led you here.
-What happened to your eyes? They're red.
-She quickly looks away.
-I'm just... a little bit of tired.
-Did you really kill Hiro?
+I open the bedroom door and see Ivy is sitting on the edge of the bed.
+As soon as she sees me, she quietly stands.
+She walks toward me.
 ...
-Does it matter anymore? I'm not leaving this room alive.
+The same damn smile.
+So... You chose me.
+You're not surprised?
+I expected as much.
+Expected? Even now, I'm still not convinced you killed Hiro.
+And yet you still chose me. I guess I made enough mistakes to lead you here.
+Your eyes... They're red.
+She quickly looks away.
+I'm just... a little tired.
+Did you kill Hiro?
+...
+Does the answer matter anymore? I'm not walking out of this room alive.
 [first_name] [last_name]...
-I lift my right hand toward her.
+I slowly raise the pistol.
 My fingers tighten around the grip.
 The barrel trembles as it points at her.
 I try to steady my hand.
 A realization suddenly hits me.
-This is the first time I've ever pointed a gun at another person.
-The first time I've even held one.
+I've never pointed a gun at another person before.
+I've never even held one.
 My throat feels dry.
 Who thought this was a good idea?
-Who allowed them to make teenagers do something like this?
+Who decided teenagers should carry this burden?
 I knew a day like this might come eventually.
+...
 But now that it's here...
-I regret choosing this school.
+I regret ever choosing this school.
 I-I'm sorry...
-My hands start to shake violently.
+My hands begin to shake uncontrollably.
 My vision blurs.
 I can barely keep the gun pointed at her.
 She takes a small step toward me.
@@ -957,38 +1093,38 @@ It's okay...
 I love yo-
 No...
 [first_name]?
-Ugh...
+...
 You know the rules.
-If she lives, then you die.
+If she lives, you die.
 Before the sentence is even finished, I notice a red dot near my chest.
 No! Wait!
-D-Don't kill him.
-Ivy lowers her head.
+Don't shoot him!
+She steps in front of me without hesitation.
 Her hands curl into fists at her sides.
 Ivy...?
 ...Kill me.
 Her voice trembles.
 What!?
-When she raises her head again, tears fill her eyes.
+When she raises her head again, tears spill down her cheeks.
 I did it. I killed Hiro.
 I'm the one who deserves to die. Not you!
 Ivy?
 Please...
-She takes a step forward.
+...
 I'll give you one final opportunity.
 I'm sorry...
-My hands start to shake violently.
+My hands won't stop shaking.
 I can barely keep the gun pointed at her.
 [first_name]...
 I love yo-
 The gun fires.
 No...
 I don't believe you.
-And I won't kill you. Not you.
+And I won't shoot you.
 Wait! [first_name]!
 We had high expectations for you.
 But... have it your way.
-No! Wait!
+NO!
 The gun fires.
 A sharp pain tears through my chest.
 My stomach drops.
@@ -996,7 +1132,7 @@ No...
 My legs give out beneath me.
 I fall on my knees.
 [first_name]!
-Ivy rushes to me.
+Ivy catches me before I hit the floor.
 Why?
 Why would you do something so stupid...?
 Iv...
@@ -1011,83 +1147,92 @@ Near the entrance, I notice a table with a pistol resting on top of it.
 I turn on the lights and see Kaori sitting on the sofa, terrified.
 The moment our eyes meet, her expression changes drastically.
 Her eyes widen as she understands what my presence means.
-I pick up the gun and slowly step closer to her.
+I pick up the pistol and slowly step closer to her.
 No...
-No, no, no...
-Tears begin to stream down her face.
+No...
+Please...
+Tears begin streaming down her face.
 It wasn't me.
-You know it wasn't me.
-You checked the dorm cameras, right?
-You saw I went back.
-Kaori, I—
+You know it wasn't.
+You checked the cameras.
+You saw me go back.
+Kaori...
 Then why are you here?
-Why are you standing here with that gun?
+Why are you holding that gun?
 It was Ivy.
-It wasn't her, Kaori.
-You know I'm innocent, and you're still going to kill me?
-Or maybe you knew from the start.
-Maybe you just needed someone to blame.
+I don't think it was.
+...
+Then...
+You know I'm innocent. And you're still going to kill me?
+Or maybe you just needed someone to blame.
 That isn't true.
 Then why did you choose me!?
 No...
-No, please...
-Tears begin to stream down her face.
+Please...
+Tears begin streaming down her face.
 It wasn't me.
 You said you believed me.
-You checked the dorm cameras, right?
+You checked the cameras, right?
 You know I went back.
-Kaori, I—
+Kaori...
 Then why are you here? Why are you holding that?
 It was Ivy.
-It wasn't her, Kaori.
+I don't think it was.
 You told me you loved me.
-Was that a lie too?
-No... I meant it.
+Was that a lie?
+No...
+Every word was true.
 Then why?
 Why me?
+...
 That's-
 ...
 Maybe I was wrong.
 Maybe I was never the one you wanted to save.
-That isn't true.
+That's not true.
+...
 Then lower the gun.
 [first_name] [last_name]...
-I lift my right hand toward her.
+I slowly raise the pistol.
 My fingers tighten around the grip.
 The barrel trembles as it points at her.
+I try to steady my hand.
 A realization suddenly hits me.
-This is the first time I've ever pointed a gun at another person.
-The first time I've even held one.
+I've never pointed a gun at another person before.
+I've never even held one.
 My throat feels dry.
 Who thought this was a good idea?
-Who allowed them to make teenagers do something like this?
+Who decided teenagers should carry this burden?
 I knew a day like this might come eventually.
+...
 But now that it's here...
-I regret choosing this school.
+I regret ever choosing this school.
 I'm sorry... Kaori.
-My hands start to shake violently.
+My hands begin to shake violently.
 No! It wasn't me.
 My vision blurs.
-I can barely keep the gun pointed at her.
-I hate yo-
+The gun slips slightly in my trembling hands.
+Please...
 The gun fires.
 No! I can't.
-I won't shoot.
+I won't shoot you.
 Thank you, [first_name]. Thank you.
-I don't think either of them did it. They're innocent.
-Ugh...
-You know the rules.
-Someone has to die. If it isn't Kaori, it will be you.
-Before the sentence is even finished, I notice a red dot near my chest.
-No! Wait!
+I don't think either of you killed Hiro.
+I won't kill an innocent person.
 ...
-Interesting. You don't want to die.
-But you refuse to kill.
+You know the rules.
+If Kaori lives, you die.
+Before the sentence is even finished, I notice a red dot near my chest.
+Wait!
+...
+Interesting. You fear death.
+Yet you refuse to kill.
 Most people choose one or the other.
-Very well. I'll give you one final opportunity.
-Think carefully. Your life...
+Very well. One final opportunity.
+Choose carefully. Your life...
 ...or the life of the person you love.
 ...
+My grip tightens.
 [first_name]?
 My hands start to shake violently.
 I'm sorry... Kaori.
@@ -1097,19 +1242,18 @@ No...
 My arm slowly lowers.
 I won't do it.
 [first_name]...
-But... have it your way.
+Then... have it your way.
 The gun fires.
-A sharp pain tears through my chest.
+A burning pain tears through my chest.
 My stomach drops.
 No...
-My legs give out beneath me.
-I fall on my knees.
+My knees hit the floor.
 [first_name]?
 Kao...
 ...
 Before she can finish her sentence, the bullet strikes her in the chest.
-For a moment, she remains standing, as if her body still hasn’t understood what happened.
-Then she stumbles backward and collapses onto the sofa, one trembling hand pressing against the wound.
+For a brief moment, she remains standing. As if her body hasn't realized what's happened.
+She collapses onto the sofa, one trembling hand pressed against the wound.
 Nngh...
 Nngh...
 ...
@@ -1117,70 +1261,82 @@ Nngh...
 My hands won't stop shaking.
 I've never liked the sight of blood. This case is no different.
 My stomach twists.
-I quickly turn away and start coughing.
+I quickly turn away and begin coughing.
 Just looking at the blood makes me want to throw up.
 D-Did she-
 Kaori Ito is dead.
-Congratulations on your first case, [first_name] [last_name].
-W-Was it her?
+Congratulations on completing your first case, [first_name] [last_name].
+W-Was it really her?
 Does the truth matter anymore? She's dead.
-I'm starting to think this school is nothing more than an excuse for you people to entertain yourselves.
-What's the point of all this?
-How is a detective supposed to live with a sacrifice like that if he doesn't even know whether it was for justice.
 ...
-Why are you silent?!
+So that's it?
+This school forces us to kill each other, and you call that justice?
+...
+What's the point of any of this?
+How is a detective supposed to live with a decision like this...
+Without ever knowing if it was the right one?
+...
+Answer me!
 Because we're not certain either.
 What?
 We have no confirmation of the real killer. Only a collection of facts. And a conclusion we chose to believe.
-You'll never know for certain whether you fought for justice...
+You'll never know whether you served justice...
 ...or condemned an innocent person. Not everyone tells the truth.
-Now, you are free to return to your life.
-Assuming you're still capable of it.
+That is the reality of the world you're about to enter.
+Now...
+Return to your life.
+If you're still capable of living it.
 ...
 Meanwhile...
 How do you feel?
+...
 I'm not sure. I-I didn't want her to die.
-And yet... Deep down, part of me is happy.
+And yet... Deep down...
+Part of me is relieved.
 He chose me.
 ...
-Do you think he feels the same way you do?
+Do you think he feels the same way?
 I don't know. Maybe.
 But he had every reason to choose me.
-Everything pointed to me, and yet he chose Kaori.
-Even though he knew she was innocent.
+Everything pointed to me. He knew Kaori was innocent.
+And he still chose her.
 ...
-Don't worry about it. You're free to return to the life you had before.
-I most definitely will.
+Don't dwell on it. You're free to return to the life you had before.
+I wonder if I can.
 ...
 Heh. We're the same, [first_name].
 In the end...
+We both...
 We both killed for someone we love.
-We meet with Ivy in front of the apartment building.
-We walk together in total silence.
+We meet outside the apartment building.
+Ivy's eyes are red. She must have been crying.
+I don't say anything. I don't know what I could possibly say.
+We continue walking forward in total silence.
 ...[first_name]
 [first_name]!
 Ugh...
 I'm sorry. I was lost in thought.
-It’s okay. I think you'll be thinking about this for a long time.
+It’s okay. I don't think you'll stop thinking about today anytime soon.
 Yeah...
-Why are you coming with me?
+Why are you still with me?
 ...
-I just didn't want you to be alone.
+I didn't want you to be alone.
 She keeps her eyes fixed on the ground as she walks.
 Do you think I made the right choice?
-Um... I don't think I'm the right person to answer that.
-Heh... That's true.
-I don't know how I'm supposed to feel. I killed her.
+I'm the last person who should answer that.
+Heh... Yeah.
+I killed her.
 My voice barely rises above a whisper.
-I failed her. I wasn't able to find the real killer.
+I failed her. I wasn't able to help her... To save her.
 You tried. More than anyone else would have. I know that.
+...
 But you're not alone now. You don't have to carry all of this by yourself.
 I'm here for you.
-Thanks, Ivy.
+Thanks.
 She looks at me with that same gentle smile.
-A smile I've seen countless times before.
-But today, it feels different.
-Maybe because, right now, she's the only thing keeping me from falling apart.
+It's the same smile I've known for years.
+It feels different today.
+Maybe because, right now, it's the only thing keeping me from falling apart.
 I quietly reach for her hand.
 Huh! What are you—
 I'm sorry. I-I just...
@@ -1190,7 +1346,7 @@ I-It's okay.
 I don't mind.
 She gently squeezes my hand.
 I squeeze back.
-Neither of us says another word as we walk to my apartment together.
+Neither of us says another word as we continue walking home together.
 Before she can finish her sentence, the bullet strikes her in the chest.
 For a moment, she remains standing, as if her body still hasn’t understood what happened.
 Then she stumbles backward and collapses onto the bed, one trembling hand pressing against the wound.
@@ -1205,94 +1361,129 @@ Just looking at the blood makes me want to throw up.
 D-Did she-
 Ivy Lee is dead.
 Congratulations on your first case, [first_name] [last_name].
-Now, you are free to return to your life.
-Assuming you're still capable of it.
+W-Was it her?
+Does the truth matter anymore? She's dead.
+...
+So that's it?
+This school forces us to kill each other, and you call that justice?
+...
+What's the point of any of this?
+How is a detective supposed to live with a decision like this...
+Without ever knowing if it was the right one?
+...
+Answer me!
+Because we're not certain either.
+What?
+We have no confirmation of the real killer. Only a collection of facts. And a conclusion we chose to believe.
+You'll never know whether you served justice...
+...or condemned an innocent person. Not everyone tells the truth.
+That is the reality of the world you're about to enter.
+Return to your life.
+If you're still capable of living it.
 ...
 Two days later, everyone is still talking about it. People look at me differently now.
 I sit in class, staring out the window.
 [first_name]?
 Ugh... I'm sorry. I was lost in thought.
-That's okay. I know it's been tough for you.
+That's okay. I know it's been hard.
+...
 Yeah...
 She steps closer and gently takes my hand.
 Her grip is warm.
 Are you ready for the final test?
-Test? Oh... yeah, I think so. Are you?
-I think I am. I'm just nervous.
-Heh. Don't worry. I know you'll do fine.
+The final test? Oh... yeah, I think so. Are you?
+I'm trying not to think about it. I'm a little nervous.
+Heh. You'll do fine. I know you will.
 Thanks, [first_name].
 Um...
-D-Do you want to go see a movie with me tommorow?
-There's a new comedy coming out. I heard it's pretty good.
-A movie? With you?
-Yes! I-I'd love to.
+Actually...
+Would you like to go see a movie with me tomorrow?
+There's a new comedy playing. I heard it's pretty good.
+A movie...
+With you?
+I-I'd love to.
 Great. I'll... I'll wait for you after school.
-I can't wait. Hehe.
-I'm sorry. I have to go to the bathroom.
-Sure.
+It's a date.
+Hehe.
+Her smile makes my chest feel a little lighter.
+For the first time in days, I feel like things might be okay.
 After school, I return to my room.
-There is no confirmation that it was Ivy. The school refuses to tell me anything.
+The academy still refuses to tell me whether Ivy was really the killer.
 I lean back against the wall and let out a long sigh.
 But the more I think about her, the more restless I become.
 In the end, I decide to visit her room one last time.
-I enter an apartment. It's dark inside.
-I turn on the light and head toward Ivy's room.
+I enter an apartment. It's dark
+I switch on the lights and head toward Ivy's room.
 You're not supposed to be here.
-Damn it! I always forget you can do this.
-You're not allowed to enter the women's dormitory when it isn't necessary.
-Come on... she's not here anymore.
-I enter her room.
-I walk toward her desk and notice a dark blue hoodie draped over the chair.
-Is it the same hoodie Ivy was wearing that night?
-Was this here when I talked to her?
-I pick it up and check the pockets. A flash drive falls into my hand.
-I insert it into the laptop resting on the desk.
-Inside, I find a single video. 'Untitled1.mp4'
+Damn it! I always forget you can do that.
+Entering the women's dormitory without authorization is prohibited.
+Come on... She's gone.
+I step into Ivy's room.
+Everything is exactly as she left it.
+My eyes stop on the blue hoodie hanging over the back of her chair.
+Was this the one from that night?
+I pick it up and check the pockets. Something falls onto the floor.
+A flash drive.
+I insert it into the laptop on her desk.
+Inside, I find a single file.
+'Untitled1.mp4'
 Ahem...
 It's time for you to choose...
-And If you're watching this video... then you chose me.
-Hehe. Not in the way I hoped.
-I'm not sure if this is the right time to tell you the truth.
+If you're watching this... then you chose me.
+Hehe. Not exactly the outcome I was hoping for.
+I don't know if this is the right time to tell you the truth.
 But I lied. I lied a lot. Especially today. And I hope you'll understand why.
 I hope you'll understand that everything I did... I did it because of you.
 ...
 It was you...
 You were the one who killed Hiro Tanaka.
-I saw it with my own eyes. I saw your face when you were killing him.
+I saw it with my own eyes.
+I saw your face. I watched you kill him.
 What?
 That's impossible. I don't rem-
 I think it's called dissociative amnesia.
-Triggered by acute psychological trauma.
-A person tends to forget a specific traumatic period.
-Sometimes memories from before or after the event become fragmented as well.
-It was you in that hoodie.
-After you killed Hiro...
-You hid it and returned to your room.
-The moment I found it, I knew it would lead back to you...
-Without thinking, I made myself a suspect instead.
+Memory loss caused by severe psychological trauma.
+Sometimes the mind buries memories that are too painful to face.
+Sometimes it even erases what happened before and after.
 ...
-The next day, I came to see you. To prepare a plan.
+You were the one wearing that hoodie.
+After Hiro died...
+You threw it away...
+... and ran.
+I didn't know what to think.
+I only knew one thing.
+If anyone found that hoodie, they would find you.
+That's why I decided to make myself a suspect instead.
+...
+I still don't know if it was the right decision.
+But I don't regret it.
+...
+The next morning, I came to see you. I wanted to talk to you. To figure out what to do.
 That's when I realized something was wrong.
 You remembered nothing.
 Not what you did. Not the bridge.
 Your memories... just disappeared.
-I can't imagine what kind of night you went through.
-Heh.
+I can't imagine what you went through.
+You were completely alone.
+...
+And I wasn't there to help you.
+Heh...
 You couldn't even remember how we first met.
 You idiot.
-Do you have any idea how sad that made me?
+Do you have any idea how much that hurt?
 ...
-You also forgot the truth about Hiro.
-That was when I realized just how bad it was.
+You even forgot the truth about Hiro.
+That's when I realized how serious it was.
 After all, that was the reason you killed him in the first place.
 You wanted to protect her.
-Protect Kaori...
+Protect Kaori.
 And she's...
 She's innocent.
-It was me who told the school about her meeting with Hiro.
-I was the one who made her a suspect.
+I'm the one who told the academy about her meeting with Hiro.
+I made her a suspect.
 I was the one who dragged her into this.
 She's just a victim of mine.
+...
 I-I wanted to protect you.
 ...
 Ugh...
@@ -1304,34 +1495,39 @@ Because I'm...
 ...
 I'm terrified.
 I really don't want to die.
-I want to stay by your side. I want to see you graduate.
-I want to walk to school with you again.
-I want to work at the same company as you.
+I want to stay by your side.
+I want to graduate with you.
+I want to walk to school together again.
+I want to work at the same company.
 I want all of it.
 Her voice cracks.
-Even if someone innocent has to pay the price.
+Even if someone innocent had to pay the price.
 Even if that makes me a terrible person.
 ...
 Your memories...
 They'll probably return eventually.
-I thought it would be better if I was the one to tell you the truth.
-So you wouldn't have to face those memories alone.
+I wanted you to hear the truth from me.
+So you wouldn't have to face them alone.
+...
 But that's not completely true either.
 The truth is, I want you to remember me.
 I want to be the person you think about.
-The person you can't forget.
+The person you could never forget.
 The person who loved you more than anyone else.
-She laughs weakly through her tears.
+She lets out a weak, tearful laugh.
 ...
 Heh.
-How selfish.
+How pathetic.
 A door opens somewhere in the background.
-She wipes her eyes.
+She quickly wipes away her tears.
 ...
-I guess this is goodbye.
-I love you, my dear friend.
+I guess...
+This is goodbye.
+I love you...
+My dear friend.
 I always will.
 The video ends.
+My vision blurs.
 ...
 Tears begin to fall.
 B-But I-
@@ -1340,25 +1536,5 @@ Ivy.
 I'm so sorry.
 I slowly turn toward her bed.
 ...
-All that's left is a dark stain where her blood dried.
-How did he die?
-[message_place]
-[message]
-[message_place]
-[message]
-[message_place]
-[message]
-How did he die?
-[message_place]
-[message]
-[message_place]
-[message]
-[message_place]
-[message]
-How did he die?
-[message_place]
-[message]
-[message_place]
-[message]
-[message_place]
-[message]
+All that's left...
+...is the dark stain where her blood dried.

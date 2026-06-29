@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1012: expected statement.
-    linear 1.0 zoom 1.0
-            ^
+File "game/script.rpy", line 2588: '{' was never closed
+    
+                            ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Sat Jun 27 15:52:36 2026
+Sun Jun 28 19:57:26 2026

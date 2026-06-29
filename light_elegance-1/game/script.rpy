@@ -1239,7 +1239,7 @@ label sakura_dialogue:
                         s "..."
                         "She shifts uncomfortably in her seat."
                         show sakura blush with dissolve
-                        s "I'd rather not. It doesn't have anything to do with the case.
+                        s "I'd rather not. It doesn't have anything to do with the case."
                         s "And I’m not required to tell you, ahem..."
                         u "...Is it Hiro?"
                         show sakura normal with dissolve
@@ -2584,7 +2584,7 @@ label end_credits:
     camera:
         zoom 1.0
     # $ quick_menu = False
-    scene black
+    scene black with fade
 
     show text "{size=90}{color=#FFFFFF}THE CULPRIT I LOVE{/color}{/size}" at truecenter
     with fade
