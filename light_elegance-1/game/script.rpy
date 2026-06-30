@@ -153,7 +153,6 @@ label start:
     "BEEP! BEEP! BEEP!"
     scene bedroom
     i "Hmhm... "
-    i "It's time to wake up."
     u "Ugh..."
     u "Damn it. I forgot you people had this creepy side of yours. Who thought putting a speaker in my room was a good idea?"
     i "You did. It was included in the documents you signed."
@@ -198,7 +197,8 @@ label start:
     "And once the culprit is found..."
     "They face the death penalty."
 
-    "And yesterday... My best friend's body was found."
+    "And yesterday... Hiro..."
+    "My best friend's body was found."
     "As his closest friend, it falls to me to find the person responsible. And today is the day I must make my decision." 
     "There are two people considered as the primary suspects."
     "My childhood friend..."
@@ -206,7 +206,7 @@ label start:
     "Who should I believe? Who should I trust?"
     "As an aspiring detective, I should let go of my emotions, especially in moments like this."
     "But how do I..."
-    "How do I choose who lives or dies?"
+    "How do I choose who lives and who dies?"
 
     pause 1.0
 
@@ -222,13 +222,13 @@ label start:
 
     q "Hey [first_name]! I've been calling you forever! Why didn't you wait for me?"
     "Her name's Ivy and she’s my childhood friend. Our parents work together, and somewhere along the way, we naturally became close."
-    "There's always a smile on her face. Today is no exception."
-    "I remember that smile irritating me quite a bit. I'm not sure why, but that's in the past."
+    "Doesn't matter how bad things get. She always tries to smile."
+    "I've never seen her completely devastated. Even today, she's smiling."
     k "It's been a while. How are you?"
-    u "I'm fine... You seem awfully cheerful for a day like this."
+    u "I'm fine... But you're in a surprisingly good mood for a day like this."
 
     show kaori normal with dissolve
-    k "Why shouldn't I?"
+    k "Why shouldn't I be?"
     u "A boy from our class died two weeks ago."
     "I think his name was Ronn."
     "His girlfriend killed him. According to her, he was the one who murdered her best friend."
@@ -785,7 +785,7 @@ label kaori_dialogue:
             "During the class I report everything I found out till now."
             jump test
         menu:
-            "What were you doing the night Hiro died?" if not asked_q1 and talked_sakura:
+            "Her Alibi" if not asked_q1 and talked_sakura:
                 if talked_sakura:
                     $ first_sakura = True
                     show kaori normal with dissolve
@@ -867,7 +867,7 @@ label kaori_dialogue:
                 k "I went to my dorm. The cameras can confirm it."
                 $ asked_q1 = True
                 jump kaori_questions
-            "Why are you so happy today?" if not asked_q3:
+            "Her Smile" if not asked_q3:
                 # camera:
                 #     linear 1.0 zoom 1.35 xalign 0.5 yalign -1
                 show kaori normal with dissolve
@@ -920,7 +920,7 @@ label kaori_dialogue:
                 k "...Yeah."
                 $ asked_q3 = True
                 jump kaori_questions
-            "What’s happened between you and Kaori?" if not asked_q2 and asked_q1 and asked_q3:
+            "Kaori" if not asked_q2 and asked_q1 and asked_q3:
                 if talked_sakura:
                     u "You and Kaori don't get along very well. What's going on between you two?"
                     show kaori normal with dissolve
@@ -1140,7 +1140,7 @@ label sakura_dialogue:
                 jump test
 
         menu:
-            "What were you doing the night Hiro died?" if not asked_qq1:
+            "Her Alibi" if not asked_qq1:
                 u "Simple question. What were you doing around 11PM that night?"
                 "The moment I ask, her eyes begin darting around the room."
                 "Her fingers tighten around the edge of her skirt."
@@ -1189,7 +1189,7 @@ label sakura_dialogue:
 
                 $ asked_qq1 = True
                 jump sakura_questions
-            "What’s happened between you and Ivy?" if not asked_qq2:
+            "Ivy" if not asked_qq2:
                     if not asked_qq1:
                         show sakura normal with dissolve
                     
@@ -1423,18 +1423,20 @@ label riverbank:
     "Their build doesn't look feminine. If I had to guess... I'd say it was a boy."
     "The academy separates almost everything between boys and girls."
     "The hoodies are no exception. Blue for boys. Pink for girls."
-    "Did Ivy borrow that hoodie from another student? She doesn't have many male friends."
-    "Only Hiro..."
-    "...And me."
-    "..."
-    "Is that why I couldn't find my hoodie?"
-    "And then Kaori enters the store."
+    "This could be anyone."
+    "Here! Kaori enters the store."
     "She buys a few things before leaving and heading back toward the school."
 
     if first_sakura:
         "I guess Kaori wasn't lying. But what about Ivy? She walked past the store and followed Hiro."
         "I fast-forward another ten minutes. Ivy comes back into view, carrying a blue hoodie in her hands."
         "She looks exhausted. Like she’s been running."
+        "As for hoodie..."
+        "Did Ivy borrow it from another student? She doesn't have many male friends."
+        "Only Hiro..."
+        "...And me."
+        "..."
+        "Is that why I couldn't find my hoodie?"
         "The timestamp reads 11:05 PM. That's almost exactly Hiro's estimated time of death."
         "I keep watching. She paces back and forth outside the store."
         "She looks nervous. Like she's trying to decide what to do."
@@ -1449,6 +1451,12 @@ label riverbank:
         "... was Ivy?"
         "She was the one who walked past Kaori."
         "But she never told me that. She said she didn't see Kaori at all."
+        "As for hoodie..."
+        "Did Ivy borrow it from another student? She doesn't have many male friends."
+        "Only Hiro..."
+        "...And me."
+        "..."
+        "Is that why I couldn't find my hoodie?"
         "I keep watching. She paces back and forth outside the store."
         "She looks nervous. Like she's trying to decide what to do."
         "..."
@@ -1526,11 +1534,11 @@ label choice_dialogue:
                 u "I can't afford to let my feelings cloud my judgment."
                 u "Right now. I need the truth."
                 u "Even if it means hurting you."
-                show sakura blush with dissolve
-                s "What's that supposed to mean?"
+                s "..."
                 u "I know everything..."
                 if first_sakura:
                     u "About your feelings. Ivy told me."
+                    show sakura blush with dissolve
                     s "W-What do you mean?"
                     u "How you feel about me."
                     u "You love me... don’t you?"
@@ -1539,6 +1547,7 @@ label choice_dialogue:
                     u "And your face tells me the rest."
                 elif first_kaori:
                     u "About your feelings."
+                    show sakura blush with dissolve
                     s "W-What do you mean?"
                     u "How you feel about me."
                     u "You love me... don’t you?"
@@ -1584,6 +1593,7 @@ label choice_dialogue:
                 s "He deserved it. Not because of what he did to me, but because of what he did to everyone else."
                 s "And you..."
                 s "Ugh... I hope you're only acting like this because of today."
+                show sakura sad with dissolve
                 s "Because if this..."
                 s "...is the real you."
                 s "... then I don't know you anymore."
@@ -1824,7 +1834,7 @@ label choice_dialogue:
     k "He looked down on you."
     k "And the worst part? You let him."
     u "What-"
-    k "I've known you for years."
+    k "Oh... I've known you for years."
     k "Nothing escapes your eyes... unless you choose not to see it." 
     k "You saw him changing."
     u "Ivy, I-"
@@ -1965,7 +1975,7 @@ label ending:
         "I regret ever choosing this school."
         
         menu:
-            "Shoot":
+            "Pull the Trigger":
                 u "I-I'm sorry..."
                 "My hands begin to shake uncontrollably."
                 "My vision blurs."
@@ -1974,7 +1984,7 @@ label ending:
                 k "It's okay..."
                 k "I love yo-"
                 jump ending_three
-            "Don't shoot":
+            "Lower the Gun":
                 u "No..."
                 show kaori serious with dissolve
                 k "[first_name]?"
@@ -2000,7 +2010,7 @@ label ending:
                 i "..."
                 i "I'll give you one final opportunity."
                 menu:
-                    "Shoot":
+                    "End It":
                         u "I'm sorry..."
                         "My hands won't stop shaking."
                         "I can barely keep the gun pointed at her."
@@ -2008,7 +2018,7 @@ label ending:
                         k "I love yo-"
                         "The gun fires."
                         jump ending_three
-                    "I don't believe you":
+                    "Refuse":
                         u "No..."
                         u "I don't believe you."
                         u "And I won't shoot you."
@@ -2121,7 +2131,7 @@ label ending:
         "I regret ever choosing this school."
 
         menu:
-            "Shoot":
+            "Pull the Trigger":
                 u "I'm sorry... Kaori."
                 "My hands begin to shake violently."
                 s "No! It wasn't me."
@@ -2130,7 +2140,7 @@ label ending:
                 s "Please..." 
                 "The gun fires."
                 jump ending_one
-            "Don't shoot":
+            "Lower the Gun":
                 u "No! I can't."
                 show sakura sad with dissolve
                 u "I won't shoot you."
@@ -2150,7 +2160,7 @@ label ending:
                 i "Choose carefully. Your life..."
                 i "...or the life of the person you love."
                 menu:
-                    "Shoot":
+                    "End It":
                         u "..."
                         "My grip tightens."
                         s "[first_name]?"
@@ -2159,7 +2169,7 @@ label ending:
                         "My vision blurs."
                         s "No! Wai-"
                         jump ending_one
-                    "Don't shoot":
+                    "Refuse":
                         u "No..."
                         "My arm slowly lowers."
                         u "I won't do it."
@@ -2280,6 +2290,7 @@ label ending_one:
     u "Do you think I made the right choice?"
     k "I'm the last person who should answer that."
     u "Heh... Yeah."
+    u "..."
     u "I killed her."
     show kaori serious with dissolve
     "My voice barely rises above a whisper."
@@ -2333,7 +2344,7 @@ label ending_three:
     "Just looking at the blood makes me want to throw up."
     u "D-Did she-"
     i "Ivy Lee is dead."
-    i "Congratulations on your first case, [first_name] [last_name]."
+    i "Congratulations on completing your first case, [first_name] [last_name]."
     u "W-Was it her?"
     i "Does the truth matter anymore? She's dead."
     u "..."

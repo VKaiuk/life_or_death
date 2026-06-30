@@ -160,8 +160,6 @@ define config.autosave_slots = 6
 define config.quicksave_slots = 6
 define config.main_menu_music = "audio/Dream.mp3"
 define config.rollback_length = 10
-define config.window_icon = "gui/game_icon.png"
-
 
 ## Build configuration #########################################################
 ##
